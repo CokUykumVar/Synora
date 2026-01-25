@@ -14,7 +14,41 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import * as Speech from 'expo-speech';
 import i18n from '../src/i18n';
+
+// Language code mapping for Text-to-Speech
+const languageToSpeechCode: { [key: string]: string } = {
+  en: 'en-US',
+  tr: 'tr-TR',
+  de: 'de-DE',
+  es: 'es-ES',
+  fr: 'fr-FR',
+  it: 'it-IT',
+  pt: 'pt-BR',
+  ru: 'ru-RU',
+  ja: 'ja-JP',
+  zh: 'zh-CN',
+  ko: 'ko-KR',
+  ar: 'ar-SA',
+  az: 'az-AZ',
+  hr: 'hr-HR',
+  cs: 'cs-CZ',
+  da: 'da-DK',
+  nl: 'nl-NL',
+  fi: 'fi-FI',
+  el: 'el-GR',
+  hi: 'hi-IN',
+  id: 'id-ID',
+  no: 'nb-NO',
+  pl: 'pl-PL',
+  ro: 'ro-RO',
+  sv: 'sv-SE',
+  th: 'th-TH',
+  uk: 'uk-UA',
+  ur: 'ur-PK',
+  vi: 'vi-VN',
+};
 import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
 import { useUser } from '../src/context/UserContext';
 import { getWordsForLanguagePair } from '../src/data/words';
@@ -103,6 +137,16 @@ export default function LearnScreen() {
       setIsCorrect(null);
     }
   }, [phase, currentWordIndex, currentWord, generateOptions, allWords]);
+
+  // Auto-play sound when entering listening phase or changing word
+  useEffect(() => {
+    if (phase === 'listening' && currentWord && !isSpeaking) {
+      const timer = setTimeout(() => {
+        playSound();
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [phase, currentWordIndex]);
 
   useEffect(() => {
     Animated.parallel([
@@ -343,10 +387,36 @@ export default function LearnScreen() {
     }
   };
 
-  const playSound = () => {
-    // TODO: Implement text-to-speech
-    console.log('Playing sound for:', currentWord?.word);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+
+  const playSound = async () => {
+    if (!currentWord || isSpeaking) return;
+
+    const langCode = preferences.learningLanguage?.code || 'en';
+    const speechLang = languageToSpeechCode[langCode] || 'en-US';
+
+    setIsSpeaking(true);
+
+    try {
+      await Speech.speak(currentWord.word, {
+        language: speechLang,
+        rate: 0.8,
+        pitch: 1.0,
+        onDone: () => setIsSpeaking(false),
+        onError: () => setIsSpeaking(false),
+      });
+    } catch (error) {
+      console.log('Speech error:', error);
+      setIsSpeaking(false);
+    }
   };
+
+  // Stop speech when leaving the screen
+  useEffect(() => {
+    return () => {
+      Speech.stop();
+    };
+  }, []);
 
   const renderSelectionPhase = () => (
     <View style={styles.selectionContainer}>
@@ -384,7 +454,21 @@ export default function LearnScreen() {
           {...panResponder.panHandlers}
         >
           <View style={styles.wordCardContent}>
-            <Text style={styles.wordText}>{currentWord.word}</Text>
+            <View style={styles.wordWithSound}>
+              <Text style={styles.wordText}>{currentWord.word}</Text>
+              <TouchableOpacity
+                style={styles.soundButtonSmall}
+                onPress={playSound}
+                activeOpacity={0.7}
+                disabled={isSpeaking}
+              >
+                <Ionicons
+                  name={isSpeaking ? "volume-medium" : "volume-high"}
+                  size={22}
+                  color={isSpeaking ? colors.text.primary : colors.brand.gold}
+                />
+              </TouchableOpacity>
+            </View>
             <Text style={styles.pronunciationText}>{currentWord.pronunciation}</Text>
             <View style={styles.dividerLine} />
             <Text style={styles.translationText}>{currentWord.translation}</Text>
@@ -540,11 +624,16 @@ export default function LearnScreen() {
         <Text style={styles.listeningPrompt}>{i18n.t('learn.listenAndGuess')}</Text>
 
         <TouchableOpacity
-          style={styles.playButton}
+          style={[styles.playButton, isSpeaking && styles.playButtonActive]}
           onPress={playSound}
           activeOpacity={0.7}
+          disabled={isSpeaking}
         >
-          <Ionicons name="volume-high" size={32} color={colors.brand.gold} />
+          <Ionicons
+            name={isSpeaking ? "volume-medium" : "volume-high"}
+            size={32}
+            color={isSpeaking ? colors.text.primary : colors.brand.gold}
+          />
         </TouchableOpacity>
 
         <Text style={styles.translationHint}>{currentWord?.translation}</Text>
@@ -982,6 +1071,20 @@ const styles = StyleSheet.create({
   wordCardContent: {
     alignItems: 'center',
   },
+  wordWithSound: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  soundButtonSmall: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: 'rgba(201, 162, 39, 0.15)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: spacing.sm,
+  },
   wordText: {
     fontFamily: fonts.bold,
     fontSize: 32,
@@ -1248,6 +1351,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: spacing.sm,
     borderWidth: 2,
+    borderColor: colors.brand.gold,
+  },
+  playButtonActive: {
+    backgroundColor: colors.brand.gold,
     borderColor: colors.brand.gold,
   },
   translationHint: {
