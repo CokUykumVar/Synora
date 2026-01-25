@@ -331,6 +331,9 @@
     "reviewAgain": "Review Again",
     "done": "Done",
     "skip": "Skip",
-    "skipped": "skipped"
+    "skipped": "skipped",
+    "reverseTranslation": "Reverse Translation",
+    "findTranslation": "Find the translation",
+    "selectCorrectTranslation": "Select the correct translation"
   }
 }

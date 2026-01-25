@@ -323,6 +323,9 @@
     "reviewAgain": "Ôn Lại",
     "done": "Xong",
     "skip": "Bỏ qua",
-    "skipped": "đã bỏ qua"
+    "skipped": "đã bỏ qua",
+    "reverseTranslation": "Dịch ngược",
+    "findTranslation": "Tìm bản dịch",
+    "selectCorrectTranslation": "Chọn bản dịch đúng"
   }
 }

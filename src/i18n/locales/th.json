@@ -323,6 +323,9 @@
     "reviewAgain": "ทบทวนอีกครั้ง",
     "done": "เสร็จสิ้น",
     "skip": "ข้าม",
-    "skipped": "ข้ามไป"
+    "skipped": "ข้ามไป",
+    "reverseTranslation": "การแปลย้อนกลับ",
+    "findTranslation": "หาคำแปล",
+    "selectCorrectTranslation": "เลือกคำแปลที่ถูกต้อง"
   }
 }

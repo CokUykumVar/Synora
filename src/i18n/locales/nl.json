@@ -323,6 +323,9 @@
     "reviewAgain": "Opnieuw Oefenen",
     "done": "Klaar",
     "skip": "Overslaan",
-    "skipped": "overgeslagen"
+    "skipped": "overgeslagen",
+    "reverseTranslation": "Omgekeerde vertaling",
+    "findTranslation": "Vind de vertaling",
+    "selectCorrectTranslation": "Selecteer de juiste vertaling"
   }
 }

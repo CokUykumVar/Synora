@@ -323,6 +323,9 @@
     "reviewAgain": "Повторить",
     "done": "Готово",
     "skip": "Пропустить",
-    "skipped": "пропущено"
+    "skipped": "пропущено",
+    "reverseTranslation": "Обратный перевод",
+    "findTranslation": "Найдите перевод",
+    "selectCorrectTranslation": "Выберите правильный перевод"
   }
 }

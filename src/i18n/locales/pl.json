@@ -323,6 +323,9 @@
     "reviewAgain": "Powtórz",
     "done": "Gotowe",
     "skip": "Pomiń",
-    "skipped": "pominięte"
+    "skipped": "pominięte",
+    "reverseTranslation": "Odwrotne tłumaczenie",
+    "findTranslation": "Znajdź tłumaczenie",
+    "selectCorrectTranslation": "Wybierz poprawne tłumaczenie"
   }
 }

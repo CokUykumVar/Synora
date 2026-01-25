@@ -323,6 +323,9 @@
     "reviewAgain": "دوبارہ مشق کریں",
     "done": "مکمل",
     "skip": "چھوڑیں",
-    "skipped": "چھوڑ دیا"
+    "skipped": "چھوڑ دیا",
+    "reverseTranslation": "الٹا ترجمہ",
+    "findTranslation": "ترجمہ تلاش کریں",
+    "selectCorrectTranslation": "صحیح ترجمہ منتخب کریں"
   }
 }

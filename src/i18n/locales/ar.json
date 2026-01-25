@@ -323,6 +323,9 @@
     "reviewAgain": "مراجعة مرة أخرى",
     "done": "تم",
     "skip": "تخطي",
-    "skipped": "تم تخطيها"
+    "skipped": "تم تخطيها",
+    "reverseTranslation": "الترجمة العكسية",
+    "findTranslation": "ابحث عن الترجمة",
+    "selectCorrectTranslation": "اختر الترجمة الصحيحة"
   }
 }

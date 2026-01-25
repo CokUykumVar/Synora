@@ -323,6 +323,9 @@
     "reviewAgain": "Επανάληψη",
     "done": "Τέλος",
     "skip": "Παράλειψη",
-    "skipped": "παραλείφθηκε"
+    "skipped": "παραλείφθηκε",
+    "reverseTranslation": "Αντίστροφη μετάφραση",
+    "findTranslation": "Βρείτε τη μετάφραση",
+    "selectCorrectTranslation": "Επιλέξτε τη σωστή μετάφραση"
   }
 }

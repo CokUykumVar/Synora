@@ -323,6 +323,9 @@
     "reviewAgain": "Øv Igen",
     "done": "Færdig",
     "skip": "Spring over",
-    "skipped": "sprunget over"
+    "skipped": "sprunget over",
+    "reverseTranslation": "Omvendt oversættelse",
+    "findTranslation": "Find oversættelsen",
+    "selectCorrectTranslation": "Vælg den rigtige oversættelse"
   }
 }

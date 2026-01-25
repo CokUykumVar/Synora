@@ -323,6 +323,9 @@
     "reviewAgain": "Təkrar Et",
     "done": "Bitdi",
     "skip": "Keç",
-    "skipped": "keçildi"
+    "skipped": "keçildi",
+    "reverseTranslation": "Əks tərcümə",
+    "findTranslation": "Tərcüməni tapın",
+    "selectCorrectTranslation": "Düzgün tərcüməni seçin"
   }
 }

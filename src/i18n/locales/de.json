@@ -323,6 +323,9 @@
     "reviewAgain": "Nochmal üben",
     "done": "Fertig",
     "skip": "Überspringen",
-    "skipped": "übersprungen"
+    "skipped": "übersprungen",
+    "reverseTranslation": "Umgekehrte Übersetzung",
+    "findTranslation": "Finde die Übersetzung",
+    "selectCorrectTranslation": "Wähle die richtige Übersetzung"
   }
 }

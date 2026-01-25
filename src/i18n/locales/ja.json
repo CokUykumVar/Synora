@@ -323,6 +323,9 @@
     "reviewAgain": "もう一度",
     "done": "完了",
     "skip": "スキップ",
-    "skipped": "スキップ"
+    "skipped": "スキップ",
+    "reverseTranslation": "逆翻訳",
+    "findTranslation": "翻訳を見つけて",
+    "selectCorrectTranslation": "正しい翻訳を選んでください"
   }
 }

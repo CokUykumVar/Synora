@@ -323,6 +323,9 @@
     "reviewAgain": "Ulangi",
     "done": "Selesai",
     "skip": "Lewati",
-    "skipped": "dilewati"
+    "skipped": "dilewati",
+    "reverseTranslation": "Terjemahan terbalik",
+    "findTranslation": "Temukan terjemahannya",
+    "selectCorrectTranslation": "Pilih terjemahan yang benar"
   }
 }

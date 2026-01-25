@@ -323,6 +323,9 @@
     "reviewAgain": "Repasar",
     "done": "Listo",
     "skip": "Saltar",
-    "skipped": "saltadas"
+    "skipped": "saltadas",
+    "reverseTranslation": "Traducción inversa",
+    "findTranslation": "Encuentra la traducción",
+    "selectCorrectTranslation": "Selecciona la traducción correcta"
   }
 }

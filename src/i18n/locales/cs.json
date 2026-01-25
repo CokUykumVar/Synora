@@ -323,6 +323,9 @@
     "reviewAgain": "Opakovat",
     "done": "Hotovo",
     "skip": "Přeskočit",
-    "skipped": "přeskočeno"
+    "skipped": "přeskočeno",
+    "reverseTranslation": "Obrácený překlad",
+    "findTranslation": "Najděte překlad",
+    "selectCorrectTranslation": "Vyberte správný překlad"
   }
 }

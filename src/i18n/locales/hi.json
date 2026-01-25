@@ -323,6 +323,9 @@
     "reviewAgain": "फिर से दोहराएं",
     "done": "पूर्ण",
     "skip": "छोड़ें",
-    "skipped": "छोड़ा गया"
+    "skipped": "छोड़ा गया",
+    "reverseTranslation": "उल्टा अनुवाद",
+    "findTranslation": "अनुवाद खोजें",
+    "selectCorrectTranslation": "सही अनुवाद चुनें"
   }
 }

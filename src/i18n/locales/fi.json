@@ -323,6 +323,9 @@
     "reviewAgain": "Harjoittele Uudelleen",
     "done": "Valmis",
     "skip": "Ohita",
-    "skipped": "ohitettu"
+    "skipped": "ohitettu",
+    "reverseTranslation": "Käänteinen käännös",
+    "findTranslation": "Etsi käännös",
+    "selectCorrectTranslation": "Valitse oikea käännös"
   }
 }

@@ -67,7 +67,7 @@ interface Word {
   category?: string;
 }
 
-type LearningPhase = 'selection' | 'flashcard' | 'listening' | 'writing' | 'complete';
+type LearningPhase = 'selection' | 'flashcard' | 'listening' | 'writing' | 'reverseTranslation' | 'complete';
 
 export default function LearnScreen() {
   const router = useRouter();
@@ -93,14 +93,17 @@ export default function LearnScreen() {
     flashcard: { correct: number; skipped: number };
     listening: { correct: number; skipped: number };
     writing: { correct: number; skipped: number };
+    reverseTranslation: { correct: number; skipped: number };
   }>({
     flashcard: { correct: 0, skipped: 0 },
     listening: { correct: 0, skipped: 0 },
     writing: { correct: 0, skipped: 0 },
+    reverseTranslation: { correct: 0, skipped: 0 },
   });
   const [options, setOptions] = useState<string[]>([]);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [wordsLoading, setWordsLoading] = useState(true);
+  const [isSwiping, setIsSwiping] = useState(false); // For visual button disable
 
   // Load words based on user's language preferences
   useEffect(() => {
@@ -119,24 +122,33 @@ export default function LearnScreen() {
     ? availableWords[0]
     : selectedWords[currentWordIndex];
 
-  // Generate random options for multiple choice
-  const generateOptions = useCallback((correctWord: Word, allWords: Word[]) => {
-    const otherWords = allWords.filter(w => w.id !== correctWord.id);
+  // Generate random options for multiple choice (only from selected 5 words)
+  const generateOptions = useCallback((correctWord: Word, wordPool: Word[], useTranslations: boolean = false) => {
+    const otherWords = wordPool.filter(w => w.id !== correctWord.id);
     const shuffled = otherWords.sort(() => Math.random() - 0.5);
-    const wrongOptions = shuffled.slice(0, 3).map(w => w.word);
-    const allOptions = [...wrongOptions, correctWord.word].sort(() => Math.random() - 0.5);
+    // Use all other selected words as wrong options (max 4 for 5 selected words)
+    const wrongOptions = shuffled.map(w => useTranslations ? w.translation : w.word);
+    const correctOption = useTranslations ? correctWord.translation : correctWord.word;
+    const allOptions = [...wrongOptions, correctOption].sort(() => Math.random() - 0.5);
     return allOptions;
   }, []);
 
-  // Update options when word changes in flashcard or listening phase
+  // Update options when word changes in flashcard, listening, or reverseTranslation phase
   useEffect(() => {
-    if ((phase === 'flashcard' || phase === 'listening') && currentWord && allWords.length > 0) {
-      const newOptions = generateOptions(currentWord, allWords);
+    if ((phase === 'flashcard' || phase === 'listening') && currentWord && selectedWords.length > 0) {
+      // Use only the 5 selected words for options (show words in learning language)
+      const newOptions = generateOptions(currentWord, selectedWords, false);
+      setOptions(newOptions);
+      setSelectedOption(null);
+      setIsCorrect(null);
+    } else if (phase === 'reverseTranslation' && currentWord && selectedWords.length > 0) {
+      // Reverse mode: show translations (native language) as options
+      const newOptions = generateOptions(currentWord, selectedWords, true);
       setOptions(newOptions);
       setSelectedOption(null);
       setIsCorrect(null);
     }
-  }, [phase, currentWordIndex, currentWord, generateOptions, allWords]);
+  }, [phase, currentWordIndex, currentWord, generateOptions, selectedWords]);
 
   // Auto-play sound when entering listening phase or changing word
   useEffect(() => {
@@ -176,6 +188,9 @@ export default function LearnScreen() {
   }, [cardPosition]);
 
   const handleKnowWord = useCallback(() => {
+    // Prevent rapid swipes
+    if (isSwipingRef.current || isSwiping) return;
+
     if (availableWords.length <= 1) {
       if (selectedWords.length >= 5) {
         setPhase('flashcard');
@@ -185,17 +200,33 @@ export default function LearnScreen() {
       }
       return;
     }
+
+    isSwipingRef.current = true;
+    setIsSwiping(true);
     animateCardOut('right', () => {
       setAvailableWords(prev => prev.slice(1));
+      // Unlock after animation completes
+      setTimeout(() => {
+        isSwipingRef.current = false;
+        setIsSwiping(false);
+      }, 100);
     });
-  }, [availableWords.length, selectedWords.length, animateCardOut]);
+  }, [availableWords.length, selectedWords.length, animateCardOut, isSwiping]);
 
   const handleLearnWord = useCallback(() => {
+    // Prevent rapid swipes and check if already at max
+    if (isSwipingRef.current || isSwiping || selectedWords.length >= 5) return;
+
     const word = availableWords[0];
     if (!word) return;
 
+    isSwipingRef.current = true;
+    setIsSwiping(true);
     animateCardOut('left', () => {
       setSelectedWords(prev => {
+        // Double-check to prevent exceeding 5
+        if (prev.length >= 5) return prev;
+
         const newSelected = [...prev, word];
         if (newSelected.length >= 5) {
           setTimeout(() => {
@@ -208,13 +239,19 @@ export default function LearnScreen() {
         return newSelected;
       });
       setAvailableWords(prev => prev.slice(1));
+      // Unlock after animation completes
+      setTimeout(() => {
+        isSwipingRef.current = false;
+        setIsSwiping(false);
+      }, 100);
     });
-  }, [availableWords, animateCardOut]);
+  }, [availableWords, selectedWords.length, animateCardOut, isSwiping]);
 
   // Refs to hold latest handlers for panResponder
   const handleKnowWordRef = useRef(handleKnowWord);
   const handleLearnWordRef = useRef(handleLearnWord);
   const phaseRef = useRef(phase);
+  const isSwipingRef = useRef(false); // Lock to prevent rapid swipes
 
   useEffect(() => {
     handleKnowWordRef.current = handleKnowWord;
@@ -224,12 +261,16 @@ export default function LearnScreen() {
 
   const panResponder = useMemo(() =>
     PanResponder.create({
-      onStartShouldSetPanResponder: () => phaseRef.current === 'selection',
-      onMoveShouldSetPanResponder: () => phaseRef.current === 'selection',
+      onStartShouldSetPanResponder: () => phaseRef.current === 'selection' && !isSwipingRef.current,
+      onMoveShouldSetPanResponder: () => phaseRef.current === 'selection' && !isSwipingRef.current,
       onPanResponderMove: (_, gesture) => {
-        cardPosition.setValue({ x: gesture.dx, y: gesture.dy });
+        if (!isSwipingRef.current) {
+          cardPosition.setValue({ x: gesture.dx, y: gesture.dy });
+        }
       },
       onPanResponderRelease: (_, gesture) => {
+        if (isSwipingRef.current) return;
+
         if (gesture.dx > SWIPE_THRESHOLD) {
           // Swipe right - I know this word
           handleKnowWordRef.current();
@@ -372,7 +413,11 @@ export default function LearnScreen() {
       setUserInput('');
       setIsCorrect(null);
     } else {
-      setPhase('complete');
+      // Move to reverse translation phase
+      setPhase('reverseTranslation');
+      setCurrentWordIndex(0);
+      setSelectedOption(null);
+      setIsCorrect(null);
     }
   };
 
@@ -382,7 +427,51 @@ export default function LearnScreen() {
       setUserInput('');
       setIsCorrect(null);
     } else {
-      // Complete
+      // Move to reverse translation phase
+      setPhase('reverseTranslation');
+      setCurrentWordIndex(0);
+      setSelectedOption(null);
+      setIsCorrect(null);
+    }
+  };
+
+  // Reverse Translation handlers
+  const handleReverseOptionSelect = (option: string) => {
+    if (selectedOption !== null) return;
+
+    setSelectedOption(option);
+    const correct = option === currentWord?.translation;
+    setIsCorrect(correct);
+
+    if (correct) {
+      setExerciseResults(prev => ({
+        ...prev,
+        reverseTranslation: { ...prev.reverseTranslation, correct: prev.reverseTranslation.correct + 1 },
+      }));
+    }
+  };
+
+  const handleReverseSkip = () => {
+    setExerciseResults(prev => ({
+      ...prev,
+      reverseTranslation: { ...prev.reverseTranslation, skipped: prev.reverseTranslation.skipped + 1 },
+    }));
+
+    if (currentWordIndex < selectedWords.length - 1) {
+      setCurrentWordIndex(prev => prev + 1);
+      setSelectedOption(null);
+      setIsCorrect(null);
+    } else {
+      setPhase('complete');
+    }
+  };
+
+  const handleReverseNext = () => {
+    if (currentWordIndex < selectedWords.length - 1) {
+      setCurrentWordIndex(prev => prev + 1);
+      setSelectedOption(null);
+      setIsCorrect(null);
+    } else {
       setPhase('complete');
     }
   };
@@ -490,17 +579,25 @@ export default function LearnScreen() {
 
       <View style={styles.actionButtons}>
         <TouchableOpacity
-          style={[styles.actionButton, styles.learnButton]}
+          style={[
+            styles.actionButton,
+            styles.learnButton,
+            (isSwiping || selectedWords.length >= 5) && styles.buttonDisabled,
+          ]}
           onPress={handleLearnWord}
           activeOpacity={0.7}
+          disabled={isSwiping || selectedWords.length >= 5}
         >
-          <Ionicons name="add-circle" size={28} color={colors.brand.gold} />
-          <Text style={styles.learnButtonText}>{i18n.t('learn.addToLearn')}</Text>
+          <Ionicons name="add-circle" size={28} color={selectedWords.length >= 5 ? colors.text.muted : colors.brand.gold} />
+          <Text style={[styles.learnButtonText, selectedWords.length >= 5 && styles.buttonTextDisabled]}>
+            {i18n.t('learn.addToLearn')}
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.actionButton, styles.knowButton]}
+          style={[styles.actionButton, styles.knowButton, isSwiping && styles.buttonDisabled]}
           onPress={handleKnowWord}
           activeOpacity={0.7}
+          disabled={isSwiping}
         >
           <Ionicons name="checkmark-circle" size={28} color={colors.text.muted} />
           <Text style={styles.knowButtonText}>{i18n.t('learn.iKnowThis')}</Text>
@@ -786,10 +883,113 @@ export default function LearnScreen() {
     </View>
   );
 
+  const renderReverseTranslationPhase = () => (
+    <View style={styles.exerciseContainer}>
+      <View style={styles.exerciseHeader}>
+        <View style={styles.phaseIndicator}>
+          <Ionicons name="swap-horizontal" size={20} color={colors.brand.gold} />
+          <Text style={styles.phaseText}>{i18n.t('learn.reverseTranslation')}</Text>
+        </View>
+        <Text style={styles.progressText}>
+          {currentWordIndex + 1} / {selectedWords.length}
+        </Text>
+      </View>
+
+      {/* Word Card - Show learning language word */}
+      <View style={styles.reverseCard}>
+        <Text style={styles.reversePrompt}>{i18n.t('learn.findTranslation')}</Text>
+        <View style={styles.wordWithSound}>
+          <Text style={styles.reverseWord}>{currentWord?.word}</Text>
+          <TouchableOpacity
+            style={styles.soundButtonSmall}
+            onPress={playSound}
+            activeOpacity={0.7}
+            disabled={isSpeaking}
+          >
+            <Ionicons
+              name={isSpeaking ? "volume-medium" : "volume-high"}
+              size={22}
+              color={isSpeaking ? colors.text.primary : colors.brand.gold}
+            />
+          </TouchableOpacity>
+        </View>
+        {currentWord?.pronunciation && (
+          <Text style={styles.reversePronunciation}>{currentWord.pronunciation}</Text>
+        )}
+      </View>
+
+      {/* Multiple Choice Options - Translations */}
+      <Text style={styles.questionText}>{i18n.t('learn.selectCorrectTranslation')}</Text>
+
+      <View style={styles.optionsContainer}>
+        {options.map((option, index) => {
+          const isSelected = selectedOption === option;
+          const isCorrectOption = option === currentWord?.translation;
+          const showResult = selectedOption !== null;
+
+          let optionStyle = styles.optionButton;
+          let textStyle = styles.optionText;
+
+          if (showResult) {
+            if (isCorrectOption) {
+              optionStyle = { ...styles.optionButton, ...styles.optionCorrect };
+              textStyle = { ...styles.optionText, ...styles.optionTextCorrect };
+            } else if (isSelected && !isCorrectOption) {
+              optionStyle = { ...styles.optionButton, ...styles.optionWrong };
+              textStyle = { ...styles.optionText, ...styles.optionTextWrong };
+            }
+          }
+
+          return (
+            <TouchableOpacity
+              key={index}
+              style={optionStyle}
+              onPress={() => handleReverseOptionSelect(option)}
+              activeOpacity={0.7}
+              disabled={selectedOption !== null}
+            >
+              <Text style={textStyle}>{option}</Text>
+              {showResult && isCorrectOption && (
+                <Ionicons name="checkmark-circle" size={24} color={colors.status.success} />
+              )}
+              {showResult && isSelected && !isCorrectOption && (
+                <Ionicons name="close-circle" size={24} color={colors.status.error} />
+              )}
+            </TouchableOpacity>
+          );
+        })}
+      </View>
+
+      {/* Action Buttons */}
+      <View style={styles.exerciseActions}>
+        {selectedOption === null && (
+          <TouchableOpacity
+            style={styles.skipButton}
+            onPress={handleReverseSkip}
+            activeOpacity={0.7}
+          >
+            <Ionicons name="play-skip-forward" size={18} color={colors.text.muted} />
+            <Text style={styles.skipButtonText}>{i18n.t('learn.skip')}</Text>
+          </TouchableOpacity>
+        )}
+        {selectedOption !== null && (
+          <TouchableOpacity
+            style={styles.nextButton}
+            onPress={handleReverseNext}
+            activeOpacity={0.7}
+          >
+            <Text style={styles.nextButtonText}>{i18n.t('learn.next')}</Text>
+            <Ionicons name="arrow-forward" size={20} color={colors.background.primary} />
+          </TouchableOpacity>
+        )}
+      </View>
+    </View>
+  );
+
   const renderCompletePhase = () => {
-    const totalCorrect = exerciseResults.flashcard.correct + exerciseResults.listening.correct + exerciseResults.writing.correct;
-    const totalSkipped = exerciseResults.flashcard.skipped + exerciseResults.listening.skipped + exerciseResults.writing.skipped;
-    const totalAnswered = (selectedWords.length * 3) - totalSkipped;
+    const totalCorrect = exerciseResults.flashcard.correct + exerciseResults.listening.correct + exerciseResults.writing.correct + exerciseResults.reverseTranslation.correct;
+    const totalSkipped = exerciseResults.flashcard.skipped + exerciseResults.listening.skipped + exerciseResults.writing.skipped + exerciseResults.reverseTranslation.skipped;
+    const totalAnswered = (selectedWords.length * 4) - totalSkipped;
     const percentage = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
 
     const formatResult = (correct: number, skipped: number) => {
@@ -833,6 +1033,14 @@ export default function LearnScreen() {
               {formatResult(exerciseResults.writing.correct, exerciseResults.writing.skipped)}
             </Text>
           </View>
+          <View style={styles.resultDivider} />
+          <View style={styles.resultRow}>
+            <Ionicons name="swap-horizontal" size={24} color={colors.brand.gold} />
+            <Text style={styles.resultLabel}>{i18n.t('learn.reverseTranslation')}</Text>
+            <Text style={styles.resultValue}>
+              {formatResult(exerciseResults.reverseTranslation.correct, exerciseResults.reverseTranslation.skipped)}
+            </Text>
+          </View>
         </View>
 
         <View style={styles.totalScore}>
@@ -851,6 +1059,7 @@ export default function LearnScreen() {
                 flashcard: { correct: 0, skipped: 0 },
                 listening: { correct: 0, skipped: 0 },
                 writing: { correct: 0, skipped: 0 },
+                reverseTranslation: { correct: 0, skipped: 0 },
               });
             }}
             activeOpacity={0.7}
@@ -947,6 +1156,7 @@ export default function LearnScreen() {
         {phase === 'flashcard' && renderFlashcardPhase()}
         {phase === 'listening' && renderListeningPhase()}
         {phase === 'writing' && renderWritingPhase()}
+        {phase === 'reverseTranslation' && renderReverseTranslationPhase()}
         {phase === 'complete' && renderCompletePhase()}
       </Animated.View>
     </LinearGradient>
@@ -1169,6 +1379,12 @@ const styles = StyleSheet.create({
     marginTop: spacing.xs,
     textAlign: 'center',
   },
+  buttonDisabled: {
+    opacity: 0.5,
+  },
+  buttonTextDisabled: {
+    color: colors.text.muted,
+  },
 
   // Exercise Container
   exerciseContainer: {
@@ -1246,23 +1462,23 @@ const styles = StyleSheet.create({
     marginBottom: spacing.sm,
   },
   optionsContainer: {
-    marginBottom: spacing.sm,
+    marginBottom: spacing.md,
   },
   optionButton: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: colors.background.card,
-    borderRadius: borderRadius.md,
+    borderRadius: borderRadius.lg,
     borderWidth: 1,
     borderColor: colors.border.primary,
-    paddingVertical: spacing.sm,
-    paddingHorizontal: spacing.md,
-    marginBottom: spacing.xs,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.lg,
+    marginBottom: spacing.sm,
   },
   optionText: {
     fontFamily: fonts.medium,
-    fontSize: fontSize.sm,
+    fontSize: fontSize.md,
     color: colors.text.primary,
     flex: 1,
   },
@@ -1630,5 +1846,33 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     color: colors.background.primary,
     marginRight: spacing.sm,
+  },
+
+  // Reverse Translation
+  reverseCard: {
+    backgroundColor: colors.background.card,
+    borderRadius: borderRadius.xl,
+    borderWidth: 1,
+    borderColor: colors.border.primary,
+    padding: spacing.xl,
+    alignItems: 'center',
+    marginBottom: spacing.lg,
+  },
+  reversePrompt: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.md,
+    color: colors.text.secondary,
+    marginBottom: spacing.md,
+  },
+  reverseWord: {
+    fontFamily: fonts.bold,
+    fontSize: 28,
+    color: colors.text.primary,
+  },
+  reversePronunciation: {
+    fontFamily: fonts.body,
+    fontSize: fontSize.md,
+    color: colors.text.muted,
+    marginTop: spacing.xs,
   },
 });

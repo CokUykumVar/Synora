@@ -331,6 +331,9 @@
     "reviewAgain": "Tekrar Et",
     "done": "Tamamla",
     "skip": "Atla",
-    "skipped": "atlandı"
+    "skipped": "atlandı",
+    "reverseTranslation": "Ters Çeviri",
+    "findTranslation": "Çevirisini bul",
+    "selectCorrectTranslation": "Doğru çeviriyi seçin"
   }
 }

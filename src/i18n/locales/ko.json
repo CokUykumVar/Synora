@@ -323,6 +323,9 @@
     "reviewAgain": "다시 복습",
     "done": "완료",
     "skip": "건너뛰기",
-    "skipped": "건너뜀"
+    "skipped": "건너뜀",
+    "reverseTranslation": "역번역",
+    "findTranslation": "번역을 찾으세요",
+    "selectCorrectTranslation": "올바른 번역을 선택하세요"
   }
 }

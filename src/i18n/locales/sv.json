@@ -323,6 +323,9 @@
     "reviewAgain": "Öva Igen",
     "done": "Klar",
     "skip": "Hoppa över",
-    "skipped": "hoppade över"
+    "skipped": "hoppade över",
+    "reverseTranslation": "Omvänd översättning",
+    "findTranslation": "Hitta översättningen",
+    "selectCorrectTranslation": "Välj rätt översättning"
   }
 }
