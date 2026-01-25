@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Yüklənir..."
+  },
+  "onboarding": {
+    "slogan": "Sözləri öyrənməyin ən ağıllı yolu",
+    "explore": "Kəşf et",
+    "login": "Daxil ol"
+  },
+  "login": {
+    "title": "Asanlıqla Daxil Olun",
+    "subtitle": "Bütün cihazlarda sinxronlaşın",
+    "google": "Google ilə davam et",
+    "apple": "Apple ilə davam et",
+    "or": "və ya",
+    "email": "E-poçt ilə daxil ol"
+  },
+  "emailLogin": {
+    "title": "Hesabınıza Daxil Olun",
+    "emailPlaceholder": "E-poçt ünvanınız",
+    "passwordPlaceholder": "Şifrəniz",
+    "forgotPassword": "Şifrəni unutdum",
+    "loginButton": "Daxil ol",
+    "noAccount": "Hesabınız yoxdur?",
+    "register": "Qeydiyyat"
+  },
+  "register": {
+    "title": "Hesab Yaradın",
+    "subtitle": "Söz öyrənmə səyahətinizə başlayın",
+    "namePlaceholder": "Adınız",
+    "emailPlaceholder": "E-poçt ünvanınız",
+    "passwordPlaceholder": "Şifrəniz",
+    "confirmPasswordPlaceholder": "Şifrəni təsdiqləyin",
+    "registerButton": "Qeydiyyat",
+    "hasAccount": "Artıq hesabınız var?",
+    "login": "Daxil ol"
+  },
+  "languageSelect": {
+    "title": "Dil Seçimi",
+    "subtitle": "Hansı dili öyrənmək istəyirsiniz?",
+    "nativeLanguage": "Ana Diliniz",
+    "learnLanguage": "Öyrənmək İstədiyiniz Dil",
+    "select": "Seçin",
+    "selectNative": "Ana dilinizi seçin",
+    "selectLearn": "Öyrənmək istədiyiniz dili seçin",
+    "continue": "Davam et"
+  },
+  "levelSelect": {
+    "title": "Səviyyənizi Seçin",
+    "subtitle": "Hansı səviyyədən başlamaq istəyirsiniz?",
+    "continue": "Davam et",
+    "levels": {
+      "beginner": {
+        "name": "Başlanğıc",
+        "description": "Heç nə bilmirəm, sıfırdan başlayıram"
+      },
+      "elementary": {
+        "name": "Əsas",
+        "description": "Sadə sözlər və cümlələr bilirəm"
+      },
+      "intermediate": {
+        "name": "Orta",
+        "description": "Gündəlik söhbətləri başa düşürəm"
+      },
+      "advanced": {
+        "name": "İrəli",
+        "description": "Səlis danışıram, inkişaf etmək istəyirəm"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Gündəlik Hədəfiniz",
+    "subtitle": "Hər gün neçə söz öyrənmək istəyirsiniz?",
+    "continue": "Davam et",
+    "wordsPerDay": "söz/gün",
+    "perMonth": "/ay",
+    "hint": "Hədəfinizi istənilən vaxt dəyişə bilərsiniz",
+    "goals": {
+      "casual": { "name": "Rahat" },
+      "regular": { "name": "Müntəzəm" },
+      "serious": { "name": "Ciddi" },
+      "intense": { "name": "İntensiv" }
+    }
+  },
+  "topicSelect": {
+    "title": "Hansı Mövzular Sizi Maraqlandırır?",
+    "subtitle": "Maraqlarınızı seçin, məzmunu fərdiləşdirəcəyik",
+    "continue": "Davam et",
+    "hint": "{{count}} mövzu seçildi",
+    "hintMin": "Ən azı {{min}} mövzu seçin ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Səyahət",
+      "food": "Yemək və İçki",
+      "business": "Biznes və Karyera",
+      "technology": "Texnologiya",
+      "health": "Sağlamlıq",
+      "sports": "İdman",
+      "music": "Musiqi",
+      "entertainment": "Əyləncə",
+      "nature": "Təbiət",
+      "shopping": "Alış-veriş",
+      "family": "Ailə və Münasibətlər",
+      "education": "Təhsil"
+    }
+  },
+  "habit": {
+    "title": "Vərdiş qazanmaq istəyirsiniz?",
+    "subtitle": "Gündəlik xatırlatmalarla öyrənmə rutininizi yaradın və hədəflərinizə çatın",
+    "skip": "Keç",
+    "continue": "Davam et",
+    "dailyReminder": "Gündəlik Xatırlatma",
+    "reminderDescription": "Hər gün seçdiyiniz vaxtda xatırladın",
+    "selectTime": "Xatırlatma Vaxtı",
+    "hint": "Xatırlatma parametrlərini istənilən vaxt dəyişə bilərsiniz",
+    "times": {
+      "morning": "Səhər",
+      "noon": "Günorta",
+      "afternoon": "Günortadan sonra",
+      "evening": "Axşam",
+      "night": "Gecə"
+    }
+  },
+  "saving": {
+    "title": "Seçimləriniz saxlanılır",
+    "subtitle": "Sizin üçün ən yaxşı təcrübəni hazırlayırıq",
+    "pleaseWait": "Zəhmət olmasa gözləyin...",
+    "items": {
+      "language": "Dil seçimləri",
+      "level": "Səviyyə məlumatları",
+      "goal": "Gündəlik hədəf",
+      "topics": "Maraqlar",
+      "reminder": "Xatırlatma parametrləri"
+    }
+  },
+  "success": {
+    "title": "Hər Şey Hazırdır!",
+    "subtitle": "Söz öyrənmə səyahətiniz başlayır",
+    "start": "Başlayaq",
+    "features": {
+      "personalized": "Sizin üçün fərdiləşdirilmiş məzmun hazırdır",
+      "goals": "Hədəfləriniz müəyyən edildi",
+      "ready": "Öyrənməyə hazırsınız!"
+    }
+  },
+  "explore": {
+    "title": "Kəşf Et",
+    "subtitle": "Yeni mövzular və sözlər kəşf edin",
+    "searchPlaceholder": "Mövzu və ya söz axtar...",
+    "categories": "Kateqoriyalar",
+    "featured": "Seçilmiş",
+    "popularWords": "Məşhur Sözlər",
+    "newTopics": "Yeni Mövzular",
+    "seeAll": "Hamısını Gör",
+    "words": "söz",
+    "new": "Yeni",
+    "topicsAvailable": "Mövcud Mövzular",
+    "wordsToLearn": "Öyrəniləcək Sözlər",
+    "categoryNames": {
+      "all": "Hamısı",
+      "travel": "Səyahət",
+      "food": "Yemək",
+      "business": "Biznes",
+      "technology": "Texnologiya",
+      "health": "Sağlamlıq",
+      "sports": "İdman",
+      "music": "Musiqi"
+    }
+  },
+  "stats": {
+    "title": "Statistika",
+    "subtitle": "Öyrənmə irəliləyişinizi izləyin",
+    "totalWords": "Ümumi Söz",
+    "currentStreak": "Cari Ardıcıllıq",
+    "accuracy": "Dəqiqlik",
+    "todayWords": "Bu gün",
+    "weeklyProgress": "Həftəlik İrəliləyiş",
+    "moreStats": "Daha Çox Statistika",
+    "weeklyAverage": "Həftəlik Ort.",
+    "totalTime": "Ümumi Vaxt",
+    "bestStreak": "Ən Yaxşı Ardıcıllıq",
+    "perfectDays": "Mükəmməl Günlər",
+    "categoryProgress": "Kateqoriya İrəliləyişi",
+    "words": "söz",
+    "achievements": "Nailiyyətlər",
+    "goalMet": "Hədəf Çatıldı",
+    "goalNotMet": "Davam Edir",
+    "days": {
+      "mon": "Baz.e",
+      "tue": "Ç.ax",
+      "wed": "Çər",
+      "thu": "C.ax",
+      "fri": "Cüm",
+      "sat": "Şən",
+      "sun": "Baz"
+    },
+    "achievementNames": {
+      "first_word": "İlk Söz",
+      "week_streak": "Həftəlik Ardıcıllıq",
+      "hundred_words": "100 Söz",
+      "perfect_day": "Mükəmməl Gün",
+      "month_streak": "Aylıq Ardıcıllıq",
+      "five_hundred": "500 Söz"
+    }
+  },
+  "home": {
+    "greeting": "Salam,",
+    "streak": "Ardıcıl Gün",
+    "streakMessage": "Əla iş görürsən! Ardıcıllığını davam etdir.",
+    "todayProgress": "Bugünkü İrəliləyiş",
+    "words": "söz",
+    "wordsLeft": "Hədəfə çatmaq üçün {{count}} söz qalıb",
+    "goalComplete": "Bugünkü hədəfinizə çatdınız!",
+    "startLearning": "Öyrənməyə Başla",
+    "review": "Təkrar",
+    "quickPractice": "Sürətli Məşq",
+    "statistics": "Statistika",
+    "totalWords": "Ümumi Söz",
+    "level": "Səviyyə",
+    "daysActive": "Aktiv Günlər",
+    "accuracy": "Dəqiqlik",
+    "continueLearning": "Öyrənməyə Davam Et",
+    "lastTopic": "Səyahət",
+    "levels": {
+      "beginner": "Başlanğıc",
+      "elementary": "Əsas",
+      "intermediate": "Orta",
+      "advanced": "İrəli"
+    },
+    "nav": {
+      "home": "Ana Səhifə",
+      "explore": "Kəşf et",
+      "stats": "Statistika",
+      "settings": "Parametrlər"
+    }
+  },
+  "settings": {
+    "title": "Parametrlər",
+    "learning": "Öyrənmə",
+    "appLanguage": "Tətbiq dili",
+    "learningLanguage": "Öyrənilən dil",
+    "dailyGoal": "Gündəlik hədəf",
+    "wordsPerDay": "söz/gün",
+    "level": "Səviyyə",
+    "notifications": "Bildirişlər",
+    "pushNotifications": "Push bildirişlər",
+    "reminderTime": "Xatırlatma vaxtı",
+    "appSettings": "Tətbiq parametrləri",
+    "sound": "Səs effektləri",
+    "vibration": "Vibrasiya",
+    "autoPlay": "Avtomatik oxutma",
+    "darkMode": "Qaranlıq rejim",
+    "support": "Dəstək",
+    "helpCenter": "Yardım mərkəzi",
+    "contactUs": "Bizimlə əlaqə",
+    "rateApp": "Tətbiqi qiymətləndir",
+    "shareApp": "Tətbiqi paylaş",
+    "legal": "Hüquqi",
+    "privacyPolicy": "Məxfilik siyasəti",
+    "termsOfService": "Xidmət şərtləri",
+    "logout": "Çıxış",
+    "logoutTitle": "Çıxış",
+    "logoutMessage": "Çıxış etmək istədiyinizə əminsiniz?",
+    "deleteAccount": "Hesabı sil",
+    "deleteTitle": "Hesabı sil",
+    "deleteMessage": "Bu əməliyyat geri qaytarıla bilməz. Bütün məlumatlarınız həmişəlik silinəcək.",
+    "delete": "Sil",
+    "cancel": "Ləğv et",
+    "madeWith": "Sevgi ilə hazırlanıb"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Redaktə et",
+    "save": "Saxla",
+    "memberSince": "Üzv olub:",
+    "statistics": "Statistika",
+    "wordsLearned": "Öyrənilən Sözlər",
+    "currentStreak": "Cari Ardıcıllıq",
+    "bestStreak": "Ən Yaxşı Ardıcıllıq",
+    "accuracy": "Dəqiqlik",
+    "totalTime": "Ümumi Vaxt",
+    "daysActive": "Aktiv Günlər",
+    "learningInfo": "Öyrənmə Məlumatı",
+    "nativeLanguage": "Ana Dil",
+    "learningLanguage": "Öyrənilən Dil",
+    "level": "Səviyyə",
+    "dailyGoal": "Gündəlik Hədəf",
+    "wordsPerDay": "söz/gün",
+    "achievements": "Nailiyyətlər",
+    "seeAll": "Hamısını Gör",
+    "settings": "Parametrlər",
+    "namePlaceholder": "Adınızı daxil edin",
+    "error": "Xəta",
+    "nameError": "Ad ən az 2 simvol olmalıdır"
+  },
+  "learn": {
+    "title": "Öyrən",
+    "selectWords": "Sözlər Seç",
+    "selectedCount": "{{count}}/{{total}} söz seçildi",
+    "wantToLearn": "Öyrənmək istəyirəm",
+    "alreadyKnow": "Artıq bilirəm",
+    "addToLearn": "Öyrənmək İstəyirəm",
+    "iKnowThis": "Bunu Bilirəm",
+    "visualLearning": "Vizual Öyrənmə",
+    "audioLearning": "Audio Öyrənmə",
+    "writingPractice": "Yazı Təcrübəsi",
+    "tapToReveal": "Cavabı görmək üçün toxun",
+    "selectCorrectWord": "Doğru sözü seçin",
+    "didntKnow": "Bilmirdim",
+    "gotIt": "Bilirdim",
+    "listenAndGuess": "Dinlə və təxmin et",
+    "showAnswer": "Cavabı Göstər",
+    "writeTheWord": "Sözü yazın",
+    "typeHere": "Buraya yazın...",
+    "check": "Yoxla",
+    "correct": "Düzgün!",
+    "incorrect": "Yanlış",
+    "correctAnswer": "Düzgün cavab",
+    "next": "Sonrakı",
+    "sessionComplete": "Sessiya Tamamlandı!",
+    "greatJob": "Əla iş!",
+    "totalScore": "Ümumi Xal",
+    "reviewAgain": "Təkrar Et",
+    "done": "Bitdi",
+    "skip": "Keç",
+    "skipped": "keçildi"
+  }
+}

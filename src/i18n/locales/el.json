@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Φόρτωση..."
+  },
+  "onboarding": {
+    "slogan": "Ο πιο έξυπνος τρόπος να μάθεις λέξεις",
+    "explore": "Εξερεύνηση",
+    "login": "Σύνδεση"
+  },
+  "login": {
+    "title": "Εύκολη Σύνδεση",
+    "subtitle": "Μείνετε συγχρονισμένοι σε όλες τις συσκευές",
+    "google": "Συνέχεια με Google",
+    "apple": "Συνέχεια με Apple",
+    "or": "ή",
+    "email": "Σύνδεση με Email"
+  },
+  "emailLogin": {
+    "title": "Συνδεθείτε στο Λογαριασμό σας",
+    "emailPlaceholder": "Το email σας",
+    "passwordPlaceholder": "Ο κωδικός σας",
+    "forgotPassword": "Ξεχάσατε τον κωδικό",
+    "loginButton": "Σύνδεση",
+    "noAccount": "Δεν έχετε λογαριασμό;",
+    "register": "Εγγραφή"
+  },
+  "register": {
+    "title": "Δημιουργία Λογαριασμού",
+    "subtitle": "Ξεκινήστε το ταξίδι εκμάθησης λεξιλογίου",
+    "namePlaceholder": "Το όνομά σας",
+    "emailPlaceholder": "Το email σας",
+    "passwordPlaceholder": "Ο κωδικός σας",
+    "confirmPasswordPlaceholder": "Επιβεβαίωση κωδικού",
+    "registerButton": "Εγγραφή",
+    "hasAccount": "Έχετε ήδη λογαριασμό;",
+    "login": "Σύνδεση"
+  },
+  "languageSelect": {
+    "title": "Επιλογή Γλώσσας",
+    "subtitle": "Ποια γλώσσα θέλετε να μάθετε;",
+    "nativeLanguage": "Η Μητρική σας Γλώσσα",
+    "learnLanguage": "Γλώσσα προς Εκμάθηση",
+    "select": "Επιλέξτε",
+    "selectNative": "Επιλέξτε τη μητρική σας γλώσσα",
+    "selectLearn": "Επιλέξτε γλώσσα προς εκμάθηση",
+    "continue": "Συνέχεια"
+  },
+  "levelSelect": {
+    "title": "Επιλέξτε το Επίπεδό σας",
+    "subtitle": "Από ποιο επίπεδο θέλετε να ξεκινήσετε;",
+    "continue": "Συνέχεια",
+    "levels": {
+      "beginner": {
+        "name": "Αρχάριος",
+        "description": "Δεν ξέρω τίποτα, ξεκινάω από το μηδέν"
+      },
+      "elementary": {
+        "name": "Βασικό",
+        "description": "Ξέρω απλές λέξεις και προτάσεις"
+      },
+      "intermediate": {
+        "name": "Μέσο",
+        "description": "Καταλαβαίνω καθημερινές συνομιλίες"
+      },
+      "advanced": {
+        "name": "Προχωρημένο",
+        "description": "Μιλάω άπταιστα, θέλω να βελτιωθώ"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Ο Καθημερινός σας Στόχος",
+    "subtitle": "Πόσες λέξεις θέλετε να μάθετε κάθε μέρα;",
+    "continue": "Συνέχεια",
+    "wordsPerDay": "λέξεις/ημέρα",
+    "perMonth": "/μήνα",
+    "hint": "Μπορείτε να αλλάξετε τον στόχο σας ανά πάσα στιγμή",
+    "goals": {
+      "casual": { "name": "Χαλαρός" },
+      "regular": { "name": "Κανονικός" },
+      "serious": { "name": "Σοβαρός" },
+      "intense": { "name": "Εντατικός" }
+    }
+  },
+  "topicSelect": {
+    "title": "Ποια Θέματα σας Ενδιαφέρουν;",
+    "subtitle": "Επιλέξτε ενδιαφέροντα, θα προσαρμόσουμε το περιεχόμενο",
+    "continue": "Συνέχεια",
+    "hint": "{{count}} θέματα επιλέχθηκαν",
+    "hintMin": "Επιλέξτε τουλάχιστον {{min}} θέματα ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Ταξίδια",
+      "food": "Φαγητό & Ποτά",
+      "business": "Επιχειρήσεις & Καριέρα",
+      "technology": "Τεχνολογία",
+      "health": "Υγεία",
+      "sports": "Αθλητισμός",
+      "music": "Μουσική",
+      "entertainment": "Ψυχαγωγία",
+      "nature": "Φύση",
+      "shopping": "Αγορές",
+      "family": "Οικογένεια & Σχέσεις",
+      "education": "Εκπαίδευση"
+    }
+  },
+  "habit": {
+    "title": "Θέλετε να δημιουργήσετε μια συνήθεια;",
+    "subtitle": "Δημιουργήστε τη ρουτίνα μάθησής σας με καθημερινές υπενθυμίσεις και πετύχετε τους στόχους σας",
+    "skip": "Παράλειψη",
+    "continue": "Συνέχεια",
+    "dailyReminder": "Καθημερινή Υπενθύμιση",
+    "reminderDescription": "Λάβετε υπενθύμιση στην επιλεγμένη ώρα κάθε μέρα",
+    "selectTime": "Ώρα Υπενθύμισης",
+    "hint": "Μπορείτε να αλλάξετε τις ρυθμίσεις υπενθύμισης ανά πάσα στιγμή",
+    "times": {
+      "morning": "Πρωί",
+      "noon": "Μεσημέρι",
+      "afternoon": "Απόγευμα",
+      "evening": "Βράδυ",
+      "night": "Νύχτα"
+    }
+  },
+  "saving": {
+    "title": "Αποθήκευση επιλογών σας",
+    "subtitle": "Προετοιμάζουμε την καλύτερη εμπειρία για εσάς",
+    "pleaseWait": "Παρακαλώ περιμένετε...",
+    "items": {
+      "language": "Προτιμήσεις γλώσσας",
+      "level": "Πληροφορίες επιπέδου",
+      "goal": "Καθημερινός στόχος",
+      "topics": "Ενδιαφέροντα",
+      "reminder": "Ρυθμίσεις υπενθύμισης"
+    }
+  },
+  "success": {
+    "title": "Όλα Έτοιμα!",
+    "subtitle": "Το ταξίδι εκμάθησης λεξιλογίου σας ξεκινά",
+    "start": "Ας ξεκινήσουμε",
+    "features": {
+      "personalized": "Εξατομικευμένο περιεχόμενο έτοιμο για εσάς",
+      "goals": "Οι στόχοι σας έχουν οριστεί",
+      "ready": "Είστε έτοιμοι να μάθετε!"
+    }
+  },
+  "explore": {
+    "title": "Εξερεύνηση",
+    "subtitle": "Ανακαλύψτε νέα θέματα και λέξεις",
+    "searchPlaceholder": "Αναζήτηση θεμάτων ή λέξεων...",
+    "categories": "Κατηγορίες",
+    "featured": "Προτεινόμενα",
+    "popularWords": "Δημοφιλείς Λέξεις",
+    "newTopics": "Νέα Θέματα",
+    "seeAll": "Δείτε Όλα",
+    "words": "λέξεις",
+    "new": "Νέο",
+    "topicsAvailable": "Διαθέσιμα Θέματα",
+    "wordsToLearn": "Λέξεις προς Μάθηση",
+    "categoryNames": {
+      "all": "Όλα",
+      "travel": "Ταξίδια",
+      "food": "Φαγητό",
+      "business": "Επιχειρήσεις",
+      "technology": "Τεχνολογία",
+      "health": "Υγεία",
+      "sports": "Αθλητισμός",
+      "music": "Μουσική"
+    }
+  },
+  "stats": {
+    "title": "Στατιστικά",
+    "subtitle": "Παρακολουθήστε την πρόοδο μάθησης",
+    "totalWords": "Συνολικές Λέξεις",
+    "currentStreak": "Τρέχουσα Σειρά",
+    "accuracy": "Ακρίβεια",
+    "todayWords": "Σήμερα",
+    "weeklyProgress": "Εβδομαδιαία Πρόοδος",
+    "moreStats": "Περισσότερα Στατιστικά",
+    "weeklyAverage": "Εβδομ. Μέσος",
+    "totalTime": "Συνολικός Χρόνος",
+    "bestStreak": "Καλύτερη Σειρά",
+    "perfectDays": "Τέλειες Μέρες",
+    "categoryProgress": "Πρόοδος Κατηγορίας",
+    "words": "λέξεις",
+    "achievements": "Επιτεύγματα",
+    "goalMet": "Στόχος Επιτεύχθηκε",
+    "goalNotMet": "Σε Εξέλιξη",
+    "days": {
+      "mon": "Δευ",
+      "tue": "Τρί",
+      "wed": "Τετ",
+      "thu": "Πέμ",
+      "fri": "Παρ",
+      "sat": "Σάβ",
+      "sun": "Κυρ"
+    },
+    "achievementNames": {
+      "first_word": "Πρώτη Λέξη",
+      "week_streak": "Εβδομαδιαία Σειρά",
+      "hundred_words": "100 Λέξεις",
+      "perfect_day": "Τέλεια Μέρα",
+      "month_streak": "Μηνιαία Σειρά",
+      "five_hundred": "500 Λέξεις"
+    }
+  },
+  "home": {
+    "greeting": "Γεια σου,",
+    "streak": "Μέρες στη Σειρά",
+    "streakMessage": "Καλή δουλειά! Συνέχισε τη σειρά σου.",
+    "todayProgress": "Σημερινή Πρόοδος",
+    "words": "λέξεις",
+    "wordsLeft": "{{count}} λέξεις ακόμα για τον στόχο",
+    "goalComplete": "Πέτυχες τον σημερινό στόχο!",
+    "startLearning": "Έναρξη Μάθησης",
+    "review": "Επανάληψη",
+    "quickPractice": "Γρήγορη Εξάσκηση",
+    "statistics": "Στατιστικά",
+    "totalWords": "Συνολικές Λέξεις",
+    "level": "Επίπεδο",
+    "daysActive": "Ενεργές Μέρες",
+    "accuracy": "Ακρίβεια",
+    "continueLearning": "Συνέχισε να Μαθαίνεις",
+    "lastTopic": "Ταξίδια",
+    "levels": {
+      "beginner": "Αρχάριος",
+      "elementary": "Βασικό",
+      "intermediate": "Μέσο",
+      "advanced": "Προχωρημένο"
+    },
+    "nav": {
+      "home": "Αρχική",
+      "explore": "Εξερεύνηση",
+      "stats": "Στατιστικά",
+      "settings": "Ρυθμίσεις"
+    }
+  },
+  "settings": {
+    "title": "Ρυθμίσεις",
+    "learning": "Μάθηση",
+    "appLanguage": "Γλώσσα εφαρμογής",
+    "learningLanguage": "Γλώσσα εκμάθησης",
+    "dailyGoal": "Ημερήσιος Στόχος",
+    "wordsPerDay": "λέξεις/ημέρα",
+    "level": "Επίπεδο",
+    "notifications": "Ειδοποιήσεις",
+    "pushNotifications": "Push ειδοποιήσεις",
+    "reminderTime": "Ώρα υπενθύμισης",
+    "appSettings": "Ρυθμίσεις εφαρμογής",
+    "sound": "Ηχητικά εφέ",
+    "vibration": "Δόνηση",
+    "autoPlay": "Αυτόματη αναπαραγωγή",
+    "darkMode": "Σκοτεινή λειτουργία",
+    "support": "Υποστήριξη",
+    "helpCenter": "Κέντρο βοήθειας",
+    "contactUs": "Επικοινωνία",
+    "rateApp": "Βαθμολογήστε",
+    "shareApp": "Μοιραστείτε",
+    "legal": "Νομικά",
+    "privacyPolicy": "Πολιτική απορρήτου",
+    "termsOfService": "Όροι χρήσης",
+    "logout": "Αποσύνδεση",
+    "logoutTitle": "Αποσύνδεση",
+    "logoutMessage": "Είστε σίγουροι ότι θέλετε να αποσυνδεθείτε;",
+    "deleteAccount": "Διαγραφή λογαριασμού",
+    "deleteTitle": "Διαγραφή λογαριασμού",
+    "deleteMessage": "Αυτή η ενέργεια δεν μπορεί να αναιρεθεί. Όλα τα δεδομένα σας θα διαγραφούν οριστικά.",
+    "delete": "Διαγραφή",
+    "cancel": "Ακύρωση",
+    "madeWith": "Φτιαγμένο με αγάπη"
+  },
+  "profile": {
+    "title": "Προφίλ",
+    "edit": "Επεξεργασία",
+    "save": "Αποθήκευση",
+    "memberSince": "Μέλος από:",
+    "statistics": "Στατιστικά",
+    "wordsLearned": "Λέξεις που Μαθεύτηκαν",
+    "currentStreak": "Τρέχουσα Σειρά",
+    "bestStreak": "Καλύτερη Σειρά",
+    "accuracy": "Ακρίβεια",
+    "totalTime": "Συνολικός Χρόνος",
+    "daysActive": "Ενεργές Μέρες",
+    "learningInfo": "Πληροφορίες Μάθησης",
+    "nativeLanguage": "Μητρική Γλώσσα",
+    "learningLanguage": "Γλώσσα Εκμάθησης",
+    "level": "Επίπεδο",
+    "dailyGoal": "Ημερήσιος Στόχος",
+    "wordsPerDay": "λέξεις/ημέρα",
+    "achievements": "Επιτεύγματα",
+    "seeAll": "Δείτε Όλα",
+    "settings": "Ρυθμίσεις",
+    "namePlaceholder": "Εισάγετε το όνομά σας",
+    "error": "Σφάλμα",
+    "nameError": "Το όνομα πρέπει να έχει τουλάχιστον 2 χαρακτήρες"
+  },
+  "learn": {
+    "title": "Μάθε",
+    "selectWords": "Επιλέξτε Λέξεις",
+    "selectedCount": "{{count}}/{{total}} λέξεις επιλέχθηκαν",
+    "wantToLearn": "Θέλω να μάθω",
+    "alreadyKnow": "Το ξέρω ήδη",
+    "addToLearn": "Θέλω να Μάθω",
+    "iKnowThis": "Το Ξέρω",
+    "visualLearning": "Οπτική Μάθηση",
+    "audioLearning": "Ακουστική Μάθηση",
+    "writingPractice": "Άσκηση Γραφής",
+    "tapToReveal": "Πατήστε για αποκάλυψη",
+    "selectCorrectWord": "Επιλέξτε τη σωστή λέξη",
+    "didntKnow": "Δεν ήξερα",
+    "gotIt": "Το ήξερα",
+    "listenAndGuess": "Ακούστε και μαντέψτε",
+    "showAnswer": "Εμφάνιση Απάντησης",
+    "writeTheWord": "Γράψτε τη λέξη",
+    "typeHere": "Πληκτρολογήστε εδώ...",
+    "check": "Έλεγχος",
+    "correct": "Σωστό!",
+    "incorrect": "Λάθος",
+    "correctAnswer": "Σωστή απάντηση",
+    "next": "Επόμενο",
+    "sessionComplete": "Συνεδρία Ολοκληρώθηκε!",
+    "greatJob": "Εξαιρετική δουλειά!",
+    "totalScore": "Συνολική Βαθμολογία",
+    "reviewAgain": "Επανάληψη",
+    "done": "Τέλος",
+    "skip": "Παράλειψη",
+    "skipped": "παραλείφθηκε"
+  }
+}

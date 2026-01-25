@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "加载中..."
+  },
+  "onboarding": {
+    "slogan": "最聪明的单词学习方式",
+    "explore": "探索",
+    "login": "登录"
+  },
+  "login": {
+    "title": "轻松登录",
+    "subtitle": "在所有设备上保持同步",
+    "google": "使用Google继续",
+    "apple": "使用Apple继续",
+    "or": "或",
+    "email": "使用邮箱登录"
+  },
+  "emailLogin": {
+    "title": "登录您的账户",
+    "emailPlaceholder": "您的邮箱地址",
+    "passwordPlaceholder": "您的密码",
+    "forgotPassword": "忘记密码",
+    "loginButton": "登录",
+    "noAccount": "还没有账户?",
+    "register": "注册"
+  },
+  "register": {
+    "title": "创建账户",
+    "subtitle": "开始您的词汇学习之旅",
+    "namePlaceholder": "您的姓名",
+    "emailPlaceholder": "您的邮箱地址",
+    "passwordPlaceholder": "您的密码",
+    "confirmPasswordPlaceholder": "确认密码",
+    "registerButton": "注册",
+    "hasAccount": "已有账户?",
+    "login": "登录"
+  },
+  "languageSelect": {
+    "title": "语言选择",
+    "subtitle": "您想学习哪种语言?",
+    "nativeLanguage": "您的母语",
+    "learnLanguage": "想学习的语言",
+    "select": "选择",
+    "selectNative": "选择您的母语",
+    "selectLearn": "选择要学习的语言",
+    "continue": "继续"
+  },
+  "levelSelect": {
+    "title": "选择您的级别",
+    "subtitle": "您想从哪个级别开始?",
+    "continue": "继续",
+    "levels": {
+      "beginner": {
+        "name": "入门",
+        "description": "我什么都不知道，从零开始"
+      },
+      "elementary": {
+        "name": "基础",
+        "description": "我知道简单的单词和句子"
+      },
+      "intermediate": {
+        "name": "中级",
+        "description": "我能理解日常对话"
+      },
+      "advanced": {
+        "name": "高级",
+        "description": "我能流利地说，想要提高"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "您的每日目标",
+    "subtitle": "您每天想学习多少个单词?",
+    "continue": "继续",
+    "wordsPerDay": "单词/天",
+    "perMonth": "/月",
+    "hint": "您可以随时更改目标",
+    "goals": {
+      "casual": { "name": "休闲" },
+      "regular": { "name": "常规" },
+      "serious": { "name": "认真" },
+      "intense": { "name": "强化" }
+    }
+  },
+  "topicSelect": {
+    "title": "您对哪些主题感兴趣?",
+    "subtitle": "选择您的兴趣，我们将个性化您的内容",
+    "continue": "继续",
+    "hint": "已选择{{count}}个主题",
+    "hintMin": "请至少选择{{min}}个主题 ({{count}}/{{min}})",
+    "topics": {
+      "travel": "旅行",
+      "food": "美食与饮品",
+      "business": "商务与职业",
+      "technology": "科技",
+      "health": "健康",
+      "sports": "体育",
+      "music": "音乐",
+      "entertainment": "娱乐",
+      "nature": "自然",
+      "shopping": "购物",
+      "family": "家庭与关系",
+      "education": "教育"
+    }
+  },
+  "habit": {
+    "title": "想养成学习习惯吗?",
+    "subtitle": "通过每日提醒建立学习习惯，实现您的目标",
+    "skip": "跳过",
+    "continue": "继续",
+    "dailyReminder": "每日提醒",
+    "reminderDescription": "每天在您选择的时间收到提醒",
+    "selectTime": "提醒时间",
+    "hint": "您可以随时更改提醒设置",
+    "times": {
+      "morning": "早晨",
+      "noon": "中午",
+      "afternoon": "下午",
+      "evening": "傍晚",
+      "night": "晚上"
+    }
+  },
+  "saving": {
+    "title": "正在保存您的选择",
+    "subtitle": "我们正在为您准备最佳体验",
+    "pleaseWait": "请稍候...",
+    "items": {
+      "language": "语言偏好",
+      "level": "级别信息",
+      "goal": "每日目标",
+      "topics": "兴趣爱好",
+      "reminder": "提醒设置"
+    }
+  },
+  "success": {
+    "title": "一切就绪！",
+    "subtitle": "您的词汇学习之旅即将开始",
+    "start": "开始学习",
+    "features": {
+      "personalized": "个性化内容已为您准备好",
+      "goals": "您的目标已设定",
+      "ready": "您已准备好学习！"
+    }
+  },
+  "stats": {
+    "title": "统计数据",
+    "subtitle": "追踪你的学习进度",
+    "totalWords": "总单词数",
+    "currentStreak": "当前连续",
+    "accuracy": "准确率",
+    "todayWords": "今天",
+    "weeklyProgress": "每周进度",
+    "moreStats": "更多统计",
+    "weeklyAverage": "周平均",
+    "totalTime": "总时间",
+    "bestStreak": "最佳连续",
+    "perfectDays": "完美天数",
+    "categoryProgress": "分类进度",
+    "words": "个单词",
+    "achievements": "成就",
+    "goalMet": "目标达成",
+    "goalNotMet": "进行中",
+    "days": {
+      "mon": "周一",
+      "tue": "周二",
+      "wed": "周三",
+      "thu": "周四",
+      "fri": "周五",
+      "sat": "周六",
+      "sun": "周日"
+    },
+    "achievementNames": {
+      "first_word": "第一个词",
+      "week_streak": "周连续",
+      "hundred_words": "100个词",
+      "perfect_day": "完美一天",
+      "month_streak": "月连续",
+      "five_hundred": "500个词"
+    }
+  },
+  "explore": {
+    "title": "探索",
+    "subtitle": "发现新主题和单词",
+    "searchPlaceholder": "搜索主题或单词...",
+    "categories": "分类",
+    "featured": "精选",
+    "popularWords": "热门单词",
+    "newTopics": "新主题",
+    "seeAll": "查看全部",
+    "words": "个单词",
+    "new": "新",
+    "topicsAvailable": "可用主题",
+    "wordsToLearn": "待学单词",
+    "categoryNames": {
+      "all": "全部",
+      "travel": "旅行",
+      "food": "美食",
+      "business": "商务",
+      "technology": "科技",
+      "health": "健康",
+      "sports": "体育",
+      "music": "音乐"
+    }
+  },
+  "home": {
+    "greeting": "你好，",
+    "streak": "连续天数",
+    "streakMessage": "做得很棒！保持你的连续记录。",
+    "todayProgress": "今日进度",
+    "words": "个单词",
+    "wordsLeft": "还需{{count}}个单词达成目标",
+    "goalComplete": "今日目标已完成！",
+    "startLearning": "开始学习",
+    "review": "复习",
+    "quickPractice": "快速练习",
+    "statistics": "统计数据",
+    "totalWords": "总单词数",
+    "level": "级别",
+    "daysActive": "活跃天数",
+    "accuracy": "准确率",
+    "continueLearning": "继续学习",
+    "lastTopic": "旅行",
+    "levels": {
+      "beginner": "入门",
+      "elementary": "基础",
+      "intermediate": "中级",
+      "advanced": "高级"
+    },
+    "nav": {
+      "home": "首页",
+      "explore": "探索",
+      "stats": "统计",
+      "settings": "设置"
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "learning": "学习",
+    "appLanguage": "应用语言",
+    "learningLanguage": "学习语言",
+    "dailyGoal": "每日目标",
+    "wordsPerDay": "词/天",
+    "level": "级别",
+    "notifications": "通知",
+    "pushNotifications": "推送通知",
+    "reminderTime": "提醒时间",
+    "appSettings": "应用设置",
+    "sound": "音效",
+    "vibration": "振动",
+    "autoPlay": "自动播放",
+    "darkMode": "深色模式",
+    "support": "支持",
+    "helpCenter": "帮助中心",
+    "contactUs": "联系我们",
+    "rateApp": "评价应用",
+    "shareApp": "分享应用",
+    "legal": "法律",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "logout": "退出登录",
+    "logoutTitle": "退出登录",
+    "logoutMessage": "确定要退出登录吗？",
+    "deleteAccount": "删除账户",
+    "deleteTitle": "删除账户",
+    "deleteMessage": "此操作无法撤销。您的所有数据将被永久删除。",
+    "delete": "删除",
+    "cancel": "取消",
+    "madeWith": "用心制作"
+  },
+  "profile": {
+    "title": "个人资料",
+    "edit": "编辑",
+    "save": "保存",
+    "memberSince": "加入时间:",
+    "statistics": "统计",
+    "wordsLearned": "已学单词",
+    "currentStreak": "当前连续",
+    "bestStreak": "最佳连续",
+    "accuracy": "正确率",
+    "totalTime": "总时长",
+    "daysActive": "活跃天数",
+    "learningInfo": "学习信息",
+    "nativeLanguage": "母语",
+    "learningLanguage": "学习语言",
+    "level": "级别",
+    "dailyGoal": "每日目标",
+    "wordsPerDay": "词/天",
+    "achievements": "成就",
+    "seeAll": "查看全部",
+    "settings": "设置",
+    "namePlaceholder": "输入您的名字",
+    "error": "错误",
+    "nameError": "名字至少需要2个字符"
+  },
+  "learn": {
+    "title": "学习",
+    "selectWords": "选择单词",
+    "selectedCount": "已选择 {{count}}/{{total}} 个单词",
+    "wantToLearn": "想要学习",
+    "alreadyKnow": "已经知道",
+    "addToLearn": "想要学习",
+    "iKnowThis": "我知道",
+    "visualLearning": "视觉学习",
+    "audioLearning": "听力学习",
+    "writingPractice": "写作练习",
+    "tapToReveal": "点击显示答案",
+    "selectCorrectWord": "选择正确的单词",
+    "didntKnow": "不知道",
+    "gotIt": "知道了",
+    "listenAndGuess": "听并猜测",
+    "showAnswer": "显示答案",
+    "writeTheWord": "写出单词",
+    "typeHere": "在此输入...",
+    "check": "检查",
+    "correct": "正确！",
+    "incorrect": "错误",
+    "correctAnswer": "正确答案",
+    "next": "下一个",
+    "sessionComplete": "学习完成！",
+    "greatJob": "做得好！",
+    "totalScore": "总分",
+    "reviewAgain": "再次复习",
+    "done": "完成",
+    "skip": "跳过",
+    "skipped": "已跳过"
+  }
+}

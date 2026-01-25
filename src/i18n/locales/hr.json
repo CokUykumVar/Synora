@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Učitavanje..."
+  },
+  "onboarding": {
+    "slogan": "Najpametniji način učenja riječi",
+    "explore": "Istraži",
+    "login": "Prijava"
+  },
+  "login": {
+    "title": "Laka Prijava",
+    "subtitle": "Ostanite sinkronizirani na svim uređajima",
+    "google": "Nastavi s Google",
+    "apple": "Nastavi s Apple",
+    "or": "ili",
+    "email": "Prijava putem Emaila"
+  },
+  "emailLogin": {
+    "title": "Prijavite se na Račun",
+    "emailPlaceholder": "Vaša email adresa",
+    "passwordPlaceholder": "Vaša lozinka",
+    "forgotPassword": "Zaboravljena lozinka",
+    "loginButton": "Prijava",
+    "noAccount": "Nemate račun?",
+    "register": "Registracija"
+  },
+  "register": {
+    "title": "Kreiraj Račun",
+    "subtitle": "Započnite putovanje učenja vokabulara",
+    "namePlaceholder": "Vaše ime",
+    "emailPlaceholder": "Vaša email adresa",
+    "passwordPlaceholder": "Vaša lozinka",
+    "confirmPasswordPlaceholder": "Potvrdite lozinku",
+    "registerButton": "Registracija",
+    "hasAccount": "Već imate račun?",
+    "login": "Prijava"
+  },
+  "languageSelect": {
+    "title": "Odabir Jezika",
+    "subtitle": "Koji jezik želite naučiti?",
+    "nativeLanguage": "Vaš Materinski Jezik",
+    "learnLanguage": "Jezik za Učenje",
+    "select": "Odaberi",
+    "selectNative": "Odaberite materinski jezik",
+    "selectLearn": "Odaberite jezik za učenje",
+    "continue": "Nastavi"
+  },
+  "levelSelect": {
+    "title": "Odaberite Svoju Razinu",
+    "subtitle": "Od koje razine želite početi?",
+    "continue": "Nastavi",
+    "levels": {
+      "beginner": {
+        "name": "Početnik",
+        "description": "Ne znam ništa, počinjem od nule"
+      },
+      "elementary": {
+        "name": "Osnovno",
+        "description": "Znam jednostavne riječi i rečenice"
+      },
+      "intermediate": {
+        "name": "Srednje",
+        "description": "Razumijem svakodnevne razgovore"
+      },
+      "advanced": {
+        "name": "Napredno",
+        "description": "Tečno govorim, želim se poboljšati"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Vaš Dnevni Cilj",
+    "subtitle": "Koliko riječi želite naučiti svaki dan?",
+    "continue": "Nastavi",
+    "wordsPerDay": "riječi/dan",
+    "perMonth": "/mjesec",
+    "hint": "Možete promijeniti cilj bilo kada",
+    "goals": {
+      "casual": { "name": "Opušten" },
+      "regular": { "name": "Redovit" },
+      "serious": { "name": "Ozbiljan" },
+      "intense": { "name": "Intenzivan" }
+    }
+  },
+  "topicSelect": {
+    "title": "Koje Teme Vas Zanimaju?",
+    "subtitle": "Odaberite interese, prilagodit ćemo sadržaj",
+    "continue": "Nastavi",
+    "hint": "Odabrano {{count}} tema",
+    "hintMin": "Odaberite najmanje {{min}} teme ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Putovanja",
+      "food": "Hrana i Piće",
+      "business": "Posao i Karijera",
+      "technology": "Tehnologija",
+      "health": "Zdravlje",
+      "sports": "Sport",
+      "music": "Glazba",
+      "entertainment": "Zabava",
+      "nature": "Priroda",
+      "shopping": "Kupovina",
+      "family": "Obitelj i Odnosi",
+      "education": "Obrazovanje"
+    }
+  },
+  "habit": {
+    "title": "Želite li izgraditi naviku?",
+    "subtitle": "Stvorite svoju rutinu učenja s dnevnim podsjetnicima i postignite svoje ciljeve",
+    "skip": "Preskoči",
+    "continue": "Nastavi",
+    "dailyReminder": "Dnevni Podsjetnik",
+    "reminderDescription": "Primite podsjetnik u odabrano vrijeme svaki dan",
+    "selectTime": "Vrijeme Podsjetnika",
+    "hint": "Postavke podsjetnika možete promijeniti bilo kada",
+    "times": {
+      "morning": "Jutro",
+      "noon": "Podne",
+      "afternoon": "Popodne",
+      "evening": "Večer",
+      "night": "Noć"
+    }
+  },
+  "saving": {
+    "title": "Spremanje vaših odabira",
+    "subtitle": "Pripremamo najbolje iskustvo za vas",
+    "pleaseWait": "Molimo pričekajte...",
+    "items": {
+      "language": "Jezične postavke",
+      "level": "Informacije o razini",
+      "goal": "Dnevni cilj",
+      "topics": "Interesi",
+      "reminder": "Postavke podsjetnika"
+    }
+  },
+  "success": {
+    "title": "Sve Je Spremno!",
+    "subtitle": "Vaše putovanje učenja vokabulara počinje",
+    "start": "Počnimo",
+    "features": {
+      "personalized": "Personalizirani sadržaj spreman za vas",
+      "goals": "Vaši ciljevi su postavljeni",
+      "ready": "Spremni ste za učenje!"
+    }
+  },
+  "explore": {
+    "title": "Istražite",
+    "subtitle": "Otkrijte nove teme i riječi",
+    "searchPlaceholder": "Pretraži teme ili riječi...",
+    "categories": "Kategorije",
+    "featured": "Istaknuto",
+    "popularWords": "Popularne Riječi",
+    "newTopics": "Nove Teme",
+    "seeAll": "Vidi Sve",
+    "words": "riječi",
+    "new": "Novo",
+    "topicsAvailable": "Dostupne Teme",
+    "wordsToLearn": "Riječi za Učenje",
+    "categoryNames": {
+      "all": "Sve",
+      "travel": "Putovanja",
+      "food": "Hrana",
+      "business": "Posao",
+      "technology": "Tech",
+      "health": "Zdravlje",
+      "sports": "Sport",
+      "music": "Glazba"
+    }
+  },
+  "stats": {
+    "title": "Statistike",
+    "subtitle": "Pratite napredak učenja",
+    "totalWords": "Ukupno Riječi",
+    "currentStreak": "Trenutna Serija",
+    "accuracy": "Točnost",
+    "todayWords": "Danas",
+    "weeklyProgress": "Tjedni Napredak",
+    "moreStats": "Više Statistika",
+    "weeklyAverage": "Tjed. Prosjek",
+    "totalTime": "Ukupno Vrijeme",
+    "bestStreak": "Najbolja Serija",
+    "perfectDays": "Savršeni Dani",
+    "categoryProgress": "Napredak Kategorije",
+    "words": "riječi",
+    "achievements": "Postignuća",
+    "goalMet": "Cilj Postignut",
+    "goalNotMet": "U Tijeku",
+    "days": {
+      "mon": "Pon",
+      "tue": "Uto",
+      "wed": "Sri",
+      "thu": "Čet",
+      "fri": "Pet",
+      "sat": "Sub",
+      "sun": "Ned"
+    },
+    "achievementNames": {
+      "first_word": "Prva Riječ",
+      "week_streak": "Tjedna Serija",
+      "hundred_words": "100 Riječi",
+      "perfect_day": "Savršen Dan",
+      "month_streak": "Mjesečna Serija",
+      "five_hundred": "500 Riječi"
+    }
+  },
+  "home": {
+    "greeting": "Bok,",
+    "streak": "Dana Zaredom",
+    "streakMessage": "Odličan posao! Nastavi svoju seriju.",
+    "todayProgress": "Današnji Napredak",
+    "words": "riječi",
+    "wordsLeft": "Još {{count}} riječi do cilja",
+    "goalComplete": "Postigli ste današnji cilj!",
+    "startLearning": "Počni Učiti",
+    "review": "Ponavljanje",
+    "quickPractice": "Brza Vježba",
+    "statistics": "Statistike",
+    "totalWords": "Ukupno Riječi",
+    "level": "Razina",
+    "daysActive": "Aktivni Dani",
+    "accuracy": "Točnost",
+    "continueLearning": "Nastavi Učiti",
+    "lastTopic": "Putovanja",
+    "levels": {
+      "beginner": "Početnik",
+      "elementary": "Osnovno",
+      "intermediate": "Srednje",
+      "advanced": "Napredno"
+    },
+    "nav": {
+      "home": "Početna",
+      "explore": "Istraži",
+      "stats": "Statistike",
+      "settings": "Postavke"
+    }
+  },
+  "settings": {
+    "title": "Postavke",
+    "learning": "Učenje",
+    "appLanguage": "Jezik aplikacije",
+    "learningLanguage": "Jezik učenja",
+    "dailyGoal": "Dnevni cilj",
+    "wordsPerDay": "riječi/dan",
+    "level": "Razina",
+    "notifications": "Obavijesti",
+    "pushNotifications": "Push obavijesti",
+    "reminderTime": "Vrijeme podsjetnika",
+    "appSettings": "Postavke aplikacije",
+    "sound": "Zvučni efekti",
+    "vibration": "Vibracija",
+    "autoPlay": "Automatska reprodukcija",
+    "darkMode": "Tamni način",
+    "support": "Podrška",
+    "helpCenter": "Centar za pomoć",
+    "contactUs": "Kontaktirajte nas",
+    "rateApp": "Ocijeni aplikaciju",
+    "shareApp": "Podijeli aplikaciju",
+    "legal": "Pravno",
+    "privacyPolicy": "Pravila privatnosti",
+    "termsOfService": "Uvjeti korištenja",
+    "logout": "Odjava",
+    "logoutTitle": "Odjava",
+    "logoutMessage": "Jeste li sigurni da se želite odjaviti?",
+    "deleteAccount": "Obriši račun",
+    "deleteTitle": "Obriši račun",
+    "deleteMessage": "Ova radnja se ne može poništiti. Svi vaši podaci bit će trajno izbrisani.",
+    "delete": "Obriši",
+    "cancel": "Odustani",
+    "madeWith": "Napravljeno s ljubavlju"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Uredi",
+    "save": "Spremi",
+    "memberSince": "Član od:",
+    "statistics": "Statistike",
+    "wordsLearned": "Naučene Riječi",
+    "currentStreak": "Trenutna Serija",
+    "bestStreak": "Najbolja Serija",
+    "accuracy": "Točnost",
+    "totalTime": "Ukupno Vrijeme",
+    "daysActive": "Aktivni Dani",
+    "learningInfo": "Info o Učenju",
+    "nativeLanguage": "Materinski Jezik",
+    "learningLanguage": "Jezik Učenja",
+    "level": "Razina",
+    "dailyGoal": "Dnevni Cilj",
+    "wordsPerDay": "riječi/dan",
+    "achievements": "Postignuća",
+    "seeAll": "Vidi Sve",
+    "settings": "Postavke",
+    "namePlaceholder": "Unesite svoje ime",
+    "error": "Greška",
+    "nameError": "Ime mora imati najmanje 2 znaka"
+  },
+  "learn": {
+    "title": "Uči",
+    "selectWords": "Odaberi Riječi",
+    "selectedCount": "{{count}}/{{total}} riječi odabrano",
+    "wantToLearn": "Želim naučiti",
+    "alreadyKnow": "Već znam",
+    "addToLearn": "Želim Naučiti",
+    "iKnowThis": "Znam Ovo",
+    "visualLearning": "Vizualno Učenje",
+    "audioLearning": "Audio Učenje",
+    "writingPractice": "Vježba Pisanja",
+    "tapToReveal": "Dodirnite za otkrivanje",
+    "selectCorrectWord": "Odaberite točnu riječ",
+    "didntKnow": "Nisam znao",
+    "gotIt": "Znao sam",
+    "listenAndGuess": "Slušaj i pogodi",
+    "showAnswer": "Prikaži Odgovor",
+    "writeTheWord": "Napišite riječ",
+    "typeHere": "Upišite ovdje...",
+    "check": "Provjeri",
+    "correct": "Točno!",
+    "incorrect": "Netočno",
+    "correctAnswer": "Točan odgovor",
+    "next": "Sljedeće",
+    "sessionComplete": "Sesija Završena!",
+    "greatJob": "Odličan posao!",
+    "totalScore": "Ukupni Rezultat",
+    "reviewAgain": "Ponovi",
+    "done": "Gotovo",
+    "skip": "Preskoči",
+    "skipped": "preskočeno"
+  }
+}

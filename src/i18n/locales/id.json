@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Memuat..."
+  },
+  "onboarding": {
+    "slogan": "Cara paling cerdas untuk belajar kata",
+    "explore": "Jelajahi",
+    "login": "Masuk"
+  },
+  "login": {
+    "title": "Masuk dengan Mudah",
+    "subtitle": "Tetap tersinkronisasi di semua perangkat",
+    "google": "Lanjutkan dengan Google",
+    "apple": "Lanjutkan dengan Apple",
+    "or": "atau",
+    "email": "Masuk dengan Email"
+  },
+  "emailLogin": {
+    "title": "Masuk ke Akun Anda",
+    "emailPlaceholder": "Alamat email Anda",
+    "passwordPlaceholder": "Kata sandi Anda",
+    "forgotPassword": "Lupa kata sandi",
+    "loginButton": "Masuk",
+    "noAccount": "Belum punya akun?",
+    "register": "Daftar"
+  },
+  "register": {
+    "title": "Buat Akun",
+    "subtitle": "Mulai perjalanan belajar kosakata Anda",
+    "namePlaceholder": "Nama Anda",
+    "emailPlaceholder": "Alamat email Anda",
+    "passwordPlaceholder": "Kata sandi Anda",
+    "confirmPasswordPlaceholder": "Konfirmasi kata sandi",
+    "registerButton": "Daftar",
+    "hasAccount": "Sudah punya akun?",
+    "login": "Masuk"
+  },
+  "languageSelect": {
+    "title": "Pilih Bahasa",
+    "subtitle": "Bahasa apa yang ingin Anda pelajari?",
+    "nativeLanguage": "Bahasa Ibu Anda",
+    "learnLanguage": "Bahasa yang Ingin Dipelajari",
+    "select": "Pilih",
+    "selectNative": "Pilih bahasa ibu Anda",
+    "selectLearn": "Pilih bahasa untuk dipelajari",
+    "continue": "Lanjutkan"
+  },
+  "levelSelect": {
+    "title": "Pilih Level Anda",
+    "subtitle": "Dari level mana Anda ingin memulai?",
+    "continue": "Lanjutkan",
+    "levels": {
+      "beginner": {
+        "name": "Pemula",
+        "description": "Saya tidak tahu apa-apa, mulai dari nol"
+      },
+      "elementary": {
+        "name": "Dasar",
+        "description": "Saya tahu kata dan kalimat sederhana"
+      },
+      "intermediate": {
+        "name": "Menengah",
+        "description": "Saya bisa memahami percakapan sehari-hari"
+      },
+      "advanced": {
+        "name": "Lanjutan",
+        "description": "Saya fasih berbicara, ingin meningkatkan diri"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Target Harian Anda",
+    "subtitle": "Berapa kata yang ingin Anda pelajari setiap hari?",
+    "continue": "Lanjutkan",
+    "wordsPerDay": "kata/hari",
+    "perMonth": "/bulan",
+    "hint": "Anda dapat mengubah target kapan saja",
+    "goals": {
+      "casual": { "name": "Santai" },
+      "regular": { "name": "Teratur" },
+      "serious": { "name": "Serius" },
+      "intense": { "name": "Intensif" }
+    }
+  },
+  "topicSelect": {
+    "title": "Topik Apa yang Menarik Bagi Anda?",
+    "subtitle": "Pilih minat Anda, kami akan mempersonalisasi konten",
+    "continue": "Lanjutkan",
+    "hint": "{{count}} topik dipilih",
+    "hintMin": "Pilih minimal {{min}} topik ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Perjalanan",
+      "food": "Makanan & Minuman",
+      "business": "Bisnis & Karier",
+      "technology": "Teknologi",
+      "health": "Kesehatan",
+      "sports": "Olahraga",
+      "music": "Musik",
+      "entertainment": "Hiburan",
+      "nature": "Alam",
+      "shopping": "Belanja",
+      "family": "Keluarga & Hubungan",
+      "education": "Pendidikan"
+    }
+  },
+  "habit": {
+    "title": "Ingin Membangun Kebiasaan?",
+    "subtitle": "Buat rutinitas belajar Anda dengan pengingat harian dan capai tujuan Anda",
+    "skip": "Lewati",
+    "continue": "Lanjutkan",
+    "dailyReminder": "Pengingat Harian",
+    "reminderDescription": "Dapatkan pengingat pada waktu yang dipilih setiap hari",
+    "selectTime": "Waktu Pengingat",
+    "hint": "Anda dapat mengubah pengaturan pengingat kapan saja",
+    "times": {
+      "morning": "Pagi",
+      "noon": "Siang",
+      "afternoon": "Sore",
+      "evening": "Petang",
+      "night": "Malam"
+    }
+  },
+  "saving": {
+    "title": "Menyimpan Pilihan Anda",
+    "subtitle": "Kami sedang menyiapkan pengalaman terbaik untuk Anda",
+    "pleaseWait": "Harap tunggu...",
+    "items": {
+      "language": "Preferensi bahasa",
+      "level": "Informasi level",
+      "goal": "Target harian",
+      "topics": "Minat",
+      "reminder": "Pengaturan pengingat"
+    }
+  },
+  "success": {
+    "title": "Semuanya Siap!",
+    "subtitle": "Perjalanan belajar kosakata Anda dimulai",
+    "start": "Mulai",
+    "features": {
+      "personalized": "Konten yang dipersonalisasi siap untuk Anda",
+      "goals": "Target Anda telah ditetapkan",
+      "ready": "Anda siap untuk belajar!"
+    }
+  },
+  "stats": {
+    "title": "Statistik",
+    "subtitle": "Lacak kemajuan belajar Anda",
+    "totalWords": "Total Kata",
+    "currentStreak": "Streak Saat Ini",
+    "accuracy": "Akurasi",
+    "todayWords": "Hari Ini",
+    "weeklyProgress": "Kemajuan Mingguan",
+    "moreStats": "Statistik Lainnya",
+    "weeklyAverage": "Rata-rata Mingguan",
+    "totalTime": "Total Waktu",
+    "bestStreak": "Streak Terbaik",
+    "perfectDays": "Hari Sempurna",
+    "categoryProgress": "Kemajuan Kategori",
+    "words": "kata",
+    "achievements": "Pencapaian",
+    "goalMet": "Target Tercapai",
+    "goalNotMet": "Dalam Proses",
+    "days": {
+      "mon": "Sen",
+      "tue": "Sel",
+      "wed": "Rab",
+      "thu": "Kam",
+      "fri": "Jum",
+      "sat": "Sab",
+      "sun": "Min"
+    },
+    "achievementNames": {
+      "first_word": "Kata Pertama",
+      "week_streak": "Streak Mingguan",
+      "hundred_words": "100 Kata",
+      "perfect_day": "Hari Sempurna",
+      "month_streak": "Streak Bulanan",
+      "five_hundred": "500 Kata"
+    }
+  },
+  "explore": {
+    "title": "Jelajahi",
+    "subtitle": "Temukan topik dan kata baru",
+    "searchPlaceholder": "Cari topik atau kata...",
+    "categories": "Kategori",
+    "featured": "Unggulan",
+    "popularWords": "Kata Populer",
+    "newTopics": "Topik Baru",
+    "seeAll": "Lihat Semua",
+    "words": "kata",
+    "new": "Baru",
+    "topicsAvailable": "Topik Tersedia",
+    "wordsToLearn": "Kata untuk Dipelajari",
+    "categoryNames": {
+      "all": "Semua",
+      "travel": "Perjalanan",
+      "food": "Makanan",
+      "business": "Bisnis",
+      "technology": "Teknologi",
+      "health": "Kesehatan",
+      "sports": "Olahraga",
+      "music": "Musik"
+    }
+  },
+  "home": {
+    "greeting": "Halo,",
+    "streak": "Hari Beruntun",
+    "streakMessage": "Kerja bagus! Pertahankan streak Anda.",
+    "todayProgress": "Progres Hari Ini",
+    "words": "kata",
+    "wordsLeft": "{{count}} kata lagi untuk mencapai target",
+    "goalComplete": "Anda telah menyelesaikan target hari ini!",
+    "startLearning": "Mulai Belajar",
+    "review": "Ulasan",
+    "quickPractice": "Latihan Cepat",
+    "statistics": "Statistik",
+    "totalWords": "Total Kata",
+    "level": "Level",
+    "daysActive": "Hari Aktif",
+    "accuracy": "Akurasi",
+    "continueLearning": "Lanjutkan Belajar",
+    "lastTopic": "Perjalanan",
+    "levels": {
+      "beginner": "Pemula",
+      "elementary": "Dasar",
+      "intermediate": "Menengah",
+      "advanced": "Lanjutan"
+    },
+    "nav": {
+      "home": "Beranda",
+      "explore": "Jelajahi",
+      "stats": "Statistik",
+      "settings": "Pengaturan"
+    }
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "learning": "Pembelajaran",
+    "appLanguage": "Bahasa Aplikasi",
+    "learningLanguage": "Bahasa yang Dipelajari",
+    "dailyGoal": "Target Harian",
+    "wordsPerDay": "kata/hari",
+    "level": "Level",
+    "notifications": "Notifikasi",
+    "pushNotifications": "Notifikasi Push",
+    "reminderTime": "Waktu Pengingat",
+    "appSettings": "Pengaturan Aplikasi",
+    "sound": "Efek Suara",
+    "vibration": "Getaran",
+    "autoPlay": "Putar Otomatis",
+    "darkMode": "Mode Gelap",
+    "support": "Dukungan",
+    "helpCenter": "Pusat Bantuan",
+    "contactUs": "Hubungi Kami",
+    "rateApp": "Nilai Aplikasi",
+    "shareApp": "Bagikan Aplikasi",
+    "legal": "Legal",
+    "privacyPolicy": "Kebijakan Privasi",
+    "termsOfService": "Ketentuan Layanan",
+    "logout": "Keluar",
+    "logoutTitle": "Keluar",
+    "logoutMessage": "Apakah Anda yakin ingin keluar?",
+    "deleteAccount": "Hapus Akun",
+    "deleteTitle": "Hapus Akun",
+    "deleteMessage": "Tindakan ini tidak dapat dibatalkan. Semua data Anda akan dihapus secara permanen.",
+    "delete": "Hapus",
+    "cancel": "Batal",
+    "madeWith": "Dibuat dengan cinta"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Edit",
+    "save": "Simpan",
+    "memberSince": "Anggota sejak:",
+    "statistics": "Statistik",
+    "wordsLearned": "Kata Dipelajari",
+    "currentStreak": "Seri Saat Ini",
+    "bestStreak": "Seri Terbaik",
+    "accuracy": "Akurasi",
+    "totalTime": "Total Waktu",
+    "daysActive": "Hari Aktif",
+    "learningInfo": "Info Pembelajaran",
+    "nativeLanguage": "Bahasa Ibu",
+    "learningLanguage": "Bahasa yang Dipelajari",
+    "level": "Level",
+    "dailyGoal": "Target Harian",
+    "wordsPerDay": "kata/hari",
+    "achievements": "Pencapaian",
+    "seeAll": "Lihat Semua",
+    "settings": "Pengaturan",
+    "namePlaceholder": "Masukkan nama Anda",
+    "error": "Kesalahan",
+    "nameError": "Nama harus minimal 2 karakter"
+  },
+  "learn": {
+    "title": "Belajar",
+    "selectWords": "Pilih Kata",
+    "selectedCount": "{{count}}/{{total}} kata dipilih",
+    "wantToLearn": "Ingin belajar",
+    "alreadyKnow": "Sudah tahu",
+    "addToLearn": "Ingin Belajar",
+    "iKnowThis": "Saya Tahu",
+    "visualLearning": "Pembelajaran Visual",
+    "audioLearning": "Pembelajaran Audio",
+    "writingPractice": "Latihan Menulis",
+    "tapToReveal": "Ketuk untuk menampilkan",
+    "selectCorrectWord": "Pilih kata yang benar",
+    "didntKnow": "Tidak tahu",
+    "gotIt": "Tahu",
+    "listenAndGuess": "Dengar dan tebak",
+    "showAnswer": "Tampilkan Jawaban",
+    "writeTheWord": "Tulis kata",
+    "typeHere": "Ketik di sini...",
+    "check": "Periksa",
+    "correct": "Benar!",
+    "incorrect": "Salah",
+    "correctAnswer": "Jawaban benar",
+    "next": "Selanjutnya",
+    "sessionComplete": "Sesi Selesai!",
+    "greatJob": "Kerja bagus!",
+    "totalScore": "Skor Total",
+    "reviewAgain": "Ulangi",
+    "done": "Selesai",
+    "skip": "Lewati",
+    "skipped": "dilewati"
+  }
+}

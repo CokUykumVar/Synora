@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Ladataan..."
+  },
+  "onboarding": {
+    "slogan": "Älykkäin tapa oppia sanoja",
+    "explore": "Tutustu",
+    "login": "Kirjaudu"
+  },
+  "login": {
+    "title": "Kirjaudu Helposti",
+    "subtitle": "Pysy synkronoituna kaikilla laitteilla",
+    "google": "Jatka Googlella",
+    "apple": "Jatka Applella",
+    "or": "tai",
+    "email": "Kirjaudu sähköpostilla"
+  },
+  "emailLogin": {
+    "title": "Kirjaudu Tilillesi",
+    "emailPlaceholder": "Sähköpostiosoitteesi",
+    "passwordPlaceholder": "Salasanasi",
+    "forgotPassword": "Unohtuiko salasana",
+    "loginButton": "Kirjaudu",
+    "noAccount": "Ei tiliä?",
+    "register": "Rekisteröidy"
+  },
+  "register": {
+    "title": "Luo Tili",
+    "subtitle": "Aloita sanastonoppimismatkasi",
+    "namePlaceholder": "Nimesi",
+    "emailPlaceholder": "Sähköpostiosoitteesi",
+    "passwordPlaceholder": "Salasanasi",
+    "confirmPasswordPlaceholder": "Vahvista salasana",
+    "registerButton": "Rekisteröidy",
+    "hasAccount": "Onko sinulla jo tili?",
+    "login": "Kirjaudu"
+  },
+  "languageSelect": {
+    "title": "Kielen Valinta",
+    "subtitle": "Mitä kieltä haluat oppia?",
+    "nativeLanguage": "Äidinkielesi",
+    "learnLanguage": "Opittava Kieli",
+    "select": "Valitse",
+    "selectNative": "Valitse äidinkielesi",
+    "selectLearn": "Valitse opittava kieli",
+    "continue": "Jatka"
+  },
+  "levelSelect": {
+    "title": "Valitse Tasosi",
+    "subtitle": "Miltä tasolta haluat aloittaa?",
+    "continue": "Jatka",
+    "levels": {
+      "beginner": {
+        "name": "Aloittelija",
+        "description": "En osaa mitään, aloitan alusta"
+      },
+      "elementary": {
+        "name": "Perustaso",
+        "description": "Osaan yksinkertaisia sanoja ja lauseita"
+      },
+      "intermediate": {
+        "name": "Keskitaso",
+        "description": "Ymmärrän arkipäivän keskusteluja"
+      },
+      "advanced": {
+        "name": "Edistynyt",
+        "description": "Puhun sujuvasti, haluan kehittyä"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Päivittäinen Tavoitteesi",
+    "subtitle": "Kuinka monta sanaa haluat oppia päivässä?",
+    "continue": "Jatka",
+    "wordsPerDay": "sanaa/päivä",
+    "perMonth": "/kuukausi",
+    "hint": "Voit muuttaa tavoitettasi milloin tahansa",
+    "goals": {
+      "casual": { "name": "Rento" },
+      "regular": { "name": "Säännöllinen" },
+      "serious": { "name": "Vakava" },
+      "intense": { "name": "Intensiivinen" }
+    }
+  },
+  "topicSelect": {
+    "title": "Mitkä Aiheet Kiinnostavat Sinua?",
+    "subtitle": "Valitse kiinnostuksesi, räätälöimme sisällön",
+    "continue": "Jatka",
+    "hint": "{{count}} aihetta valittu",
+    "hintMin": "Valitse vähintään {{min}} aihetta ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Matkailu",
+      "food": "Ruoka & Juoma",
+      "business": "Liiketoiminta & Ura",
+      "technology": "Teknologia",
+      "health": "Terveys",
+      "sports": "Urheilu",
+      "music": "Musiikki",
+      "entertainment": "Viihde",
+      "nature": "Luonto",
+      "shopping": "Ostokset",
+      "family": "Perhe & Suhteet",
+      "education": "Koulutus"
+    }
+  },
+  "habit": {
+    "title": "Haluatko rakentaa tavan?",
+    "subtitle": "Luo oppimisrutiinisi päivittäisillä muistutuksilla ja saavuta tavoitteesi",
+    "skip": "Ohita",
+    "continue": "Jatka",
+    "dailyReminder": "Päivittäinen Muistutus",
+    "reminderDescription": "Saat muistutuksen valittuun aikaan joka päivä",
+    "selectTime": "Muistutusaika",
+    "hint": "Voit muuttaa muistutusasetuksia milloin tahansa",
+    "times": {
+      "morning": "Aamu",
+      "noon": "Keskipäivä",
+      "afternoon": "Iltapäivä",
+      "evening": "Ilta",
+      "night": "Yö"
+    }
+  },
+  "saving": {
+    "title": "Tallennetaan valintojasi",
+    "subtitle": "Valmistelemme sinulle parasta kokemusta",
+    "pleaseWait": "Odota hetki...",
+    "items": {
+      "language": "Kieliasetukset",
+      "level": "Tasotiedot",
+      "goal": "Päivittäinen tavoite",
+      "topics": "Kiinnostuksen kohteet",
+      "reminder": "Muistutusasetukset"
+    }
+  },
+  "success": {
+    "title": "Kaikki Valmiina!",
+    "subtitle": "Sanasto-oppimismatkasi alkaa",
+    "start": "Aloitetaan",
+    "features": {
+      "personalized": "Personoitu sisältö valmiina sinulle",
+      "goals": "Tavoitteesi on asetettu",
+      "ready": "Olet valmis oppimaan!"
+    }
+  },
+  "explore": {
+    "title": "Tutustu",
+    "subtitle": "Löydä uusia aiheita ja sanoja",
+    "searchPlaceholder": "Hae aiheita tai sanoja...",
+    "categories": "Kategoriat",
+    "featured": "Suositellut",
+    "popularWords": "Suositut Sanat",
+    "newTopics": "Uudet Aiheet",
+    "seeAll": "Näytä Kaikki",
+    "words": "sanaa",
+    "new": "Uusi",
+    "topicsAvailable": "Saatavilla Olevat Aiheet",
+    "wordsToLearn": "Opittavat Sanat",
+    "categoryNames": {
+      "all": "Kaikki",
+      "travel": "Matkailu",
+      "food": "Ruoka",
+      "business": "Liiketoiminta",
+      "technology": "Teknologia",
+      "health": "Terveys",
+      "sports": "Urheilu",
+      "music": "Musiikki"
+    }
+  },
+  "stats": {
+    "title": "Tilastot",
+    "subtitle": "Seuraa oppimisedistystäsi",
+    "totalWords": "Sanoja Yhteensä",
+    "currentStreak": "Nykyinen Putki",
+    "accuracy": "Tarkkuus",
+    "todayWords": "Tänään",
+    "weeklyProgress": "Viikoittainen Edistyminen",
+    "moreStats": "Lisää Tilastoja",
+    "weeklyAverage": "Viikon Keskim.",
+    "totalTime": "Kokonaisaika",
+    "bestStreak": "Paras Putki",
+    "perfectDays": "Täydelliset Päivät",
+    "categoryProgress": "Kategorian Edistyminen",
+    "words": "sanaa",
+    "achievements": "Saavutukset",
+    "goalMet": "Tavoite Saavutettu",
+    "goalNotMet": "Kesken",
+    "days": {
+      "mon": "Ma",
+      "tue": "Ti",
+      "wed": "Ke",
+      "thu": "To",
+      "fri": "Pe",
+      "sat": "La",
+      "sun": "Su"
+    },
+    "achievementNames": {
+      "first_word": "Ensimmäinen Sana",
+      "week_streak": "Viikkoputki",
+      "hundred_words": "100 Sanaa",
+      "perfect_day": "Täydellinen Päivä",
+      "month_streak": "Kuukausiputki",
+      "five_hundred": "500 Sanaa"
+    }
+  },
+  "home": {
+    "greeting": "Hei,",
+    "streak": "Peräkkäiset Päivät",
+    "streakMessage": "Hyvää työtä! Pidä putkesi yllä.",
+    "todayProgress": "Tämän Päivän Edistyminen",
+    "words": "sanaa",
+    "wordsLeft": "{{count}} sanaa jäljellä tavoitteeseen",
+    "goalComplete": "Olet saavuttanut päivän tavoitteen!",
+    "startLearning": "Aloita Oppiminen",
+    "review": "Kertaa",
+    "quickPractice": "Pikaharjoitus",
+    "statistics": "Tilastot",
+    "totalWords": "Sanoja Yhteensä",
+    "level": "Taso",
+    "daysActive": "Aktiivisia Päiviä",
+    "accuracy": "Tarkkuus",
+    "continueLearning": "Jatka Oppimista",
+    "lastTopic": "Matkailu",
+    "levels": {
+      "beginner": "Aloittelija",
+      "elementary": "Perustaso",
+      "intermediate": "Keskitaso",
+      "advanced": "Edistynyt"
+    },
+    "nav": {
+      "home": "Koti",
+      "explore": "Tutustu",
+      "stats": "Tilastot",
+      "settings": "Asetukset"
+    }
+  },
+  "settings": {
+    "title": "Asetukset",
+    "learning": "Oppiminen",
+    "appLanguage": "Sovelluksen kieli",
+    "learningLanguage": "Opittava kieli",
+    "dailyGoal": "Päivittäinen tavoite",
+    "wordsPerDay": "sanaa/päivä",
+    "level": "Taso",
+    "notifications": "Ilmoitukset",
+    "pushNotifications": "Push-ilmoitukset",
+    "reminderTime": "Muistutusaika",
+    "appSettings": "Sovelluksen asetukset",
+    "sound": "Äänitehosteet",
+    "vibration": "Värinä",
+    "autoPlay": "Automaattinen toisto",
+    "darkMode": "Tumma tila",
+    "support": "Tuki",
+    "helpCenter": "Ohjekeskus",
+    "contactUs": "Ota yhteyttä",
+    "rateApp": "Arvioi sovellus",
+    "shareApp": "Jaa sovellus",
+    "legal": "Oikeudelliset",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "termsOfService": "Käyttöehdot",
+    "logout": "Kirjaudu ulos",
+    "logoutTitle": "Kirjaudu ulos",
+    "logoutMessage": "Haluatko varmasti kirjautua ulos?",
+    "deleteAccount": "Poista tili",
+    "deleteTitle": "Poista tili",
+    "deleteMessage": "Tätä toimintoa ei voi kumota. Kaikki tietosi poistetaan pysyvästi.",
+    "delete": "Poista",
+    "cancel": "Peruuta",
+    "madeWith": "Tehty rakkaudella"
+  },
+  "profile": {
+    "title": "Profiili",
+    "edit": "Muokkaa",
+    "save": "Tallenna",
+    "memberSince": "Jäsen alkaen:",
+    "statistics": "Tilastot",
+    "wordsLearned": "Opitut Sanat",
+    "currentStreak": "Nykyinen Putki",
+    "bestStreak": "Paras Putki",
+    "accuracy": "Tarkkuus",
+    "totalTime": "Kokonaisaika",
+    "daysActive": "Aktiivisia Päiviä",
+    "learningInfo": "Oppimistiedot",
+    "nativeLanguage": "Äidinkieli",
+    "learningLanguage": "Opittava Kieli",
+    "level": "Taso",
+    "dailyGoal": "Päivittäinen Tavoite",
+    "wordsPerDay": "sanaa/päivä",
+    "achievements": "Saavutukset",
+    "seeAll": "Näytä Kaikki",
+    "settings": "Asetukset",
+    "namePlaceholder": "Syötä nimesi",
+    "error": "Virhe",
+    "nameError": "Nimen on oltava vähintään 2 merkkiä"
+  },
+  "learn": {
+    "title": "Opiskele",
+    "selectWords": "Valitse Sanat",
+    "selectedCount": "{{count}}/{{total}} sanaa valittu",
+    "wantToLearn": "Haluan oppia",
+    "alreadyKnow": "Osaan jo",
+    "addToLearn": "Haluan Oppia",
+    "iKnowThis": "Osaan Tämän",
+    "visualLearning": "Visuaalinen Oppiminen",
+    "audioLearning": "Kuunteluharjoitus",
+    "writingPractice": "Kirjoitusharjoitus",
+    "tapToReveal": "Napauta nähdäksesi",
+    "selectCorrectWord": "Valitse oikea sana",
+    "didntKnow": "En tiennyt",
+    "gotIt": "Tiesin",
+    "listenAndGuess": "Kuuntele ja arvaa",
+    "showAnswer": "Näytä Vastaus",
+    "writeTheWord": "Kirjoita sana",
+    "typeHere": "Kirjoita tähän...",
+    "check": "Tarkista",
+    "correct": "Oikein!",
+    "incorrect": "Väärin",
+    "correctAnswer": "Oikea vastaus",
+    "next": "Seuraava",
+    "sessionComplete": "Sessio Valmis!",
+    "greatJob": "Hienoa työtä!",
+    "totalScore": "Kokonaispisteet",
+    "reviewAgain": "Harjoittele Uudelleen",
+    "done": "Valmis",
+    "skip": "Ohita",
+    "skipped": "ohitettu"
+  }
+}

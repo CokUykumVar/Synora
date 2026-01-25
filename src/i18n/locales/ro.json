@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Se încarcă..."
+  },
+  "onboarding": {
+    "slogan": "Cel mai inteligent mod de a învăța cuvinte",
+    "explore": "Explorează",
+    "login": "Conectare"
+  },
+  "login": {
+    "title": "Conectare Ușoară",
+    "subtitle": "Rămâi sincronizat pe toate dispozitivele",
+    "google": "Continuă cu Google",
+    "apple": "Continuă cu Apple",
+    "or": "sau",
+    "email": "Conectare cu Email"
+  },
+  "emailLogin": {
+    "title": "Conectează-te la Contul Tău",
+    "emailPlaceholder": "Adresa ta de email",
+    "passwordPlaceholder": "Parola ta",
+    "forgotPassword": "Am uitat parola",
+    "loginButton": "Conectare",
+    "noAccount": "Nu ai cont?",
+    "register": "Înregistrare"
+  },
+  "register": {
+    "title": "Creează Cont",
+    "subtitle": "Începe călătoria ta de învățare a vocabularului",
+    "namePlaceholder": "Numele tău",
+    "emailPlaceholder": "Adresa ta de email",
+    "passwordPlaceholder": "Parola ta",
+    "confirmPasswordPlaceholder": "Confirmă parola",
+    "registerButton": "Înregistrare",
+    "hasAccount": "Ai deja cont?",
+    "login": "Conectare"
+  },
+  "languageSelect": {
+    "title": "Selectare Limbă",
+    "subtitle": "Ce limbă vrei să înveți?",
+    "nativeLanguage": "Limba Ta Maternă",
+    "learnLanguage": "Limba de Învățat",
+    "select": "Selectează",
+    "selectNative": "Selectează limba ta maternă",
+    "selectLearn": "Selectează limba de învățat",
+    "continue": "Continuă"
+  },
+  "levelSelect": {
+    "title": "Selectează Nivelul Tău",
+    "subtitle": "De la ce nivel vrei să începi?",
+    "continue": "Continuă",
+    "levels": {
+      "beginner": {
+        "name": "Începător",
+        "description": "Nu știu nimic, încep de la zero"
+      },
+      "elementary": {
+        "name": "Elementar",
+        "description": "Cunosc cuvinte și propoziții simple"
+      },
+      "intermediate": {
+        "name": "Intermediar",
+        "description": "Înțeleg conversațiile zilnice"
+      },
+      "advanced": {
+        "name": "Avansat",
+        "description": "Vorbesc fluent, vreau să mă perfecționez"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Obiectivul Tău Zilnic",
+    "subtitle": "Câte cuvinte vrei să înveți în fiecare zi?",
+    "continue": "Continuă",
+    "wordsPerDay": "cuvinte/zi",
+    "perMonth": "/lună",
+    "hint": "Poți schimba obiectivul oricând",
+    "goals": {
+      "casual": { "name": "Relaxat" },
+      "regular": { "name": "Regulat" },
+      "serious": { "name": "Serios" },
+      "intense": { "name": "Intens" }
+    }
+  },
+  "topicSelect": {
+    "title": "Ce Subiecte Te Interesează?",
+    "subtitle": "Selectează interesele, personalizăm conținutul",
+    "continue": "Continuă",
+    "hint": "{{count}} subiecte selectate",
+    "hintMin": "Selectează cel puțin {{min}} subiecte ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Călătorii",
+      "food": "Mâncare și Băutură",
+      "business": "Afaceri și Carieră",
+      "technology": "Tehnologie",
+      "health": "Sănătate",
+      "sports": "Sport",
+      "music": "Muzică",
+      "entertainment": "Divertisment",
+      "nature": "Natură",
+      "shopping": "Cumpărături",
+      "family": "Familie și Relații",
+      "education": "Educație"
+    }
+  },
+  "habit": {
+    "title": "Vrei să îți formezi un obicei?",
+    "subtitle": "Creează-ți rutina de învățare cu memento-uri zilnice și atinge-ți obiectivele",
+    "skip": "Sari",
+    "continue": "Continuă",
+    "dailyReminder": "Memento Zilnic",
+    "reminderDescription": "Primește un memento la ora aleasă în fiecare zi",
+    "selectTime": "Ora Memento-ului",
+    "hint": "Poți schimba setările de memento oricând",
+    "times": {
+      "morning": "Dimineață",
+      "noon": "Amiază",
+      "afternoon": "După-amiază",
+      "evening": "Seară",
+      "night": "Noapte"
+    }
+  },
+  "saving": {
+    "title": "Se salvează selecțiile tale",
+    "subtitle": "Pregătim cea mai bună experiență pentru tine",
+    "pleaseWait": "Te rugăm să aștepți...",
+    "items": {
+      "language": "Preferințe de limbă",
+      "level": "Informații despre nivel",
+      "goal": "Obiectiv zilnic",
+      "topics": "Interese",
+      "reminder": "Setări de memento"
+    }
+  },
+  "success": {
+    "title": "Totul Este Gata!",
+    "subtitle": "Călătoria ta de învățare a vocabularului începe",
+    "start": "Să Începem",
+    "features": {
+      "personalized": "Conținut personalizat gata pentru tine",
+      "goals": "Obiectivele tale sunt setate",
+      "ready": "Ești gata să înveți!"
+    }
+  },
+  "explore": {
+    "title": "Explorează",
+    "subtitle": "Descoperă subiecte și cuvinte noi",
+    "searchPlaceholder": "Caută subiecte sau cuvinte...",
+    "categories": "Categorii",
+    "featured": "Recomandate",
+    "popularWords": "Cuvinte Populare",
+    "newTopics": "Subiecte Noi",
+    "seeAll": "Vezi Tot",
+    "words": "cuvinte",
+    "new": "Nou",
+    "topicsAvailable": "Subiecte Disponibile",
+    "wordsToLearn": "Cuvinte de Învățat",
+    "categoryNames": {
+      "all": "Tot",
+      "travel": "Călătorii",
+      "food": "Mâncare",
+      "business": "Afaceri",
+      "technology": "Tech",
+      "health": "Sănătate",
+      "sports": "Sport",
+      "music": "Muzică"
+    }
+  },
+  "stats": {
+    "title": "Statistici",
+    "subtitle": "Urmărește progresul învățării",
+    "totalWords": "Total Cuvinte",
+    "currentStreak": "Serie Curentă",
+    "accuracy": "Precizie",
+    "todayWords": "Astăzi",
+    "weeklyProgress": "Progres Săptămânal",
+    "moreStats": "Mai Multe Statistici",
+    "weeklyAverage": "Medie Săpt.",
+    "totalTime": "Timp Total",
+    "bestStreak": "Cea Mai Bună Serie",
+    "perfectDays": "Zile Perfecte",
+    "categoryProgress": "Progres Categorie",
+    "words": "cuvinte",
+    "achievements": "Realizări",
+    "goalMet": "Obiectiv Atins",
+    "goalNotMet": "În Desfășurare",
+    "days": {
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mie",
+      "thu": "Joi",
+      "fri": "Vin",
+      "sat": "Sâm",
+      "sun": "Dum"
+    },
+    "achievementNames": {
+      "first_word": "Primul Cuvânt",
+      "week_streak": "Serie Săptămânală",
+      "hundred_words": "100 Cuvinte",
+      "perfect_day": "Zi Perfectă",
+      "month_streak": "Serie Lunară",
+      "five_hundred": "500 Cuvinte"
+    }
+  },
+  "home": {
+    "greeting": "Salut,",
+    "streak": "Zile Consecutive",
+    "streakMessage": "Bravo! Continuă-ți seria.",
+    "todayProgress": "Progresul de Azi",
+    "words": "cuvinte",
+    "wordsLeft": "Încă {{count}} cuvinte pentru obiectiv",
+    "goalComplete": "Ai atins obiectivul de azi!",
+    "startLearning": "Începe Învățarea",
+    "review": "Recapitulare",
+    "quickPractice": "Practică Rapidă",
+    "statistics": "Statistici",
+    "totalWords": "Total Cuvinte",
+    "level": "Nivel",
+    "daysActive": "Zile Active",
+    "accuracy": "Precizie",
+    "continueLearning": "Continuă Învățarea",
+    "lastTopic": "Călătorii",
+    "levels": {
+      "beginner": "Începător",
+      "elementary": "Elementar",
+      "intermediate": "Intermediar",
+      "advanced": "Avansat"
+    },
+    "nav": {
+      "home": "Acasă",
+      "explore": "Explorează",
+      "stats": "Statistici",
+      "settings": "Setări"
+    }
+  },
+  "settings": {
+    "title": "Setări",
+    "learning": "Învățare",
+    "appLanguage": "Limba aplicației",
+    "learningLanguage": "Limba de învățat",
+    "dailyGoal": "Obiectiv zilnic",
+    "wordsPerDay": "cuvinte/zi",
+    "level": "Nivel",
+    "notifications": "Notificări",
+    "pushNotifications": "Notificări push",
+    "reminderTime": "Ora memento-ului",
+    "appSettings": "Setări aplicație",
+    "sound": "Efecte sonore",
+    "vibration": "Vibrații",
+    "autoPlay": "Redare automată",
+    "darkMode": "Mod întunecat",
+    "support": "Suport",
+    "helpCenter": "Centru de ajutor",
+    "contactUs": "Contactează-ne",
+    "rateApp": "Evaluează aplicația",
+    "shareApp": "Distribuie aplicația",
+    "legal": "Legal",
+    "privacyPolicy": "Politica de confidențialitate",
+    "termsOfService": "Termeni și condiții",
+    "logout": "Deconectare",
+    "logoutTitle": "Deconectare",
+    "logoutMessage": "Ești sigur că vrei să te deconectezi?",
+    "deleteAccount": "Șterge contul",
+    "deleteTitle": "Șterge contul",
+    "deleteMessage": "Această acțiune nu poate fi anulată. Toate datele tale vor fi șterse permanent.",
+    "delete": "Șterge",
+    "cancel": "Anulează",
+    "madeWith": "Făcut cu dragoste"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Editare",
+    "save": "Salvare",
+    "memberSince": "Membru din:",
+    "statistics": "Statistici",
+    "wordsLearned": "Cuvinte Învățate",
+    "currentStreak": "Serie Curentă",
+    "bestStreak": "Cea Mai Bună Serie",
+    "accuracy": "Precizie",
+    "totalTime": "Timp Total",
+    "daysActive": "Zile Active",
+    "learningInfo": "Info Învățare",
+    "nativeLanguage": "Limba Maternă",
+    "learningLanguage": "Limba de Învățat",
+    "level": "Nivel",
+    "dailyGoal": "Obiectiv Zilnic",
+    "wordsPerDay": "cuvinte/zi",
+    "achievements": "Realizări",
+    "seeAll": "Vezi Tot",
+    "settings": "Setări",
+    "namePlaceholder": "Introduceți numele",
+    "error": "Eroare",
+    "nameError": "Numele trebuie să aibă cel puțin 2 caractere"
+  },
+  "learn": {
+    "title": "Învață",
+    "selectWords": "Selectează Cuvinte",
+    "selectedCount": "{{count}}/{{total}} cuvinte selectate",
+    "wantToLearn": "Vreau să învăț",
+    "alreadyKnow": "Știu deja",
+    "addToLearn": "Vreau Să Învăț",
+    "iKnowThis": "Știu Asta",
+    "visualLearning": "Învățare Vizuală",
+    "audioLearning": "Învățare Audio",
+    "writingPractice": "Practică Scriere",
+    "tapToReveal": "Atingeți pentru a dezvălui",
+    "selectCorrectWord": "Selectați cuvântul corect",
+    "didntKnow": "Nu știam",
+    "gotIt": "Știam",
+    "listenAndGuess": "Ascultă și ghicește",
+    "showAnswer": "Arată Răspunsul",
+    "writeTheWord": "Scrie cuvântul",
+    "typeHere": "Tastați aici...",
+    "check": "Verifică",
+    "correct": "Corect!",
+    "incorrect": "Incorect",
+    "correctAnswer": "Răspuns corect",
+    "next": "Următorul",
+    "sessionComplete": "Sesiune Completă!",
+    "greatJob": "Treabă bună!",
+    "totalScore": "Scor Total",
+    "reviewAgain": "Repetă",
+    "done": "Gata",
+    "skip": "Sari",
+    "skipped": "sărite"
+  }
+}

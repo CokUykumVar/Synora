@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "กำลังโหลด..."
+  },
+  "onboarding": {
+    "slogan": "วิธีที่ฉลาดที่สุดในการเรียนรู้คำศัพท์",
+    "explore": "สำรวจ",
+    "login": "เข้าสู่ระบบ"
+  },
+  "login": {
+    "title": "เข้าสู่ระบบง่ายๆ",
+    "subtitle": "ซิงค์ข้อมูลบนทุกอุปกรณ์",
+    "google": "ดำเนินการต่อด้วย Google",
+    "apple": "ดำเนินการต่อด้วย Apple",
+    "or": "หรือ",
+    "email": "เข้าสู่ระบบด้วยอีเมล"
+  },
+  "emailLogin": {
+    "title": "เข้าสู่ระบบบัญชีของคุณ",
+    "emailPlaceholder": "อีเมลของคุณ",
+    "passwordPlaceholder": "รหัสผ่านของคุณ",
+    "forgotPassword": "ลืมรหัสผ่าน",
+    "loginButton": "เข้าสู่ระบบ",
+    "noAccount": "ยังไม่มีบัญชี?",
+    "register": "ลงทะเบียน"
+  },
+  "register": {
+    "title": "สร้างบัญชี",
+    "subtitle": "เริ่มต้นการเดินทางเรียนรู้คำศัพท์",
+    "namePlaceholder": "ชื่อของคุณ",
+    "emailPlaceholder": "อีเมลของคุณ",
+    "passwordPlaceholder": "รหัสผ่านของคุณ",
+    "confirmPasswordPlaceholder": "ยืนยันรหัสผ่าน",
+    "registerButton": "ลงทะเบียน",
+    "hasAccount": "มีบัญชีอยู่แล้ว?",
+    "login": "เข้าสู่ระบบ"
+  },
+  "languageSelect": {
+    "title": "เลือกภาษา",
+    "subtitle": "คุณต้องการเรียนภาษาอะไร?",
+    "nativeLanguage": "ภาษาแม่ของคุณ",
+    "learnLanguage": "ภาษาที่ต้องการเรียน",
+    "select": "เลือก",
+    "selectNative": "เลือกภาษาแม่ของคุณ",
+    "selectLearn": "เลือกภาษาที่จะเรียน",
+    "continue": "ดำเนินการต่อ"
+  },
+  "levelSelect": {
+    "title": "เลือกระดับของคุณ",
+    "subtitle": "คุณต้องการเริ่มจากระดับไหน?",
+    "continue": "ดำเนินการต่อ",
+    "levels": {
+      "beginner": {
+        "name": "เริ่มต้น",
+        "description": "ไม่รู้อะไรเลย เริ่มจากศูนย์"
+      },
+      "elementary": {
+        "name": "พื้นฐาน",
+        "description": "รู้คำและประโยคง่ายๆ"
+      },
+      "intermediate": {
+        "name": "ปานกลาง",
+        "description": "เข้าใจการสนทนาในชีวิตประจำวัน"
+      },
+      "advanced": {
+        "name": "ขั้นสูง",
+        "description": "พูดได้คล่อง ต้องการพัฒนาตัวเอง"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "เป้าหมายรายวันของคุณ",
+    "subtitle": "คุณต้องการเรียนรู้กี่คำต่อวัน?",
+    "continue": "ดำเนินการต่อ",
+    "wordsPerDay": "คำ/วัน",
+    "perMonth": "/เดือน",
+    "hint": "คุณสามารถเปลี่ยนเป้าหมายได้ตลอดเวลา",
+    "goals": {
+      "casual": { "name": "สบายๆ" },
+      "regular": { "name": "ปกติ" },
+      "serious": { "name": "จริงจัง" },
+      "intense": { "name": "เข้มข้น" }
+    }
+  },
+  "topicSelect": {
+    "title": "หัวข้อใดที่คุณสนใจ?",
+    "subtitle": "เลือกความสนใจ เราจะปรับแต่งเนื้อหาให้คุณ",
+    "continue": "ดำเนินการต่อ",
+    "hint": "เลือกแล้ว {{count}} หัวข้อ",
+    "hintMin": "เลือกอย่างน้อย {{min}} หัวข้อ ({{count}}/{{min}})",
+    "topics": {
+      "travel": "การเดินทาง",
+      "food": "อาหารและเครื่องดื่ม",
+      "business": "ธุรกิจและอาชีพ",
+      "technology": "เทคโนโลยี",
+      "health": "สุขภาพ",
+      "sports": "กีฬา",
+      "music": "ดนตรี",
+      "entertainment": "ความบันเทิง",
+      "nature": "ธรรมชาติ",
+      "shopping": "ช้อปปิ้ง",
+      "family": "ครอบครัวและความสัมพันธ์",
+      "education": "การศึกษา"
+    }
+  },
+  "habit": {
+    "title": "คุณต้องการสร้างนิสัยไหม?",
+    "subtitle": "สร้างกิจวัตรการเรียนรู้ด้วยการแจ้งเตือนรายวันและบรรลุเป้าหมายของคุณ",
+    "skip": "ข้าม",
+    "continue": "ดำเนินการต่อ",
+    "dailyReminder": "การแจ้งเตือนรายวัน",
+    "reminderDescription": "รับการแจ้งเตือนในเวลาที่เลือกทุกวัน",
+    "selectTime": "เวลาแจ้งเตือน",
+    "hint": "คุณสามารถเปลี่ยนการตั้งค่าการแจ้งเตือนได้ตลอดเวลา",
+    "times": {
+      "morning": "เช้า",
+      "noon": "เที่ยง",
+      "afternoon": "บ่าย",
+      "evening": "เย็น",
+      "night": "กลางคืน"
+    }
+  },
+  "saving": {
+    "title": "กำลังบันทึกการเลือกของคุณ",
+    "subtitle": "เรากำลังเตรียมประสบการณ์ที่ดีที่สุดให้คุณ",
+    "pleaseWait": "กรุณารอสักครู่...",
+    "items": {
+      "language": "การตั้งค่าภาษา",
+      "level": "ข้อมูลระดับ",
+      "goal": "เป้าหมายรายวัน",
+      "topics": "ความสนใจ",
+      "reminder": "การตั้งค่าการแจ้งเตือน"
+    }
+  },
+  "success": {
+    "title": "พร้อมทุกอย่างแล้ว!",
+    "subtitle": "การเดินทางเรียนรู้คำศัพท์ของคุณเริ่มต้นแล้ว",
+    "start": "เริ่มกันเลย",
+    "features": {
+      "personalized": "เนื้อหาที่ปรับแต่งพร้อมสำหรับคุณ",
+      "goals": "เป้าหมายของคุณถูกตั้งค่าแล้ว",
+      "ready": "คุณพร้อมที่จะเรียนรู้แล้ว!"
+    }
+  },
+  "stats": {
+    "title": "สถิติ",
+    "subtitle": "ติดตามความก้าวหน้าในการเรียนรู้",
+    "totalWords": "คำทั้งหมด",
+    "currentStreak": "สถิติปัจจุบัน",
+    "accuracy": "ความแม่นยำ",
+    "todayWords": "วันนี้",
+    "weeklyProgress": "ความก้าวหน้ารายสัปดาห์",
+    "moreStats": "สถิติเพิ่มเติม",
+    "weeklyAverage": "เฉลี่ยต่อสัปดาห์",
+    "totalTime": "เวลาทั้งหมด",
+    "bestStreak": "สถิติที่ดีที่สุด",
+    "perfectDays": "วันที่สมบูรณ์แบบ",
+    "categoryProgress": "ความก้าวหน้าตามหมวดหมู่",
+    "words": "คำ",
+    "achievements": "ความสำเร็จ",
+    "goalMet": "บรรลุเป้าหมาย",
+    "goalNotMet": "กำลังดำเนินการ",
+    "days": {
+      "mon": "จ.",
+      "tue": "อ.",
+      "wed": "พ.",
+      "thu": "พฤ.",
+      "fri": "ศ.",
+      "sat": "ส.",
+      "sun": "อา."
+    },
+    "achievementNames": {
+      "first_word": "คำแรก",
+      "week_streak": "สถิติสัปดาห์",
+      "hundred_words": "100 คำ",
+      "perfect_day": "วันที่สมบูรณ์",
+      "month_streak": "สถิติเดือน",
+      "five_hundred": "500 คำ"
+    }
+  },
+  "explore": {
+    "title": "สำรวจ",
+    "subtitle": "ค้นพบหัวข้อและคำศัพท์ใหม่",
+    "searchPlaceholder": "ค้นหาหัวข้อหรือคำ...",
+    "categories": "หมวดหมู่",
+    "featured": "แนะนำ",
+    "popularWords": "คำศัพท์ยอดนิยม",
+    "newTopics": "หัวข้อใหม่",
+    "seeAll": "ดูทั้งหมด",
+    "words": "คำ",
+    "new": "ใหม่",
+    "topicsAvailable": "หัวข้อที่มี",
+    "wordsToLearn": "คำศัพท์ที่จะเรียน",
+    "categoryNames": {
+      "all": "ทั้งหมด",
+      "travel": "การเดินทาง",
+      "food": "อาหาร",
+      "business": "ธุรกิจ",
+      "technology": "เทคโนโลยี",
+      "health": "สุขภาพ",
+      "sports": "กีฬา",
+      "music": "ดนตรี"
+    }
+  },
+  "home": {
+    "greeting": "สวัสดี,",
+    "streak": "วันติดต่อกัน",
+    "streakMessage": "ทำได้ดีมาก! รักษาสถิติไว้นะ",
+    "todayProgress": "ความก้าวหน้าวันนี้",
+    "words": "คำ",
+    "wordsLeft": "อีก {{count}} คำเพื่อบรรลุเป้าหมาย",
+    "goalComplete": "คุณทำเป้าหมายวันนี้สำเร็จแล้ว!",
+    "startLearning": "เริ่มเรียน",
+    "review": "ทบทวน",
+    "quickPractice": "ฝึกด่วน",
+    "statistics": "สถิติ",
+    "totalWords": "คำทั้งหมด",
+    "level": "ระดับ",
+    "daysActive": "วันที่ใช้งาน",
+    "accuracy": "ความแม่นยำ",
+    "continueLearning": "เรียนต่อ",
+    "lastTopic": "การเดินทาง",
+    "levels": {
+      "beginner": "เริ่มต้น",
+      "elementary": "พื้นฐาน",
+      "intermediate": "ปานกลาง",
+      "advanced": "ขั้นสูง"
+    },
+    "nav": {
+      "home": "หน้าแรก",
+      "explore": "สำรวจ",
+      "stats": "สถิติ",
+      "settings": "ตั้งค่า"
+    }
+  },
+  "settings": {
+    "title": "ตั้งค่า",
+    "learning": "การเรียนรู้",
+    "appLanguage": "ภาษาแอป",
+    "learningLanguage": "ภาษาที่เรียน",
+    "dailyGoal": "เป้าหมายประจำวัน",
+    "wordsPerDay": "คำ/วัน",
+    "level": "ระดับ",
+    "notifications": "การแจ้งเตือน",
+    "pushNotifications": "การแจ้งเตือนแบบพุช",
+    "reminderTime": "เวลาเตือน",
+    "appSettings": "ตั้งค่าแอป",
+    "sound": "เอฟเฟกต์เสียง",
+    "vibration": "การสั่น",
+    "autoPlay": "เล่นอัตโนมัติ",
+    "darkMode": "โหมดมืด",
+    "support": "สนับสนุน",
+    "helpCenter": "ศูนย์ช่วยเหลือ",
+    "contactUs": "ติดต่อเรา",
+    "rateApp": "ให้คะแนนแอป",
+    "shareApp": "แชร์แอป",
+    "legal": "ข้อกฎหมาย",
+    "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+    "termsOfService": "ข้อกำหนดการใช้งาน",
+    "logout": "ออกจากระบบ",
+    "logoutTitle": "ออกจากระบบ",
+    "logoutMessage": "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ?",
+    "deleteAccount": "ลบบัญชี",
+    "deleteTitle": "ลบบัญชี",
+    "deleteMessage": "การดำเนินการนี้ไม่สามารถยกเลิกได้ ข้อมูลทั้งหมดของคุณจะถูกลบอย่างถาวร",
+    "delete": "ลบ",
+    "cancel": "ยกเลิก",
+    "madeWith": "สร้างด้วยความรัก"
+  },
+  "profile": {
+    "title": "โปรไฟล์",
+    "edit": "แก้ไข",
+    "save": "บันทึก",
+    "memberSince": "สมาชิกตั้งแต่:",
+    "statistics": "สถิติ",
+    "wordsLearned": "คำที่เรียนรู้",
+    "currentStreak": "สตรีคปัจจุบัน",
+    "bestStreak": "สตรีคที่ดีที่สุด",
+    "accuracy": "ความแม่นยำ",
+    "totalTime": "เวลารวม",
+    "daysActive": "วันที่ใช้งาน",
+    "learningInfo": "ข้อมูลการเรียนรู้",
+    "nativeLanguage": "ภาษาแม่",
+    "learningLanguage": "ภาษาที่เรียน",
+    "level": "ระดับ",
+    "dailyGoal": "เป้าหมายประจำวัน",
+    "wordsPerDay": "คำ/วัน",
+    "achievements": "ความสำเร็จ",
+    "seeAll": "ดูทั้งหมด",
+    "settings": "ตั้งค่า",
+    "namePlaceholder": "ใส่ชื่อของคุณ",
+    "error": "ข้อผิดพลาด",
+    "nameError": "ชื่อต้องมีอย่างน้อย 2 ตัวอักษร"
+  },
+  "learn": {
+    "title": "เรียนรู้",
+    "selectWords": "เลือกคำ",
+    "selectedCount": "เลือกแล้ว {{count}}/{{total}} คำ",
+    "wantToLearn": "อยากเรียน",
+    "alreadyKnow": "รู้แล้ว",
+    "addToLearn": "อยากเรียน",
+    "iKnowThis": "ฉันรู้",
+    "visualLearning": "การเรียนรู้ด้วยภาพ",
+    "audioLearning": "การเรียนรู้ด้วยเสียง",
+    "writingPractice": "ฝึกเขียน",
+    "tapToReveal": "แตะเพื่อแสดงคำตอบ",
+    "selectCorrectWord": "เลือกคำที่ถูกต้อง",
+    "didntKnow": "ไม่รู้",
+    "gotIt": "รู้แล้ว",
+    "listenAndGuess": "ฟังและเดา",
+    "showAnswer": "แสดงคำตอบ",
+    "writeTheWord": "เขียนคำ",
+    "typeHere": "พิมพ์ที่นี่...",
+    "check": "ตรวจสอบ",
+    "correct": "ถูกต้อง!",
+    "incorrect": "ผิด",
+    "correctAnswer": "คำตอบที่ถูกต้อง",
+    "next": "ถัดไป",
+    "sessionComplete": "จบเซสชัน!",
+    "greatJob": "เยี่ยมมาก!",
+    "totalScore": "คะแนนรวม",
+    "reviewAgain": "ทบทวนอีกครั้ง",
+    "done": "เสร็จสิ้น",
+    "skip": "ข้าม",
+    "skipped": "ข้ามไป"
+  }
+}

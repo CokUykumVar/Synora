@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Завантаження..."
+  },
+  "onboarding": {
+    "slogan": "Найрозумніший спосіб вивчати слова",
+    "explore": "Досліджувати",
+    "login": "Увійти"
+  },
+  "login": {
+    "title": "Легкий Вхід",
+    "subtitle": "Синхронізуйтесь на всіх пристроях",
+    "google": "Продовжити з Google",
+    "apple": "Продовжити з Apple",
+    "or": "або",
+    "email": "Увійти через Email"
+  },
+  "emailLogin": {
+    "title": "Увійдіть до Акаунту",
+    "emailPlaceholder": "Ваш email",
+    "passwordPlaceholder": "Ваш пароль",
+    "forgotPassword": "Забули пароль",
+    "loginButton": "Увійти",
+    "noAccount": "Немає акаунту?",
+    "register": "Реєстрація"
+  },
+  "register": {
+    "title": "Створити Акаунт",
+    "subtitle": "Почніть свою подорож вивчення слів",
+    "namePlaceholder": "Ваше ім'я",
+    "emailPlaceholder": "Ваш email",
+    "passwordPlaceholder": "Ваш пароль",
+    "confirmPasswordPlaceholder": "Підтвердіть пароль",
+    "registerButton": "Реєстрація",
+    "hasAccount": "Вже є акаунт?",
+    "login": "Увійти"
+  },
+  "languageSelect": {
+    "title": "Вибір Мови",
+    "subtitle": "Яку мову ви хочете вивчати?",
+    "nativeLanguage": "Ваша Рідна Мова",
+    "learnLanguage": "Мова для Вивчення",
+    "select": "Вибрати",
+    "selectNative": "Виберіть рідну мову",
+    "selectLearn": "Виберіть мову для вивчення",
+    "continue": "Продовжити"
+  },
+  "levelSelect": {
+    "title": "Виберіть Свій Рівень",
+    "subtitle": "З якого рівня ви хочете почати?",
+    "continue": "Продовжити",
+    "levels": {
+      "beginner": {
+        "name": "Початківець",
+        "description": "Нічого не знаю, починаю з нуля"
+      },
+      "elementary": {
+        "name": "Базовий",
+        "description": "Знаю прості слова та речення"
+      },
+      "intermediate": {
+        "name": "Середній",
+        "description": "Розумію щоденні розмови"
+      },
+      "advanced": {
+        "name": "Просунутий",
+        "description": "Вільно розмовляю, хочу вдосконалюватись"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Ваша Щоденна Ціль",
+    "subtitle": "Скільки слів ви хочете вчити щодня?",
+    "continue": "Продовжити",
+    "wordsPerDay": "слів/день",
+    "perMonth": "/місяць",
+    "hint": "Ви можете змінити ціль будь-коли",
+    "goals": {
+      "casual": { "name": "Спокійний" },
+      "regular": { "name": "Регулярний" },
+      "serious": { "name": "Серйозний" },
+      "intense": { "name": "Інтенсивний" }
+    }
+  },
+  "topicSelect": {
+    "title": "Які Теми Вас Цікавлять?",
+    "subtitle": "Виберіть інтереси, ми персоналізуємо контент",
+    "continue": "Продовжити",
+    "hint": "Вибрано {{count}} тем",
+    "hintMin": "Виберіть мінімум {{min}} теми ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Подорожі",
+      "food": "Їжа та Напої",
+      "business": "Бізнес та Кар'єра",
+      "technology": "Технології",
+      "health": "Здоров'я",
+      "sports": "Спорт",
+      "music": "Музика",
+      "entertainment": "Розваги",
+      "nature": "Природа",
+      "shopping": "Шопінг",
+      "family": "Сім'я та Стосунки",
+      "education": "Освіта"
+    }
+  },
+  "habit": {
+    "title": "Хочете виробити звичку?",
+    "subtitle": "Створіть свою навчальну рутину з щоденними нагадуваннями та досягайте цілей",
+    "skip": "Пропустити",
+    "continue": "Продовжити",
+    "dailyReminder": "Щоденне Нагадування",
+    "reminderDescription": "Отримуйте нагадування в обраний час щодня",
+    "selectTime": "Час Нагадування",
+    "hint": "Ви можете змінити налаштування нагадувань будь-коли",
+    "times": {
+      "morning": "Ранок",
+      "noon": "Полудень",
+      "afternoon": "День",
+      "evening": "Вечір",
+      "night": "Ніч"
+    }
+  },
+  "saving": {
+    "title": "Збереження ваших виборів",
+    "subtitle": "Ми готуємо найкращий досвід для вас",
+    "pleaseWait": "Будь ласка, зачекайте...",
+    "items": {
+      "language": "Мовні налаштування",
+      "level": "Інформація про рівень",
+      "goal": "Щоденна ціль",
+      "topics": "Інтереси",
+      "reminder": "Налаштування нагадувань"
+    }
+  },
+  "success": {
+    "title": "Все Готово!",
+    "subtitle": "Ваша подорож вивчення слів починається",
+    "start": "Почнемо",
+    "features": {
+      "personalized": "Персоналізований контент готовий для вас",
+      "goals": "Ваші цілі встановлені",
+      "ready": "Ви готові вчитися!"
+    }
+  },
+  "explore": {
+    "title": "Дослідити",
+    "subtitle": "Відкрийте нові теми та слова",
+    "searchPlaceholder": "Шукати теми або слова...",
+    "categories": "Категорії",
+    "featured": "Рекомендовані",
+    "popularWords": "Популярні Слова",
+    "newTopics": "Нові Теми",
+    "seeAll": "Переглянути Все",
+    "words": "слів",
+    "new": "Новий",
+    "topicsAvailable": "Доступні Теми",
+    "wordsToLearn": "Слова для Вивчення",
+    "categoryNames": {
+      "all": "Все",
+      "travel": "Подорожі",
+      "food": "Їжа",
+      "business": "Бізнес",
+      "technology": "Техно",
+      "health": "Здоров'я",
+      "sports": "Спорт",
+      "music": "Музика"
+    }
+  },
+  "stats": {
+    "title": "Статистика",
+    "subtitle": "Відстежуйте прогрес навчання",
+    "totalWords": "Всього Слів",
+    "currentStreak": "Поточна Серія",
+    "accuracy": "Точність",
+    "todayWords": "Сьогодні",
+    "weeklyProgress": "Тижневий Прогрес",
+    "moreStats": "Більше Статистики",
+    "weeklyAverage": "Сер. за Тиждень",
+    "totalTime": "Загальний Час",
+    "bestStreak": "Найкраща Серія",
+    "perfectDays": "Ідеальні Дні",
+    "categoryProgress": "Прогрес Категорії",
+    "words": "слів",
+    "achievements": "Досягнення",
+    "goalMet": "Ціль Досягнута",
+    "goalNotMet": "В Процесі",
+    "days": {
+      "mon": "Пн",
+      "tue": "Вт",
+      "wed": "Ср",
+      "thu": "Чт",
+      "fri": "Пт",
+      "sat": "Сб",
+      "sun": "Нд"
+    },
+    "achievementNames": {
+      "first_word": "Перше Слово",
+      "week_streak": "Тижнева Серія",
+      "hundred_words": "100 Слів",
+      "perfect_day": "Ідеальний День",
+      "month_streak": "Місячна Серія",
+      "five_hundred": "500 Слів"
+    }
+  },
+  "home": {
+    "greeting": "Привіт,",
+    "streak": "Днів Поспіль",
+    "streakMessage": "Чудова робота! Продовжуй свою серію.",
+    "todayProgress": "Сьогоднішній Прогрес",
+    "words": "слів",
+    "wordsLeft": "Ще {{count}} слів до цілі",
+    "goalComplete": "Ви досягли сьогоднішньої цілі!",
+    "startLearning": "Почати Вчитися",
+    "review": "Повторення",
+    "quickPractice": "Швидка Практика",
+    "statistics": "Статистика",
+    "totalWords": "Всього Слів",
+    "level": "Рівень",
+    "daysActive": "Активних Днів",
+    "accuracy": "Точність",
+    "continueLearning": "Продовжити Навчання",
+    "lastTopic": "Подорожі",
+    "levels": {
+      "beginner": "Початківець",
+      "elementary": "Базовий",
+      "intermediate": "Середній",
+      "advanced": "Просунутий"
+    },
+    "nav": {
+      "home": "Головна",
+      "explore": "Пошук",
+      "stats": "Статистика",
+      "settings": "Налаштування"
+    }
+  },
+  "settings": {
+    "title": "Налаштування",
+    "learning": "Навчання",
+    "appLanguage": "Мова додатку",
+    "learningLanguage": "Мова навчання",
+    "dailyGoal": "Щоденна ціль",
+    "wordsPerDay": "слів/день",
+    "level": "Рівень",
+    "notifications": "Сповіщення",
+    "pushNotifications": "Push-сповіщення",
+    "reminderTime": "Час нагадування",
+    "appSettings": "Налаштування додатку",
+    "sound": "Звукові ефекти",
+    "vibration": "Вібрація",
+    "autoPlay": "Автовідтворення",
+    "darkMode": "Темний режим",
+    "support": "Підтримка",
+    "helpCenter": "Центр допомоги",
+    "contactUs": "Зв'язатися з нами",
+    "rateApp": "Оцінити додаток",
+    "shareApp": "Поділитися додатком",
+    "legal": "Правова інформація",
+    "privacyPolicy": "Політика конфіденційності",
+    "termsOfService": "Умови використання",
+    "logout": "Вийти",
+    "logoutTitle": "Вийти",
+    "logoutMessage": "Ви впевнені, що хочете вийти?",
+    "deleteAccount": "Видалити акаунт",
+    "deleteTitle": "Видалити акаунт",
+    "deleteMessage": "Цю дію не можна скасувати. Всі ваші дані будуть видалені назавжди.",
+    "delete": "Видалити",
+    "cancel": "Скасувати",
+    "madeWith": "Зроблено з любов'ю"
+  },
+  "profile": {
+    "title": "Профіль",
+    "edit": "Редагувати",
+    "save": "Зберегти",
+    "memberSince": "Учасник з:",
+    "statistics": "Статистика",
+    "wordsLearned": "Вивчені Слова",
+    "currentStreak": "Поточна Серія",
+    "bestStreak": "Найкраща Серія",
+    "accuracy": "Точність",
+    "totalTime": "Загальний Час",
+    "daysActive": "Активних Днів",
+    "learningInfo": "Інформація про Навчання",
+    "nativeLanguage": "Рідна Мова",
+    "learningLanguage": "Мова Навчання",
+    "level": "Рівень",
+    "dailyGoal": "Щоденна Ціль",
+    "wordsPerDay": "слів/день",
+    "achievements": "Досягнення",
+    "seeAll": "Переглянути Все",
+    "settings": "Налаштування",
+    "namePlaceholder": "Введіть своє ім'я",
+    "error": "Помилка",
+    "nameError": "Ім'я має містити щонайменше 2 символи"
+  },
+  "learn": {
+    "title": "Вчити",
+    "selectWords": "Обрати Слова",
+    "selectedCount": "{{count}}/{{total}} слів обрано",
+    "wantToLearn": "Хочу вивчити",
+    "alreadyKnow": "Вже знаю",
+    "addToLearn": "Хочу Вивчити",
+    "iKnowThis": "Я Знаю",
+    "visualLearning": "Візуальне навчання",
+    "audioLearning": "Аудіо навчання",
+    "writingPractice": "Письмова практика",
+    "tapToReveal": "Натисніть щоб відкрити",
+    "selectCorrectWord": "Виберіть правильне слово",
+    "didntKnow": "Не знав",
+    "gotIt": "Знав",
+    "listenAndGuess": "Слухай і вгадай",
+    "showAnswer": "Показати відповідь",
+    "writeTheWord": "Напишіть слово",
+    "typeHere": "Введіть тут...",
+    "check": "Перевірити",
+    "correct": "Правильно!",
+    "incorrect": "Неправильно",
+    "correctAnswer": "Правильна відповідь",
+    "next": "Далі",
+    "sessionComplete": "Сесію завершено!",
+    "greatJob": "Чудова робота!",
+    "totalScore": "Загальний бал",
+    "reviewAgain": "Повторити",
+    "done": "Готово",
+    "skip": "Пропустити",
+    "skipped": "пропущено"
+  }
+}

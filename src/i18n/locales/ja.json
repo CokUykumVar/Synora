@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "読み込み中..."
+  },
+  "onboarding": {
+    "slogan": "最も賢い単語学習法",
+    "explore": "探索",
+    "login": "ログイン"
+  },
+  "login": {
+    "title": "簡単ログイン",
+    "subtitle": "すべてのデバイスで同期",
+    "google": "Googleで続ける",
+    "apple": "Appleで続ける",
+    "or": "または",
+    "email": "メールでログイン"
+  },
+  "emailLogin": {
+    "title": "アカウントにログイン",
+    "emailPlaceholder": "メールアドレス",
+    "passwordPlaceholder": "パスワード",
+    "forgotPassword": "パスワードを忘れた",
+    "loginButton": "ログイン",
+    "noAccount": "アカウントをお持ちでない?",
+    "register": "登録"
+  },
+  "register": {
+    "title": "アカウント作成",
+    "subtitle": "語彙学習の旅を始めましょう",
+    "namePlaceholder": "お名前",
+    "emailPlaceholder": "メールアドレス",
+    "passwordPlaceholder": "パスワード",
+    "confirmPasswordPlaceholder": "パスワードを確認",
+    "registerButton": "登録",
+    "hasAccount": "すでにアカウントをお持ち?",
+    "login": "ログイン"
+  },
+  "languageSelect": {
+    "title": "言語選択",
+    "subtitle": "どの言語を学びたいですか?",
+    "nativeLanguage": "母国語",
+    "learnLanguage": "学びたい言語",
+    "select": "選択",
+    "selectNative": "母国語を選択",
+    "selectLearn": "学ぶ言語を選択",
+    "continue": "続ける"
+  },
+  "levelSelect": {
+    "title": "レベルを選択",
+    "subtitle": "どのレベルから始めますか?",
+    "continue": "続ける",
+    "levels": {
+      "beginner": {
+        "name": "初心者",
+        "description": "何も知らない、ゼロから始める"
+      },
+      "elementary": {
+        "name": "初級",
+        "description": "簡単な単語と文章を知っている"
+      },
+      "intermediate": {
+        "name": "中級",
+        "description": "日常会話を理解できる"
+      },
+      "advanced": {
+        "name": "上級",
+        "description": "流暢に話せる、上達したい"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "毎日の目標",
+    "subtitle": "毎日何単語学びたいですか?",
+    "continue": "続ける",
+    "wordsPerDay": "単語/日",
+    "perMonth": "/月",
+    "hint": "目標はいつでも変更できます",
+    "goals": {
+      "casual": { "name": "カジュアル" },
+      "regular": { "name": "レギュラー" },
+      "serious": { "name": "シリアス" },
+      "intense": { "name": "インテンス" }
+    }
+  },
+  "topicSelect": {
+    "title": "興味のあるトピックは?",
+    "subtitle": "興味を選択して、コンテンツをカスタマイズ",
+    "continue": "続ける",
+    "hint": "{{count}}個のトピックを選択",
+    "hintMin": "最低{{min}}個のトピックを選択 ({{count}}/{{min}})",
+    "topics": {
+      "travel": "旅行",
+      "food": "食べ物と飲み物",
+      "business": "ビジネスとキャリア",
+      "technology": "テクノロジー",
+      "health": "健康",
+      "sports": "スポーツ",
+      "music": "音楽",
+      "entertainment": "エンターテイメント",
+      "nature": "自然",
+      "shopping": "ショッピング",
+      "family": "家族と人間関係",
+      "education": "教育"
+    }
+  },
+  "habit": {
+    "title": "習慣を身につけたいですか?",
+    "subtitle": "毎日のリマインダーで学習ルーティンを作り、目標を達成しましょう",
+    "skip": "スキップ",
+    "continue": "続ける",
+    "dailyReminder": "毎日のリマインダー",
+    "reminderDescription": "毎日選択した時間にリマインド",
+    "selectTime": "リマインダー時刻",
+    "hint": "リマインダー設定はいつでも変更できます",
+    "times": {
+      "morning": "朝",
+      "noon": "昼",
+      "afternoon": "午後",
+      "evening": "夕方",
+      "night": "夜"
+    }
+  },
+  "saving": {
+    "title": "設定を保存中",
+    "subtitle": "最高の体験を準備しています",
+    "pleaseWait": "お待ちください...",
+    "items": {
+      "language": "言語設定",
+      "level": "レベル情報",
+      "goal": "毎日の目標",
+      "topics": "興味",
+      "reminder": "リマインダー設定"
+    }
+  },
+  "success": {
+    "title": "準備完了！",
+    "subtitle": "語彙学習の旅が始まります",
+    "start": "始めましょう",
+    "features": {
+      "personalized": "パーソナライズされたコンテンツの準備完了",
+      "goals": "目標が設定されました",
+      "ready": "学習の準備ができました！"
+    }
+  },
+  "stats": {
+    "title": "統計",
+    "subtitle": "学習の進捗を追跡",
+    "totalWords": "総単語数",
+    "currentStreak": "現在の連続",
+    "accuracy": "正答率",
+    "todayWords": "今日",
+    "weeklyProgress": "週間進捗",
+    "moreStats": "その他の統計",
+    "weeklyAverage": "週平均",
+    "totalTime": "合計時間",
+    "bestStreak": "最高連続",
+    "perfectDays": "完璧な日",
+    "categoryProgress": "カテゴリ進捗",
+    "words": "単語",
+    "achievements": "実績",
+    "goalMet": "目標達成",
+    "goalNotMet": "進行中",
+    "days": {
+      "mon": "月",
+      "tue": "火",
+      "wed": "水",
+      "thu": "木",
+      "fri": "金",
+      "sat": "土",
+      "sun": "日"
+    },
+    "achievementNames": {
+      "first_word": "最初の単語",
+      "week_streak": "週間連続",
+      "hundred_words": "100単語",
+      "perfect_day": "完璧な日",
+      "month_streak": "月間連続",
+      "five_hundred": "500単語"
+    }
+  },
+  "explore": {
+    "title": "探索",
+    "subtitle": "新しいトピックと単語を発見",
+    "searchPlaceholder": "トピックや単語を検索...",
+    "categories": "カテゴリー",
+    "featured": "おすすめ",
+    "popularWords": "人気の単語",
+    "newTopics": "新しいトピック",
+    "seeAll": "すべて見る",
+    "words": "単語",
+    "new": "新着",
+    "topicsAvailable": "利用可能なトピック",
+    "wordsToLearn": "学ぶ単語",
+    "categoryNames": {
+      "all": "すべて",
+      "travel": "旅行",
+      "food": "食べ物",
+      "business": "ビジネス",
+      "technology": "テック",
+      "health": "健康",
+      "sports": "スポーツ",
+      "music": "音楽"
+    }
+  },
+  "home": {
+    "greeting": "こんにちは、",
+    "streak": "連続日数",
+    "streakMessage": "素晴らしい！連続記録を維持しよう。",
+    "todayProgress": "今日の進捗",
+    "words": "単語",
+    "wordsLeft": "目標まであと{{count}}単語",
+    "goalComplete": "今日の目標達成！",
+    "startLearning": "学習を始める",
+    "review": "復習",
+    "quickPractice": "クイック練習",
+    "statistics": "統計",
+    "totalWords": "総単語数",
+    "level": "レベル",
+    "daysActive": "アクティブ日数",
+    "accuracy": "正答率",
+    "continueLearning": "学習を続ける",
+    "lastTopic": "旅行",
+    "levels": {
+      "beginner": "初心者",
+      "elementary": "初級",
+      "intermediate": "中級",
+      "advanced": "上級"
+    },
+    "nav": {
+      "home": "ホーム",
+      "explore": "探索",
+      "stats": "統計",
+      "settings": "設定"
+    }
+  },
+  "settings": {
+    "title": "設定",
+    "learning": "学習",
+    "appLanguage": "アプリの言語",
+    "learningLanguage": "学習言語",
+    "dailyGoal": "毎日の目標",
+    "wordsPerDay": "単語/日",
+    "level": "レベル",
+    "notifications": "通知",
+    "pushNotifications": "プッシュ通知",
+    "reminderTime": "リマインダー時刻",
+    "appSettings": "アプリ設定",
+    "sound": "サウンド効果",
+    "vibration": "バイブレーション",
+    "autoPlay": "自動再生",
+    "darkMode": "ダークモード",
+    "support": "サポート",
+    "helpCenter": "ヘルプセンター",
+    "contactUs": "お問い合わせ",
+    "rateApp": "アプリを評価",
+    "shareApp": "アプリを共有",
+    "legal": "法的事項",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "logout": "ログアウト",
+    "logoutTitle": "ログアウト",
+    "logoutMessage": "ログアウトしてもよろしいですか？",
+    "deleteAccount": "アカウント削除",
+    "deleteTitle": "アカウント削除",
+    "deleteMessage": "この操作は取り消せません。すべてのデータが完全に削除されます。",
+    "delete": "削除",
+    "cancel": "キャンセル",
+    "madeWith": "愛を込めて作りました"
+  },
+  "profile": {
+    "title": "プロフィール",
+    "edit": "編集",
+    "save": "保存",
+    "memberSince": "登録日:",
+    "statistics": "統計",
+    "wordsLearned": "学習した単語",
+    "currentStreak": "現在の連続",
+    "bestStreak": "最高連続",
+    "accuracy": "正答率",
+    "totalTime": "合計時間",
+    "daysActive": "アクティブ日数",
+    "learningInfo": "学習情報",
+    "nativeLanguage": "母国語",
+    "learningLanguage": "学習言語",
+    "level": "レベル",
+    "dailyGoal": "毎日の目標",
+    "wordsPerDay": "単語/日",
+    "achievements": "実績",
+    "seeAll": "すべて見る",
+    "settings": "設定",
+    "namePlaceholder": "名前を入力",
+    "error": "エラー",
+    "nameError": "名前は2文字以上必要です"
+  },
+  "learn": {
+    "title": "学習",
+    "selectWords": "単語を選択",
+    "selectedCount": "{{count}}/{{total}} 単語選択済み",
+    "wantToLearn": "学びたい",
+    "alreadyKnow": "既に知っている",
+    "addToLearn": "学びたい",
+    "iKnowThis": "知っている",
+    "visualLearning": "視覚学習",
+    "audioLearning": "聴覚学習",
+    "writingPractice": "ライティング練習",
+    "tapToReveal": "タップして表示",
+    "selectCorrectWord": "正しい単語を選択してください",
+    "didntKnow": "知らなかった",
+    "gotIt": "知っていた",
+    "listenAndGuess": "聞いて推測",
+    "showAnswer": "答えを表示",
+    "writeTheWord": "単語を書いてください",
+    "typeHere": "ここに入力...",
+    "check": "確認",
+    "correct": "正解！",
+    "incorrect": "不正解",
+    "correctAnswer": "正解",
+    "next": "次へ",
+    "sessionComplete": "セッション完了！",
+    "greatJob": "よくできました！",
+    "totalScore": "合計スコア",
+    "reviewAgain": "もう一度",
+    "done": "完了",
+    "skip": "スキップ",
+    "skipped": "スキップ"
+  }
+}

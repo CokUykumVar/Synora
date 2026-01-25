@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Načítání..."
+  },
+  "onboarding": {
+    "slogan": "Nejchytřejší způsob učení slovíček",
+    "explore": "Prozkoumat",
+    "login": "Přihlásit se"
+  },
+  "login": {
+    "title": "Snadné Přihlášení",
+    "subtitle": "Zůstaňte synchronizováni na všech zařízeních",
+    "google": "Pokračovat s Google",
+    "apple": "Pokračovat s Apple",
+    "or": "nebo",
+    "email": "Přihlásit se emailem"
+  },
+  "emailLogin": {
+    "title": "Přihlaste se do Účtu",
+    "emailPlaceholder": "Váš email",
+    "passwordPlaceholder": "Vaše heslo",
+    "forgotPassword": "Zapomenuté heslo",
+    "loginButton": "Přihlásit se",
+    "noAccount": "Nemáte účet?",
+    "register": "Registrovat"
+  },
+  "register": {
+    "title": "Vytvořit Účet",
+    "subtitle": "Začněte svou cestu učení slovíček",
+    "namePlaceholder": "Vaše jméno",
+    "emailPlaceholder": "Váš email",
+    "passwordPlaceholder": "Vaše heslo",
+    "confirmPasswordPlaceholder": "Potvrďte heslo",
+    "registerButton": "Registrovat",
+    "hasAccount": "Již máte účet?",
+    "login": "Přihlásit se"
+  },
+  "languageSelect": {
+    "title": "Výběr Jazyka",
+    "subtitle": "Který jazyk se chcete naučit?",
+    "nativeLanguage": "Váš Mateřský Jazyk",
+    "learnLanguage": "Jazyk k Učení",
+    "select": "Vybrat",
+    "selectNative": "Vyberte svůj mateřský jazyk",
+    "selectLearn": "Vyberte jazyk k učení",
+    "continue": "Pokračovat"
+  },
+  "levelSelect": {
+    "title": "Vyberte Svou Úroveň",
+    "subtitle": "Od které úrovně chcete začít?",
+    "continue": "Pokračovat",
+    "levels": {
+      "beginner": {
+        "name": "Začátečník",
+        "description": "Nic neumím, začínám od nuly"
+      },
+      "elementary": {
+        "name": "Základní",
+        "description": "Znám jednoduchá slova a věty"
+      },
+      "intermediate": {
+        "name": "Střední",
+        "description": "Rozumím běžným rozhovorům"
+      },
+      "advanced": {
+        "name": "Pokročilý",
+        "description": "Mluvím plynule, chci se zlepšit"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Váš Denní Cíl",
+    "subtitle": "Kolik slov chcete učit každý den?",
+    "continue": "Pokračovat",
+    "wordsPerDay": "slov/den",
+    "perMonth": "/měsíc",
+    "hint": "Svůj cíl můžete kdykoli změnit",
+    "goals": {
+      "casual": { "name": "Klidný" },
+      "regular": { "name": "Pravidelný" },
+      "serious": { "name": "Vážný" },
+      "intense": { "name": "Intenzivní" }
+    }
+  },
+  "topicSelect": {
+    "title": "Jaká Témata Vás Zajímají?",
+    "subtitle": "Vyberte své zájmy, přizpůsobíme obsah",
+    "continue": "Pokračovat",
+    "hint": "Vybráno {{count}} témat",
+    "hintMin": "Vyberte alespoň {{min}} témata ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Cestování",
+      "food": "Jídlo a Pití",
+      "business": "Podnikání a Kariéra",
+      "technology": "Technologie",
+      "health": "Zdraví",
+      "sports": "Sport",
+      "music": "Hudba",
+      "entertainment": "Zábava",
+      "nature": "Příroda",
+      "shopping": "Nakupování",
+      "family": "Rodina a Vztahy",
+      "education": "Vzdělávání"
+    }
+  },
+  "habit": {
+    "title": "Chcete si vytvořit návyk?",
+    "subtitle": "Vytvořte si učební rutinu s denními připomínkami a dosáhněte svých cílů",
+    "skip": "Přeskočit",
+    "continue": "Pokračovat",
+    "dailyReminder": "Denní Připomínka",
+    "reminderDescription": "Dostávejte připomínku ve zvolený čas každý den",
+    "selectTime": "Čas Připomínky",
+    "hint": "Nastavení připomínek můžete kdykoli změnit",
+    "times": {
+      "morning": "Ráno",
+      "noon": "Poledne",
+      "afternoon": "Odpoledne",
+      "evening": "Večer",
+      "night": "Noc"
+    }
+  },
+  "saving": {
+    "title": "Ukládání vašich voleb",
+    "subtitle": "Připravujeme pro vás ten nejlepší zážitek",
+    "pleaseWait": "Prosím čekejte...",
+    "items": {
+      "language": "Jazykové preference",
+      "level": "Informace o úrovni",
+      "goal": "Denní cíl",
+      "topics": "Zájmy",
+      "reminder": "Nastavení připomínek"
+    }
+  },
+  "success": {
+    "title": "Vše Připraveno!",
+    "subtitle": "Vaše cesta učení slovíček začíná",
+    "start": "Začněme",
+    "features": {
+      "personalized": "Personalizovaný obsah připraven pro vás",
+      "goals": "Vaše cíle jsou nastaveny",
+      "ready": "Jste připraveni se učit!"
+    }
+  },
+  "explore": {
+    "title": "Prozkoumejte",
+    "subtitle": "Objevte nová témata a slova",
+    "searchPlaceholder": "Hledat témata nebo slova...",
+    "categories": "Kategorie",
+    "featured": "Doporučené",
+    "popularWords": "Oblíbená Slova",
+    "newTopics": "Nová Témata",
+    "seeAll": "Zobrazit Vše",
+    "words": "slov",
+    "new": "Nový",
+    "topicsAvailable": "Dostupná Témata",
+    "wordsToLearn": "Slova k Učení",
+    "categoryNames": {
+      "all": "Vše",
+      "travel": "Cestování",
+      "food": "Jídlo",
+      "business": "Podnikání",
+      "technology": "Tech",
+      "health": "Zdraví",
+      "sports": "Sport",
+      "music": "Hudba"
+    }
+  },
+  "stats": {
+    "title": "Statistiky",
+    "subtitle": "Sledujte svůj pokrok v učení",
+    "totalWords": "Celkem Slov",
+    "currentStreak": "Aktuální Série",
+    "accuracy": "Přesnost",
+    "todayWords": "Dnes",
+    "weeklyProgress": "Týdenní Pokrok",
+    "moreStats": "Další Statistiky",
+    "weeklyAverage": "Týd. Průměr",
+    "totalTime": "Celkový Čas",
+    "bestStreak": "Nejlepší Série",
+    "perfectDays": "Perfektní Dny",
+    "categoryProgress": "Pokrok Kategorie",
+    "words": "slov",
+    "achievements": "Úspěchy",
+    "goalMet": "Cíl Splněn",
+    "goalNotMet": "Probíhá",
+    "days": {
+      "mon": "Po",
+      "tue": "Út",
+      "wed": "St",
+      "thu": "Čt",
+      "fri": "Pá",
+      "sat": "So",
+      "sun": "Ne"
+    },
+    "achievementNames": {
+      "first_word": "První Slovo",
+      "week_streak": "Týdenní Série",
+      "hundred_words": "100 Slov",
+      "perfect_day": "Perfektní Den",
+      "month_streak": "Měsíční Série",
+      "five_hundred": "500 Slov"
+    }
+  },
+  "home": {
+    "greeting": "Ahoj,",
+    "streak": "Dní v Řadě",
+    "streakMessage": "Skvělá práce! Udržujte svou sérii.",
+    "todayProgress": "Dnešní Pokrok",
+    "words": "slov",
+    "wordsLeft": "Ještě {{count}} slov do cíle",
+    "goalComplete": "Splnili jste dnešní cíl!",
+    "startLearning": "Začít Učení",
+    "review": "Opakování",
+    "quickPractice": "Rychlé Cvičení",
+    "statistics": "Statistiky",
+    "totalWords": "Celkem Slov",
+    "level": "Úroveň",
+    "daysActive": "Aktivní Dny",
+    "accuracy": "Přesnost",
+    "continueLearning": "Pokračovat v Učení",
+    "lastTopic": "Cestování",
+    "levels": {
+      "beginner": "Začátečník",
+      "elementary": "Základní",
+      "intermediate": "Střední",
+      "advanced": "Pokročilý"
+    },
+    "nav": {
+      "home": "Domů",
+      "explore": "Prozkoumat",
+      "stats": "Statistiky",
+      "settings": "Nastavení"
+    }
+  },
+  "settings": {
+    "title": "Nastavení",
+    "learning": "Učení",
+    "appLanguage": "Jazyk aplikace",
+    "learningLanguage": "Jazyk učení",
+    "dailyGoal": "Denní cíl",
+    "wordsPerDay": "slov/den",
+    "level": "Úroveň",
+    "notifications": "Oznámení",
+    "pushNotifications": "Push oznámení",
+    "reminderTime": "Čas připomínky",
+    "appSettings": "Nastavení aplikace",
+    "sound": "Zvukové efekty",
+    "vibration": "Vibrace",
+    "autoPlay": "Automatické přehrávání",
+    "darkMode": "Tmavý režim",
+    "support": "Podpora",
+    "helpCenter": "Centrum nápovědy",
+    "contactUs": "Kontakt",
+    "rateApp": "Ohodnotit aplikaci",
+    "shareApp": "Sdílet aplikaci",
+    "legal": "Právní",
+    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "termsOfService": "Podmínky služby",
+    "logout": "Odhlásit",
+    "logoutTitle": "Odhlásit",
+    "logoutMessage": "Opravdu se chcete odhlásit?",
+    "deleteAccount": "Smazat účet",
+    "deleteTitle": "Smazat účet",
+    "deleteMessage": "Tuto akci nelze vrátit zpět. Všechna vaše data budou trvale smazána.",
+    "delete": "Smazat",
+    "cancel": "Zrušit",
+    "madeWith": "Vytvořeno s láskou"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Upravit",
+    "save": "Uložit",
+    "memberSince": "Člen od:",
+    "statistics": "Statistiky",
+    "wordsLearned": "Naučená Slova",
+    "currentStreak": "Aktuální Série",
+    "bestStreak": "Nejlepší Série",
+    "accuracy": "Přesnost",
+    "totalTime": "Celkový Čas",
+    "daysActive": "Aktivní Dny",
+    "learningInfo": "Informace o Učení",
+    "nativeLanguage": "Mateřský Jazyk",
+    "learningLanguage": "Jazyk Učení",
+    "level": "Úroveň",
+    "dailyGoal": "Denní Cíl",
+    "wordsPerDay": "slov/den",
+    "achievements": "Úspěchy",
+    "seeAll": "Zobrazit Vše",
+    "settings": "Nastavení",
+    "namePlaceholder": "Zadejte své jméno",
+    "error": "Chyba",
+    "nameError": "Jméno musí mít alespoň 2 znaky"
+  },
+  "learn": {
+    "title": "Učit se",
+    "selectWords": "Vyberte Slova",
+    "selectedCount": "{{count}}/{{total}} slov vybráno",
+    "wantToLearn": "Chci se naučit",
+    "alreadyKnow": "Již znám",
+    "addToLearn": "Chci Se Naučit",
+    "iKnowThis": "Znám To",
+    "visualLearning": "Vizuální Učení",
+    "audioLearning": "Poslechové Učení",
+    "writingPractice": "Psaní",
+    "tapToReveal": "Klepněte pro odkrytí",
+    "selectCorrectWord": "Vyberte správné slovo",
+    "didntKnow": "Nevěděl jsem",
+    "gotIt": "Věděl jsem",
+    "listenAndGuess": "Poslouchejte a hádejte",
+    "showAnswer": "Ukázat Odpověď",
+    "writeTheWord": "Napište slovo",
+    "typeHere": "Pište zde...",
+    "check": "Zkontrolovat",
+    "correct": "Správně!",
+    "incorrect": "Špatně",
+    "correctAnswer": "Správná odpověď",
+    "next": "Další",
+    "sessionComplete": "Relace Dokončena!",
+    "greatJob": "Skvělá práce!",
+    "totalScore": "Celkové Skóre",
+    "reviewAgain": "Opakovat",
+    "done": "Hotovo",
+    "skip": "Přeskočit",
+    "skipped": "přeskočeno"
+  }
+}

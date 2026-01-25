@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Ładowanie..."
+  },
+  "onboarding": {
+    "slogan": "Najmądrzejszy sposób nauki słów",
+    "explore": "Odkryj",
+    "login": "Zaloguj się"
+  },
+  "login": {
+    "title": "Łatwe Logowanie",
+    "subtitle": "Synchronizuj się na wszystkich urządzeniach",
+    "google": "Kontynuuj z Google",
+    "apple": "Kontynuuj z Apple",
+    "or": "lub",
+    "email": "Zaloguj przez Email"
+  },
+  "emailLogin": {
+    "title": "Zaloguj się na Konto",
+    "emailPlaceholder": "Twój adres email",
+    "passwordPlaceholder": "Twoje hasło",
+    "forgotPassword": "Zapomniałem hasła",
+    "loginButton": "Zaloguj się",
+    "noAccount": "Nie masz konta?",
+    "register": "Zarejestruj się"
+  },
+  "register": {
+    "title": "Utwórz Konto",
+    "subtitle": "Rozpocznij swoją podróż nauki słownictwa",
+    "namePlaceholder": "Twoje imię",
+    "emailPlaceholder": "Twój adres email",
+    "passwordPlaceholder": "Twoje hasło",
+    "confirmPasswordPlaceholder": "Potwierdź hasło",
+    "registerButton": "Zarejestruj się",
+    "hasAccount": "Masz już konto?",
+    "login": "Zaloguj się"
+  },
+  "languageSelect": {
+    "title": "Wybór Języka",
+    "subtitle": "Jakiego języka chcesz się uczyć?",
+    "nativeLanguage": "Twój Język Ojczysty",
+    "learnLanguage": "Język do Nauki",
+    "select": "Wybierz",
+    "selectNative": "Wybierz swój język ojczysty",
+    "selectLearn": "Wybierz język do nauki",
+    "continue": "Kontynuuj"
+  },
+  "levelSelect": {
+    "title": "Wybierz Swój Poziom",
+    "subtitle": "Od jakiego poziomu chcesz zacząć?",
+    "continue": "Kontynuuj",
+    "levels": {
+      "beginner": {
+        "name": "Początkujący",
+        "description": "Nic nie wiem, zaczynam od zera"
+      },
+      "elementary": {
+        "name": "Podstawowy",
+        "description": "Znam proste słowa i zdania"
+      },
+      "intermediate": {
+        "name": "Średni",
+        "description": "Rozumiem codzienne rozmowy"
+      },
+      "advanced": {
+        "name": "Zaawansowany",
+        "description": "Mówię płynnie, chcę się doskonalić"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Twój Dzienny Cel",
+    "subtitle": "Ile słów chcesz uczyć się każdego dnia?",
+    "continue": "Kontynuuj",
+    "wordsPerDay": "słów/dzień",
+    "perMonth": "/miesiąc",
+    "hint": "Możesz zmienić cel w dowolnym momencie",
+    "goals": {
+      "casual": { "name": "Spokojny" },
+      "regular": { "name": "Regularny" },
+      "serious": { "name": "Poważny" },
+      "intense": { "name": "Intensywny" }
+    }
+  },
+  "topicSelect": {
+    "title": "Jakie Tematy Cię Interesują?",
+    "subtitle": "Wybierz zainteresowania, dostosujemy treści",
+    "continue": "Kontynuuj",
+    "hint": "Wybrano {{count}} tematów",
+    "hintMin": "Wybierz minimum {{min}} tematy ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Podróże",
+      "food": "Jedzenie i Napoje",
+      "business": "Biznes i Kariera",
+      "technology": "Technologia",
+      "health": "Zdrowie",
+      "sports": "Sport",
+      "music": "Muzyka",
+      "entertainment": "Rozrywka",
+      "nature": "Natura",
+      "shopping": "Zakupy",
+      "family": "Rodzina i Relacje",
+      "education": "Edukacja"
+    }
+  },
+  "habit": {
+    "title": "Chcesz wyrobić nawyk?",
+    "subtitle": "Stwórz swoją rutynę nauki z codziennymi przypomnieniami i osiągnij cele",
+    "skip": "Pomiń",
+    "continue": "Kontynuuj",
+    "dailyReminder": "Codzienne Przypomnienie",
+    "reminderDescription": "Otrzymuj przypomnienie o wybranej porze każdego dnia",
+    "selectTime": "Czas Przypomnienia",
+    "hint": "Możesz zmienić ustawienia przypomnień w dowolnym momencie",
+    "times": {
+      "morning": "Rano",
+      "noon": "Południe",
+      "afternoon": "Popołudnie",
+      "evening": "Wieczór",
+      "night": "Noc"
+    }
+  },
+  "saving": {
+    "title": "Zapisywanie wyborów",
+    "subtitle": "Przygotowujemy dla ciebie najlepsze doświadczenie",
+    "pleaseWait": "Proszę czekać...",
+    "items": {
+      "language": "Preferencje językowe",
+      "level": "Informacje o poziomie",
+      "goal": "Dzienny cel",
+      "topics": "Zainteresowania",
+      "reminder": "Ustawienia przypomnień"
+    }
+  },
+  "success": {
+    "title": "Wszystko Gotowe!",
+    "subtitle": "Twoja podróż nauki słownictwa się zaczyna",
+    "start": "Zaczynajmy",
+    "features": {
+      "personalized": "Spersonalizowane treści gotowe dla ciebie",
+      "goals": "Twoje cele są ustawione",
+      "ready": "Jesteś gotowy do nauki!"
+    }
+  },
+  "stats": {
+    "title": "Statystyki",
+    "subtitle": "Śledź postępy w nauce",
+    "totalWords": "Łącznie Słów",
+    "currentStreak": "Obecna Seria",
+    "accuracy": "Dokładność",
+    "todayWords": "Dziś",
+    "weeklyProgress": "Postęp Tygodniowy",
+    "moreStats": "Więcej Statystyk",
+    "weeklyAverage": "Średnia Tyg.",
+    "totalTime": "Łączny Czas",
+    "bestStreak": "Najlepsza Seria",
+    "perfectDays": "Perfekcyjne Dni",
+    "categoryProgress": "Postęp Kategorii",
+    "words": "słów",
+    "achievements": "Osiągnięcia",
+    "goalMet": "Cel Osiągnięty",
+    "goalNotMet": "W Trakcie",
+    "days": {
+      "mon": "Pon",
+      "tue": "Wt",
+      "wed": "Śr",
+      "thu": "Czw",
+      "fri": "Pt",
+      "sat": "Sob",
+      "sun": "Ndz"
+    },
+    "achievementNames": {
+      "first_word": "Pierwsze Słowo",
+      "week_streak": "Seria Tygodnia",
+      "hundred_words": "100 Słów",
+      "perfect_day": "Perfekcyjny Dzień",
+      "month_streak": "Seria Miesiąca",
+      "five_hundred": "500 Słów"
+    }
+  },
+  "explore": {
+    "title": "Odkrywaj",
+    "subtitle": "Odkryj nowe tematy i słowa",
+    "searchPlaceholder": "Szukaj tematów lub słów...",
+    "categories": "Kategorie",
+    "featured": "Polecane",
+    "popularWords": "Popularne Słowa",
+    "newTopics": "Nowe Tematy",
+    "seeAll": "Zobacz Wszystko",
+    "words": "słów",
+    "new": "Nowy",
+    "topicsAvailable": "Dostępne Tematy",
+    "wordsToLearn": "Słowa do Nauki",
+    "categoryNames": {
+      "all": "Wszystko",
+      "travel": "Podróże",
+      "food": "Jedzenie",
+      "business": "Biznes",
+      "technology": "Tech",
+      "health": "Zdrowie",
+      "sports": "Sport",
+      "music": "Muzyka"
+    }
+  },
+  "home": {
+    "greeting": "Cześć,",
+    "streak": "Dni z Rzędu",
+    "streakMessage": "Świetna robota! Utrzymuj swoją serię.",
+    "todayProgress": "Dzisiejszy Postęp",
+    "words": "słów",
+    "wordsLeft": "Jeszcze {{count}} słów do celu",
+    "goalComplete": "Osiągnąłeś dzisiejszy cel!",
+    "startLearning": "Zacznij Naukę",
+    "review": "Powtórka",
+    "quickPractice": "Szybkie Ćwiczenie",
+    "statistics": "Statystyki",
+    "totalWords": "Łącznie Słów",
+    "level": "Poziom",
+    "daysActive": "Aktywne Dni",
+    "accuracy": "Dokładność",
+    "continueLearning": "Kontynuuj Naukę",
+    "lastTopic": "Podróże",
+    "levels": {
+      "beginner": "Początkujący",
+      "elementary": "Podstawowy",
+      "intermediate": "Średni",
+      "advanced": "Zaawansowany"
+    },
+    "nav": {
+      "home": "Start",
+      "explore": "Odkryj",
+      "stats": "Statystyki",
+      "settings": "Ustawienia"
+    }
+  },
+  "settings": {
+    "title": "Ustawienia",
+    "learning": "Nauka",
+    "appLanguage": "Język aplikacji",
+    "learningLanguage": "Język nauki",
+    "dailyGoal": "Dzienny cel",
+    "wordsPerDay": "słów/dzień",
+    "level": "Poziom",
+    "notifications": "Powiadomienia",
+    "pushNotifications": "Powiadomienia push",
+    "reminderTime": "Czas przypomnienia",
+    "appSettings": "Ustawienia aplikacji",
+    "sound": "Efekty dźwiękowe",
+    "vibration": "Wibracje",
+    "autoPlay": "Automatyczne odtwarzanie",
+    "darkMode": "Tryb ciemny",
+    "support": "Wsparcie",
+    "helpCenter": "Centrum pomocy",
+    "contactUs": "Kontakt",
+    "rateApp": "Oceń aplikację",
+    "shareApp": "Udostępnij aplikację",
+    "legal": "Prawne",
+    "privacyPolicy": "Polityka prywatności",
+    "termsOfService": "Warunki korzystania",
+    "logout": "Wyloguj",
+    "logoutTitle": "Wyloguj",
+    "logoutMessage": "Czy na pewno chcesz się wylogować?",
+    "deleteAccount": "Usuń konto",
+    "deleteTitle": "Usuń konto",
+    "deleteMessage": "Tej czynności nie można cofnąć. Wszystkie dane zostaną trwale usunięte.",
+    "delete": "Usuń",
+    "cancel": "Anuluj",
+    "madeWith": "Stworzone z miłością"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Edytuj",
+    "save": "Zapisz",
+    "memberSince": "Członek od:",
+    "statistics": "Statystyki",
+    "wordsLearned": "Nauczone Słowa",
+    "currentStreak": "Obecna Seria",
+    "bestStreak": "Najlepsza Seria",
+    "accuracy": "Dokładność",
+    "totalTime": "Łączny Czas",
+    "daysActive": "Aktywne Dni",
+    "learningInfo": "Info o Nauce",
+    "nativeLanguage": "Język Ojczysty",
+    "learningLanguage": "Język Nauki",
+    "level": "Poziom",
+    "dailyGoal": "Dzienny Cel",
+    "wordsPerDay": "słów/dzień",
+    "achievements": "Osiągnięcia",
+    "seeAll": "Zobacz Wszystko",
+    "settings": "Ustawienia",
+    "namePlaceholder": "Wpisz swoje imię",
+    "error": "Błąd",
+    "nameError": "Imię musi mieć co najmniej 2 znaki"
+  },
+  "learn": {
+    "title": "Nauka",
+    "selectWords": "Wybierz Słowa",
+    "selectedCount": "{{count}}/{{total}} słów wybranych",
+    "wantToLearn": "Chcę się uczyć",
+    "alreadyKnow": "Już znam",
+    "addToLearn": "Chcę Się Uczyć",
+    "iKnowThis": "Znam To",
+    "visualLearning": "Nauka Wizualna",
+    "audioLearning": "Nauka Słuchowa",
+    "writingPractice": "Ćwiczenie Pisania",
+    "tapToReveal": "Dotknij aby odkryć",
+    "selectCorrectWord": "Wybierz poprawne słowo",
+    "didntKnow": "Nie wiedziałem",
+    "gotIt": "Wiedziałem",
+    "listenAndGuess": "Słuchaj i zgaduj",
+    "showAnswer": "Pokaż Odpowiedź",
+    "writeTheWord": "Napisz słowo",
+    "typeHere": "Pisz tutaj...",
+    "check": "Sprawdź",
+    "correct": "Poprawnie!",
+    "incorrect": "Niepoprawnie",
+    "correctAnswer": "Poprawna odpowiedź",
+    "next": "Dalej",
+    "sessionComplete": "Sesja Zakończona!",
+    "greatJob": "Świetna robota!",
+    "totalScore": "Całkowity Wynik",
+    "reviewAgain": "Powtórz",
+    "done": "Gotowe",
+    "skip": "Pomiń",
+    "skipped": "pominięte"
+  }
+}

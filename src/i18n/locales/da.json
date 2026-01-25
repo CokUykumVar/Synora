@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Indlæser..."
+  },
+  "onboarding": {
+    "slogan": "Den smarteste måde at lære ord på",
+    "explore": "Udforsk",
+    "login": "Log ind"
+  },
+  "login": {
+    "title": "Log Nemt Ind",
+    "subtitle": "Forbliv synkroniseret på alle enheder",
+    "google": "Fortsæt med Google",
+    "apple": "Fortsæt med Apple",
+    "or": "eller",
+    "email": "Log ind med Email"
+  },
+  "emailLogin": {
+    "title": "Log ind på din Konto",
+    "emailPlaceholder": "Din e-mailadresse",
+    "passwordPlaceholder": "Dit kodeord",
+    "forgotPassword": "Glemt kodeord",
+    "loginButton": "Log ind",
+    "noAccount": "Har du ingen konto?",
+    "register": "Registrer"
+  },
+  "register": {
+    "title": "Opret Konto",
+    "subtitle": "Start din ordforrådsrejse",
+    "namePlaceholder": "Dit navn",
+    "emailPlaceholder": "Din e-mailadresse",
+    "passwordPlaceholder": "Dit kodeord",
+    "confirmPasswordPlaceholder": "Bekræft kodeord",
+    "registerButton": "Registrer",
+    "hasAccount": "Har du allerede en konto?",
+    "login": "Log ind"
+  },
+  "languageSelect": {
+    "title": "Sprogvalg",
+    "subtitle": "Hvilket sprog vil du lære?",
+    "nativeLanguage": "Dit Modersmål",
+    "learnLanguage": "Sprog at Lære",
+    "select": "Vælg",
+    "selectNative": "Vælg dit modersmål",
+    "selectLearn": "Vælg sprog at lære",
+    "continue": "Fortsæt"
+  },
+  "levelSelect": {
+    "title": "Vælg Dit Niveau",
+    "subtitle": "Fra hvilket niveau vil du starte?",
+    "continue": "Fortsæt",
+    "levels": {
+      "beginner": {
+        "name": "Begynder",
+        "description": "Jeg ved ingenting, starter fra bunden"
+      },
+      "elementary": {
+        "name": "Grundlæggende",
+        "description": "Jeg kender simple ord og sætninger"
+      },
+      "intermediate": {
+        "name": "Mellem",
+        "description": "Jeg forstår hverdagssamtaler"
+      },
+      "advanced": {
+        "name": "Avanceret",
+        "description": "Jeg taler flydende, vil forbedre mig"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Dit Daglige Mål",
+    "subtitle": "Hvor mange ord vil du lære hver dag?",
+    "continue": "Fortsæt",
+    "wordsPerDay": "ord/dag",
+    "perMonth": "/måned",
+    "hint": "Du kan ændre dit mål når som helst",
+    "goals": {
+      "casual": { "name": "Afslappet" },
+      "regular": { "name": "Regelmæssig" },
+      "serious": { "name": "Seriøs" },
+      "intense": { "name": "Intens" }
+    }
+  },
+  "topicSelect": {
+    "title": "Hvilke Emner Interesserer Dig?",
+    "subtitle": "Vælg dine interesser, vi tilpasser indholdet",
+    "continue": "Fortsæt",
+    "hint": "{{count}} emner valgt",
+    "hintMin": "Vælg mindst {{min}} emner ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Rejser",
+      "food": "Mad & Drikke",
+      "business": "Forretning & Karriere",
+      "technology": "Teknologi",
+      "health": "Sundhed",
+      "sports": "Sport",
+      "music": "Musik",
+      "entertainment": "Underholdning",
+      "nature": "Natur",
+      "shopping": "Shopping",
+      "family": "Familie & Relationer",
+      "education": "Uddannelse"
+    }
+  },
+  "habit": {
+    "title": "Vil du opbygge en vane?",
+    "subtitle": "Skab din læringsrutine med daglige påmindelser og nå dine mål",
+    "skip": "Spring over",
+    "continue": "Fortsæt",
+    "dailyReminder": "Daglig Påmindelse",
+    "reminderDescription": "Bliv påmindet på det valgte tidspunkt hver dag",
+    "selectTime": "Påmindelsestid",
+    "hint": "Du kan ændre påmindelsesindstillinger når som helst",
+    "times": {
+      "morning": "Morgen",
+      "noon": "Middag",
+      "afternoon": "Eftermiddag",
+      "evening": "Aften",
+      "night": "Nat"
+    }
+  },
+  "saving": {
+    "title": "Gemmer dine valg",
+    "subtitle": "Vi forbereder den bedste oplevelse for dig",
+    "pleaseWait": "Vent venligst...",
+    "items": {
+      "language": "Sprogindstillinger",
+      "level": "Niveauinformation",
+      "goal": "Dagligt mål",
+      "topics": "Interesser",
+      "reminder": "Påmindelsesindstillinger"
+    }
+  },
+  "success": {
+    "title": "Alt Klar!",
+    "subtitle": "Din ordforrådsrejse begynder",
+    "start": "Lad os starte",
+    "features": {
+      "personalized": "Personaliseret indhold klar til dig",
+      "goals": "Dine mål er sat",
+      "ready": "Du er klar til at lære!"
+    }
+  },
+  "explore": {
+    "title": "Udforsk",
+    "subtitle": "Opdag nye emner og ord",
+    "searchPlaceholder": "Søg emner eller ord...",
+    "categories": "Kategorier",
+    "featured": "Udvalgte",
+    "popularWords": "Populære Ord",
+    "newTopics": "Nye Emner",
+    "seeAll": "Se Alle",
+    "words": "ord",
+    "new": "Nyt",
+    "topicsAvailable": "Tilgængelige Emner",
+    "wordsToLearn": "Ord at Lære",
+    "categoryNames": {
+      "all": "Alle",
+      "travel": "Rejser",
+      "food": "Mad",
+      "business": "Forretning",
+      "technology": "Teknologi",
+      "health": "Sundhed",
+      "sports": "Sport",
+      "music": "Musik"
+    }
+  },
+  "stats": {
+    "title": "Statistik",
+    "subtitle": "Følg din læringsudvikling",
+    "totalWords": "Samlede Ord",
+    "currentStreak": "Nuværende Serie",
+    "accuracy": "Nøjagtighed",
+    "todayWords": "I dag",
+    "weeklyProgress": "Ugentlig Fremgang",
+    "moreStats": "Flere Statistikker",
+    "weeklyAverage": "Ugentligt Gns.",
+    "totalTime": "Samlet Tid",
+    "bestStreak": "Bedste Serie",
+    "perfectDays": "Perfekte Dage",
+    "categoryProgress": "Kategorifremgang",
+    "words": "ord",
+    "achievements": "Præstationer",
+    "goalMet": "Mål Nået",
+    "goalNotMet": "I Gang",
+    "days": {
+      "mon": "Man",
+      "tue": "Tir",
+      "wed": "Ons",
+      "thu": "Tor",
+      "fri": "Fre",
+      "sat": "Lør",
+      "sun": "Søn"
+    },
+    "achievementNames": {
+      "first_word": "Første Ord",
+      "week_streak": "Ugeserie",
+      "hundred_words": "100 Ord",
+      "perfect_day": "Perfekt Dag",
+      "month_streak": "Månedsserie",
+      "five_hundred": "500 Ord"
+    }
+  },
+  "home": {
+    "greeting": "Hej,",
+    "streak": "Dage i Træk",
+    "streakMessage": "Godt klaret! Hold din serie kørende.",
+    "todayProgress": "Dagens Fremskridt",
+    "words": "ord",
+    "wordsLeft": "{{count}} ord tilbage til målet",
+    "goalComplete": "Du har nået dagens mål!",
+    "startLearning": "Start Læring",
+    "review": "Gennemgang",
+    "quickPractice": "Hurtig Øvelse",
+    "statistics": "Statistik",
+    "totalWords": "Totalt Ord",
+    "level": "Niveau",
+    "daysActive": "Aktive Dage",
+    "accuracy": "Nøjagtighed",
+    "continueLearning": "Fortsæt med at Lære",
+    "lastTopic": "Rejser",
+    "levels": {
+      "beginner": "Begynder",
+      "elementary": "Grundlæggende",
+      "intermediate": "Mellem",
+      "advanced": "Avanceret"
+    },
+    "nav": {
+      "home": "Hjem",
+      "explore": "Udforsk",
+      "stats": "Statistik",
+      "settings": "Indstillinger"
+    }
+  },
+  "settings": {
+    "title": "Indstillinger",
+    "learning": "Læring",
+    "appLanguage": "App-sprog",
+    "learningLanguage": "Sprog der læres",
+    "dailyGoal": "Dagligt Mål",
+    "wordsPerDay": "ord/dag",
+    "level": "Niveau",
+    "notifications": "Notifikationer",
+    "pushNotifications": "Push-notifikationer",
+    "reminderTime": "Påmindelsestid",
+    "appSettings": "App-indstillinger",
+    "sound": "Lydeffekter",
+    "vibration": "Vibration",
+    "autoPlay": "Automatisk afspilning",
+    "darkMode": "Mørk tilstand",
+    "support": "Support",
+    "helpCenter": "Hjælpecenter",
+    "contactUs": "Kontakt os",
+    "rateApp": "Bedøm appen",
+    "shareApp": "Del appen",
+    "legal": "Juridisk",
+    "privacyPolicy": "Privatlivspolitik",
+    "termsOfService": "Servicevilkår",
+    "logout": "Log ud",
+    "logoutTitle": "Log ud",
+    "logoutMessage": "Er du sikker på, at du vil logge ud?",
+    "deleteAccount": "Slet konto",
+    "deleteTitle": "Slet konto",
+    "deleteMessage": "Denne handling kan ikke fortrydes. Alle dine data vil blive permanent slettet.",
+    "delete": "Slet",
+    "cancel": "Annuller",
+    "madeWith": "Lavet med kærlighed"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Rediger",
+    "save": "Gem",
+    "memberSince": "Medlem siden:",
+    "statistics": "Statistik",
+    "wordsLearned": "Lærte Ord",
+    "currentStreak": "Nuværende Serie",
+    "bestStreak": "Bedste Serie",
+    "accuracy": "Nøjagtighed",
+    "totalTime": "Samlet Tid",
+    "daysActive": "Aktive Dage",
+    "learningInfo": "Læringsinformation",
+    "nativeLanguage": "Modersmål",
+    "learningLanguage": "Sprog der Læres",
+    "level": "Niveau",
+    "dailyGoal": "Dagligt Mål",
+    "wordsPerDay": "ord/dag",
+    "achievements": "Præstationer",
+    "seeAll": "Se Alle",
+    "settings": "Indstillinger",
+    "namePlaceholder": "Indtast dit navn",
+    "error": "Fejl",
+    "nameError": "Navnet skal være mindst 2 tegn"
+  },
+  "learn": {
+    "title": "Lær",
+    "selectWords": "Vælg Ord",
+    "selectedCount": "{{count}}/{{total}} ord valgt",
+    "wantToLearn": "Vil lære",
+    "alreadyKnow": "Kender allerede",
+    "addToLearn": "Vil Lære",
+    "iKnowThis": "Jeg Kender Dette",
+    "visualLearning": "Visuel Læring",
+    "audioLearning": "Lytteøvelse",
+    "writingPractice": "Skriveøvelse",
+    "tapToReveal": "Tryk for at afsløre",
+    "selectCorrectWord": "Vælg det rigtige ord",
+    "didntKnow": "Vidste ikke",
+    "gotIt": "Vidste",
+    "listenAndGuess": "Lyt og gæt",
+    "showAnswer": "Vis Svar",
+    "writeTheWord": "Skriv ordet",
+    "typeHere": "Skriv her...",
+    "check": "Tjek",
+    "correct": "Korrekt!",
+    "incorrect": "Forkert",
+    "correctAnswer": "Korrekt svar",
+    "next": "Næste",
+    "sessionComplete": "Session Fuldført!",
+    "greatJob": "Godt klaret!",
+    "totalScore": "Total Score",
+    "reviewAgain": "Øv Igen",
+    "done": "Færdig",
+    "skip": "Spring over",
+    "skipped": "sprunget over"
+  }
+}

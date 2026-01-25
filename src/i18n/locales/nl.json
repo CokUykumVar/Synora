@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Laden..."
+  },
+  "onboarding": {
+    "slogan": "De slimste manier om woorden te leren",
+    "explore": "Ontdekken",
+    "login": "Inloggen"
+  },
+  "login": {
+    "title": "Makkelijk Inloggen",
+    "subtitle": "Blijf gesynchroniseerd op al je apparaten",
+    "google": "Doorgaan met Google",
+    "apple": "Doorgaan met Apple",
+    "or": "of",
+    "email": "Inloggen met Email"
+  },
+  "emailLogin": {
+    "title": "Log in op je Account",
+    "emailPlaceholder": "Je e-mailadres",
+    "passwordPlaceholder": "Je wachtwoord",
+    "forgotPassword": "Wachtwoord vergeten",
+    "loginButton": "Inloggen",
+    "noAccount": "Geen account?",
+    "register": "Registreren"
+  },
+  "register": {
+    "title": "Account Aanmaken",
+    "subtitle": "Begin je woordenschat reis",
+    "namePlaceholder": "Je naam",
+    "emailPlaceholder": "Je e-mailadres",
+    "passwordPlaceholder": "Je wachtwoord",
+    "confirmPasswordPlaceholder": "Bevestig wachtwoord",
+    "registerButton": "Registreren",
+    "hasAccount": "Heb je al een account?",
+    "login": "Inloggen"
+  },
+  "languageSelect": {
+    "title": "Taalkeuze",
+    "subtitle": "Welke taal wil je leren?",
+    "nativeLanguage": "Je Moedertaal",
+    "learnLanguage": "Taal om te Leren",
+    "select": "Selecteren",
+    "selectNative": "Selecteer je moedertaal",
+    "selectLearn": "Selecteer de taal om te leren",
+    "continue": "Doorgaan"
+  },
+  "levelSelect": {
+    "title": "Selecteer Je Niveau",
+    "subtitle": "Vanaf welk niveau wil je beginnen?",
+    "continue": "Doorgaan",
+    "levels": {
+      "beginner": {
+        "name": "Beginner",
+        "description": "Ik weet niets, ik begin vanaf nul"
+      },
+      "elementary": {
+        "name": "Elementair",
+        "description": "Ik ken eenvoudige woorden en zinnen"
+      },
+      "intermediate": {
+        "name": "Gemiddeld",
+        "description": "Ik begrijp dagelijkse gesprekken"
+      },
+      "advanced": {
+        "name": "Gevorderd",
+        "description": "Ik spreek vloeiend, wil mezelf verbeteren"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Je Dagelijkse Doel",
+    "subtitle": "Hoeveel woorden wil je elke dag leren?",
+    "continue": "Doorgaan",
+    "wordsPerDay": "woorden/dag",
+    "perMonth": "/maand",
+    "hint": "Je kunt je doel op elk moment wijzigen",
+    "goals": {
+      "casual": { "name": "Ontspannen" },
+      "regular": { "name": "Regelmatig" },
+      "serious": { "name": "Serieus" },
+      "intense": { "name": "Intensief" }
+    }
+  },
+  "topicSelect": {
+    "title": "Welke Onderwerpen Interesseren Je?",
+    "subtitle": "Selecteer je interesses, we personaliseren je inhoud",
+    "continue": "Doorgaan",
+    "hint": "{{count}} onderwerpen geselecteerd",
+    "hintMin": "Selecteer minimaal {{min}} onderwerpen ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Reizen",
+      "food": "Eten & Drinken",
+      "business": "Zakelijk & Carrière",
+      "technology": "Technologie",
+      "health": "Gezondheid",
+      "sports": "Sport",
+      "music": "Muziek",
+      "entertainment": "Entertainment",
+      "nature": "Natuur",
+      "shopping": "Winkelen",
+      "family": "Familie & Relaties",
+      "education": "Onderwijs"
+    }
+  },
+  "habit": {
+    "title": "Wil je een gewoonte opbouwen?",
+    "subtitle": "Creëer je leerroutine met dagelijkse herinneringen en bereik je doelen",
+    "skip": "Overslaan",
+    "continue": "Doorgaan",
+    "dailyReminder": "Dagelijkse Herinnering",
+    "reminderDescription": "Word elke dag herinnerd op de gekozen tijd",
+    "selectTime": "Herinneringstijd",
+    "hint": "Je kunt de herinneringsinstellingen altijd wijzigen",
+    "times": {
+      "morning": "Ochtend",
+      "noon": "Middag",
+      "afternoon": "Namiddag",
+      "evening": "Avond",
+      "night": "Nacht"
+    }
+  },
+  "saving": {
+    "title": "Je selecties worden opgeslagen",
+    "subtitle": "We bereiden de beste ervaring voor je voor",
+    "pleaseWait": "Even geduld...",
+    "items": {
+      "language": "Taalvoorkeuren",
+      "level": "Niveau-informatie",
+      "goal": "Dagelijks doel",
+      "topics": "Interesses",
+      "reminder": "Herinneringsinstellingen"
+    }
+  },
+  "success": {
+    "title": "Alles Klaar!",
+    "subtitle": "Je woordenschatreis begint",
+    "start": "Laten we beginnen",
+    "features": {
+      "personalized": "Gepersonaliseerde inhoud klaar voor jou",
+      "goals": "Je doelen zijn ingesteld",
+      "ready": "Je bent klaar om te leren!"
+    }
+  },
+  "stats": {
+    "title": "Statistieken",
+    "subtitle": "Volg je leervoortgang",
+    "totalWords": "Totaal Woorden",
+    "currentStreak": "Huidige Reeks",
+    "accuracy": "Nauwkeurigheid",
+    "todayWords": "Vandaag",
+    "weeklyProgress": "Wekelijkse Voortgang",
+    "moreStats": "Meer Statistieken",
+    "weeklyAverage": "Wekelijks Gem.",
+    "totalTime": "Totale Tijd",
+    "bestStreak": "Beste Reeks",
+    "perfectDays": "Perfecte Dagen",
+    "categoryProgress": "Categorie Voortgang",
+    "words": "woorden",
+    "achievements": "Prestaties",
+    "goalMet": "Doel Behaald",
+    "goalNotMet": "In Voortgang",
+    "days": {
+      "mon": "Ma",
+      "tue": "Di",
+      "wed": "Wo",
+      "thu": "Do",
+      "fri": "Vr",
+      "sat": "Za",
+      "sun": "Zo"
+    },
+    "achievementNames": {
+      "first_word": "Eerste Woord",
+      "week_streak": "Weekreeks",
+      "hundred_words": "100 Woorden",
+      "perfect_day": "Perfecte Dag",
+      "month_streak": "Maandreeks",
+      "five_hundred": "500 Woorden"
+    }
+  },
+  "explore": {
+    "title": "Ontdekken",
+    "subtitle": "Ontdek nieuwe onderwerpen en woorden",
+    "searchPlaceholder": "Zoek onderwerpen of woorden...",
+    "categories": "Categorieën",
+    "featured": "Uitgelicht",
+    "popularWords": "Populaire Woorden",
+    "newTopics": "Nieuwe Onderwerpen",
+    "seeAll": "Alles Bekijken",
+    "words": "woorden",
+    "new": "Nieuw",
+    "topicsAvailable": "Beschikbare Onderwerpen",
+    "wordsToLearn": "Te Leren Woorden",
+    "categoryNames": {
+      "all": "Alles",
+      "travel": "Reizen",
+      "food": "Eten",
+      "business": "Zakelijk",
+      "technology": "Tech",
+      "health": "Gezondheid",
+      "sports": "Sport",
+      "music": "Muziek"
+    }
+  },
+  "home": {
+    "greeting": "Hallo,",
+    "streak": "Dagen Reeks",
+    "streakMessage": "Goed bezig! Houd je reeks vol.",
+    "todayProgress": "Voortgang Vandaag",
+    "words": "woorden",
+    "wordsLeft": "Nog {{count}} woorden om je doel te bereiken",
+    "goalComplete": "Je hebt je doel van vandaag behaald!",
+    "startLearning": "Start met Leren",
+    "review": "Herhalen",
+    "quickPractice": "Snelle Oefening",
+    "statistics": "Statistieken",
+    "totalWords": "Totaal Woorden",
+    "level": "Niveau",
+    "daysActive": "Actieve Dagen",
+    "accuracy": "Nauwkeurigheid",
+    "continueLearning": "Ga Verder met Leren",
+    "lastTopic": "Reizen",
+    "levels": {
+      "beginner": "Beginner",
+      "elementary": "Elementair",
+      "intermediate": "Gemiddeld",
+      "advanced": "Gevorderd"
+    },
+    "nav": {
+      "home": "Home",
+      "explore": "Ontdek",
+      "stats": "Stats",
+      "settings": "Instellingen"
+    }
+  },
+  "settings": {
+    "title": "Instellingen",
+    "learning": "Leren",
+    "appLanguage": "App-taal",
+    "learningLanguage": "Leertaal",
+    "dailyGoal": "Dagelijks Doel",
+    "wordsPerDay": "woorden/dag",
+    "level": "Niveau",
+    "notifications": "Meldingen",
+    "pushNotifications": "Pushmeldingen",
+    "reminderTime": "Herinneringstijd",
+    "appSettings": "App-instellingen",
+    "sound": "Geluidseffecten",
+    "vibration": "Trillen",
+    "autoPlay": "Automatisch afspelen",
+    "darkMode": "Donkere modus",
+    "support": "Ondersteuning",
+    "helpCenter": "Helpcentrum",
+    "contactUs": "Contact",
+    "rateApp": "Beoordeel app",
+    "shareApp": "Deel app",
+    "legal": "Juridisch",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfService": "Servicevoorwaarden",
+    "logout": "Uitloggen",
+    "logoutTitle": "Uitloggen",
+    "logoutMessage": "Weet je zeker dat je wilt uitloggen?",
+    "deleteAccount": "Account verwijderen",
+    "deleteTitle": "Account verwijderen",
+    "deleteMessage": "Deze actie kan niet ongedaan worden gemaakt. Al je gegevens worden permanent verwijderd.",
+    "delete": "Verwijderen",
+    "cancel": "Annuleren",
+    "madeWith": "Gemaakt met liefde"
+  },
+  "profile": {
+    "title": "Profiel",
+    "edit": "Bewerken",
+    "save": "Opslaan",
+    "memberSince": "Lid sinds:",
+    "statistics": "Statistieken",
+    "wordsLearned": "Geleerde Woorden",
+    "currentStreak": "Huidige Reeks",
+    "bestStreak": "Beste Reeks",
+    "accuracy": "Nauwkeurigheid",
+    "totalTime": "Totale Tijd",
+    "daysActive": "Actieve Dagen",
+    "learningInfo": "Leerinformatie",
+    "nativeLanguage": "Moedertaal",
+    "learningLanguage": "Leertaal",
+    "level": "Niveau",
+    "dailyGoal": "Dagelijks Doel",
+    "wordsPerDay": "woorden/dag",
+    "achievements": "Prestaties",
+    "seeAll": "Alles Bekijken",
+    "settings": "Instellingen",
+    "namePlaceholder": "Voer je naam in",
+    "error": "Fout",
+    "nameError": "Naam moet minimaal 2 tekens bevatten"
+  },
+  "learn": {
+    "title": "Leren",
+    "selectWords": "Woorden Selecteren",
+    "selectedCount": "{{count}}/{{total}} woorden geselecteerd",
+    "wantToLearn": "Wil leren",
+    "alreadyKnow": "Ken ik al",
+    "addToLearn": "Wil Leren",
+    "iKnowThis": "Ik Ken Dit",
+    "visualLearning": "Visueel Leren",
+    "audioLearning": "Audio Leren",
+    "writingPractice": "Schrijfoefening",
+    "tapToReveal": "Tik om te onthullen",
+    "selectCorrectWord": "Selecteer het juiste woord",
+    "didntKnow": "Wist niet",
+    "gotIt": "Wist ik",
+    "listenAndGuess": "Luister en raad",
+    "showAnswer": "Toon Antwoord",
+    "writeTheWord": "Schrijf het woord",
+    "typeHere": "Typ hier...",
+    "check": "Controleren",
+    "correct": "Correct!",
+    "incorrect": "Fout",
+    "correctAnswer": "Juiste antwoord",
+    "next": "Volgende",
+    "sessionComplete": "Sessie Voltooid!",
+    "greatJob": "Goed gedaan!",
+    "totalScore": "Totaalscore",
+    "reviewAgain": "Opnieuw Oefenen",
+    "done": "Klaar",
+    "skip": "Overslaan",
+    "skipped": "overgeslagen"
+  }
+}

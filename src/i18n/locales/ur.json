@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "لوڈ ہو رہا ہے..."
+  },
+  "onboarding": {
+    "slogan": "الفاظ سیکھنے کا سب سے ہوشیار طریقہ",
+    "explore": "دریافت کریں",
+    "login": "لاگ ان"
+  },
+  "login": {
+    "title": "آسانی سے لاگ ان کریں",
+    "subtitle": "تمام آلات پر مطابقت رکھیں",
+    "google": "Google کے ساتھ جاری رکھیں",
+    "apple": "Apple کے ساتھ جاری رکھیں",
+    "or": "یا",
+    "email": "ای میل سے لاگ ان کریں"
+  },
+  "emailLogin": {
+    "title": "اپنے اکاؤنٹ میں لاگ ان کریں",
+    "emailPlaceholder": "آپ کا ای میل",
+    "passwordPlaceholder": "آپ کا پاس ورڈ",
+    "forgotPassword": "پاس ورڈ بھول گئے",
+    "loginButton": "لاگ ان",
+    "noAccount": "اکاؤنٹ نہیں ہے؟",
+    "register": "رجسٹر کریں"
+  },
+  "register": {
+    "title": "اکاؤنٹ بنائیں",
+    "subtitle": "اپنا الفاظ سیکھنے کا سفر شروع کریں",
+    "namePlaceholder": "آپ کا نام",
+    "emailPlaceholder": "آپ کا ای میل",
+    "passwordPlaceholder": "آپ کا پاس ورڈ",
+    "confirmPasswordPlaceholder": "پاس ورڈ کی تصدیق کریں",
+    "registerButton": "رجسٹر کریں",
+    "hasAccount": "پہلے سے اکاؤنٹ ہے؟",
+    "login": "لاگ ان"
+  },
+  "languageSelect": {
+    "title": "زبان کا انتخاب",
+    "subtitle": "آپ کون سی زبان سیکھنا چاہتے ہیں؟",
+    "nativeLanguage": "آپ کی مادری زبان",
+    "learnLanguage": "سیکھنے کی زبان",
+    "select": "منتخب کریں",
+    "selectNative": "اپنی مادری زبان منتخب کریں",
+    "selectLearn": "سیکھنے کے لیے زبان منتخب کریں",
+    "continue": "جاری رکھیں"
+  },
+  "levelSelect": {
+    "title": "اپنا درجہ منتخب کریں",
+    "subtitle": "آپ کس درجے سے شروع کرنا چاہتے ہیں؟",
+    "continue": "جاری رکھیں",
+    "levels": {
+      "beginner": {
+        "name": "ابتدائی",
+        "description": "مجھے کچھ نہیں آتا، صفر سے شروع کر رہا ہوں"
+      },
+      "elementary": {
+        "name": "بنیادی",
+        "description": "مجھے آسان الفاظ اور جملے آتے ہیں"
+      },
+      "intermediate": {
+        "name": "درمیانی",
+        "description": "میں روزمرہ کی گفتگو سمجھ سکتا ہوں"
+      },
+      "advanced": {
+        "name": "اعلی",
+        "description": "میں روانی سے بول سکتا ہوں، بہتر ہونا چاہتا ہوں"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "آپ کا روزانہ ہدف",
+    "subtitle": "آپ روزانہ کتنے الفاظ سیکھنا چاہتے ہیں؟",
+    "continue": "جاری رکھیں",
+    "wordsPerDay": "الفاظ/دن",
+    "perMonth": "/ماہ",
+    "hint": "آپ اپنا ہدف کسی بھی وقت تبدیل کر سکتے ہیں",
+    "goals": {
+      "casual": { "name": "آرام دہ" },
+      "regular": { "name": "باقاعدہ" },
+      "serious": { "name": "سنجیدہ" },
+      "intense": { "name": "شدید" }
+    }
+  },
+  "topicSelect": {
+    "title": "آپ کو کون سے موضوعات دلچسپ لگتے ہیں؟",
+    "subtitle": "اپنی دلچسپیاں منتخب کریں، ہم مواد کو ذاتی بنائیں گے",
+    "continue": "جاری رکھیں",
+    "hint": "{{count}} موضوعات منتخب ہیں",
+    "hintMin": "کم از کم {{min}} موضوعات منتخب کریں ({{count}}/{{min}})",
+    "topics": {
+      "travel": "سفر",
+      "food": "کھانا اور مشروبات",
+      "business": "کاروبار اور کیریئر",
+      "technology": "ٹیکنالوجی",
+      "health": "صحت",
+      "sports": "کھیل",
+      "music": "موسیقی",
+      "entertainment": "تفریح",
+      "nature": "فطرت",
+      "shopping": "خریداری",
+      "family": "خاندان اور تعلقات",
+      "education": "تعلیم"
+    }
+  },
+  "habit": {
+    "title": "کیا آپ عادت بنانا چاہتے ہیں؟",
+    "subtitle": "روزانہ یاد دہانیوں کے ساتھ اپنا سیکھنے کا معمول بنائیں اور اپنے اہداف حاصل کریں",
+    "skip": "چھوڑیں",
+    "continue": "جاری رکھیں",
+    "dailyReminder": "روزانہ یاد دہانی",
+    "reminderDescription": "ہر روز منتخب وقت پر یاد دہانی حاصل کریں",
+    "selectTime": "یاد دہانی کا وقت",
+    "hint": "آپ یاد دہانی کی ترتیبات کسی بھی وقت تبدیل کر سکتے ہیں",
+    "times": {
+      "morning": "صبح",
+      "noon": "دوپہر",
+      "afternoon": "سہ پہر",
+      "evening": "شام",
+      "night": "رات"
+    }
+  },
+  "saving": {
+    "title": "آپ کے انتخاب محفوظ ہو رہے ہیں",
+    "subtitle": "ہم آپ کے لیے بہترین تجربہ تیار کر رہے ہیں",
+    "pleaseWait": "براہ کرم انتظار کریں...",
+    "items": {
+      "language": "زبان کی ترجیحات",
+      "level": "درجے کی معلومات",
+      "goal": "روزانہ ہدف",
+      "topics": "دلچسپیاں",
+      "reminder": "یاد دہانی کی ترتیبات"
+    }
+  },
+  "success": {
+    "title": "سب کچھ تیار ہے!",
+    "subtitle": "آپ کا الفاظ سیکھنے کا سفر شروع ہوتا ہے",
+    "start": "شروع کریں",
+    "features": {
+      "personalized": "آپ کے لیے ذاتی مواد تیار ہے",
+      "goals": "آپ کے اہداف مقرر ہو گئے",
+      "ready": "آپ سیکھنے کے لیے تیار ہیں!"
+    }
+  },
+  "stats": {
+    "title": "اعداد و شمار",
+    "subtitle": "اپنی سیکھنے کی پیشرفت دیکھیں",
+    "totalWords": "کل الفاظ",
+    "currentStreak": "موجودہ سلسلہ",
+    "accuracy": "درستگی",
+    "todayWords": "آج",
+    "weeklyProgress": "ہفتہ وار پیشرفت",
+    "moreStats": "مزید اعداد",
+    "weeklyAverage": "ہفتہ وار اوسط",
+    "totalTime": "کل وقت",
+    "bestStreak": "بہترین سلسلہ",
+    "perfectDays": "کامل دن",
+    "categoryProgress": "زمرہ پیشرفت",
+    "words": "الفاظ",
+    "achievements": "کامیابیاں",
+    "goalMet": "ہدف مکمل",
+    "goalNotMet": "جاری ہے",
+    "days": {
+      "mon": "پیر",
+      "tue": "منگل",
+      "wed": "بدھ",
+      "thu": "جمعرات",
+      "fri": "جمعہ",
+      "sat": "ہفتہ",
+      "sun": "اتوار"
+    },
+    "achievementNames": {
+      "first_word": "پہلا لفظ",
+      "week_streak": "ہفتہ سلسلہ",
+      "hundred_words": "100 الفاظ",
+      "perfect_day": "کامل دن",
+      "month_streak": "ماہ سلسلہ",
+      "five_hundred": "500 الفاظ"
+    }
+  },
+  "explore": {
+    "title": "دریافت کریں",
+    "subtitle": "نئے موضوعات اور الفاظ دریافت کریں",
+    "searchPlaceholder": "موضوع یا لفظ تلاش کریں...",
+    "categories": "زمرے",
+    "featured": "نمایاں",
+    "popularWords": "مقبول الفاظ",
+    "newTopics": "نئے موضوعات",
+    "seeAll": "سب دیکھیں",
+    "words": "الفاظ",
+    "new": "نیا",
+    "topicsAvailable": "دستیاب موضوعات",
+    "wordsToLearn": "سیکھنے کے الفاظ",
+    "categoryNames": {
+      "all": "سب",
+      "travel": "سفر",
+      "food": "کھانا",
+      "business": "کاروبار",
+      "technology": "ٹیکنالوجی",
+      "health": "صحت",
+      "sports": "کھیل",
+      "music": "موسیقی"
+    }
+  },
+  "home": {
+    "greeting": "السلام علیکم،",
+    "streak": "روزانہ سلسلہ",
+    "streakMessage": "شاندار کارکردگی! اپنا سلسلہ جاری رکھیں۔",
+    "todayProgress": "آج کی پیشرفت",
+    "words": "الفاظ",
+    "wordsLeft": "ہدف تک پہنچنے کے لیے {{count}} مزید الفاظ",
+    "goalComplete": "آپ نے آج کا ہدف مکمل کر لیا!",
+    "startLearning": "سیکھنا شروع کریں",
+    "review": "دہرائی",
+    "quickPractice": "فوری مشق",
+    "statistics": "اعداد و شمار",
+    "totalWords": "کل الفاظ",
+    "level": "درجہ",
+    "daysActive": "فعال دن",
+    "accuracy": "درستگی",
+    "continueLearning": "سیکھنا جاری رکھیں",
+    "lastTopic": "سفر",
+    "levels": {
+      "beginner": "ابتدائی",
+      "elementary": "بنیادی",
+      "intermediate": "درمیانی",
+      "advanced": "اعلی"
+    },
+    "nav": {
+      "home": "ہوم",
+      "explore": "دریافت",
+      "stats": "اعداد",
+      "settings": "ترتیبات"
+    }
+  },
+  "settings": {
+    "title": "ترتیبات",
+    "learning": "سیکھنا",
+    "appLanguage": "ایپ کی زبان",
+    "learningLanguage": "سیکھنے کی زبان",
+    "dailyGoal": "روزانہ ہدف",
+    "wordsPerDay": "الفاظ/دن",
+    "level": "سطح",
+    "notifications": "اطلاعات",
+    "pushNotifications": "پش اطلاعات",
+    "reminderTime": "یاد دہانی کا وقت",
+    "appSettings": "ایپ کی ترتیبات",
+    "sound": "آواز کے اثرات",
+    "vibration": "کمپن",
+    "autoPlay": "خودکار چلائیں",
+    "darkMode": "تاریک موڈ",
+    "support": "مدد",
+    "helpCenter": "مدد مرکز",
+    "contactUs": "ہم سے رابطہ کریں",
+    "rateApp": "ایپ کی درجہ بندی کریں",
+    "shareApp": "ایپ شیئر کریں",
+    "legal": "قانونی",
+    "privacyPolicy": "رازداری کی پالیسی",
+    "termsOfService": "سروس کی شرائط",
+    "logout": "لاگ آؤٹ",
+    "logoutTitle": "لاگ آؤٹ",
+    "logoutMessage": "کیا آپ واقعی لاگ آؤٹ کرنا چاہتے ہیں؟",
+    "deleteAccount": "اکاؤنٹ حذف کریں",
+    "deleteTitle": "اکاؤنٹ حذف کریں",
+    "deleteMessage": "یہ عمل واپس نہیں ہو سکتا۔ آپ کا تمام ڈیٹا مستقل طور پر حذف ہو جائے گا۔",
+    "delete": "حذف کریں",
+    "cancel": "منسوخ",
+    "madeWith": "محبت سے بنایا گیا"
+  },
+  "profile": {
+    "title": "پروفائل",
+    "edit": "ترمیم",
+    "save": "محفوظ کریں",
+    "memberSince": "ممبر بنے:",
+    "statistics": "اعداد و شمار",
+    "wordsLearned": "سیکھے گئے الفاظ",
+    "currentStreak": "موجودہ سلسلہ",
+    "bestStreak": "بہترین سلسلہ",
+    "accuracy": "درستگی",
+    "totalTime": "کل وقت",
+    "daysActive": "فعال دن",
+    "learningInfo": "سیکھنے کی معلومات",
+    "nativeLanguage": "مادری زبان",
+    "learningLanguage": "سیکھنے کی زبان",
+    "level": "سطح",
+    "dailyGoal": "روزانہ ہدف",
+    "wordsPerDay": "الفاظ/دن",
+    "achievements": "کامیابیاں",
+    "seeAll": "سب دیکھیں",
+    "settings": "ترتیبات",
+    "namePlaceholder": "اپنا نام درج کریں",
+    "error": "خرابی",
+    "nameError": "نام کم از کم 2 حروف کا ہونا چاہیے"
+  },
+  "learn": {
+    "title": "سیکھیں",
+    "selectWords": "الفاظ منتخب کریں",
+    "selectedCount": "{{count}}/{{total}} الفاظ منتخب ہیں",
+    "wantToLearn": "سیکھنا چاہتا ہوں",
+    "alreadyKnow": "پہلے سے جانتا ہوں",
+    "addToLearn": "سیکھنا چاہتا ہوں",
+    "iKnowThis": "میں جانتا ہوں",
+    "visualLearning": "بصری سیکھنا",
+    "audioLearning": "سماعی سیکھنا",
+    "writingPractice": "لکھنے کی مشق",
+    "tapToReveal": "جواب دیکھنے کے لیے ٹیپ کریں",
+    "selectCorrectWord": "صحیح لفظ منتخب کریں",
+    "didntKnow": "نہیں جانتا تھا",
+    "gotIt": "جانتا تھا",
+    "listenAndGuess": "سنیں اور اندازہ لگائیں",
+    "showAnswer": "جواب دکھائیں",
+    "writeTheWord": "لفظ لکھیں",
+    "typeHere": "یہاں ٹائپ کریں...",
+    "check": "چیک کریں",
+    "correct": "صحیح!",
+    "incorrect": "غلط",
+    "correctAnswer": "صحیح جواب",
+    "next": "اگلا",
+    "sessionComplete": "سیشن مکمل!",
+    "greatJob": "بہترین!",
+    "totalScore": "کل سکور",
+    "reviewAgain": "دوبارہ مشق کریں",
+    "done": "مکمل",
+    "skip": "چھوڑیں",
+    "skipped": "چھوڑ دیا"
+  }
+}

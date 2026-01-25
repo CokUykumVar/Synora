@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Laddar..."
+  },
+  "onboarding": {
+    "slogan": "Det smartaste sättet att lära sig ord",
+    "explore": "Utforska",
+    "login": "Logga in"
+  },
+  "login": {
+    "title": "Logga in Enkelt",
+    "subtitle": "Håll dig synkroniserad på alla enheter",
+    "google": "Fortsätt med Google",
+    "apple": "Fortsätt med Apple",
+    "or": "eller",
+    "email": "Logga in med Email"
+  },
+  "emailLogin": {
+    "title": "Logga in på ditt Konto",
+    "emailPlaceholder": "Din e-postadress",
+    "passwordPlaceholder": "Ditt lösenord",
+    "forgotPassword": "Glömt lösenord",
+    "loginButton": "Logga in",
+    "noAccount": "Har du inget konto?",
+    "register": "Registrera"
+  },
+  "register": {
+    "title": "Skapa Konto",
+    "subtitle": "Börja din ordförrådresa",
+    "namePlaceholder": "Ditt namn",
+    "emailPlaceholder": "Din e-postadress",
+    "passwordPlaceholder": "Ditt lösenord",
+    "confirmPasswordPlaceholder": "Bekräfta lösenord",
+    "registerButton": "Registrera",
+    "hasAccount": "Har du redan ett konto?",
+    "login": "Logga in"
+  },
+  "languageSelect": {
+    "title": "Språkval",
+    "subtitle": "Vilket språk vill du lära dig?",
+    "nativeLanguage": "Ditt Modersmål",
+    "learnLanguage": "Språk att Lära",
+    "select": "Välj",
+    "selectNative": "Välj ditt modersmål",
+    "selectLearn": "Välj språk att lära",
+    "continue": "Fortsätt"
+  },
+  "levelSelect": {
+    "title": "Välj Din Nivå",
+    "subtitle": "Från vilken nivå vill du börja?",
+    "continue": "Fortsätt",
+    "levels": {
+      "beginner": {
+        "name": "Nybörjare",
+        "description": "Jag kan ingenting, börjar från noll"
+      },
+      "elementary": {
+        "name": "Grundläggande",
+        "description": "Jag kan enkla ord och meningar"
+      },
+      "intermediate": {
+        "name": "Medel",
+        "description": "Jag förstår vardagliga samtal"
+      },
+      "advanced": {
+        "name": "Avancerad",
+        "description": "Jag talar flytande, vill förbättra mig"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Ditt Dagliga Mål",
+    "subtitle": "Hur många ord vill du lära dig varje dag?",
+    "continue": "Fortsätt",
+    "wordsPerDay": "ord/dag",
+    "perMonth": "/månad",
+    "hint": "Du kan ändra ditt mål när som helst",
+    "goals": {
+      "casual": { "name": "Avslappnad" },
+      "regular": { "name": "Regelbunden" },
+      "serious": { "name": "Seriös" },
+      "intense": { "name": "Intensiv" }
+    }
+  },
+  "topicSelect": {
+    "title": "Vilka Ämnen Intresserar Dig?",
+    "subtitle": "Välj dina intressen, vi anpassar innehållet",
+    "continue": "Fortsätt",
+    "hint": "{{count}} ämnen valda",
+    "hintMin": "Välj minst {{min}} ämnen ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Resor",
+      "food": "Mat & Dryck",
+      "business": "Affärer & Karriär",
+      "technology": "Teknik",
+      "health": "Hälsa",
+      "sports": "Sport",
+      "music": "Musik",
+      "entertainment": "Underhållning",
+      "nature": "Natur",
+      "shopping": "Shopping",
+      "family": "Familj & Relationer",
+      "education": "Utbildning"
+    }
+  },
+  "habit": {
+    "title": "Vill du bygga en vana?",
+    "subtitle": "Skapa din inlärningsrutin med dagliga påminnelser och nå dina mål",
+    "skip": "Hoppa över",
+    "continue": "Fortsätt",
+    "dailyReminder": "Daglig Påminnelse",
+    "reminderDescription": "Bli påmind vid vald tid varje dag",
+    "selectTime": "Påminnelsetid",
+    "hint": "Du kan ändra påminnelseinställningar när som helst",
+    "times": {
+      "morning": "Morgon",
+      "noon": "Middag",
+      "afternoon": "Eftermiddag",
+      "evening": "Kväll",
+      "night": "Natt"
+    }
+  },
+  "saving": {
+    "title": "Sparar dina val",
+    "subtitle": "Vi förbereder den bästa upplevelsen för dig",
+    "pleaseWait": "Vänligen vänta...",
+    "items": {
+      "language": "Språkinställningar",
+      "level": "Nivåinformation",
+      "goal": "Dagligt mål",
+      "topics": "Intressen",
+      "reminder": "Påminnelseinställningar"
+    }
+  },
+  "success": {
+    "title": "Allt Klart!",
+    "subtitle": "Din ordförrådresa börjar",
+    "start": "Låt oss börja",
+    "features": {
+      "personalized": "Personaliserat innehåll redo för dig",
+      "goals": "Dina mål är satta",
+      "ready": "Du är redo att lära dig!"
+    }
+  },
+  "stats": {
+    "title": "Statistik",
+    "subtitle": "Följ dina framsteg",
+    "totalWords": "Totalt Ord",
+    "currentStreak": "Nuvarande Serie",
+    "accuracy": "Noggrannhet",
+    "todayWords": "Idag",
+    "weeklyProgress": "Veckoframsteg",
+    "moreStats": "Mer Statistik",
+    "weeklyAverage": "Veckosnitt",
+    "totalTime": "Total Tid",
+    "bestStreak": "Bästa Serie",
+    "perfectDays": "Perfekta Dagar",
+    "categoryProgress": "Kategoriframsteg",
+    "words": "ord",
+    "achievements": "Prestationer",
+    "goalMet": "Mål Uppnått",
+    "goalNotMet": "Pågående",
+    "days": {
+      "mon": "Mån",
+      "tue": "Tis",
+      "wed": "Ons",
+      "thu": "Tor",
+      "fri": "Fre",
+      "sat": "Lör",
+      "sun": "Sön"
+    },
+    "achievementNames": {
+      "first_word": "Första Ordet",
+      "week_streak": "Veckoserie",
+      "hundred_words": "100 Ord",
+      "perfect_day": "Perfekt Dag",
+      "month_streak": "Månadsserie",
+      "five_hundred": "500 Ord"
+    }
+  },
+  "explore": {
+    "title": "Utforska",
+    "subtitle": "Upptäck nya ämnen och ord",
+    "searchPlaceholder": "Sök ämnen eller ord...",
+    "categories": "Kategorier",
+    "featured": "Utvalda",
+    "popularWords": "Populära Ord",
+    "newTopics": "Nya Ämnen",
+    "seeAll": "Se Alla",
+    "words": "ord",
+    "new": "Nytt",
+    "topicsAvailable": "Tillgängliga Ämnen",
+    "wordsToLearn": "Ord att Lära",
+    "categoryNames": {
+      "all": "Alla",
+      "travel": "Resor",
+      "food": "Mat",
+      "business": "Affärer",
+      "technology": "Teknik",
+      "health": "Hälsa",
+      "sports": "Sport",
+      "music": "Musik"
+    }
+  },
+  "home": {
+    "greeting": "Hej,",
+    "streak": "Dagar i Rad",
+    "streakMessage": "Bra jobbat! Håll din serie igång.",
+    "todayProgress": "Dagens Framsteg",
+    "words": "ord",
+    "wordsLeft": "{{count}} ord kvar till målet",
+    "goalComplete": "Du har nått dagens mål!",
+    "startLearning": "Börja Lära",
+    "review": "Repetera",
+    "quickPractice": "Snabbövning",
+    "statistics": "Statistik",
+    "totalWords": "Totalt Ord",
+    "level": "Nivå",
+    "daysActive": "Aktiva Dagar",
+    "accuracy": "Noggrannhet",
+    "continueLearning": "Fortsätt Lära",
+    "lastTopic": "Resor",
+    "levels": {
+      "beginner": "Nybörjare",
+      "elementary": "Grundläggande",
+      "intermediate": "Medel",
+      "advanced": "Avancerad"
+    },
+    "nav": {
+      "home": "Hem",
+      "explore": "Utforska",
+      "stats": "Statistik",
+      "settings": "Inställningar"
+    }
+  },
+  "settings": {
+    "title": "Inställningar",
+    "learning": "Lärande",
+    "appLanguage": "App-språk",
+    "learningLanguage": "Språk som lärs",
+    "dailyGoal": "Dagligt Mål",
+    "wordsPerDay": "ord/dag",
+    "level": "Nivå",
+    "notifications": "Aviseringar",
+    "pushNotifications": "Push-aviseringar",
+    "reminderTime": "Påminnelsetid",
+    "appSettings": "App-inställningar",
+    "sound": "Ljudeffekter",
+    "vibration": "Vibration",
+    "autoPlay": "Automatisk uppspelning",
+    "darkMode": "Mörkt läge",
+    "support": "Support",
+    "helpCenter": "Hjälpcenter",
+    "contactUs": "Kontakta oss",
+    "rateApp": "Betygsätt appen",
+    "shareApp": "Dela appen",
+    "legal": "Juridiskt",
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor",
+    "logout": "Logga ut",
+    "logoutTitle": "Logga ut",
+    "logoutMessage": "Är du säker på att du vill logga ut?",
+    "deleteAccount": "Radera konto",
+    "deleteTitle": "Radera konto",
+    "deleteMessage": "Denna åtgärd kan inte ångras. All din data kommer att raderas permanent.",
+    "delete": "Radera",
+    "cancel": "Avbryt",
+    "madeWith": "Gjord med kärlek"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Redigera",
+    "save": "Spara",
+    "memberSince": "Medlem sedan:",
+    "statistics": "Statistik",
+    "wordsLearned": "Inlärda Ord",
+    "currentStreak": "Nuvarande Svit",
+    "bestStreak": "Bästa Svit",
+    "accuracy": "Noggrannhet",
+    "totalTime": "Total Tid",
+    "daysActive": "Aktiva Dagar",
+    "learningInfo": "Lärandeinformation",
+    "nativeLanguage": "Modersmål",
+    "learningLanguage": "Språk som Lärs",
+    "level": "Nivå",
+    "dailyGoal": "Dagligt Mål",
+    "wordsPerDay": "ord/dag",
+    "achievements": "Prestationer",
+    "seeAll": "Visa Alla",
+    "settings": "Inställningar",
+    "namePlaceholder": "Ange ditt namn",
+    "error": "Fel",
+    "nameError": "Namnet måste vara minst 2 tecken"
+  },
+  "learn": {
+    "title": "Lär dig",
+    "selectWords": "Välj Ord",
+    "selectedCount": "{{count}}/{{total}} ord valda",
+    "wantToLearn": "Vill lära mig",
+    "alreadyKnow": "Kan redan",
+    "addToLearn": "Vill Lära Mig",
+    "iKnowThis": "Jag Kan Detta",
+    "visualLearning": "Visuellt Lärande",
+    "audioLearning": "Ljudinlärning",
+    "writingPractice": "Skrivövning",
+    "tapToReveal": "Tryck för att visa",
+    "selectCorrectWord": "Välj rätt ord",
+    "didntKnow": "Visste inte",
+    "gotIt": "Visste",
+    "listenAndGuess": "Lyssna och gissa",
+    "showAnswer": "Visa Svar",
+    "writeTheWord": "Skriv ordet",
+    "typeHere": "Skriv här...",
+    "check": "Kontrollera",
+    "correct": "Rätt!",
+    "incorrect": "Fel",
+    "correctAnswer": "Rätt svar",
+    "next": "Nästa",
+    "sessionComplete": "Session Klar!",
+    "greatJob": "Bra jobbat!",
+    "totalScore": "Total Poäng",
+    "reviewAgain": "Öva Igen",
+    "done": "Klar",
+    "skip": "Hoppa över",
+    "skipped": "hoppade över"
+  }
+}

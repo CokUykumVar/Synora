@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "로딩 중..."
+  },
+  "onboarding": {
+    "slogan": "가장 스마트한 단어 학습법",
+    "explore": "탐색",
+    "login": "로그인"
+  },
+  "login": {
+    "title": "쉽게 로그인",
+    "subtitle": "모든 기기에서 동기화",
+    "google": "Google로 계속",
+    "apple": "Apple로 계속",
+    "or": "또는",
+    "email": "이메일로 로그인"
+  },
+  "emailLogin": {
+    "title": "계정에 로그인",
+    "emailPlaceholder": "이메일 주소",
+    "passwordPlaceholder": "비밀번호",
+    "forgotPassword": "비밀번호 찾기",
+    "loginButton": "로그인",
+    "noAccount": "계정이 없으신가요?",
+    "register": "가입"
+  },
+  "register": {
+    "title": "계정 만들기",
+    "subtitle": "어휘 학습 여정을 시작하세요",
+    "namePlaceholder": "이름",
+    "emailPlaceholder": "이메일 주소",
+    "passwordPlaceholder": "비밀번호",
+    "confirmPasswordPlaceholder": "비밀번호 확인",
+    "registerButton": "가입",
+    "hasAccount": "이미 계정이 있으신가요?",
+    "login": "로그인"
+  },
+  "languageSelect": {
+    "title": "언어 선택",
+    "subtitle": "어떤 언어를 배우고 싶으신가요?",
+    "nativeLanguage": "모국어",
+    "learnLanguage": "배우고 싶은 언어",
+    "select": "선택",
+    "selectNative": "모국어 선택",
+    "selectLearn": "배울 언어 선택",
+    "continue": "계속"
+  },
+  "levelSelect": {
+    "title": "레벨 선택",
+    "subtitle": "어떤 레벨부터 시작하시겠습니까?",
+    "continue": "계속",
+    "levels": {
+      "beginner": {
+        "name": "입문",
+        "description": "아무것도 모르고 처음부터 시작해요"
+      },
+      "elementary": {
+        "name": "초급",
+        "description": "간단한 단어와 문장을 알아요"
+      },
+      "intermediate": {
+        "name": "중급",
+        "description": "일상 대화를 이해할 수 있어요"
+      },
+      "advanced": {
+        "name": "고급",
+        "description": "유창하게 말하고 더 발전하고 싶어요"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "일일 목표",
+    "subtitle": "매일 몇 단어를 배우고 싶으신가요?",
+    "continue": "계속",
+    "wordsPerDay": "단어/일",
+    "perMonth": "/월",
+    "hint": "목표는 언제든지 변경할 수 있어요",
+    "goals": {
+      "casual": { "name": "가볍게" },
+      "regular": { "name": "보통" },
+      "serious": { "name": "진지하게" },
+      "intense": { "name": "집중적으로" }
+    }
+  },
+  "topicSelect": {
+    "title": "어떤 주제에 관심이 있으세요?",
+    "subtitle": "관심사를 선택하면 맞춤 콘텐츠를 제공해드려요",
+    "continue": "계속",
+    "hint": "{{count}}개 주제 선택됨",
+    "hintMin": "최소 {{min}}개 주제를 선택하세요 ({{count}}/{{min}})",
+    "topics": {
+      "travel": "여행",
+      "food": "음식 & 음료",
+      "business": "비즈니스 & 커리어",
+      "technology": "기술",
+      "health": "건강",
+      "sports": "스포츠",
+      "music": "음악",
+      "entertainment": "엔터테인먼트",
+      "nature": "자연",
+      "shopping": "쇼핑",
+      "family": "가족 & 관계",
+      "education": "교육"
+    }
+  },
+  "habit": {
+    "title": "습관을 만들고 싶으세요?",
+    "subtitle": "매일 알림으로 학습 루틴을 만들고 목표를 달성하세요",
+    "skip": "건너뛰기",
+    "continue": "계속",
+    "dailyReminder": "매일 알림",
+    "reminderDescription": "매일 선택한 시간에 알림 받기",
+    "selectTime": "알림 시간",
+    "hint": "알림 설정은 언제든지 변경할 수 있어요",
+    "times": {
+      "morning": "아침",
+      "noon": "점심",
+      "afternoon": "오후",
+      "evening": "저녁",
+      "night": "밤"
+    }
+  },
+  "saving": {
+    "title": "선택 항목 저장 중",
+    "subtitle": "최고의 경험을 준비하고 있어요",
+    "pleaseWait": "잠시만 기다려주세요...",
+    "items": {
+      "language": "언어 설정",
+      "level": "레벨 정보",
+      "goal": "일일 목표",
+      "topics": "관심사",
+      "reminder": "알림 설정"
+    }
+  },
+  "success": {
+    "title": "모든 준비 완료!",
+    "subtitle": "어휘 학습 여정이 시작됩니다",
+    "start": "시작하기",
+    "features": {
+      "personalized": "맞춤형 콘텐츠가 준비되었어요",
+      "goals": "목표가 설정되었어요",
+      "ready": "학습할 준비가 되었어요!"
+    }
+  },
+  "stats": {
+    "title": "통계",
+    "subtitle": "학습 진행 상황 추적",
+    "totalWords": "총 단어 수",
+    "currentStreak": "현재 연속",
+    "accuracy": "정확도",
+    "todayWords": "오늘",
+    "weeklyProgress": "주간 진행",
+    "moreStats": "더 많은 통계",
+    "weeklyAverage": "주간 평균",
+    "totalTime": "총 시간",
+    "bestStreak": "최고 연속",
+    "perfectDays": "완벽한 날",
+    "categoryProgress": "카테고리 진행",
+    "words": "단어",
+    "achievements": "업적",
+    "goalMet": "목표 달성",
+    "goalNotMet": "진행 중",
+    "days": {
+      "mon": "월",
+      "tue": "화",
+      "wed": "수",
+      "thu": "목",
+      "fri": "금",
+      "sat": "토",
+      "sun": "일"
+    },
+    "achievementNames": {
+      "first_word": "첫 단어",
+      "week_streak": "주간 연속",
+      "hundred_words": "100단어",
+      "perfect_day": "완벽한 날",
+      "month_streak": "월간 연속",
+      "five_hundred": "500단어"
+    }
+  },
+  "explore": {
+    "title": "탐색",
+    "subtitle": "새로운 주제와 단어 발견",
+    "searchPlaceholder": "주제 또는 단어 검색...",
+    "categories": "카테고리",
+    "featured": "추천",
+    "popularWords": "인기 단어",
+    "newTopics": "새 주제",
+    "seeAll": "모두 보기",
+    "words": "단어",
+    "new": "새로운",
+    "topicsAvailable": "이용 가능한 주제",
+    "wordsToLearn": "학습할 단어",
+    "categoryNames": {
+      "all": "전체",
+      "travel": "여행",
+      "food": "음식",
+      "business": "비즈니스",
+      "technology": "기술",
+      "health": "건강",
+      "sports": "스포츠",
+      "music": "음악"
+    }
+  },
+  "home": {
+    "greeting": "안녕하세요,",
+    "streak": "연속 일수",
+    "streakMessage": "잘하고 있어요! 연속 기록을 유지하세요.",
+    "todayProgress": "오늘의 진행",
+    "words": "단어",
+    "wordsLeft": "목표까지 {{count}}단어 더",
+    "goalComplete": "오늘의 목표를 달성했어요!",
+    "startLearning": "학습 시작",
+    "review": "복습",
+    "quickPractice": "빠른 연습",
+    "statistics": "통계",
+    "totalWords": "총 단어 수",
+    "level": "레벨",
+    "daysActive": "활동 일수",
+    "accuracy": "정확도",
+    "continueLearning": "학습 계속하기",
+    "lastTopic": "여행",
+    "levels": {
+      "beginner": "입문",
+      "elementary": "초급",
+      "intermediate": "중급",
+      "advanced": "고급"
+    },
+    "nav": {
+      "home": "홈",
+      "explore": "탐색",
+      "stats": "통계",
+      "settings": "설정"
+    }
+  },
+  "settings": {
+    "title": "설정",
+    "learning": "학습",
+    "appLanguage": "앱 언어",
+    "learningLanguage": "학습 언어",
+    "dailyGoal": "일일 목표",
+    "wordsPerDay": "단어/일",
+    "level": "레벨",
+    "notifications": "알림",
+    "pushNotifications": "푸시 알림",
+    "reminderTime": "알림 시간",
+    "appSettings": "앱 설정",
+    "sound": "효과음",
+    "vibration": "진동",
+    "autoPlay": "자동 재생",
+    "darkMode": "다크 모드",
+    "support": "지원",
+    "helpCenter": "도움말 센터",
+    "contactUs": "문의하기",
+    "rateApp": "앱 평가",
+    "shareApp": "앱 공유",
+    "legal": "법적 정보",
+    "privacyPolicy": "개인정보 처리방침",
+    "termsOfService": "서비스 이용약관",
+    "logout": "로그아웃",
+    "logoutTitle": "로그아웃",
+    "logoutMessage": "로그아웃 하시겠습니까?",
+    "deleteAccount": "계정 삭제",
+    "deleteTitle": "계정 삭제",
+    "deleteMessage": "이 작업은 되돌릴 수 없습니다. 모든 데이터가 영구적으로 삭제됩니다.",
+    "delete": "삭제",
+    "cancel": "취소",
+    "madeWith": "사랑으로 만들었습니다"
+  },
+  "profile": {
+    "title": "프로필",
+    "edit": "편집",
+    "save": "저장",
+    "memberSince": "가입일:",
+    "statistics": "통계",
+    "wordsLearned": "학습한 단어",
+    "currentStreak": "현재 연속",
+    "bestStreak": "최고 연속",
+    "accuracy": "정확도",
+    "totalTime": "총 시간",
+    "daysActive": "활동 일수",
+    "learningInfo": "학습 정보",
+    "nativeLanguage": "모국어",
+    "learningLanguage": "학습 언어",
+    "level": "레벨",
+    "dailyGoal": "일일 목표",
+    "wordsPerDay": "단어/일",
+    "achievements": "업적",
+    "seeAll": "모두 보기",
+    "settings": "설정",
+    "namePlaceholder": "이름을 입력하세요",
+    "error": "오류",
+    "nameError": "이름은 최소 2자 이상이어야 합니다"
+  },
+  "learn": {
+    "title": "학습",
+    "selectWords": "단어 선택",
+    "selectedCount": "{{count}}/{{total}} 단어 선택됨",
+    "wantToLearn": "배우고 싶어요",
+    "alreadyKnow": "이미 알아요",
+    "addToLearn": "배우고 싶어요",
+    "iKnowThis": "알아요",
+    "visualLearning": "시각 학습",
+    "audioLearning": "청각 학습",
+    "writingPractice": "쓰기 연습",
+    "tapToReveal": "탭하여 정답 보기",
+    "selectCorrectWord": "올바른 단어를 선택하세요",
+    "didntKnow": "몰랐어요",
+    "gotIt": "알았어요",
+    "listenAndGuess": "듣고 맞춰보세요",
+    "showAnswer": "정답 보기",
+    "writeTheWord": "단어를 쓰세요",
+    "typeHere": "여기에 입력...",
+    "check": "확인",
+    "correct": "정답!",
+    "incorrect": "오답",
+    "correctAnswer": "정답",
+    "next": "다음",
+    "sessionComplete": "학습 완료!",
+    "greatJob": "잘했어요!",
+    "totalScore": "총 점수",
+    "reviewAgain": "다시 복습",
+    "done": "완료",
+    "skip": "건너뛰기",
+    "skipped": "건너뜀"
+  }
+}

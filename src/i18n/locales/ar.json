@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "جاري التحميل..."
+  },
+  "onboarding": {
+    "slogan": "أذكى طريقة لتعلم الكلمات",
+    "explore": "استكشف",
+    "login": "تسجيل الدخول"
+  },
+  "login": {
+    "title": "سجل الدخول بسهولة",
+    "subtitle": "ابق متزامناً على جميع أجهزتك",
+    "google": "المتابعة مع Google",
+    "apple": "المتابعة مع Apple",
+    "or": "أو",
+    "email": "تسجيل الدخول بالبريد الإلكتروني"
+  },
+  "emailLogin": {
+    "title": "سجل الدخول إلى حسابك",
+    "emailPlaceholder": "بريدك الإلكتروني",
+    "passwordPlaceholder": "كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور",
+    "loginButton": "تسجيل الدخول",
+    "noAccount": "ليس لديك حساب؟",
+    "register": "سجل"
+  },
+  "register": {
+    "title": "إنشاء حساب",
+    "subtitle": "ابدأ رحلة تعلم المفردات",
+    "namePlaceholder": "اسمك",
+    "emailPlaceholder": "بريدك الإلكتروني",
+    "passwordPlaceholder": "كلمة المرور",
+    "confirmPasswordPlaceholder": "تأكيد كلمة المرور",
+    "registerButton": "سجل",
+    "hasAccount": "لديك حساب بالفعل؟",
+    "login": "تسجيل الدخول"
+  },
+  "languageSelect": {
+    "title": "اختيار اللغة",
+    "subtitle": "أي لغة تريد أن تتعلم؟",
+    "nativeLanguage": "لغتك الأم",
+    "learnLanguage": "اللغة التي تريد تعلمها",
+    "select": "اختر",
+    "selectNative": "اختر لغتك الأم",
+    "selectLearn": "اختر اللغة للتعلم",
+    "continue": "متابعة"
+  },
+  "levelSelect": {
+    "title": "اختر مستواك",
+    "subtitle": "من أي مستوى تريد أن تبدأ؟",
+    "continue": "متابعة",
+    "levels": {
+      "beginner": {
+        "name": "مبتدئ",
+        "description": "لا أعرف شيئاً، أبدأ من الصفر"
+      },
+      "elementary": {
+        "name": "أساسي",
+        "description": "أعرف كلمات وجمل بسيطة"
+      },
+      "intermediate": {
+        "name": "متوسط",
+        "description": "أستطيع فهم المحادثات اليومية"
+      },
+      "advanced": {
+        "name": "متقدم",
+        "description": "أتحدث بطلاقة، أريد التحسن"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "هدفك اليومي",
+    "subtitle": "كم كلمة تريد تعلمها كل يوم؟",
+    "continue": "متابعة",
+    "wordsPerDay": "كلمة/يوم",
+    "perMonth": "/شهر",
+    "hint": "يمكنك تغيير هدفك في أي وقت",
+    "goals": {
+      "casual": { "name": "مريح" },
+      "regular": { "name": "منتظم" },
+      "serious": { "name": "جاد" },
+      "intense": { "name": "مكثف" }
+    }
+  },
+  "topicSelect": {
+    "title": "ما المواضيع التي تهمك؟",
+    "subtitle": "اختر اهتماماتك، سنخصص المحتوى لك",
+    "continue": "متابعة",
+    "hint": "تم اختيار {{count}} مواضيع",
+    "hintMin": "اختر {{min}} مواضيع على الأقل ({{count}}/{{min}})",
+    "topics": {
+      "travel": "السفر",
+      "food": "الطعام والشراب",
+      "business": "الأعمال والمهنة",
+      "technology": "التكنولوجيا",
+      "health": "الصحة",
+      "sports": "الرياضة",
+      "music": "الموسيقى",
+      "entertainment": "الترفيه",
+      "nature": "الطبيعة",
+      "shopping": "التسوق",
+      "family": "العائلة والعلاقات",
+      "education": "التعليم"
+    }
+  },
+  "habit": {
+    "title": "هل تريد بناء عادة؟",
+    "subtitle": "أنشئ روتين التعلم الخاص بك مع تذكيرات يومية وحقق أهدافك",
+    "skip": "تخطي",
+    "continue": "متابعة",
+    "dailyReminder": "تذكير يومي",
+    "reminderDescription": "احصل على تذكير في الوقت المختار كل يوم",
+    "selectTime": "وقت التذكير",
+    "hint": "يمكنك تغيير إعدادات التذكير في أي وقت",
+    "times": {
+      "morning": "صباح",
+      "noon": "ظهر",
+      "afternoon": "عصر",
+      "evening": "مساء",
+      "night": "ليل"
+    }
+  },
+  "saving": {
+    "title": "جاري حفظ اختياراتك",
+    "subtitle": "نحن نجهز أفضل تجربة لك",
+    "pleaseWait": "يرجى الانتظار...",
+    "items": {
+      "language": "تفضيلات اللغة",
+      "level": "معلومات المستوى",
+      "goal": "الهدف اليومي",
+      "topics": "الاهتمامات",
+      "reminder": "إعدادات التذكير"
+    }
+  },
+  "success": {
+    "title": "كل شيء جاهز!",
+    "subtitle": "تبدأ رحلة تعلم المفردات الخاصة بك",
+    "start": "لنبدأ",
+    "features": {
+      "personalized": "محتوى مخصص جاهز لك",
+      "goals": "تم تحديد أهدافك",
+      "ready": "أنت مستعد للتعلم!"
+    }
+  },
+  "stats": {
+    "title": "الإحصائيات",
+    "subtitle": "تتبع تقدمك في التعلم",
+    "totalWords": "إجمالي الكلمات",
+    "currentStreak": "السلسلة الحالية",
+    "accuracy": "الدقة",
+    "todayWords": "اليوم",
+    "weeklyProgress": "التقدم الأسبوعي",
+    "moreStats": "المزيد من الإحصائيات",
+    "weeklyAverage": "المتوسط الأسبوعي",
+    "totalTime": "الوقت الإجمالي",
+    "bestStreak": "أفضل سلسلة",
+    "perfectDays": "أيام مثالية",
+    "categoryProgress": "تقدم الفئة",
+    "words": "كلمات",
+    "achievements": "الإنجازات",
+    "goalMet": "تم تحقيق الهدف",
+    "goalNotMet": "قيد التقدم",
+    "days": {
+      "mon": "اثن",
+      "tue": "ثلا",
+      "wed": "أرب",
+      "thu": "خمي",
+      "fri": "جمع",
+      "sat": "سبت",
+      "sun": "أحد"
+    },
+    "achievementNames": {
+      "first_word": "الكلمة الأولى",
+      "week_streak": "سلسلة أسبوع",
+      "hundred_words": "100 كلمة",
+      "perfect_day": "يوم مثالي",
+      "month_streak": "سلسلة شهر",
+      "five_hundred": "500 كلمة"
+    }
+  },
+  "explore": {
+    "title": "استكشف",
+    "subtitle": "اكتشف مواضيع وكلمات جديدة",
+    "searchPlaceholder": "ابحث عن مواضيع أو كلمات...",
+    "categories": "الفئات",
+    "featured": "المميزة",
+    "popularWords": "الكلمات الشائعة",
+    "newTopics": "مواضيع جديدة",
+    "seeAll": "عرض الكل",
+    "words": "كلمات",
+    "new": "جديد",
+    "topicsAvailable": "المواضيع المتاحة",
+    "wordsToLearn": "كلمات للتعلم",
+    "categoryNames": {
+      "all": "الكل",
+      "travel": "السفر",
+      "food": "الطعام",
+      "business": "الأعمال",
+      "technology": "التقنية",
+      "health": "الصحة",
+      "sports": "الرياضة",
+      "music": "الموسيقى"
+    }
+  },
+  "home": {
+    "greeting": "مرحباً،",
+    "streak": "أيام متتالية",
+    "streakMessage": "عمل رائع! حافظ على سلسلتك.",
+    "todayProgress": "تقدم اليوم",
+    "words": "كلمات",
+    "wordsLeft": "{{count}} كلمة أخرى لتحقيق هدفك",
+    "goalComplete": "لقد أكملت هدف اليوم!",
+    "startLearning": "ابدأ التعلم",
+    "review": "مراجعة",
+    "quickPractice": "تدريب سريع",
+    "statistics": "الإحصائيات",
+    "totalWords": "إجمالي الكلمات",
+    "level": "المستوى",
+    "daysActive": "أيام نشطة",
+    "accuracy": "الدقة",
+    "continueLearning": "واصل التعلم",
+    "lastTopic": "السفر",
+    "levels": {
+      "beginner": "مبتدئ",
+      "elementary": "أساسي",
+      "intermediate": "متوسط",
+      "advanced": "متقدم"
+    },
+    "nav": {
+      "home": "الرئيسية",
+      "explore": "استكشف",
+      "stats": "إحصائيات",
+      "settings": "الإعدادات"
+    }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "learning": "التعلم",
+    "appLanguage": "لغة التطبيق",
+    "learningLanguage": "لغة التعلم",
+    "dailyGoal": "الهدف اليومي",
+    "wordsPerDay": "كلمة/يوم",
+    "level": "المستوى",
+    "notifications": "الإشعارات",
+    "pushNotifications": "إشعارات الدفع",
+    "reminderTime": "وقت التذكير",
+    "appSettings": "إعدادات التطبيق",
+    "sound": "المؤثرات الصوتية",
+    "vibration": "الاهتزاز",
+    "autoPlay": "تشغيل تلقائي",
+    "darkMode": "الوضع المظلم",
+    "support": "الدعم",
+    "helpCenter": "مركز المساعدة",
+    "contactUs": "اتصل بنا",
+    "rateApp": "قيم التطبيق",
+    "shareApp": "شارك التطبيق",
+    "legal": "قانوني",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "logout": "تسجيل الخروج",
+    "logoutTitle": "تسجيل الخروج",
+    "logoutMessage": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+    "deleteAccount": "حذف الحساب",
+    "deleteTitle": "حذف الحساب",
+    "deleteMessage": "لا يمكن التراجع عن هذا الإجراء. سيتم حذف جميع بياناتك بشكل دائم.",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+    "madeWith": "صنع بحب"
+  },
+  "profile": {
+    "title": "الملف الشخصي",
+    "edit": "تعديل",
+    "save": "حفظ",
+    "memberSince": "عضو منذ:",
+    "statistics": "الإحصائيات",
+    "wordsLearned": "الكلمات المتعلمة",
+    "currentStreak": "السلسلة الحالية",
+    "bestStreak": "أفضل سلسلة",
+    "accuracy": "الدقة",
+    "totalTime": "الوقت الإجمالي",
+    "daysActive": "الأيام النشطة",
+    "learningInfo": "معلومات التعلم",
+    "nativeLanguage": "اللغة الأم",
+    "learningLanguage": "لغة التعلم",
+    "level": "المستوى",
+    "dailyGoal": "الهدف اليومي",
+    "wordsPerDay": "كلمة/يوم",
+    "achievements": "الإنجازات",
+    "seeAll": "عرض الكل",
+    "settings": "الإعدادات",
+    "namePlaceholder": "أدخل اسمك",
+    "error": "خطأ",
+    "nameError": "يجب أن يكون الاسم حرفين على الأقل"
+  },
+  "learn": {
+    "title": "تعلم",
+    "selectWords": "اختر الكلمات",
+    "selectedCount": "تم اختيار {{count}}/{{total}} كلمة",
+    "wantToLearn": "أريد التعلم",
+    "alreadyKnow": "أعرفها",
+    "addToLearn": "أريد التعلم",
+    "iKnowThis": "أعرف هذا",
+    "visualLearning": "التعلم البصري",
+    "audioLearning": "التعلم السمعي",
+    "writingPractice": "ممارسة الكتابة",
+    "tapToReveal": "اضغط لكشف الإجابة",
+    "selectCorrectWord": "اختر الكلمة الصحيحة",
+    "didntKnow": "لم أعرف",
+    "gotIt": "عرفتها",
+    "listenAndGuess": "استمع وخمن",
+    "showAnswer": "إظهار الإجابة",
+    "writeTheWord": "اكتب الكلمة",
+    "typeHere": "اكتب هنا...",
+    "check": "تحقق",
+    "correct": "صحيح!",
+    "incorrect": "خطأ",
+    "correctAnswer": "الإجابة الصحيحة",
+    "next": "التالي",
+    "sessionComplete": "اكتملت الجلسة!",
+    "greatJob": "عمل رائع!",
+    "totalScore": "النتيجة الإجمالية",
+    "reviewAgain": "مراجعة مرة أخرى",
+    "done": "تم",
+    "skip": "تخطي",
+    "skipped": "تم تخطيها"
+  }
+}

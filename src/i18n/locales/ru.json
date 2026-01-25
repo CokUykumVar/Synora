@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Загрузка..."
+  },
+  "onboarding": {
+    "slogan": "Самый умный способ учить слова",
+    "explore": "Исследовать",
+    "login": "Войти"
+  },
+  "login": {
+    "title": "Легкий Вход",
+    "subtitle": "Синхронизируйтесь на всех устройствах",
+    "google": "Продолжить с Google",
+    "apple": "Продолжить с Apple",
+    "or": "или",
+    "email": "Войти через Email"
+  },
+  "emailLogin": {
+    "title": "Войдите в Аккаунт",
+    "emailPlaceholder": "Ваш email",
+    "passwordPlaceholder": "Ваш пароль",
+    "forgotPassword": "Забыли пароль",
+    "loginButton": "Войти",
+    "noAccount": "Нет аккаунта?",
+    "register": "Регистрация"
+  },
+  "register": {
+    "title": "Создать Аккаунт",
+    "subtitle": "Начните свой путь изучения слов",
+    "namePlaceholder": "Ваше имя",
+    "emailPlaceholder": "Ваш email",
+    "passwordPlaceholder": "Ваш пароль",
+    "confirmPasswordPlaceholder": "Подтвердите пароль",
+    "registerButton": "Регистрация",
+    "hasAccount": "Уже есть аккаунт?",
+    "login": "Войти"
+  },
+  "languageSelect": {
+    "title": "Выбор Языка",
+    "subtitle": "Какой язык вы хотите изучать?",
+    "nativeLanguage": "Ваш Родной Язык",
+    "learnLanguage": "Язык для Изучения",
+    "select": "Выбрать",
+    "selectNative": "Выберите родной язык",
+    "selectLearn": "Выберите язык для изучения",
+    "continue": "Продолжить"
+  },
+  "levelSelect": {
+    "title": "Выберите Свой Уровень",
+    "subtitle": "С какого уровня вы хотите начать?",
+    "continue": "Продолжить",
+    "levels": {
+      "beginner": {
+        "name": "Начинающий",
+        "description": "Ничего не знаю, начинаю с нуля"
+      },
+      "elementary": {
+        "name": "Элементарный",
+        "description": "Знаю простые слова и фразы"
+      },
+      "intermediate": {
+        "name": "Средний",
+        "description": "Понимаю повседневные разговоры"
+      },
+      "advanced": {
+        "name": "Продвинутый",
+        "description": "Говорю свободно, хочу совершенствоваться"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Ваша Дневная Цель",
+    "subtitle": "Сколько слов вы хотите учить каждый день?",
+    "continue": "Продолжить",
+    "wordsPerDay": "слов/день",
+    "perMonth": "/месяц",
+    "hint": "Вы можете изменить цель в любое время",
+    "goals": {
+      "casual": { "name": "Спокойный" },
+      "regular": { "name": "Регулярный" },
+      "serious": { "name": "Серьёзный" },
+      "intense": { "name": "Интенсивный" }
+    }
+  },
+  "topicSelect": {
+    "title": "Какие Темы Вас Интересуют?",
+    "subtitle": "Выберите интересы, мы персонализируем контент",
+    "continue": "Продолжить",
+    "hint": "{{count}} тем выбрано",
+    "hintMin": "Выберите минимум {{min}} тем ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Путешествия",
+      "food": "Еда и Напитки",
+      "business": "Бизнес и Карьера",
+      "technology": "Технологии",
+      "health": "Здоровье",
+      "sports": "Спорт",
+      "music": "Музыка",
+      "entertainment": "Развлечения",
+      "nature": "Природа",
+      "shopping": "Шопинг",
+      "family": "Семья и Отношения",
+      "education": "Образование"
+    }
+  },
+  "habit": {
+    "title": "Хотите выработать привычку?",
+    "subtitle": "Создайте свою учебную рутину с ежедневными напоминаниями и достигайте целей",
+    "skip": "Пропустить",
+    "continue": "Продолжить",
+    "dailyReminder": "Ежедневное Напоминание",
+    "reminderDescription": "Получайте напоминание в выбранное время каждый день",
+    "selectTime": "Время Напоминания",
+    "hint": "Вы можете изменить настройки напоминаний в любое время",
+    "times": {
+      "morning": "Утро",
+      "noon": "Полдень",
+      "afternoon": "День",
+      "evening": "Вечер",
+      "night": "Ночь"
+    }
+  },
+  "saving": {
+    "title": "Сохранение ваших настроек",
+    "subtitle": "Мы готовим лучший опыт для вас",
+    "pleaseWait": "Пожалуйста, подождите...",
+    "items": {
+      "language": "Языковые настройки",
+      "level": "Информация об уровне",
+      "goal": "Ежедневная цель",
+      "topics": "Интересы",
+      "reminder": "Настройки напоминаний"
+    }
+  },
+  "success": {
+    "title": "Всё Готово!",
+    "subtitle": "Ваше путешествие в изучении слов начинается",
+    "start": "Начать",
+    "features": {
+      "personalized": "Персонализированный контент готов для вас",
+      "goals": "Ваши цели установлены",
+      "ready": "Вы готовы учиться!"
+    }
+  },
+  "home": {
+    "greeting": "Привет,",
+    "streak": "Дней Подряд",
+    "streakMessage": "Отлично! Продолжай в том же духе.",
+    "todayProgress": "Прогресс за Сегодня",
+    "words": "слов",
+    "wordsLeft": "Ещё {{count}} слов до цели",
+    "goalComplete": "Вы выполнили сегодняшнюю цель!",
+    "startLearning": "Начать Учиться",
+    "review": "Повторить",
+    "quickPractice": "Быстрая Практика",
+    "statistics": "Статистика",
+    "totalWords": "Всего Слов",
+    "level": "Уровень",
+    "daysActive": "Активных Дней",
+    "accuracy": "Точность",
+    "continueLearning": "Продолжить Обучение",
+    "lastTopic": "Путешествия",
+    "levels": {
+      "beginner": "Начинающий",
+      "elementary": "Элементарный",
+      "intermediate": "Средний",
+      "advanced": "Продвинутый"
+    },
+    "nav": {
+      "home": "Главная",
+      "explore": "Поиск",
+      "stats": "Статистика",
+      "settings": "Настройки"
+    }
+  },
+  "stats": {
+    "title": "Статистика",
+    "subtitle": "Отслеживайте свой прогресс",
+    "totalWords": "Всего Слов",
+    "currentStreak": "Текущая Серия",
+    "accuracy": "Точность",
+    "todayWords": "Сегодня",
+    "weeklyProgress": "Недельный Прогресс",
+    "moreStats": "Больше Статистики",
+    "weeklyAverage": "Сред. за Неделю",
+    "totalTime": "Общее Время",
+    "bestStreak": "Лучшая Серия",
+    "perfectDays": "Идеальных Дней",
+    "categoryProgress": "Прогресс по Категориям",
+    "words": "слов",
+    "achievements": "Достижения",
+    "goalMet": "Цель Достигнута",
+    "goalNotMet": "В Процессе",
+    "days": {
+      "mon": "Пн",
+      "tue": "Вт",
+      "wed": "Ср",
+      "thu": "Чт",
+      "fri": "Пт",
+      "sat": "Сб",
+      "sun": "Вс"
+    },
+    "achievementNames": {
+      "first_word": "Первое Слово",
+      "week_streak": "Неделя Подряд",
+      "hundred_words": "100 Слов",
+      "perfect_day": "Идеальный День",
+      "month_streak": "Месяц Подряд",
+      "five_hundred": "500 Слов"
+    }
+  },
+  "explore": {
+    "title": "Исследовать",
+    "subtitle": "Откройте новые темы и слова",
+    "searchPlaceholder": "Поиск тем или слов...",
+    "categories": "Категории",
+    "featured": "Рекомендуемое",
+    "popularWords": "Популярные Слова",
+    "newTopics": "Новые Темы",
+    "seeAll": "Смотреть Все",
+    "words": "слов",
+    "new": "Новое",
+    "topicsAvailable": "Доступных Тем",
+    "wordsToLearn": "Слов для Изучения",
+    "categoryNames": {
+      "all": "Все",
+      "travel": "Путешествия",
+      "food": "Еда",
+      "business": "Бизнес",
+      "technology": "Технологии",
+      "health": "Здоровье",
+      "sports": "Спорт",
+      "music": "Музыка"
+    }
+  },
+  "settings": {
+    "title": "Настройки",
+    "learning": "Обучение",
+    "appLanguage": "Язык приложения",
+    "learningLanguage": "Изучаемый язык",
+    "dailyGoal": "Дневная цель",
+    "wordsPerDay": "слов/день",
+    "level": "Уровень",
+    "notifications": "Уведомления",
+    "pushNotifications": "Push-уведомления",
+    "reminderTime": "Время напоминания",
+    "appSettings": "Настройки приложения",
+    "sound": "Звуковые эффекты",
+    "vibration": "Вибрация",
+    "autoPlay": "Автовоспроизведение",
+    "darkMode": "Тёмный режим",
+    "support": "Поддержка",
+    "helpCenter": "Центр помощи",
+    "contactUs": "Связаться с нами",
+    "rateApp": "Оценить приложение",
+    "shareApp": "Поделиться приложением",
+    "legal": "Правовая информация",
+    "privacyPolicy": "Политика конфиденциальности",
+    "termsOfService": "Условия использования",
+    "logout": "Выйти",
+    "logoutTitle": "Выйти",
+    "logoutMessage": "Вы уверены, что хотите выйти?",
+    "deleteAccount": "Удалить аккаунт",
+    "deleteTitle": "Удалить аккаунт",
+    "deleteMessage": "Это действие нельзя отменить. Все ваши данные будут удалены навсегда.",
+    "delete": "Удалить",
+    "cancel": "Отмена",
+    "madeWith": "Сделано с любовью"
+  },
+  "profile": {
+    "title": "Профиль",
+    "edit": "Редактировать",
+    "save": "Сохранить",
+    "memberSince": "Участник с:",
+    "statistics": "Статистика",
+    "wordsLearned": "Выучено слов",
+    "currentStreak": "Текущая серия",
+    "bestStreak": "Лучшая серия",
+    "accuracy": "Точность",
+    "totalTime": "Общее время",
+    "daysActive": "Активных дней",
+    "learningInfo": "Информация об обучении",
+    "nativeLanguage": "Родной язык",
+    "learningLanguage": "Изучаемый язык",
+    "level": "Уровень",
+    "dailyGoal": "Дневная цель",
+    "wordsPerDay": "слов/день",
+    "achievements": "Достижения",
+    "seeAll": "Смотреть все",
+    "settings": "Настройки",
+    "namePlaceholder": "Введите ваше имя",
+    "error": "Ошибка",
+    "nameError": "Имя должно содержать не менее 2 символов"
+  },
+  "learn": {
+    "title": "Учить",
+    "selectWords": "Выбрать слова",
+    "selectedCount": "{{count}}/{{total}} слов выбрано",
+    "wantToLearn": "Хочу выучить",
+    "alreadyKnow": "Уже знаю",
+    "addToLearn": "Хочу Выучить",
+    "iKnowThis": "Я Знаю",
+    "visualLearning": "Визуальное обучение",
+    "audioLearning": "Аудио обучение",
+    "writingPractice": "Письменная практика",
+    "tapToReveal": "Нажмите чтобы открыть",
+    "selectCorrectWord": "Выберите правильное слово",
+    "didntKnow": "Не знал",
+    "gotIt": "Знал",
+    "listenAndGuess": "Слушай и угадай",
+    "showAnswer": "Показать ответ",
+    "writeTheWord": "Напишите слово",
+    "typeHere": "Введите здесь...",
+    "check": "Проверить",
+    "correct": "Правильно!",
+    "incorrect": "Неправильно",
+    "correctAnswer": "Правильный ответ",
+    "next": "Далее",
+    "sessionComplete": "Сессия завершена!",
+    "greatJob": "Отличная работа!",
+    "totalScore": "Общий балл",
+    "reviewAgain": "Повторить",
+    "done": "Готово",
+    "skip": "Пропустить",
+    "skipped": "пропущено"
+  }
+}

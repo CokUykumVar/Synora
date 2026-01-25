@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Đang tải..."
+  },
+  "onboarding": {
+    "slogan": "Cách thông minh nhất để học từ vựng",
+    "explore": "Khám phá",
+    "login": "Đăng nhập"
+  },
+  "login": {
+    "title": "Đăng Nhập Dễ Dàng",
+    "subtitle": "Đồng bộ trên tất cả thiết bị",
+    "google": "Tiếp tục với Google",
+    "apple": "Tiếp tục với Apple",
+    "or": "hoặc",
+    "email": "Đăng nhập bằng Email"
+  },
+  "emailLogin": {
+    "title": "Đăng Nhập Tài Khoản",
+    "emailPlaceholder": "Địa chỉ email của bạn",
+    "passwordPlaceholder": "Mật khẩu của bạn",
+    "forgotPassword": "Quên mật khẩu",
+    "loginButton": "Đăng nhập",
+    "noAccount": "Chưa có tài khoản?",
+    "register": "Đăng ký"
+  },
+  "register": {
+    "title": "Tạo Tài Khoản",
+    "subtitle": "Bắt đầu hành trình học từ vựng",
+    "namePlaceholder": "Tên của bạn",
+    "emailPlaceholder": "Địa chỉ email của bạn",
+    "passwordPlaceholder": "Mật khẩu của bạn",
+    "confirmPasswordPlaceholder": "Xác nhận mật khẩu",
+    "registerButton": "Đăng ký",
+    "hasAccount": "Đã có tài khoản?",
+    "login": "Đăng nhập"
+  },
+  "languageSelect": {
+    "title": "Chọn Ngôn Ngữ",
+    "subtitle": "Bạn muốn học ngôn ngữ nào?",
+    "nativeLanguage": "Ngôn Ngữ Mẹ Đẻ",
+    "learnLanguage": "Ngôn Ngữ Muốn Học",
+    "select": "Chọn",
+    "selectNative": "Chọn ngôn ngữ mẹ đẻ",
+    "selectLearn": "Chọn ngôn ngữ để học",
+    "continue": "Tiếp tục"
+  },
+  "levelSelect": {
+    "title": "Chọn Cấp Độ",
+    "subtitle": "Bạn muốn bắt đầu từ cấp độ nào?",
+    "continue": "Tiếp tục",
+    "levels": {
+      "beginner": {
+        "name": "Mới bắt đầu",
+        "description": "Tôi không biết gì, bắt đầu từ số không"
+      },
+      "elementary": {
+        "name": "Cơ bản",
+        "description": "Tôi biết các từ và câu đơn giản"
+      },
+      "intermediate": {
+        "name": "Trung cấp",
+        "description": "Tôi hiểu được các cuộc trò chuyện hàng ngày"
+      },
+      "advanced": {
+        "name": "Nâng cao",
+        "description": "Tôi nói trôi chảy, muốn cải thiện bản thân"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Mục Tiêu Hàng Ngày",
+    "subtitle": "Bạn muốn học bao nhiêu từ mỗi ngày?",
+    "continue": "Tiếp tục",
+    "wordsPerDay": "từ/ngày",
+    "perMonth": "/tháng",
+    "hint": "Bạn có thể thay đổi mục tiêu bất cứ lúc nào",
+    "goals": {
+      "casual": { "name": "Thoải mái" },
+      "regular": { "name": "Đều đặn" },
+      "serious": { "name": "Nghiêm túc" },
+      "intense": { "name": "Tập trung" }
+    }
+  },
+  "topicSelect": {
+    "title": "Chủ Đề Nào Thu Hút Bạn?",
+    "subtitle": "Chọn sở thích, chúng tôi sẽ cá nhân hóa nội dung",
+    "continue": "Tiếp tục",
+    "hint": "Đã chọn {{count}} chủ đề",
+    "hintMin": "Chọn ít nhất {{min}} chủ đề ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Du lịch",
+      "food": "Ẩm thực & Đồ uống",
+      "business": "Kinh doanh & Sự nghiệp",
+      "technology": "Công nghệ",
+      "health": "Sức khỏe",
+      "sports": "Thể thao",
+      "music": "Âm nhạc",
+      "entertainment": "Giải trí",
+      "nature": "Thiên nhiên",
+      "shopping": "Mua sắm",
+      "family": "Gia đình & Mối quan hệ",
+      "education": "Giáo dục"
+    }
+  },
+  "habit": {
+    "title": "Bạn có muốn tạo thói quen không?",
+    "subtitle": "Tạo thói quen học tập với nhắc nhở hàng ngày và đạt được mục tiêu của bạn",
+    "skip": "Bỏ qua",
+    "continue": "Tiếp tục",
+    "dailyReminder": "Nhắc Nhở Hàng Ngày",
+    "reminderDescription": "Nhận nhắc nhở vào thời gian đã chọn mỗi ngày",
+    "selectTime": "Thời Gian Nhắc Nhở",
+    "hint": "Bạn có thể thay đổi cài đặt nhắc nhở bất cứ lúc nào",
+    "times": {
+      "morning": "Sáng",
+      "noon": "Trưa",
+      "afternoon": "Chiều",
+      "evening": "Tối",
+      "night": "Đêm"
+    }
+  },
+  "saving": {
+    "title": "Đang lưu lựa chọn của bạn",
+    "subtitle": "Chúng tôi đang chuẩn bị trải nghiệm tốt nhất cho bạn",
+    "pleaseWait": "Vui lòng đợi...",
+    "items": {
+      "language": "Tùy chọn ngôn ngữ",
+      "level": "Thông tin cấp độ",
+      "goal": "Mục tiêu hàng ngày",
+      "topics": "Sở thích",
+      "reminder": "Cài đặt nhắc nhở"
+    }
+  },
+  "success": {
+    "title": "Mọi Thứ Đã Sẵn Sàng!",
+    "subtitle": "Hành trình học từ vựng của bạn bắt đầu",
+    "start": "Bắt Đầu",
+    "features": {
+      "personalized": "Nội dung cá nhân hóa sẵn sàng cho bạn",
+      "goals": "Mục tiêu của bạn đã được đặt",
+      "ready": "Bạn đã sẵn sàng để học!"
+    }
+  },
+  "stats": {
+    "title": "Thống Kê",
+    "subtitle": "Theo dõi tiến độ học tập của bạn",
+    "totalWords": "Tổng Số Từ",
+    "currentStreak": "Chuỗi Hiện Tại",
+    "accuracy": "Độ Chính Xác",
+    "todayWords": "Hôm Nay",
+    "weeklyProgress": "Tiến Độ Tuần",
+    "moreStats": "Thêm Thống Kê",
+    "weeklyAverage": "TB Tuần",
+    "totalTime": "Tổng Thời Gian",
+    "bestStreak": "Chuỗi Tốt Nhất",
+    "perfectDays": "Ngày Hoàn Hảo",
+    "categoryProgress": "Tiến Độ Danh Mục",
+    "words": "từ",
+    "achievements": "Thành Tựu",
+    "goalMet": "Đạt Mục Tiêu",
+    "goalNotMet": "Đang Thực Hiện",
+    "days": {
+      "mon": "T2",
+      "tue": "T3",
+      "wed": "T4",
+      "thu": "T5",
+      "fri": "T6",
+      "sat": "T7",
+      "sun": "CN"
+    },
+    "achievementNames": {
+      "first_word": "Từ Đầu Tiên",
+      "week_streak": "Chuỗi Tuần",
+      "hundred_words": "100 Từ",
+      "perfect_day": "Ngày Hoàn Hảo",
+      "month_streak": "Chuỗi Tháng",
+      "five_hundred": "500 Từ"
+    }
+  },
+  "explore": {
+    "title": "Khám Phá",
+    "subtitle": "Khám phá chủ đề và từ vựng mới",
+    "searchPlaceholder": "Tìm chủ đề hoặc từ...",
+    "categories": "Danh Mục",
+    "featured": "Nổi Bật",
+    "popularWords": "Từ Phổ Biến",
+    "newTopics": "Chủ Đề Mới",
+    "seeAll": "Xem Tất Cả",
+    "words": "từ",
+    "new": "Mới",
+    "topicsAvailable": "Chủ Đề Có Sẵn",
+    "wordsToLearn": "Từ Cần Học",
+    "categoryNames": {
+      "all": "Tất Cả",
+      "travel": "Du Lịch",
+      "food": "Ẩm Thực",
+      "business": "Kinh Doanh",
+      "technology": "Công Nghệ",
+      "health": "Sức Khỏe",
+      "sports": "Thể Thao",
+      "music": "Âm Nhạc"
+    }
+  },
+  "home": {
+    "greeting": "Xin chào,",
+    "streak": "Chuỗi Ngày",
+    "streakMessage": "Bạn đang làm rất tốt! Hãy giữ chuỗi ngày.",
+    "todayProgress": "Tiến Độ Hôm Nay",
+    "words": "từ",
+    "wordsLeft": "Còn {{count}} từ nữa để đạt mục tiêu",
+    "goalComplete": "Bạn đã hoàn thành mục tiêu hôm nay!",
+    "startLearning": "Bắt Đầu Học",
+    "review": "Ôn Tập",
+    "quickPractice": "Luyện Nhanh",
+    "statistics": "Thống Kê",
+    "totalWords": "Tổng Từ",
+    "level": "Cấp Độ",
+    "daysActive": "Ngày Hoạt Động",
+    "accuracy": "Độ Chính Xác",
+    "continueLearning": "Tiếp Tục Học",
+    "lastTopic": "Du lịch",
+    "levels": {
+      "beginner": "Mới bắt đầu",
+      "elementary": "Cơ bản",
+      "intermediate": "Trung cấp",
+      "advanced": "Nâng cao"
+    },
+    "nav": {
+      "home": "Trang Chủ",
+      "explore": "Khám Phá",
+      "stats": "Thống Kê",
+      "settings": "Cài Đặt"
+    }
+  },
+  "settings": {
+    "title": "Cài Đặt",
+    "learning": "Học Tập",
+    "appLanguage": "Ngôn Ngữ Ứng Dụng",
+    "learningLanguage": "Ngôn Ngữ Đang Học",
+    "dailyGoal": "Mục Tiêu Hàng Ngày",
+    "wordsPerDay": "từ/ngày",
+    "level": "Cấp Độ",
+    "notifications": "Thông Báo",
+    "pushNotifications": "Thông Báo Đẩy",
+    "reminderTime": "Thời Gian Nhắc",
+    "appSettings": "Cài Đặt Ứng Dụng",
+    "sound": "Hiệu Ứng Âm Thanh",
+    "vibration": "Rung",
+    "autoPlay": "Tự Động Phát",
+    "darkMode": "Chế Độ Tối",
+    "support": "Hỗ Trợ",
+    "helpCenter": "Trung Tâm Trợ Giúp",
+    "contactUs": "Liên Hệ",
+    "rateApp": "Đánh Giá Ứng Dụng",
+    "shareApp": "Chia Sẻ Ứng Dụng",
+    "legal": "Pháp Lý",
+    "privacyPolicy": "Chính Sách Bảo Mật",
+    "termsOfService": "Điều Khoản Dịch Vụ",
+    "logout": "Đăng Xuất",
+    "logoutTitle": "Đăng Xuất",
+    "logoutMessage": "Bạn có chắc chắn muốn đăng xuất?",
+    "deleteAccount": "Xóa Tài Khoản",
+    "deleteTitle": "Xóa Tài Khoản",
+    "deleteMessage": "Hành động này không thể hoàn tác. Tất cả dữ liệu của bạn sẽ bị xóa vĩnh viễn.",
+    "delete": "Xóa",
+    "cancel": "Hủy",
+    "madeWith": "Được tạo với tình yêu"
+  },
+  "profile": {
+    "title": "Hồ Sơ",
+    "edit": "Chỉnh Sửa",
+    "save": "Lưu",
+    "memberSince": "Thành viên từ:",
+    "statistics": "Thống Kê",
+    "wordsLearned": "Từ Đã Học",
+    "currentStreak": "Chuỗi Hiện Tại",
+    "bestStreak": "Chuỗi Tốt Nhất",
+    "accuracy": "Độ Chính Xác",
+    "totalTime": "Tổng Thời Gian",
+    "daysActive": "Ngày Hoạt Động",
+    "learningInfo": "Thông Tin Học Tập",
+    "nativeLanguage": "Ngôn Ngữ Mẹ Đẻ",
+    "learningLanguage": "Ngôn Ngữ Đang Học",
+    "level": "Cấp Độ",
+    "dailyGoal": "Mục Tiêu Hàng Ngày",
+    "wordsPerDay": "từ/ngày",
+    "achievements": "Thành Tích",
+    "seeAll": "Xem Tất Cả",
+    "settings": "Cài Đặt",
+    "namePlaceholder": "Nhập tên của bạn",
+    "error": "Lỗi",
+    "nameError": "Tên phải có ít nhất 2 ký tự"
+  },
+  "learn": {
+    "title": "Học",
+    "selectWords": "Chọn Từ",
+    "selectedCount": "Đã chọn {{count}}/{{total}} từ",
+    "wantToLearn": "Muốn học",
+    "alreadyKnow": "Đã biết",
+    "addToLearn": "Muốn Học",
+    "iKnowThis": "Tôi Biết",
+    "visualLearning": "Học Trực Quan",
+    "audioLearning": "Học Nghe",
+    "writingPractice": "Luyện Viết",
+    "tapToReveal": "Chạm để hiện đáp án",
+    "selectCorrectWord": "Chọn từ đúng",
+    "didntKnow": "Không biết",
+    "gotIt": "Đã biết",
+    "listenAndGuess": "Nghe và đoán",
+    "showAnswer": "Hiện Đáp Án",
+    "writeTheWord": "Viết từ",
+    "typeHere": "Nhập ở đây...",
+    "check": "Kiểm Tra",
+    "correct": "Đúng!",
+    "incorrect": "Sai",
+    "correctAnswer": "Đáp án đúng",
+    "next": "Tiếp",
+    "sessionComplete": "Hoàn Thành!",
+    "greatJob": "Tuyệt vời!",
+    "totalScore": "Tổng Điểm",
+    "reviewAgain": "Ôn Lại",
+    "done": "Xong",
+    "skip": "Bỏ qua",
+    "skipped": "đã bỏ qua"
+  }
+}

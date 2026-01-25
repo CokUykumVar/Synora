@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "लोड हो रहा है..."
+  },
+  "onboarding": {
+    "slogan": "शब्द सीखने का सबसे स्मार्ट तरीका",
+    "explore": "खोजें",
+    "login": "लॉग इन करें"
+  },
+  "login": {
+    "title": "आसानी से लॉग इन करें",
+    "subtitle": "सभी डिवाइस पर सिंक रहें",
+    "google": "Google से जारी रखें",
+    "apple": "Apple से जारी रखें",
+    "or": "या",
+    "email": "ईमेल से लॉग इन करें"
+  },
+  "emailLogin": {
+    "title": "अपने खाते में लॉग इन करें",
+    "emailPlaceholder": "आपका ईमेल पता",
+    "passwordPlaceholder": "आपका पासवर्ड",
+    "forgotPassword": "पासवर्ड भूल गए",
+    "loginButton": "लॉग इन करें",
+    "noAccount": "खाता नहीं है?",
+    "register": "रजिस्टर करें"
+  },
+  "register": {
+    "title": "खाता बनाएं",
+    "subtitle": "अपनी शब्दावली सीखने की यात्रा शुरू करें",
+    "namePlaceholder": "आपका नाम",
+    "emailPlaceholder": "आपका ईमेल पता",
+    "passwordPlaceholder": "आपका पासवर्ड",
+    "confirmPasswordPlaceholder": "पासवर्ड की पुष्टि करें",
+    "registerButton": "रजिस्टर करें",
+    "hasAccount": "पहले से खाता है?",
+    "login": "लॉग इन करें"
+  },
+  "languageSelect": {
+    "title": "भाषा चयन",
+    "subtitle": "आप कौन सी भाषा सीखना चाहते हैं?",
+    "nativeLanguage": "आपकी मातृभाषा",
+    "learnLanguage": "सीखने की भाषा",
+    "select": "चुनें",
+    "selectNative": "अपनी मातृभाषा चुनें",
+    "selectLearn": "सीखने के लिए भाषा चुनें",
+    "continue": "जारी रखें"
+  },
+  "levelSelect": {
+    "title": "अपना स्तर चुनें",
+    "subtitle": "आप किस स्तर से शुरू करना चाहते हैं?",
+    "continue": "जारी रखें",
+    "levels": {
+      "beginner": {
+        "name": "शुरुआती",
+        "description": "मुझे कुछ नहीं आता, शून्य से शुरू कर रहा हूं"
+      },
+      "elementary": {
+        "name": "बुनियादी",
+        "description": "मुझे सरल शब्द और वाक्य आते हैं"
+      },
+      "intermediate": {
+        "name": "मध्यम",
+        "description": "मैं रोज़मर्रा की बातचीत समझ सकता हूं"
+      },
+      "advanced": {
+        "name": "उन्नत",
+        "description": "मैं धाराप्रवाह बोल सकता हूं, सुधार करना चाहता हूं"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "आपका दैनिक लक्ष्य",
+    "subtitle": "आप हर दिन कितने शब्द सीखना चाहते हैं?",
+    "continue": "जारी रखें",
+    "wordsPerDay": "शब्द/दिन",
+    "perMonth": "/महीना",
+    "hint": "आप कभी भी अपना लक्ष्य बदल सकते हैं",
+    "goals": {
+      "casual": { "name": "आरामदायक" },
+      "regular": { "name": "नियमित" },
+      "serious": { "name": "गंभीर" },
+      "intense": { "name": "तीव्र" }
+    }
+  },
+  "topicSelect": {
+    "title": "कौन से विषय आपकी रुचि रखते हैं?",
+    "subtitle": "अपनी रुचियां चुनें, हम सामग्री को व्यक्तिगत बनाएंगे",
+    "continue": "जारी रखें",
+    "hint": "{{count}} विषय चुने गए",
+    "hintMin": "कम से कम {{min}} विषय चुनें ({{count}}/{{min}})",
+    "topics": {
+      "travel": "यात्रा",
+      "food": "खाना और पेय",
+      "business": "व्यापार और करियर",
+      "technology": "प्रौद्योगिकी",
+      "health": "स्वास्थ्य",
+      "sports": "खेल",
+      "music": "संगीत",
+      "entertainment": "मनोरंजन",
+      "nature": "प्रकृति",
+      "shopping": "खरीदारी",
+      "family": "परिवार और रिश्ते",
+      "education": "शिक्षा"
+    }
+  },
+  "habit": {
+    "title": "क्या आप आदत बनाना चाहते हैं?",
+    "subtitle": "दैनिक रिमाइंडर के साथ अपनी सीखने की दिनचर्या बनाएं और अपने लक्ष्य प्राप्त करें",
+    "skip": "छोड़ें",
+    "continue": "जारी रखें",
+    "dailyReminder": "दैनिक रिमाइंडर",
+    "reminderDescription": "हर दिन चुने हुए समय पर रिमाइंडर प्राप्त करें",
+    "selectTime": "रिमाइंडर समय",
+    "hint": "आप कभी भी रिमाइंडर सेटिंग्स बदल सकते हैं",
+    "times": {
+      "morning": "सुबह",
+      "noon": "दोपहर",
+      "afternoon": "दोपहर बाद",
+      "evening": "शाम",
+      "night": "रात"
+    }
+  },
+  "saving": {
+    "title": "आपके चयन सहेजे जा रहे हैं",
+    "subtitle": "हम आपके लिए सबसे अच्छा अनुभव तैयार कर रहे हैं",
+    "pleaseWait": "कृपया प्रतीक्षा करें...",
+    "items": {
+      "language": "भाषा प्राथमिकताएं",
+      "level": "स्तर की जानकारी",
+      "goal": "दैनिक लक्ष्य",
+      "topics": "रुचियां",
+      "reminder": "रिमाइंडर सेटिंग्स"
+    }
+  },
+  "success": {
+    "title": "सब कुछ तैयार है!",
+    "subtitle": "आपकी शब्दावली सीखने की यात्रा शुरू होती है",
+    "start": "शुरू करें",
+    "features": {
+      "personalized": "आपके लिए व्यक्तिगत सामग्री तैयार है",
+      "goals": "आपके लक्ष्य निर्धारित हो गए",
+      "ready": "आप सीखने के लिए तैयार हैं!"
+    }
+  },
+  "stats": {
+    "title": "आंकड़े",
+    "subtitle": "अपनी सीखने की प्रगति ट्रैक करें",
+    "totalWords": "कुल शब्द",
+    "currentStreak": "वर्तमान लकीर",
+    "accuracy": "सटीकता",
+    "todayWords": "आज",
+    "weeklyProgress": "साप्ताहिक प्रगति",
+    "moreStats": "अधिक आंकड़े",
+    "weeklyAverage": "साप्ताहिक औसत",
+    "totalTime": "कुल समय",
+    "bestStreak": "सर्वश्रेष्ठ लकीर",
+    "perfectDays": "परिपूर्ण दिन",
+    "categoryProgress": "श्रेणी प्रगति",
+    "words": "शब्द",
+    "achievements": "उपलब्धियां",
+    "goalMet": "लक्ष्य पूरा",
+    "goalNotMet": "प्रगति में",
+    "days": {
+      "mon": "सोम",
+      "tue": "मंगल",
+      "wed": "बुध",
+      "thu": "गुरु",
+      "fri": "शुक्र",
+      "sat": "शनि",
+      "sun": "रवि"
+    },
+    "achievementNames": {
+      "first_word": "पहला शब्द",
+      "week_streak": "सप्ताह लकीर",
+      "hundred_words": "100 शब्द",
+      "perfect_day": "परिपूर्ण दिन",
+      "month_streak": "महीना लकीर",
+      "five_hundred": "500 शब्द"
+    }
+  },
+  "explore": {
+    "title": "खोजें",
+    "subtitle": "नए विषय और शब्द खोजें",
+    "searchPlaceholder": "विषय या शब्द खोजें...",
+    "categories": "श्रेणियाँ",
+    "featured": "विशेष",
+    "popularWords": "लोकप्रिय शब्द",
+    "newTopics": "नए विषय",
+    "seeAll": "सभी देखें",
+    "words": "शब्द",
+    "new": "नया",
+    "topicsAvailable": "उपलब्ध विषय",
+    "wordsToLearn": "सीखने के लिए शब्द",
+    "categoryNames": {
+      "all": "सभी",
+      "travel": "यात्रा",
+      "food": "खाना",
+      "business": "व्यापार",
+      "technology": "तकनीक",
+      "health": "स्वास्थ्य",
+      "sports": "खेल",
+      "music": "संगीत"
+    }
+  },
+  "home": {
+    "greeting": "नमस्ते,",
+    "streak": "दैनिक लकीर",
+    "streakMessage": "शानदार प्रदर्शन! अपनी लकीर जारी रखें।",
+    "todayProgress": "आज की प्रगति",
+    "words": "शब्द",
+    "wordsLeft": "लक्ष्य तक पहुंचने के लिए {{count}} और शब्द",
+    "goalComplete": "आपने आज का लक्ष्य पूरा कर लिया!",
+    "startLearning": "सीखना शुरू करें",
+    "review": "दोहराएं",
+    "quickPractice": "त्वरित अभ्यास",
+    "statistics": "आंकड़े",
+    "totalWords": "कुल शब्द",
+    "level": "स्तर",
+    "daysActive": "सक्रिय दिन",
+    "accuracy": "सटीकता",
+    "continueLearning": "सीखना जारी रखें",
+    "lastTopic": "यात्रा",
+    "levels": {
+      "beginner": "शुरुआती",
+      "elementary": "बुनियादी",
+      "intermediate": "मध्यम",
+      "advanced": "उन्नत"
+    },
+    "nav": {
+      "home": "होम",
+      "explore": "खोजें",
+      "stats": "आंकड़े",
+      "settings": "सेटिंग्स"
+    }
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "learning": "सीखना",
+    "appLanguage": "ऐप भाषा",
+    "learningLanguage": "सीखने की भाषा",
+    "dailyGoal": "दैनिक लक्ष्य",
+    "wordsPerDay": "शब्द/दिन",
+    "level": "स्तर",
+    "notifications": "सूचनाएं",
+    "pushNotifications": "पुश सूचनाएं",
+    "reminderTime": "रिमाइंडर समय",
+    "appSettings": "ऐप सेटिंग्स",
+    "sound": "ध्वनि प्रभाव",
+    "vibration": "कंपन",
+    "autoPlay": "ऑटो-प्ले ऑडियो",
+    "darkMode": "डार्क मोड",
+    "support": "सहायता",
+    "helpCenter": "सहायता केंद्र",
+    "contactUs": "संपर्क करें",
+    "rateApp": "ऐप रेट करें",
+    "shareApp": "ऐप साझा करें",
+    "legal": "कानूनी",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsOfService": "सेवा की शर्तें",
+    "logout": "लॉग आउट",
+    "logoutTitle": "लॉग आउट",
+    "logoutMessage": "क्या आप लॉग आउट करना चाहते हैं?",
+    "deleteAccount": "खाता हटाएं",
+    "deleteTitle": "खाता हटाएं",
+    "deleteMessage": "यह क्रिया पूर्ववत नहीं की जा सकती। आपका सारा डेटा स्थायी रूप से हटा दिया जाएगा।",
+    "delete": "हटाएं",
+    "cancel": "रद्द करें",
+    "madeWith": "प्यार से बनाया गया"
+  },
+  "profile": {
+    "title": "प्रोफ़ाइल",
+    "edit": "संपादित करें",
+    "save": "सहेजें",
+    "memberSince": "सदस्य तिथि:",
+    "statistics": "आंकड़े",
+    "wordsLearned": "सीखे गए शब्द",
+    "currentStreak": "वर्तमान लकीर",
+    "bestStreak": "सर्वश्रेष्ठ लकीर",
+    "accuracy": "सटीकता",
+    "totalTime": "कुल समय",
+    "daysActive": "सक्रिय दिन",
+    "learningInfo": "सीखने की जानकारी",
+    "nativeLanguage": "मातृभाषा",
+    "learningLanguage": "सीखने की भाषा",
+    "level": "स्तर",
+    "dailyGoal": "दैनिक लक्ष्य",
+    "wordsPerDay": "शब्द/दिन",
+    "achievements": "उपलब्धियां",
+    "seeAll": "सभी देखें",
+    "settings": "सेटिंग्स",
+    "namePlaceholder": "अपना नाम दर्ज करें",
+    "error": "त्रुटि",
+    "nameError": "नाम कम से कम 2 अक्षर का होना चाहिए"
+  },
+  "learn": {
+    "title": "सीखें",
+    "selectWords": "शब्द चुनें",
+    "selectedCount": "{{count}}/{{total}} शब्द चुने गए",
+    "wantToLearn": "सीखना चाहता हूं",
+    "alreadyKnow": "पहले से जानता हूं",
+    "addToLearn": "सीखना चाहता हूं",
+    "iKnowThis": "मुझे पता है",
+    "visualLearning": "दृश्य सीखना",
+    "audioLearning": "श्रव्य सीखना",
+    "writingPractice": "लेखन अभ्यास",
+    "tapToReveal": "उत्तर देखने के लिए टैप करें",
+    "selectCorrectWord": "सही शब्द चुनें",
+    "didntKnow": "नहीं पता था",
+    "gotIt": "पता था",
+    "listenAndGuess": "सुनें और अनुमान लगाएं",
+    "showAnswer": "उत्तर दिखाएं",
+    "writeTheWord": "शब्द लिखें",
+    "typeHere": "यहां टाइप करें...",
+    "check": "जांचें",
+    "correct": "सही!",
+    "incorrect": "गलत",
+    "correctAnswer": "सही उत्तर",
+    "next": "अगला",
+    "sessionComplete": "सत्र पूर्ण!",
+    "greatJob": "बहुत बढ़िया!",
+    "totalScore": "कुल स्कोर",
+    "reviewAgain": "फिर से दोहराएं",
+    "done": "पूर्ण",
+    "skip": "छोड़ें",
+    "skipped": "छोड़ा गया"
+  }
+}

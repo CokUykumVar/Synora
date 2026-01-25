@@ -1,0 +1,328 @@
+{
+  "appName": "Synora",
+  "splash": {
+    "loading": "Chargement..."
+  },
+  "onboarding": {
+    "slogan": "La façon la plus intelligente d'apprendre des mots",
+    "explore": "Explorer",
+    "login": "Connexion"
+  },
+  "login": {
+    "title": "Connectez-vous Facilement",
+    "subtitle": "Restez synchronisé sur tous vos appareils",
+    "google": "Continuer avec Google",
+    "apple": "Continuer avec Apple",
+    "or": "ou",
+    "email": "Se connecter avec Email"
+  },
+  "emailLogin": {
+    "title": "Connectez-vous à Votre Compte",
+    "emailPlaceholder": "Votre adresse e-mail",
+    "passwordPlaceholder": "Votre mot de passe",
+    "forgotPassword": "Mot de passe oublié",
+    "loginButton": "Connexion",
+    "noAccount": "Pas encore de compte?",
+    "register": "S'inscrire"
+  },
+  "register": {
+    "title": "Créer un Compte",
+    "subtitle": "Commencez votre voyage d'apprentissage",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre adresse e-mail",
+    "passwordPlaceholder": "Votre mot de passe",
+    "confirmPasswordPlaceholder": "Confirmez votre mot de passe",
+    "registerButton": "S'inscrire",
+    "hasAccount": "Déjà un compte?",
+    "login": "Connexion"
+  },
+  "languageSelect": {
+    "title": "Sélection de la Langue",
+    "subtitle": "Quelle langue voulez-vous apprendre?",
+    "nativeLanguage": "Votre Langue Maternelle",
+    "learnLanguage": "Langue à Apprendre",
+    "select": "Sélectionner",
+    "selectNative": "Sélectionnez votre langue maternelle",
+    "selectLearn": "Sélectionnez la langue à apprendre",
+    "continue": "Continuer"
+  },
+  "levelSelect": {
+    "title": "Sélectionnez Votre Niveau",
+    "subtitle": "De quel niveau souhaitez-vous commencer?",
+    "continue": "Continuer",
+    "levels": {
+      "beginner": {
+        "name": "Débutant",
+        "description": "Je ne sais rien, je commence de zéro"
+      },
+      "elementary": {
+        "name": "Élémentaire",
+        "description": "Je connais des mots et phrases simples"
+      },
+      "intermediate": {
+        "name": "Intermédiaire",
+        "description": "Je comprends les conversations quotidiennes"
+      },
+      "advanced": {
+        "name": "Avancé",
+        "description": "Je parle couramment, je veux m'améliorer"
+      }
+    }
+  },
+  "dailyGoal": {
+    "title": "Votre Objectif Quotidien",
+    "subtitle": "Combien de mots voulez-vous apprendre chaque jour?",
+    "continue": "Continuer",
+    "wordsPerDay": "mots/jour",
+    "perMonth": "/mois",
+    "hint": "Vous pouvez changer votre objectif à tout moment",
+    "goals": {
+      "casual": { "name": "Décontracté" },
+      "regular": { "name": "Régulier" },
+      "serious": { "name": "Sérieux" },
+      "intense": { "name": "Intense" }
+    }
+  },
+  "topicSelect": {
+    "title": "Quels Sujets Vous Intéressent?",
+    "subtitle": "Sélectionnez vos intérêts, nous personnaliserons votre contenu",
+    "continue": "Continuer",
+    "hint": "{{count}} sujets sélectionnés",
+    "hintMin": "Sélectionnez au moins {{min}} sujets ({{count}}/{{min}})",
+    "topics": {
+      "travel": "Voyage",
+      "food": "Nourriture & Boissons",
+      "business": "Affaires & Carrière",
+      "technology": "Technologie",
+      "health": "Santé",
+      "sports": "Sports",
+      "music": "Musique",
+      "entertainment": "Divertissement",
+      "nature": "Nature",
+      "shopping": "Shopping",
+      "family": "Famille & Relations",
+      "education": "Éducation"
+    }
+  },
+  "habit": {
+    "title": "Voulez-vous créer une habitude?",
+    "subtitle": "Créez votre routine d'apprentissage avec des rappels quotidiens et atteignez vos objectifs",
+    "skip": "Passer",
+    "continue": "Continuer",
+    "dailyReminder": "Rappel Quotidien",
+    "reminderDescription": "Soyez rappelé à l'heure choisie chaque jour",
+    "selectTime": "Heure du Rappel",
+    "hint": "Vous pouvez modifier les paramètres de rappel à tout moment",
+    "times": {
+      "morning": "Matin",
+      "noon": "Midi",
+      "afternoon": "Après-midi",
+      "evening": "Soir",
+      "night": "Nuit"
+    }
+  },
+  "saving": {
+    "title": "Enregistrement de vos choix",
+    "subtitle": "Nous préparons la meilleure expérience pour vous",
+    "pleaseWait": "Veuillez patienter...",
+    "items": {
+      "language": "Préférences de langue",
+      "level": "Informations de niveau",
+      "goal": "Objectif quotidien",
+      "topics": "Centres d'intérêt",
+      "reminder": "Paramètres de rappel"
+    }
+  },
+  "success": {
+    "title": "Tout Est Prêt!",
+    "subtitle": "Votre voyage d'apprentissage commence",
+    "start": "Commencer",
+    "features": {
+      "personalized": "Contenu personnalisé prêt pour vous",
+      "goals": "Vos objectifs sont définis",
+      "ready": "Vous êtes prêt à apprendre!"
+    }
+  },
+  "home": {
+    "greeting": "Bonjour,",
+    "streak": "Jours Consécutifs",
+    "streakMessage": "Excellent travail ! Maintenez votre série.",
+    "todayProgress": "Progrès du Jour",
+    "words": "mots",
+    "wordsLeft": "Encore {{count}} mots pour atteindre votre objectif",
+    "goalComplete": "Vous avez atteint votre objectif du jour !",
+    "startLearning": "Commencer à Apprendre",
+    "review": "Réviser",
+    "quickPractice": "Pratique Rapide",
+    "statistics": "Statistiques",
+    "totalWords": "Total des Mots",
+    "level": "Niveau",
+    "daysActive": "Jours Actifs",
+    "accuracy": "Précision",
+    "continueLearning": "Continuer à Apprendre",
+    "lastTopic": "Voyage",
+    "levels": {
+      "beginner": "Débutant",
+      "elementary": "Élémentaire",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "nav": {
+      "home": "Accueil",
+      "explore": "Explorer",
+      "stats": "Stats",
+      "settings": "Paramètres"
+    }
+  },
+  "stats": {
+    "title": "Statistiques",
+    "subtitle": "Suivez votre progression",
+    "totalWords": "Total des Mots",
+    "currentStreak": "Série Actuelle",
+    "accuracy": "Précision",
+    "todayWords": "Aujourd'hui",
+    "weeklyProgress": "Progrès Hebdomadaire",
+    "moreStats": "Plus de Stats",
+    "weeklyAverage": "Moy. Hebdo.",
+    "totalTime": "Temps Total",
+    "bestStreak": "Meilleure Série",
+    "perfectDays": "Jours Parfaits",
+    "categoryProgress": "Progrès par Catégorie",
+    "words": "mots",
+    "achievements": "Réussites",
+    "goalMet": "Objectif Atteint",
+    "goalNotMet": "En Cours",
+    "days": {
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mer",
+      "thu": "Jeu",
+      "fri": "Ven",
+      "sat": "Sam",
+      "sun": "Dim"
+    },
+    "achievementNames": {
+      "first_word": "Premier Mot",
+      "week_streak": "Série Semaine",
+      "hundred_words": "100 Mots",
+      "perfect_day": "Jour Parfait",
+      "month_streak": "Série Mois",
+      "five_hundred": "500 Mots"
+    }
+  },
+  "explore": {
+    "title": "Explorer",
+    "subtitle": "Découvrez de nouveaux sujets et mots",
+    "searchPlaceholder": "Rechercher sujets ou mots...",
+    "categories": "Catégories",
+    "featured": "En Vedette",
+    "popularWords": "Mots Populaires",
+    "newTopics": "Nouveaux Sujets",
+    "seeAll": "Voir Tout",
+    "words": "mots",
+    "new": "Nouveau",
+    "topicsAvailable": "Sujets Disponibles",
+    "wordsToLearn": "Mots à Apprendre",
+    "categoryNames": {
+      "all": "Tout",
+      "travel": "Voyage",
+      "food": "Cuisine",
+      "business": "Affaires",
+      "technology": "Tech",
+      "health": "Santé",
+      "sports": "Sports",
+      "music": "Musique"
+    }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "learning": "Apprentissage",
+    "appLanguage": "Langue de l'App",
+    "learningLanguage": "Langue d'Apprentissage",
+    "dailyGoal": "Objectif Quotidien",
+    "wordsPerDay": "mots/jour",
+    "level": "Niveau",
+    "notifications": "Notifications",
+    "pushNotifications": "Notifications Push",
+    "reminderTime": "Heure de Rappel",
+    "appSettings": "Paramètres de l'App",
+    "sound": "Effets Sonores",
+    "vibration": "Vibration",
+    "autoPlay": "Lecture Automatique",
+    "darkMode": "Mode Sombre",
+    "support": "Support",
+    "helpCenter": "Centre d'Aide",
+    "contactUs": "Nous Contacter",
+    "rateApp": "Noter l'App",
+    "shareApp": "Partager l'App",
+    "legal": "Légal",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions d'Utilisation",
+    "logout": "Déconnexion",
+    "logoutTitle": "Déconnexion",
+    "logoutMessage": "Êtes-vous sûr de vouloir vous déconnecter?",
+    "deleteAccount": "Supprimer le Compte",
+    "deleteTitle": "Supprimer le Compte",
+    "deleteMessage": "Cette action est irréversible. Toutes vos données seront supprimées définitivement.",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "madeWith": "Fait avec amour"
+  },
+  "profile": {
+    "title": "Profil",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "memberSince": "Membre depuis:",
+    "statistics": "Statistiques",
+    "wordsLearned": "Mots Appris",
+    "currentStreak": "Série Actuelle",
+    "bestStreak": "Meilleure Série",
+    "accuracy": "Précision",
+    "totalTime": "Temps Total",
+    "daysActive": "Jours Actifs",
+    "learningInfo": "Info d'Apprentissage",
+    "nativeLanguage": "Langue Maternelle",
+    "learningLanguage": "Langue d'Apprentissage",
+    "level": "Niveau",
+    "dailyGoal": "Objectif Quotidien",
+    "wordsPerDay": "mots/jour",
+    "achievements": "Réalisations",
+    "seeAll": "Voir Tout",
+    "settings": "Paramètres",
+    "namePlaceholder": "Entrez votre nom",
+    "error": "Erreur",
+    "nameError": "Le nom doit contenir au moins 2 caractères"
+  },
+  "learn": {
+    "title": "Apprendre",
+    "selectWords": "Sélectionner des Mots",
+    "selectedCount": "{{count}}/{{total}} mots sélectionnés",
+    "wantToLearn": "Je veux apprendre",
+    "alreadyKnow": "Je connais déjà",
+    "addToLearn": "Veux Apprendre",
+    "iKnowThis": "Je Connais",
+    "visualLearning": "Apprentissage Visuel",
+    "audioLearning": "Apprentissage Audio",
+    "writingPractice": "Pratique d'Écriture",
+    "tapToReveal": "Toucher pour révéler",
+    "selectCorrectWord": "Sélectionnez le mot correct",
+    "didntKnow": "Je ne savais pas",
+    "gotIt": "Je savais",
+    "listenAndGuess": "Écouter et deviner",
+    "showAnswer": "Afficher la Réponse",
+    "writeTheWord": "Écrivez le mot",
+    "typeHere": "Tapez ici...",
+    "check": "Vérifier",
+    "correct": "Correct!",
+    "incorrect": "Incorrect",
+    "correctAnswer": "Bonne réponse",
+    "next": "Suivant",
+    "sessionComplete": "Session Terminée!",
+    "greatJob": "Excellent travail!",
+    "totalScore": "Score Total",
+    "reviewAgain": "Réviser",
+    "done": "Terminé",
+    "skip": "Passer",
+    "skipped": "passées"
+  }
+}
