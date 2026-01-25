@@ -326,6 +326,25 @@
     "skipped": "sărite",
     "reverseTranslation": "Traducere inversă",
     "findTranslation": "Găsește traducerea",
-    "selectCorrectTranslation": "Selectează traducerea corectă"
+    "selectCorrectTranslation": "Selectează traducerea corectă",
+    "pronunciationPractice": "Pronunție",
+    "sayTheWord": "Spune cuvântul cu voce tare",
+    "listenFirst": "Ascultă mai întâi",
+    "tapToRecord": "Atinge pentru a înregistra",
+    "recording": "Se înregistrează...",
+    "playRecording": "Redă înregistrarea",
+    "playing": "Se redă...",
+    "recordAgain": "Înregistrează din nou",
+    "tapToSpeak": "Atinge pentru a vorbi",
+    "listening": "Ascult...",
+    "youSaid": "Ai spus",
+    "tryAgain": "Încearcă din nou",
+    "motivation": {
+      "excellent": "Excelent! Ești o stea!",
+      "great": "Bine lucrat! Continuă așa!",
+      "good": "Efort bun! Te îmbunătățești!",
+      "keepTrying": "Continuă să încerci! Practica face perfecțiunea!",
+      "practiceMore": "Nu renunța! Hai să încercăm din nou!"
+    }
   }
 }

@@ -326,6 +326,25 @@
     "skipped": "keçildi",
     "reverseTranslation": "Əks tərcümə",
     "findTranslation": "Tərcüməni tapın",
-    "selectCorrectTranslation": "Düzgün tərcüməni seçin"
+    "selectCorrectTranslation": "Düzgün tərcüməni seçin",
+    "pronunciationPractice": "Tələffüz",
+    "sayTheWord": "Sözü ucadan deyin",
+    "listenFirst": "Əvvəlcə dinləyin",
+    "tapToRecord": "Yazmaq üçün toxunun",
+    "recording": "Yazılır...",
+    "playRecording": "Yazını oxut",
+    "playing": "Oxunur...",
+    "recordAgain": "Yenidən yaz",
+    "tapToSpeak": "Danışmaq üçün toxunun",
+    "listening": "Dinləyirəm...",
+    "youSaid": "Siz dediniz",
+    "tryAgain": "Yenidən cəhd edin",
+    "motivation": {
+      "excellent": "Əla! Sən ulduzsan!",
+      "great": "Gözəl iş! Belə davam et!",
+      "good": "Yaxşı cəhd! İnkişaf edirsən!",
+      "keepTrying": "Cəhd etməyə davam et! Məşq mükəmməllik gətirir!",
+      "practiceMore": "Təslim olma! Yenidən cəhd edək!"
+    }
   }
 }

@@ -334,6 +334,38 @@
     "skipped": "skipped",
     "reverseTranslation": "Reverse Translation",
     "findTranslation": "Find the translation",
-    "selectCorrectTranslation": "Select the correct translation"
+    "selectCorrectTranslation": "Select the correct translation",
+    "pronunciationPractice": "Pronunciation",
+    "sayTheWord": "Say the word out loud",
+    "listenFirst": "Listen first",
+    "tapToRecord": "Tap to record",
+    "recording": "Recording...",
+    "playRecording": "Play your recording",
+    "playing": "Playing...",
+    "recordAgain": "Record again",
+    "tapToSpeak": "Tap to speak",
+    "listening": "Listening...",
+    "youSaid": "You said",
+    "tryAgain": "Try again",
+    "motivation": {
+      "excellent": "Excellent! You're a star!",
+      "great": "Great job! Keep it up!",
+      "good": "Good effort! You're improving!",
+      "keepTrying": "Keep trying! Practice makes perfect!",
+      "practiceMore": "Don't give up! Let's try again!"
+    },
+    "pronunciation": {
+      "yourScore": "Your Pronunciation Score",
+      "accuracy": "Accuracy",
+      "fluency": "Fluency",
+      "completeness": "Completeness",
+      "excellent": "Excellent pronunciation!",
+      "great": "Great! Very good pronunciation!",
+      "good": "Good! Practice a bit more.",
+      "needsWork": "Needs work. Try again!",
+      "tryAgain": "Listen again and repeat.",
+      "noSpeech": "No speech detected. Try again.",
+      "analyzing": "Analyzing pronunciation..."
+    }
   }
 }

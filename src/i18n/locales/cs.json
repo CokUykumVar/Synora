@@ -326,6 +326,25 @@
     "skipped": "přeskočeno",
     "reverseTranslation": "Obrácený překlad",
     "findTranslation": "Najděte překlad",
-    "selectCorrectTranslation": "Vyberte správný překlad"
+    "selectCorrectTranslation": "Vyberte správný překlad",
+    "pronunciationPractice": "Výslovnost",
+    "sayTheWord": "Řekněte slovo nahlas",
+    "listenFirst": "Nejdříve poslouchejte",
+    "tapToRecord": "Klepněte pro nahrávání",
+    "recording": "Nahrávání...",
+    "playRecording": "Přehrát nahrávku",
+    "playing": "Přehrává se...",
+    "recordAgain": "Nahrát znovu",
+    "tapToSpeak": "Klepněte pro mluvení",
+    "listening": "Poslouchám...",
+    "youSaid": "Řekl jste",
+    "tryAgain": "Zkusit znovu",
+    "motivation": {
+      "excellent": "Výborně! Jsi hvězda!",
+      "great": "Skvělá práce! Pokračuj!",
+      "good": "Dobrá snaha! Zlepšuješ se!",
+      "keepTrying": "Nevzdávej to! Cvičení dělá mistra!",
+      "practiceMore": "Nevzdávej se! Zkusme to znovu!"
+    }
   }
 }

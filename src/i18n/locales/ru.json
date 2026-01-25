@@ -326,6 +326,25 @@
     "skipped": "пропущено",
     "reverseTranslation": "Обратный перевод",
     "findTranslation": "Найдите перевод",
-    "selectCorrectTranslation": "Выберите правильный перевод"
+    "selectCorrectTranslation": "Выберите правильный перевод",
+    "pronunciationPractice": "Произношение",
+    "sayTheWord": "Произнесите слово вслух",
+    "listenFirst": "Сначала послушайте",
+    "tapToRecord": "Нажмите для записи",
+    "recording": "Запись...",
+    "playRecording": "Воспроизвести запись",
+    "playing": "Воспроизведение...",
+    "recordAgain": "Записать снова",
+    "tapToSpeak": "Нажмите чтобы говорить",
+    "listening": "Слушаю...",
+    "youSaid": "Вы сказали",
+    "tryAgain": "Попробовать снова",
+    "motivation": {
+      "excellent": "Отлично! Ты звезда!",
+      "great": "Отличная работа! Так держать!",
+      "good": "Хорошая работа! Ты улучшаешься!",
+      "keepTrying": "Продолжай! Практика ведёт к совершенству!",
+      "practiceMore": "Не сдавайся! Попробуем ещё раз!"
+    }
   }
 }

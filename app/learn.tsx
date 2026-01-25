@@ -15,9 +15,18 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
+import { Audio } from 'expo-av';
 import i18n from '../src/i18n';
+import {
+  isAzureConfigured,
+  speakWithAzure,
+  assessPronunciation,
+  getPronunciationFeedback,
+  PronunciationResult,
+} from '../src/services/azureSpeech';
 
 // Language code mapping for Text-to-Speech
+// Note: Some languages use fallback codes for better TTS support
 const languageToSpeechCode: { [key: string]: string } = {
   en: 'en-US',
   tr: 'tr-TR',
@@ -25,13 +34,13 @@ const languageToSpeechCode: { [key: string]: string } = {
   es: 'es-ES',
   fr: 'fr-FR',
   it: 'it-IT',
-  pt: 'pt-BR',
+  pt: 'pt-PT',    // European Portuguese (clearer pronunciation)
   ru: 'ru-RU',
   ja: 'ja-JP',
   zh: 'zh-CN',
   ko: 'ko-KR',
-  ar: 'ar-SA',
-  az: 'az-AZ',
+  ar: 'ar-XA',    // Google's Arabic (better support than ar-SA)
+  az: 'tr-TR',    // Azerbaijani → Turkish (similar Turkic language)
   hr: 'hr-HR',
   cs: 'cs-CZ',
   da: 'da-DK',
@@ -45,9 +54,43 @@ const languageToSpeechCode: { [key: string]: string } = {
   ro: 'ro-RO',
   sv: 'sv-SE',
   th: 'th-TH',
-  uk: 'uk-UA',
-  ur: 'ur-PK',
+  uk: 'ru-RU',    // Ukrainian → Russian (Slavic, better TTS support)
+  ur: 'hi-IN',    // Urdu → Hindi (mutually intelligible, same phonetics)
   vi: 'vi-VN',
+};
+
+// Language-specific speech rates for better clarity
+// Some languages need slower speech for better pronunciation
+const languageSpeechRate: { [key: string]: number } = {
+  en: 0.75,
+  tr: 0.7,
+  de: 0.7,
+  es: 0.75,
+  fr: 0.7,
+  it: 0.75,
+  pt: 0.7,   // Portuguese
+  ru: 0.65,  // Russian needs slower speech
+  ja: 0.55,  // Japanese needs slower speech
+  zh: 0.55,  // Chinese needs slower speech
+  ko: 0.6,   // Korean needs slower speech
+  ar: 0.55,  // Arabic needs slower speech
+  az: 0.7,   // Azerbaijani (uses Turkish TTS)
+  hr: 0.7,   // Croatian
+  cs: 0.7,   // Czech
+  da: 0.7,   // Danish
+  nl: 0.7,   // Dutch
+  fi: 0.7,   // Finnish
+  el: 0.65,  // Greek
+  hi: 0.6,   // Hindi
+  id: 0.7,   // Indonesian
+  no: 0.7,   // Norwegian
+  pl: 0.7,   // Polish
+  ro: 0.7,   // Romanian
+  sv: 0.7,   // Swedish
+  th: 0.55,  // Thai needs slower speech
+  uk: 0.65,  // Ukrainian (uses Russian TTS)
+  ur: 0.6,   // Urdu (uses Hindi TTS)
+  vi: 0.55,  // Vietnamese needs slower speech
 };
 import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
 import { useUser } from '../src/context/UserContext';
@@ -67,7 +110,7 @@ interface Word {
   category?: string;
 }
 
-type LearningPhase = 'selection' | 'flashcard' | 'listening' | 'writing' | 'reverseTranslation' | 'complete';
+type LearningPhase = 'selection' | 'flashcard' | 'listening' | 'writing' | 'reverseTranslation' | 'pronunciation' | 'complete';
 
 export default function LearnScreen() {
   const router = useRouter();
@@ -94,16 +137,36 @@ export default function LearnScreen() {
     listening: { correct: number; skipped: number };
     writing: { correct: number; skipped: number };
     reverseTranslation: { correct: number; skipped: number };
+    pronunciation: { correct: number; skipped: number };
   }>({
     flashcard: { correct: 0, skipped: 0 },
     listening: { correct: 0, skipped: 0 },
     writing: { correct: 0, skipped: 0 },
     reverseTranslation: { correct: 0, skipped: 0 },
+    pronunciation: { correct: 0, skipped: 0 },
   });
   const [options, setOptions] = useState<string[]>([]);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [wordsLoading, setWordsLoading] = useState(true);
   const [isSwiping, setIsSwiping] = useState(false); // For visual button disable
+
+  // Recording states for pronunciation
+  const [recording, setRecording] = useState<Audio.Recording | null>(null);
+  const [recordingUri, setRecordingUri] = useState<string | null>(null);
+  const [isRecording, setIsRecording] = useState(false);
+  const [isPlayingRecording, setIsPlayingRecording] = useState(false);
+  const [hasRecorded, setHasRecorded] = useState(false);
+  const soundRef = useRef<Audio.Sound | null>(null);
+
+  // Pronunciation assessment states
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [pronunciationResult, setPronunciationResult] = useState<PronunciationResult | null>(null);
+  const [useAzure, setUseAzure] = useState(false);
+
+  // Check if Azure is configured on mount
+  useEffect(() => {
+    setUseAzure(isAzureConfigured());
+  }, []);
 
   // Load words based on user's language preferences
   useEffect(() => {
@@ -462,7 +525,11 @@ export default function LearnScreen() {
       setSelectedOption(null);
       setIsCorrect(null);
     } else {
-      setPhase('complete');
+      // Move to pronunciation phase
+      setPhase('pronunciation');
+      setCurrentWordIndex(0);
+      setHasRecorded(false);
+      setRecordingUri(null);
     }
   };
 
@@ -472,9 +539,176 @@ export default function LearnScreen() {
       setSelectedOption(null);
       setIsCorrect(null);
     } else {
+      // Move to pronunciation phase
+      setPhase('pronunciation');
+      setCurrentWordIndex(0);
+      setHasRecorded(false);
+      setRecordingUri(null);
+    }
+  };
+
+  // Pronunciation recording handlers
+  // Custom recording options for Azure Speech (WAV format)
+  const azureRecordingOptions: Audio.RecordingOptions = {
+    isMeteringEnabled: true,
+    android: {
+      extension: '.wav',
+      outputFormat: Audio.AndroidOutputFormat.DEFAULT,
+      audioEncoder: Audio.AndroidAudioEncoder.DEFAULT,
+      sampleRate: 16000,
+      numberOfChannels: 1,
+      bitRate: 256000,
+    },
+    ios: {
+      extension: '.wav',
+      outputFormat: Audio.IOSOutputFormat.LINEARPCM,
+      audioQuality: Audio.IOSAudioQuality.HIGH,
+      sampleRate: 16000,
+      numberOfChannels: 1,
+      bitRate: 256000,
+      linearPCMBitDepth: 16,
+      linearPCMIsBigEndian: false,
+      linearPCMIsFloat: false,
+    },
+    web: {
+      mimeType: 'audio/wav',
+      bitsPerSecond: 256000,
+    },
+  };
+
+  const startRecording = async () => {
+    try {
+      // Request permissions
+      const permission = await Audio.requestPermissionsAsync();
+      if (permission.status !== 'granted') {
+        console.log('Permission not granted');
+        return;
+      }
+
+      // Set audio mode for recording
+      await Audio.setAudioModeAsync({
+        allowsRecordingIOS: true,
+        playsInSilentModeIOS: true,
+      });
+
+      // Start recording with Azure-compatible options
+      const { recording: newRecording } = await Audio.Recording.createAsync(
+        useAzure ? azureRecordingOptions : Audio.RecordingOptionsPresets.HIGH_QUALITY
+      );
+      setRecording(newRecording);
+      setIsRecording(true);
+      setHasRecorded(false);
+    } catch (error) {
+      console.log('Failed to start recording:', error);
+    }
+  };
+
+  const stopRecording = async () => {
+    if (!recording) return;
+
+    try {
+      setIsRecording(false);
+      await recording.stopAndUnloadAsync();
+      const uri = recording.getURI();
+      setRecordingUri(uri);
+      setRecording(null);
+      setHasRecorded(true);
+
+      // Reset audio mode
+      await Audio.setAudioModeAsync({
+        allowsRecordingIOS: false,
+      });
+
+      // If Azure is configured, assess pronunciation
+      if (useAzure && uri && currentWord) {
+        setIsAnalyzing(true);
+        try {
+          const langCode = preferences.learningLanguage?.code || 'en';
+          const result = await assessPronunciation(uri, currentWord.word, langCode);
+          setPronunciationResult(result);
+        } catch (error) {
+          console.log('Pronunciation assessment error:', error);
+          setPronunciationResult(null);
+        } finally {
+          setIsAnalyzing(false);
+        }
+      }
+    } catch (error) {
+      console.log('Failed to stop recording:', error);
+    }
+  };
+
+  const playRecording = async () => {
+    if (!recordingUri || isPlayingRecording) return;
+
+    try {
+      setIsPlayingRecording(true);
+      const { sound } = await Audio.Sound.createAsync({ uri: recordingUri });
+      soundRef.current = sound;
+
+      sound.setOnPlaybackStatusUpdate((status) => {
+        if (status.isLoaded && status.didJustFinish) {
+          setIsPlayingRecording(false);
+        }
+      });
+
+      await sound.playAsync();
+    } catch (error) {
+      console.log('Failed to play recording:', error);
+      setIsPlayingRecording(false);
+    }
+  };
+
+  const handlePronunciationComplete = () => {
+    // Mark as completed based on pronunciation score
+    const score = pronunciationResult?.pronunciationScore || 0;
+    if (score >= 60) {
+      setExerciseResults(prev => ({
+        ...prev,
+        pronunciation: { ...prev.pronunciation, correct: prev.pronunciation.correct + 1 },
+      }));
+    }
+
+    if (currentWordIndex < selectedWords.length - 1) {
+      setCurrentWordIndex(prev => prev + 1);
+      setHasRecorded(false);
+      setRecordingUri(null);
+      setPronunciationResult(null);
+    } else {
       setPhase('complete');
     }
   };
+
+  const handlePronunciationSkip = () => {
+    setExerciseResults(prev => ({
+      ...prev,
+      pronunciation: { ...prev.pronunciation, skipped: prev.pronunciation.skipped + 1 },
+    }));
+
+    if (currentWordIndex < selectedWords.length - 1) {
+      setCurrentWordIndex(prev => prev + 1);
+      setHasRecorded(false);
+      setRecordingUri(null);
+      setPronunciationResult(null);
+    } else {
+      setPhase('complete');
+    }
+  };
+
+  const handlePronunciationRetry = () => {
+    setHasRecorded(false);
+    setRecordingUri(null);
+    setPronunciationResult(null);
+  };
+
+  // Cleanup recording on unmount
+  useEffect(() => {
+    return () => {
+      if (soundRef.current) {
+        soundRef.current.unloadAsync();
+      }
+    };
+  }, []);
 
   const [isSpeaking, setIsSpeaking] = useState(false);
 
@@ -482,21 +716,50 @@ export default function LearnScreen() {
     if (!currentWord || isSpeaking) return;
 
     const langCode = preferences.learningLanguage?.code || 'en';
-    const speechLang = languageToSpeechCode[langCode] || 'en-US';
 
     setIsSpeaking(true);
 
     try {
-      await Speech.speak(currentWord.word, {
-        language: speechLang,
-        rate: 0.8,
-        pitch: 1.0,
-        onDone: () => setIsSpeaking(false),
-        onError: () => setIsSpeaking(false),
-      });
+      // Use Azure TTS if configured, otherwise fall back to expo-speech
+      if (useAzure) {
+        await speakWithAzure(
+          currentWord.word,
+          langCode,
+          () => {},
+          () => setIsSpeaking(false)
+        );
+      } else {
+        const speechLang = languageToSpeechCode[langCode] || 'en-US';
+        const speechRate = languageSpeechRate[langCode] || 0.7;
+
+        await Speech.speak(currentWord.word, {
+          language: speechLang,
+          rate: speechRate,
+          pitch: 1.0,
+          onDone: () => setIsSpeaking(false),
+          onError: () => setIsSpeaking(false),
+        });
+      }
     } catch (error) {
       console.log('Speech error:', error);
       setIsSpeaking(false);
+      // Fall back to expo-speech if Azure fails
+      if (useAzure) {
+        const speechLang = languageToSpeechCode[langCode] || 'en-US';
+        const speechRate = languageSpeechRate[langCode] || 0.7;
+        try {
+          await Speech.speak(currentWord.word, {
+            language: speechLang,
+            rate: speechRate,
+            pitch: 1.0,
+            onDone: () => setIsSpeaking(false),
+            onError: () => setIsSpeaking(false),
+          });
+        } catch (fallbackError) {
+          console.log('Fallback speech error:', fallbackError);
+          setIsSpeaking(false);
+        }
+      }
     }
   };
 
@@ -986,10 +1249,208 @@ export default function LearnScreen() {
     </View>
   );
 
+  const renderPronunciationPhase = () => {
+    const feedback = pronunciationResult ? getPronunciationFeedback(pronunciationResult.pronunciationScore) : null;
+
+    return (
+      <ScrollView style={styles.exerciseContainer} contentContainerStyle={styles.pronunciationScrollContent}>
+        <View style={styles.exerciseHeader}>
+          <View style={styles.phaseIndicator}>
+            <Ionicons name="mic-outline" size={20} color={colors.brand.gold} />
+            <Text style={styles.phaseText}>{i18n.t('learn.pronunciationPractice')}</Text>
+          </View>
+          <Text style={styles.progressText}>
+            {currentWordIndex + 1} / {selectedWords.length}
+          </Text>
+        </View>
+
+        {/* Word Card */}
+        <View style={styles.pronunciationCard}>
+          <Text style={styles.pronunciationPrompt}>{i18n.t('learn.sayTheWord')}</Text>
+
+          <Text style={styles.pronunciationWord}>{currentWord?.word}</Text>
+          {currentWord?.pronunciation && (
+            <Text style={styles.pronunciationHint}>{currentWord.pronunciation}</Text>
+          )}
+
+          {/* Listen Button */}
+          <TouchableOpacity
+            style={[styles.listenButton, isSpeaking && styles.listenButtonActive]}
+            onPress={playSound}
+            activeOpacity={0.7}
+            disabled={isSpeaking}
+          >
+            <Ionicons
+              name={isSpeaking ? "volume-medium" : "volume-high"}
+              size={24}
+              color={isSpeaking ? colors.text.primary : colors.brand.gold}
+            />
+            <Text style={[styles.listenButtonText, isSpeaking && styles.listenButtonTextActive]}>
+              {i18n.t('learn.listenFirst')}
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Recording Controls */}
+        <View style={styles.recordingSection}>
+          {!isRecording && !hasRecorded && !isAnalyzing && (
+            <TouchableOpacity
+              style={styles.recordButton}
+              onPress={startRecording}
+              activeOpacity={0.7}
+            >
+              <View style={styles.recordButtonInner}>
+                <Ionicons name="mic" size={32} color={colors.text.primary} />
+              </View>
+              <Text style={styles.recordButtonText}>{i18n.t('learn.tapToRecord')}</Text>
+            </TouchableOpacity>
+          )}
+
+          {isRecording && (
+            <TouchableOpacity
+              style={styles.stopButton}
+              onPress={stopRecording}
+              activeOpacity={0.7}
+            >
+              <View style={styles.stopButtonInner}>
+                <Ionicons name="stop" size={32} color={colors.text.primary} />
+              </View>
+              <Text style={styles.stopButtonText}>{i18n.t('learn.recording')}</Text>
+            </TouchableOpacity>
+          )}
+
+          {isAnalyzing && (
+            <View style={styles.analyzingSection}>
+              <ActivityIndicator size="large" color={colors.brand.gold} />
+              <Text style={styles.analyzingText}>{i18n.t('learn.pronunciation.analyzing')}</Text>
+            </View>
+          )}
+
+          {hasRecorded && !isRecording && !isAnalyzing && pronunciationResult && (
+            <View style={styles.resultSection}>
+              {/* Score Circle */}
+              <View style={[styles.scoreCircle, { borderColor: feedback?.color }]}>
+                <Text style={[styles.scoreValue, { color: feedback?.color }]}>
+                  {Math.round(pronunciationResult.pronunciationScore)}
+                </Text>
+                <Text style={styles.scoreLabel}>%</Text>
+              </View>
+
+              {/* Feedback Message */}
+              <Text style={[styles.feedbackText, { color: feedback?.color }]}>
+                {i18n.t(`learn.pronunciation.${feedback?.level}`)}
+              </Text>
+
+              {/* Recognized Text */}
+              {pronunciationResult.recognizedText && (
+                <Text style={styles.recognizedText}>
+                  {i18n.t('learn.youSaid')}: "{pronunciationResult.recognizedText}"
+                </Text>
+              )}
+
+              {/* Detailed Scores */}
+              <View style={styles.detailedScores}>
+                <View style={styles.scoreItem}>
+                  <Text style={styles.scoreItemLabel}>{i18n.t('learn.pronunciation.accuracy')}</Text>
+                  <Text style={styles.scoreItemValue}>{Math.round(pronunciationResult.accuracyScore)}%</Text>
+                </View>
+                <View style={styles.scoreItem}>
+                  <Text style={styles.scoreItemLabel}>{i18n.t('learn.pronunciation.fluency')}</Text>
+                  <Text style={styles.scoreItemValue}>{Math.round(pronunciationResult.fluencyScore)}%</Text>
+                </View>
+                <View style={styles.scoreItem}>
+                  <Text style={styles.scoreItemLabel}>{i18n.t('learn.pronunciation.completeness')}</Text>
+                  <Text style={styles.scoreItemValue}>{Math.round(pronunciationResult.completenessScore)}%</Text>
+                </View>
+              </View>
+
+              {/* Playback and Retry Buttons */}
+              <View style={styles.playbackRow}>
+                <TouchableOpacity
+                  style={[styles.smallPlaybackButton, isPlayingRecording && styles.playbackButtonActive]}
+                  onPress={playRecording}
+                  activeOpacity={0.7}
+                  disabled={isPlayingRecording}
+                >
+                  <Ionicons
+                    name={isPlayingRecording ? "pause" : "play"}
+                    size={20}
+                    color={colors.brand.gold}
+                  />
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={styles.retryButton}
+                  onPress={handlePronunciationRetry}
+                  activeOpacity={0.7}
+                >
+                  <Ionicons name="refresh" size={18} color={colors.text.muted} />
+                  <Text style={styles.retryButtonText}>{i18n.t('learn.tryAgain')}</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          )}
+
+          {hasRecorded && !isRecording && !isAnalyzing && !pronunciationResult && !useAzure && (
+            <View style={styles.playbackSection}>
+              <TouchableOpacity
+                style={[styles.playbackButton, isPlayingRecording && styles.playbackButtonActive]}
+                onPress={playRecording}
+                activeOpacity={0.7}
+                disabled={isPlayingRecording}
+              >
+                <Ionicons
+                  name={isPlayingRecording ? "pause" : "play"}
+                  size={28}
+                  color={colors.brand.gold}
+                />
+                <Text style={styles.playbackButtonText}>
+                  {isPlayingRecording ? i18n.t('learn.playing') : i18n.t('learn.playRecording')}
+                </Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.rerecordButton}
+                onPress={handlePronunciationRetry}
+                activeOpacity={0.7}
+              >
+                <Ionicons name="refresh" size={20} color={colors.text.muted} />
+                <Text style={styles.rerecordButtonText}>{i18n.t('learn.recordAgain')}</Text>
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+
+        {/* Action Buttons */}
+        <View style={styles.exerciseActions}>
+          <TouchableOpacity
+            style={styles.skipButton}
+            onPress={handlePronunciationSkip}
+            activeOpacity={0.7}
+          >
+            <Ionicons name="play-skip-forward" size={18} color={colors.text.muted} />
+            <Text style={styles.skipButtonText}>{i18n.t('learn.skip')}</Text>
+          </TouchableOpacity>
+
+          {hasRecorded && !isAnalyzing && (
+            <TouchableOpacity
+              style={styles.nextButton}
+              onPress={handlePronunciationComplete}
+              activeOpacity={0.7}
+            >
+              <Text style={styles.nextButtonText}>{i18n.t('learn.next')}</Text>
+              <Ionicons name="arrow-forward" size={20} color={colors.background.primary} />
+            </TouchableOpacity>
+          )}
+        </View>
+      </ScrollView>
+    );
+  };
+
   const renderCompletePhase = () => {
-    const totalCorrect = exerciseResults.flashcard.correct + exerciseResults.listening.correct + exerciseResults.writing.correct + exerciseResults.reverseTranslation.correct;
-    const totalSkipped = exerciseResults.flashcard.skipped + exerciseResults.listening.skipped + exerciseResults.writing.skipped + exerciseResults.reverseTranslation.skipped;
-    const totalAnswered = (selectedWords.length * 4) - totalSkipped;
+    const totalCorrect = exerciseResults.flashcard.correct + exerciseResults.listening.correct + exerciseResults.writing.correct + exerciseResults.reverseTranslation.correct + exerciseResults.pronunciation.correct;
+    const totalSkipped = exerciseResults.flashcard.skipped + exerciseResults.listening.skipped + exerciseResults.writing.skipped + exerciseResults.reverseTranslation.skipped + exerciseResults.pronunciation.skipped;
+    const totalAnswered = (selectedWords.length * 5) - totalSkipped;
     const percentage = totalAnswered > 0 ? Math.round((totalCorrect / totalAnswered) * 100) : 0;
 
     const formatResult = (correct: number, skipped: number) => {
@@ -1000,18 +1461,31 @@ export default function LearnScreen() {
       return `${correct}/${selectedWords.length}`;
     };
 
+    const getMotivationalMessage = () => {
+      if (percentage >= 90) return i18n.t('learn.motivation.excellent');
+      if (percentage >= 70) return i18n.t('learn.motivation.great');
+      if (percentage >= 50) return i18n.t('learn.motivation.good');
+      if (percentage >= 30) return i18n.t('learn.motivation.keepTrying');
+      return i18n.t('learn.motivation.practiceMore');
+    };
+
     return (
       <View style={styles.completeContainer}>
-        <View style={styles.completeIcon}>
-          <Ionicons name="trophy" size={64} color={colors.brand.gold} />
+        <View style={styles.completeHeader}>
+          <View style={styles.completeIcon}>
+            <Ionicons name="trophy" size={48} color={colors.brand.gold} />
+          </View>
+          <Text style={styles.completeTitle}>{i18n.t('learn.sessionComplete')}</Text>
         </View>
 
-        <Text style={styles.completeTitle}>{i18n.t('learn.sessionComplete')}</Text>
-        <Text style={styles.completeSubtitle}>{i18n.t('learn.greatJob')}</Text>
+        <View style={styles.scoreSection}>
+          <Text style={styles.totalScoreValue}>{percentage}%</Text>
+          <Text style={styles.motivationText}>{getMotivationalMessage()}</Text>
+        </View>
 
         <View style={styles.resultsCard}>
           <View style={styles.resultRow}>
-            <Ionicons name="eye-outline" size={24} color={colors.brand.gold} />
+            <Ionicons name="eye-outline" size={22} color={colors.brand.gold} />
             <Text style={styles.resultLabel}>{i18n.t('learn.visualLearning')}</Text>
             <Text style={styles.resultValue}>
               {formatResult(exerciseResults.flashcard.correct, exerciseResults.flashcard.skipped)}
@@ -1019,7 +1493,7 @@ export default function LearnScreen() {
           </View>
           <View style={styles.resultDivider} />
           <View style={styles.resultRow}>
-            <Ionicons name="headset-outline" size={24} color={colors.brand.gold} />
+            <Ionicons name="headset-outline" size={22} color={colors.brand.gold} />
             <Text style={styles.resultLabel}>{i18n.t('learn.audioLearning')}</Text>
             <Text style={styles.resultValue}>
               {formatResult(exerciseResults.listening.correct, exerciseResults.listening.skipped)}
@@ -1027,7 +1501,7 @@ export default function LearnScreen() {
           </View>
           <View style={styles.resultDivider} />
           <View style={styles.resultRow}>
-            <Ionicons name="create-outline" size={24} color={colors.brand.gold} />
+            <Ionicons name="create-outline" size={22} color={colors.brand.gold} />
             <Text style={styles.resultLabel}>{i18n.t('learn.writingPractice')}</Text>
             <Text style={styles.resultValue}>
               {formatResult(exerciseResults.writing.correct, exerciseResults.writing.skipped)}
@@ -1035,17 +1509,20 @@ export default function LearnScreen() {
           </View>
           <View style={styles.resultDivider} />
           <View style={styles.resultRow}>
-            <Ionicons name="swap-horizontal" size={24} color={colors.brand.gold} />
+            <Ionicons name="swap-horizontal" size={22} color={colors.brand.gold} />
             <Text style={styles.resultLabel}>{i18n.t('learn.reverseTranslation')}</Text>
             <Text style={styles.resultValue}>
               {formatResult(exerciseResults.reverseTranslation.correct, exerciseResults.reverseTranslation.skipped)}
             </Text>
           </View>
-        </View>
-
-        <View style={styles.totalScore}>
-          <Text style={styles.totalScoreLabel}>{i18n.t('learn.totalScore')}</Text>
-          <Text style={styles.totalScoreValue}>{percentage}%</Text>
+          <View style={styles.resultDivider} />
+          <View style={styles.resultRow}>
+            <Ionicons name="mic-outline" size={22} color={colors.brand.gold} />
+            <Text style={styles.resultLabel}>{i18n.t('learn.pronunciationPractice')}</Text>
+            <Text style={styles.resultValue}>
+              {formatResult(exerciseResults.pronunciation.correct, exerciseResults.pronunciation.skipped)}
+            </Text>
+          </View>
         </View>
 
         <View style={styles.completeButtons}>
@@ -1060,11 +1537,14 @@ export default function LearnScreen() {
                 listening: { correct: 0, skipped: 0 },
                 writing: { correct: 0, skipped: 0 },
                 reverseTranslation: { correct: 0, skipped: 0 },
+                pronunciation: { correct: 0, skipped: 0 },
               });
+              setHasRecorded(false);
+              setRecordingUri(null);
             }}
             activeOpacity={0.7}
           >
-            <Ionicons name="refresh" size={20} color={colors.brand.gold} />
+            <Ionicons name="refresh" size={18} color={colors.brand.gold} />
             <Text style={styles.reviewButtonText}>{i18n.t('learn.reviewAgain')}</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -1073,7 +1553,7 @@ export default function LearnScreen() {
             activeOpacity={0.7}
           >
             <Text style={styles.doneButtonText}>{i18n.t('learn.done')}</Text>
-            <Ionicons name="checkmark" size={20} color={colors.background.primary} />
+            <Ionicons name="checkmark" size={18} color={colors.background.primary} />
           </TouchableOpacity>
         </View>
       </View>
@@ -1157,6 +1637,7 @@ export default function LearnScreen() {
         {phase === 'listening' && renderListeningPhase()}
         {phase === 'writing' && renderWritingPhase()}
         {phase === 'reverseTranslation' && renderReverseTranslationPhase()}
+        {phase === 'pronunciation' && renderPronunciationPhase()}
         {phase === 'complete' && renderCompletePhase()}
       </Animated.View>
     </LinearGradient>
@@ -1740,28 +2221,37 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: spacing.lg,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: spacing.md,
+  },
+  completeHeader: {
+    alignItems: 'center',
   },
   completeIcon: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    backgroundColor: 'rgba(201, 162, 39, 0.1)',
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: 'rgba(201, 162, 39, 0.15)',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: spacing.xl,
+    marginBottom: spacing.xs,
   },
   completeTitle: {
-    fontFamily: fonts.bold,
-    fontSize: fontSize.xxl,
-    color: colors.text.primary,
-    marginBottom: spacing.sm,
-  },
-  completeSubtitle: {
-    fontFamily: fonts.body,
+    fontFamily: fonts.semiBold,
     fontSize: fontSize.md,
-    color: colors.text.muted,
-    marginBottom: spacing.xl,
+    color: colors.text.primary,
+  },
+  scoreSection: {
+    alignItems: 'center',
+    marginTop: spacing.xl,
+    marginBottom: spacing.md,
+  },
+  motivationText: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.sm,
+    color: colors.brand.gold,
+    marginTop: spacing.xs,
+    textAlign: 'center',
   },
   resultsCard: {
     width: '100%',
@@ -1769,7 +2259,8 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.xl,
     borderWidth: 1,
     borderColor: colors.border.primary,
-    padding: spacing.lg,
+    padding: spacing.md,
+    paddingVertical: spacing.sm,
     marginBottom: spacing.lg,
   },
   resultRow: {
@@ -1792,22 +2283,13 @@ const styles = StyleSheet.create({
   resultDivider: {
     height: 1,
     backgroundColor: colors.border.primary,
-    marginVertical: spacing.sm,
-  },
-  totalScore: {
-    alignItems: 'center',
-    marginBottom: spacing.xl,
-  },
-  totalScoreLabel: {
-    fontFamily: fonts.medium,
-    fontSize: fontSize.md,
-    color: colors.text.muted,
-    marginBottom: spacing.sm,
+    marginVertical: spacing.xs,
   },
   totalScoreValue: {
     fontFamily: fonts.bold,
     fontSize: 48,
     color: colors.brand.gold,
+    lineHeight: 52,
   },
   completeButtons: {
     flexDirection: 'row',
@@ -1827,7 +2309,7 @@ const styles = StyleSheet.create({
   },
   reviewButtonText: {
     fontFamily: fonts.semiBold,
-    fontSize: fontSize.md,
+    fontSize: fontSize.sm,
     color: colors.brand.gold,
     marginLeft: spacing.sm,
   },
@@ -1843,7 +2325,7 @@ const styles = StyleSheet.create({
   },
   doneButtonText: {
     fontFamily: fonts.semiBold,
-    fontSize: fontSize.md,
+    fontSize: fontSize.sm,
     color: colors.background.primary,
     marginRight: spacing.sm,
   },
@@ -1874,5 +2356,250 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     color: colors.text.muted,
     marginTop: spacing.xs,
+  },
+
+  // Pronunciation Phase
+  pronunciationCard: {
+    backgroundColor: colors.background.card,
+    borderRadius: borderRadius.xl,
+    borderWidth: 1,
+    borderColor: colors.border.primary,
+    padding: spacing.xl,
+    alignItems: 'center',
+    marginBottom: spacing.lg,
+  },
+  pronunciationPrompt: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.md,
+    color: colors.text.secondary,
+    marginBottom: spacing.md,
+  },
+  pronunciationWord: {
+    fontFamily: fonts.bold,
+    fontSize: 32,
+    color: colors.text.primary,
+    marginBottom: spacing.xs,
+  },
+  pronunciationHint: {
+    fontFamily: fonts.body,
+    fontSize: fontSize.md,
+    color: colors.text.muted,
+    marginBottom: spacing.lg,
+  },
+  listenButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.sm,
+    borderRadius: borderRadius.full,
+    backgroundColor: 'rgba(201, 162, 39, 0.1)',
+    borderWidth: 1,
+    borderColor: colors.brand.gold,
+  },
+  listenButtonActive: {
+    backgroundColor: colors.brand.gold,
+  },
+  listenButtonText: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.sm,
+    color: colors.brand.gold,
+    marginLeft: spacing.sm,
+  },
+  listenButtonTextActive: {
+    color: colors.background.primary,
+  },
+  recordingSection: {
+    alignItems: 'center',
+    marginBottom: spacing.lg,
+  },
+  recordButton: {
+    alignItems: 'center',
+  },
+  recordButtonInner: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: colors.status.error,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: spacing.sm,
+  },
+  recordButtonText: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.sm,
+    color: colors.text.secondary,
+  },
+  stopButton: {
+    alignItems: 'center',
+  },
+  stopButtonInner: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: colors.status.error,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: spacing.sm,
+    borderWidth: 3,
+    borderColor: colors.text.primary,
+  },
+  stopButtonText: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.sm,
+    color: colors.status.error,
+  },
+  playbackSection: {
+    alignItems: 'center',
+  },
+  playbackButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
+    borderRadius: borderRadius.lg,
+    backgroundColor: 'rgba(201, 162, 39, 0.1)',
+    borderWidth: 1,
+    borderColor: colors.brand.gold,
+    marginBottom: spacing.md,
+  },
+  playbackButtonActive: {
+    backgroundColor: colors.brand.gold,
+  },
+  playbackButtonText: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.md,
+    color: colors.brand.gold,
+    marginLeft: spacing.sm,
+  },
+  rerecordButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+  },
+  rerecordButtonText: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.sm,
+    color: colors.text.muted,
+    marginLeft: spacing.xs,
+  },
+  // Speech Recognition Result
+  resultSection: {
+    alignItems: 'center',
+    width: '100%',
+  },
+  recognizedText: {
+    fontFamily: fonts.body,
+    fontSize: fontSize.md,
+    color: colors.text.secondary,
+    marginTop: spacing.sm,
+    textAlign: 'center',
+  },
+  tryAgainButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.sm,
+    marginTop: spacing.md,
+    borderRadius: borderRadius.lg,
+    backgroundColor: colors.background.tertiary,
+  },
+  tryAgainButtonText: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.sm,
+    color: colors.text.muted,
+    marginLeft: spacing.xs,
+  },
+
+  // Pronunciation Assessment Styles
+  pronunciationScrollContent: {
+    paddingBottom: spacing.xl,
+  },
+  analyzingSection: {
+    alignItems: 'center',
+    paddingVertical: spacing.xl,
+  },
+  analyzingText: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.md,
+    color: colors.text.secondary,
+    marginTop: spacing.md,
+  },
+  scoreCircle: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    borderWidth: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: spacing.md,
+  },
+  scoreValue: {
+    fontFamily: fonts.bold,
+    fontSize: 32,
+  },
+  scoreLabel: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.sm,
+    color: colors.text.muted,
+    marginTop: -4,
+  },
+  feedbackText: {
+    fontFamily: fonts.semiBold,
+    fontSize: fontSize.lg,
+    textAlign: 'center',
+    marginBottom: spacing.sm,
+  },
+  detailedScores: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%',
+    marginTop: spacing.md,
+    paddingHorizontal: spacing.md,
+  },
+  scoreItem: {
+    alignItems: 'center',
+  },
+  scoreItemLabel: {
+    fontFamily: fonts.body,
+    fontSize: fontSize.xs,
+    color: colors.text.muted,
+    marginBottom: 2,
+  },
+  scoreItemValue: {
+    fontFamily: fonts.semiBold,
+    fontSize: fontSize.md,
+    color: colors.text.primary,
+  },
+  playbackRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: spacing.lg,
+    gap: spacing.md,
+  },
+  smallPlaybackButton: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: 'rgba(201, 162, 39, 0.1)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: colors.brand.gold,
+  },
+  retryButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    borderRadius: borderRadius.lg,
+    backgroundColor: colors.background.tertiary,
+  },
+  retryButtonText: {
+    fontFamily: fonts.medium,
+    fontSize: fontSize.sm,
+    color: colors.text.muted,
+    marginLeft: spacing.xs,
   },
 });

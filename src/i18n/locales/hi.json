@@ -326,6 +326,25 @@
     "skipped": "छोड़ा गया",
     "reverseTranslation": "उल्टा अनुवाद",
     "findTranslation": "अनुवाद खोजें",
-    "selectCorrectTranslation": "सही अनुवाद चुनें"
+    "selectCorrectTranslation": "सही अनुवाद चुनें",
+    "pronunciationPractice": "उच्चारण",
+    "sayTheWord": "शब्द को ज़ोर से बोलें",
+    "listenFirst": "पहले सुनें",
+    "tapToRecord": "रिकॉर्ड करने के लिए टैप करें",
+    "recording": "रिकॉर्डिंग...",
+    "playRecording": "रिकॉर्डिंग चलाएं",
+    "playing": "चल रहा है...",
+    "recordAgain": "फिर से रिकॉर्ड करें",
+    "tapToSpeak": "बोलने के लिए टैप करें",
+    "listening": "सुन रहा है...",
+    "youSaid": "आपने कहा",
+    "tryAgain": "फिर से कोशिश करें",
+    "motivation": {
+      "excellent": "उत्कृष्ट! आप एक स्टार हैं!",
+      "great": "शानदार काम! जारी रखें!",
+      "good": "अच्छा प्रयास! आप सुधर रहे हैं!",
+      "keepTrying": "कोशिश करते रहें! अभ्यास से सिद्धि होती है!",
+      "practiceMore": "हार मत मानो! फिर से कोशिश करें!"
+    }
   }
 }

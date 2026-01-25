@@ -326,6 +326,25 @@
     "skipped": "sprunget over",
     "reverseTranslation": "Omvendt oversættelse",
     "findTranslation": "Find oversættelsen",
-    "selectCorrectTranslation": "Vælg den rigtige oversættelse"
+    "selectCorrectTranslation": "Vælg den rigtige oversættelse",
+    "pronunciationPractice": "Udtale",
+    "sayTheWord": "Sig ordet højt",
+    "listenFirst": "Lyt først",
+    "tapToRecord": "Tryk for at optage",
+    "recording": "Optager...",
+    "playRecording": "Afspil optagelse",
+    "playing": "Afspiller...",
+    "recordAgain": "Optag igen",
+    "tapToSpeak": "Tryk for at tale",
+    "listening": "Lytter...",
+    "youSaid": "Du sagde",
+    "tryAgain": "Prøv igen",
+    "motivation": {
+      "excellent": "Fremragende! Du er en stjerne!",
+      "great": "Godt klaret! Fortsæt sådan!",
+      "good": "Godt forsøg! Du forbedrer dig!",
+      "keepTrying": "Bliv ved med at prøve! Øvelse gør mester!",
+      "practiceMore": "Giv ikke op! Lad os prøve igen!"
+    }
   }
 }

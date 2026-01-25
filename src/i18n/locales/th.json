@@ -326,6 +326,25 @@
     "skipped": "ข้ามไป",
     "reverseTranslation": "การแปลย้อนกลับ",
     "findTranslation": "หาคำแปล",
-    "selectCorrectTranslation": "เลือกคำแปลที่ถูกต้อง"
+    "selectCorrectTranslation": "เลือกคำแปลที่ถูกต้อง",
+    "pronunciationPractice": "การออกเสียง",
+    "sayTheWord": "พูดคำออกเสียงดัง",
+    "listenFirst": "ฟังก่อน",
+    "tapToRecord": "แตะเพื่อบันทึก",
+    "recording": "กำลังบันทึก...",
+    "playRecording": "เล่นการบันทึก",
+    "playing": "กำลังเล่น...",
+    "recordAgain": "บันทึกอีกครั้ง",
+    "tapToSpeak": "แตะเพื่อพูด",
+    "listening": "กำลังฟัง...",
+    "youSaid": "คุณพูดว่า",
+    "tryAgain": "ลองอีกครั้ง",
+    "motivation": {
+      "excellent": "ยอดเยี่ยม! คุณเป็นดาว!",
+      "great": "ทำได้ดีมาก! สู้ต่อไป!",
+      "good": "พยายามดี! คุณกำลังพัฒนา!",
+      "keepTrying": "พยายามต่อไป! การฝึกฝนนำไปสู่ความสมบูรณ์แบบ!",
+      "practiceMore": "อย่ายอมแพ้! มาลองอีกครั้ง!"
+    }
   }
 }

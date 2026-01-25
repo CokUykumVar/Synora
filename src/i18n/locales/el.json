@@ -326,6 +326,25 @@
     "skipped": "παραλείφθηκε",
     "reverseTranslation": "Αντίστροφη μετάφραση",
     "findTranslation": "Βρείτε τη μετάφραση",
-    "selectCorrectTranslation": "Επιλέξτε τη σωστή μετάφραση"
+    "selectCorrectTranslation": "Επιλέξτε τη σωστή μετάφραση",
+    "pronunciationPractice": "Προφορά",
+    "sayTheWord": "Πείτε τη λέξη δυνατά",
+    "listenFirst": "Ακούστε πρώτα",
+    "tapToRecord": "Πατήστε για εγγραφή",
+    "recording": "Εγγραφή...",
+    "playRecording": "Αναπαραγωγή εγγραφής",
+    "playing": "Αναπαραγωγή...",
+    "recordAgain": "Εγγραφή ξανά",
+    "tapToSpeak": "Πατήστε για να μιλήσετε",
+    "listening": "Ακούω...",
+    "youSaid": "Είπατε",
+    "tryAgain": "Δοκιμάστε ξανά",
+    "motivation": {
+      "excellent": "Εξαιρετικά! Είσαι αστέρι!",
+      "great": "Καλή δουλειά! Συνέχισε έτσι!",
+      "good": "Καλή προσπάθεια! Βελτιώνεσαι!",
+      "keepTrying": "Συνέχισε να προσπαθείς! Η εξάσκηση φέρνει την τελειότητα!",
+      "practiceMore": "Μην τα παρατάς! Ας δοκιμάσουμε ξανά!"
+    }
   }
 }

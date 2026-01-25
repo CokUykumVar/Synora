@@ -334,6 +334,38 @@
     "skipped": "atlandı",
     "reverseTranslation": "Ters Çeviri",
     "findTranslation": "Çevirisini bul",
-    "selectCorrectTranslation": "Doğru çeviriyi seçin"
+    "selectCorrectTranslation": "Doğru çeviriyi seçin",
+    "pronunciationPractice": "Telaffuz",
+    "sayTheWord": "Kelimeyi sesli söyle",
+    "listenFirst": "Önce dinle",
+    "tapToRecord": "Kaydetmek için dokun",
+    "recording": "Kaydediliyor...",
+    "playRecording": "Kaydını dinle",
+    "playing": "Oynatılıyor...",
+    "recordAgain": "Tekrar kaydet",
+    "tapToSpeak": "Konuşmak için dokun",
+    "listening": "Dinleniyor...",
+    "youSaid": "Sen dedin",
+    "tryAgain": "Tekrar dene",
+    "motivation": {
+      "excellent": "Mükemmel! Harikasın!",
+      "great": "Çok iyi! Böyle devam!",
+      "good": "İyi gidiyorsun! Gelişiyorsun!",
+      "keepTrying": "Devam et! Pratik mükemmelleştirir!",
+      "practiceMore": "Vazgeçme! Tekrar deneyelim!"
+    },
+    "pronunciation": {
+      "yourScore": "Telaffuz Puanın",
+      "accuracy": "Doğruluk",
+      "fluency": "Akıcılık",
+      "completeness": "Tamlık",
+      "excellent": "Mükemmel telaffuz!",
+      "great": "Harika! Çok iyi telaffuz!",
+      "good": "İyi! Biraz daha pratik yap.",
+      "needsWork": "Geliştirilmeli. Tekrar dene!",
+      "tryAgain": "Tekrar dinle ve söyle.",
+      "noSpeech": "Ses algılanamadı. Tekrar dene.",
+      "analyzing": "Telaffuz analiz ediliyor..."
+    }
   }
 }

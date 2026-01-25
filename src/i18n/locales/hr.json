@@ -326,6 +326,25 @@
     "skipped": "preskočeno",
     "reverseTranslation": "Obrnuti prijevod",
     "findTranslation": "Pronađite prijevod",
-    "selectCorrectTranslation": "Odaberite točan prijevod"
+    "selectCorrectTranslation": "Odaberite točan prijevod",
+    "pronunciationPractice": "Izgovor",
+    "sayTheWord": "Izgovorite riječ naglas",
+    "listenFirst": "Prvo poslušajte",
+    "tapToRecord": "Dodirnite za snimanje",
+    "recording": "Snimanje...",
+    "playRecording": "Reproduciraj snimku",
+    "playing": "Reproducira se...",
+    "recordAgain": "Snimi ponovno",
+    "tapToSpeak": "Dodirnite za govor",
+    "listening": "Slušam...",
+    "youSaid": "Rekli ste",
+    "tryAgain": "Pokušaj ponovno",
+    "motivation": {
+      "excellent": "Izvrsno! Ti si zvijezda!",
+      "great": "Odličan posao! Nastavi tako!",
+      "good": "Dobar pokušaj! Napreduješ!",
+      "keepTrying": "Nastavi pokušavati! Vježba čini savršenstvo!",
+      "practiceMore": "Ne odustaj! Pokušajmo ponovno!"
+    }
   }
 }

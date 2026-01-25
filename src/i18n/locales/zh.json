@@ -326,6 +326,25 @@
     "skipped": "已跳过",
     "reverseTranslation": "反向翻译",
     "findTranslation": "找出翻译",
-    "selectCorrectTranslation": "选择正确的翻译"
+    "selectCorrectTranslation": "选择正确的翻译",
+    "pronunciationPractice": "发音",
+    "sayTheWord": "大声说出这个单词",
+    "listenFirst": "先听一遍",
+    "tapToRecord": "点击录音",
+    "recording": "录音中...",
+    "playRecording": "播放录音",
+    "playing": "播放中...",
+    "recordAgain": "重新录音",
+    "tapToSpeak": "点击说话",
+    "listening": "正在听...",
+    "youSaid": "你说的是",
+    "tryAgain": "再试一次",
+    "motivation": {
+      "excellent": "太棒了！你是明星！",
+      "great": "做得好！继续保持！",
+      "good": "不错的努力！你在进步！",
+      "keepTrying": "继续努力！熟能生巧！",
+      "practiceMore": "不要放弃！让我们再试一次！"
+    }
   }
 }

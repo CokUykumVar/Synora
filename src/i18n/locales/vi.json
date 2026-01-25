@@ -326,6 +326,25 @@
     "skipped": "đã bỏ qua",
     "reverseTranslation": "Dịch ngược",
     "findTranslation": "Tìm bản dịch",
-    "selectCorrectTranslation": "Chọn bản dịch đúng"
+    "selectCorrectTranslation": "Chọn bản dịch đúng",
+    "pronunciationPractice": "Phát âm",
+    "sayTheWord": "Nói từ thành tiếng",
+    "listenFirst": "Nghe trước",
+    "tapToRecord": "Chạm để ghi âm",
+    "recording": "Đang ghi...",
+    "playRecording": "Phát bản ghi",
+    "playing": "Đang phát...",
+    "recordAgain": "Ghi lại",
+    "tapToSpeak": "Chạm để nói",
+    "listening": "Đang nghe...",
+    "youSaid": "Bạn nói",
+    "tryAgain": "Thử lại",
+    "motivation": {
+      "excellent": "Xuất sắc! Bạn là ngôi sao!",
+      "great": "Làm tốt lắm! Tiếp tục nhé!",
+      "good": "Cố gắng tốt! Bạn đang tiến bộ!",
+      "keepTrying": "Tiếp tục cố gắng! Luyện tập tạo nên hoàn hảo!",
+      "practiceMore": "Đừng bỏ cuộc! Hãy thử lại nào!"
+    }
   }
 }

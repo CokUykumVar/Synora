@@ -326,6 +326,25 @@
     "skipped": "چھوڑ دیا",
     "reverseTranslation": "الٹا ترجمہ",
     "findTranslation": "ترجمہ تلاش کریں",
-    "selectCorrectTranslation": "صحیح ترجمہ منتخب کریں"
+    "selectCorrectTranslation": "صحیح ترجمہ منتخب کریں",
+    "pronunciationPractice": "تلفظ",
+    "sayTheWord": "لفظ اونچی آواز میں بولیں",
+    "listenFirst": "پہلے سنیں",
+    "tapToRecord": "ریکارڈ کرنے کے لیے ٹیپ کریں",
+    "recording": "ریکارڈنگ...",
+    "playRecording": "ریکارڈنگ چلائیں",
+    "playing": "چل رہا ہے...",
+    "recordAgain": "دوبارہ ریکارڈ کریں",
+    "tapToSpeak": "بولنے کے لیے ٹیپ کریں",
+    "listening": "سن رہا ہے...",
+    "youSaid": "آپ نے کہا",
+    "tryAgain": "دوبارہ کوشش کریں",
+    "motivation": {
+      "excellent": "بہترین! آپ ایک ستارے ہیں!",
+      "great": "شاندار کام! جاری رکھیں!",
+      "good": "اچھی کوشش! آپ بہتر ہو رہے ہیں!",
+      "keepTrying": "کوشش جاری رکھیں! مشق سے کمال آتا ہے!",
+      "practiceMore": "ہار نہ مانیں! دوبارہ کوشش کریں!"
+    }
   }
 }

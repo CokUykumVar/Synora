@@ -326,6 +326,25 @@
     "skipped": "saltadas",
     "reverseTranslation": "Traducción inversa",
     "findTranslation": "Encuentra la traducción",
-    "selectCorrectTranslation": "Selecciona la traducción correcta"
+    "selectCorrectTranslation": "Selecciona la traducción correcta",
+    "pronunciationPractice": "Pronunciación",
+    "sayTheWord": "Di la palabra en voz alta",
+    "listenFirst": "Escucha primero",
+    "tapToRecord": "Toca para grabar",
+    "recording": "Grabando...",
+    "playRecording": "Reproduce tu grabación",
+    "playing": "Reproduciendo...",
+    "recordAgain": "Grabar de nuevo",
+    "tapToSpeak": "Toca para hablar",
+    "listening": "Escuchando...",
+    "youSaid": "Dijiste",
+    "tryAgain": "Intentar de nuevo",
+    "motivation": {
+      "excellent": "¡Excelente! ¡Eres una estrella!",
+      "great": "¡Buen trabajo! ¡Sigue así!",
+      "good": "¡Buen esfuerzo! ¡Estás mejorando!",
+      "keepTrying": "¡Sigue intentando! ¡La práctica hace al maestro!",
+      "practiceMore": "¡No te rindas! ¡Intentemos de nuevo!"
+    }
   }
 }

@@ -326,6 +326,25 @@
     "skipped": "пропущено",
     "reverseTranslation": "Зворотний переклад",
     "findTranslation": "Знайдіть переклад",
-    "selectCorrectTranslation": "Оберіть правильний переклад"
+    "selectCorrectTranslation": "Оберіть правильний переклад",
+    "pronunciationPractice": "Вимова",
+    "sayTheWord": "Скажіть слово вголос",
+    "listenFirst": "Спочатку послухайте",
+    "tapToRecord": "Натисніть для запису",
+    "recording": "Запис...",
+    "playRecording": "Відтворити запис",
+    "playing": "Відтворення...",
+    "recordAgain": "Записати знову",
+    "tapToSpeak": "Натисніть щоб говорити",
+    "listening": "Слухаю...",
+    "youSaid": "Ви сказали",
+    "tryAgain": "Спробувати знову",
+    "motivation": {
+      "excellent": "Чудово! Ти зірка!",
+      "great": "Відмінна робота! Так тримати!",
+      "good": "Гарна спроба! Ти покращуєшся!",
+      "keepTrying": "Продовжуй намагатися! Практика веде до досконалості!",
+      "practiceMore": "Не здавайся! Спробуймо ще раз!"
+    }
   }
 }

@@ -326,6 +326,25 @@
     "skipped": "スキップ",
     "reverseTranslation": "逆翻訳",
     "findTranslation": "翻訳を見つけて",
-    "selectCorrectTranslation": "正しい翻訳を選んでください"
+    "selectCorrectTranslation": "正しい翻訳を選んでください",
+    "pronunciationPractice": "発音",
+    "sayTheWord": "単語を声に出して言ってください",
+    "listenFirst": "まず聞いてください",
+    "tapToRecord": "タップして録音",
+    "recording": "録音中...",
+    "playRecording": "録音を再生",
+    "playing": "再生中...",
+    "recordAgain": "もう一度録音",
+    "tapToSpeak": "タップして話す",
+    "listening": "聞いています...",
+    "youSaid": "あなたが言ったのは",
+    "tryAgain": "もう一度試す",
+    "motivation": {
+      "excellent": "素晴らしい！あなたはスターです！",
+      "great": "よくできました！その調子！",
+      "good": "いい努力！上達しています！",
+      "keepTrying": "頑張って！練習は完璧を生む！",
+      "practiceMore": "あきらめないで！もう一度やってみよう！"
+    }
   }
 }

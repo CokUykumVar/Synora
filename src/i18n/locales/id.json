@@ -326,6 +326,25 @@
     "skipped": "dilewati",
     "reverseTranslation": "Terjemahan terbalik",
     "findTranslation": "Temukan terjemahannya",
-    "selectCorrectTranslation": "Pilih terjemahan yang benar"
+    "selectCorrectTranslation": "Pilih terjemahan yang benar",
+    "pronunciationPractice": "Pengucapan",
+    "sayTheWord": "Ucapkan kata dengan keras",
+    "listenFirst": "Dengarkan dulu",
+    "tapToRecord": "Ketuk untuk merekam",
+    "recording": "Merekam...",
+    "playRecording": "Putar rekaman",
+    "playing": "Memutar...",
+    "recordAgain": "Rekam lagi",
+    "tapToSpeak": "Ketuk untuk berbicara",
+    "listening": "Mendengarkan...",
+    "youSaid": "Anda berkata",
+    "tryAgain": "Coba lagi",
+    "motivation": {
+      "excellent": "Luar biasa! Kamu bintang!",
+      "great": "Kerja bagus! Terus semangat!",
+      "good": "Usaha yang baik! Kamu berkembang!",
+      "keepTrying": "Terus mencoba! Latihan membuat sempurna!",
+      "practiceMore": "Jangan menyerah! Ayo coba lagi!"
+    }
   }
 }

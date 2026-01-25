@@ -326,6 +326,25 @@
     "skipped": "overgeslagen",
     "reverseTranslation": "Omgekeerde vertaling",
     "findTranslation": "Vind de vertaling",
-    "selectCorrectTranslation": "Selecteer de juiste vertaling"
+    "selectCorrectTranslation": "Selecteer de juiste vertaling",
+    "pronunciationPractice": "Uitspraak",
+    "sayTheWord": "Zeg het woord hardop",
+    "listenFirst": "Luister eerst",
+    "tapToRecord": "Tik om op te nemen",
+    "recording": "Opnemen...",
+    "playRecording": "Opname afspelen",
+    "playing": "Afspelen...",
+    "recordAgain": "Opnieuw opnemen",
+    "tapToSpeak": "Tik om te spreken",
+    "listening": "Luisteren...",
+    "youSaid": "Je zei",
+    "tryAgain": "Probeer opnieuw",
+    "motivation": {
+      "excellent": "Uitstekend! Je bent een ster!",
+      "great": "Goed gedaan! Ga zo door!",
+      "good": "Goede poging! Je wordt beter!",
+      "keepTrying": "Blijf proberen! Oefening baart kunst!",
+      "practiceMore": "Geef niet op! Laten we het opnieuw proberen!"
+    }
   }
 }

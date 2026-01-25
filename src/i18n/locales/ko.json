@@ -326,6 +326,25 @@
     "skipped": "건너뜀",
     "reverseTranslation": "역번역",
     "findTranslation": "번역을 찾으세요",
-    "selectCorrectTranslation": "올바른 번역을 선택하세요"
+    "selectCorrectTranslation": "올바른 번역을 선택하세요",
+    "pronunciationPractice": "발음",
+    "sayTheWord": "단어를 소리내어 말하세요",
+    "listenFirst": "먼저 들어보세요",
+    "tapToRecord": "탭하여 녹음",
+    "recording": "녹음 중...",
+    "playRecording": "녹음 재생",
+    "playing": "재생 중...",
+    "recordAgain": "다시 녹음",
+    "tapToSpeak": "탭하여 말하기",
+    "listening": "듣고 있어요...",
+    "youSaid": "당신이 말한 것",
+    "tryAgain": "다시 시도",
+    "motivation": {
+      "excellent": "훌륭해요! 당신은 스타예요!",
+      "great": "잘했어요! 계속 화이팅!",
+      "good": "좋은 노력이에요! 발전하고 있어요!",
+      "keepTrying": "계속 노력해요! 연습이 완벽을 만들어요!",
+      "practiceMore": "포기하지 마세요! 다시 해봐요!"
+    }
   }
 }

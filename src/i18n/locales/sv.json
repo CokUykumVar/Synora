@@ -326,6 +326,25 @@
     "skipped": "hoppade över",
     "reverseTranslation": "Omvänd översättning",
     "findTranslation": "Hitta översättningen",
-    "selectCorrectTranslation": "Välj rätt översättning"
+    "selectCorrectTranslation": "Välj rätt översättning",
+    "pronunciationPractice": "Uttal",
+    "sayTheWord": "Säg ordet högt",
+    "listenFirst": "Lyssna först",
+    "tapToRecord": "Tryck för att spela in",
+    "recording": "Spelar in...",
+    "playRecording": "Spela upp inspelning",
+    "playing": "Spelar...",
+    "recordAgain": "Spela in igen",
+    "tapToSpeak": "Tryck för att tala",
+    "listening": "Lyssnar...",
+    "youSaid": "Du sa",
+    "tryAgain": "Försök igen",
+    "motivation": {
+      "excellent": "Utmärkt! Du är en stjärna!",
+      "great": "Bra jobbat! Fortsätt så!",
+      "good": "Bra försök! Du förbättras!",
+      "keepTrying": "Fortsätt försöka! Övning ger färdighet!",
+      "practiceMore": "Ge inte upp! Låt oss försöka igen!"
+    }
   }
 }

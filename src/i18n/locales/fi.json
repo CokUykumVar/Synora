@@ -326,6 +326,25 @@
     "skipped": "ohitettu",
     "reverseTranslation": "Käänteinen käännös",
     "findTranslation": "Etsi käännös",
-    "selectCorrectTranslation": "Valitse oikea käännös"
+    "selectCorrectTranslation": "Valitse oikea käännös",
+    "pronunciationPractice": "Ääntäminen",
+    "sayTheWord": "Sano sana ääneen",
+    "listenFirst": "Kuuntele ensin",
+    "tapToRecord": "Napauta nauhoittaaksesi",
+    "recording": "Nauhoitetaan...",
+    "playRecording": "Toista nauhoitus",
+    "playing": "Toistetaan...",
+    "recordAgain": "Nauhoita uudelleen",
+    "tapToSpeak": "Napauta puhuaksesi",
+    "listening": "Kuuntelee...",
+    "youSaid": "Sanoit",
+    "tryAgain": "Yritä uudelleen",
+    "motivation": {
+      "excellent": "Erinomaista! Olet tähti!",
+      "great": "Hienoa työtä! Jatka samaan malliin!",
+      "good": "Hyvä yritys! Kehityt!",
+      "keepTrying": "Jatka yrittämistä! Harjoitus tekee mestarin!",
+      "practiceMore": "Älä luovuta! Yritetään uudelleen!"
+    }
   }
 }

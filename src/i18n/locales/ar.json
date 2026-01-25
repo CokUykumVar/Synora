@@ -326,6 +326,25 @@
     "skipped": "تم تخطيها",
     "reverseTranslation": "الترجمة العكسية",
     "findTranslation": "ابحث عن الترجمة",
-    "selectCorrectTranslation": "اختر الترجمة الصحيحة"
+    "selectCorrectTranslation": "اختر الترجمة الصحيحة",
+    "pronunciationPractice": "النطق",
+    "sayTheWord": "انطق الكلمة بصوت عالٍ",
+    "listenFirst": "استمع أولاً",
+    "tapToRecord": "اضغط للتسجيل",
+    "recording": "جاري التسجيل...",
+    "playRecording": "تشغيل التسجيل",
+    "playing": "جاري التشغيل...",
+    "recordAgain": "سجل مرة أخرى",
+    "tapToSpeak": "اضغط للتحدث",
+    "listening": "جاري الاستماع...",
+    "youSaid": "قلت",
+    "tryAgain": "حاول مرة أخرى",
+    "motivation": {
+      "excellent": "ممتاز! أنت نجم!",
+      "great": "عمل رائع! استمر!",
+      "good": "جهد جيد! أنت تتحسن!",
+      "keepTrying": "استمر في المحاولة! الممارسة تصنع الكمال!",
+      "practiceMore": "لا تستسلم! لنحاول مرة أخرى!"
+    }
   }
 }
