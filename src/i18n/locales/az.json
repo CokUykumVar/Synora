@@ -44,7 +44,8 @@
     "select": "Seçin",
     "selectNative": "Ana dilinizi seçin",
     "selectLearn": "Öyrənmək istədiyiniz dili seçin",
-    "continue": "Davam et"
+    "continue": "Davam et",
+    "recommended": "Tövsiyə olunan"
   },
   "levelSelect": {
     "title": "Səviyyənizi Seçin",
@@ -101,7 +102,10 @@
       "nature": "Təbiət",
       "shopping": "Alış-veriş",
       "family": "Ailə və Münasibətlər",
-      "education": "Təhsil"
+      "education": "Təhsil",
+      "verbs": "Fellər",
+      "adjectives": "Sifətlər",
+      "emotions": "Emosiyalar"
     }
   },
   "habit": {
@@ -164,7 +168,10 @@
       "technology": "Texnologiya",
       "health": "Sağlamlıq",
       "sports": "İdman",
-      "music": "Musiqi"
+      "music": "Musiqi",
+      "verbs": "Fellər",
+      "adjectives": "Sifətlər",
+      "emotions": "Emosiyalar"
     }
   },
   "stats": {
@@ -214,6 +221,7 @@
     "startLearning": "Öyrənməyə Başla",
     "review": "Təkrar",
     "quickPractice": "Sürətli Məşq",
+    "weakWords": "Zəif Sözlər",
     "statistics": "Statistika",
     "totalWords": "Ümumi Söz",
     "level": "Səviyyə",
@@ -339,6 +347,12 @@
     "listening": "Dinləyirəm...",
     "youSaid": "Siz dediniz",
     "tryAgain": "Yenidən cəhd edin",
+    "matchingGame": "Uyğunlaşdırma Oyunu",
+    "matchImageToWord": "Şəkli düzgün sözlə uyğunlaşdırın",
+    "selectImageFirst": "Əvvəlcə bir şəkil seçin",
+    "wordsLearned": "söz öyrənildi",
+    "youLearnedTheseWords": "Bu sözləri öyrəndiniz!",
+    "keepPracticing": "Məşq etməyə davam edin",
     "motivation": {
       "excellent": "Əla! Sən ulduzsan!",
       "great": "Gözəl iş! Belə davam et!",
@@ -346,5 +360,12 @@
       "keepTrying": "Cəhd etməyə davam et! Məşq mükəmməllik gətirir!",
       "practiceMore": "Təslim olma! Yenidən cəhd edək!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

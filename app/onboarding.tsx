@@ -5,12 +5,14 @@ import {
   StyleSheet,
   TouchableOpacity,
   Animated,
+  Platform,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 export default function OnboardingScreen() {
   const router = useRouter();
@@ -53,44 +55,49 @@ export default function OnboardingScreen() {
       start={{ x: 0.5, y: 0.35 }}
       end={{ x: 0.5, y: 1 }}
     >
-      <Animated.View
-        style={[
-          styles.content,
-          {
-            opacity: fadeAnim,
-            transform: [{ translateY: slideAnim }],
-          },
-        ]}
-      >
-        <View style={styles.logoContainer}>
-          <Text style={styles.logo}>SYNORA</Text>
-          <Text style={styles.slogan}>{i18n.t('onboarding.slogan')}</Text>
-        </View>
+      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+        <Animated.View
+          style={[
+            styles.content,
+            {
+              opacity: fadeAnim,
+              transform: [{ translateY: slideAnim }],
+            },
+          ]}
+        >
+          <View style={styles.logoContainer}>
+            <Text style={styles.logo}>SYNORA</Text>
+            <Text style={styles.slogan}>{i18n.t('onboarding.slogan')}</Text>
+          </View>
 
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity
-            style={styles.buttonPrimary}
-            onPress={handleExplore}
-            activeOpacity={0.7}
-          >
-            <Text style={styles.buttonTextPrimary}>{i18n.t('onboarding.explore')}</Text>
-          </TouchableOpacity>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity
+              style={styles.buttonPrimary}
+              onPress={handleExplore}
+              activeOpacity={0.7}
+            >
+              <Text style={styles.buttonTextPrimary}>{i18n.t('onboarding.explore')}</Text>
+            </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.buttonSecondary}
-            onPress={handleLogin}
-            activeOpacity={0.7}
-          >
-            <Text style={styles.buttonTextSecondary}>{i18n.t('onboarding.login')}</Text>
-          </TouchableOpacity>
-        </View>
-      </Animated.View>
+            <TouchableOpacity
+              style={styles.buttonSecondary}
+              onPress={handleLogin}
+              activeOpacity={0.7}
+            >
+              <Text style={styles.buttonTextSecondary}>{i18n.t('onboarding.login')}</Text>
+            </TouchableOpacity>
+          </View>
+        </Animated.View>
+      </SafeAreaView>
     </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  safeArea: {
     flex: 1,
   },
   content: {
@@ -101,32 +108,36 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingBottom: 40,
+    // Splash screen ile aynı pozisyon için
+    marginBottom: layout.screenHeight * 0.1,
   },
   logo: {
     fontFamily: fonts.logo,
-    fontSize: 72,
+    fontSize: layout.isSmallDevice ? 56 : layout.isMediumDevice ? 64 : 72,
     color: colors.brand.gold,
-    letterSpacing: 8,
+    letterSpacing: layout.isSmallDevice ? 6 : 8,
+    // Android font rendering düzeltmesi
+    includeFontPadding: false,
+    textAlignVertical: 'center',
   },
   slogan: {
     fontFamily: fonts.italic,
-    fontSize: fontSize.xl,
+    fontSize: layout.isSmallDevice ? fontSize.md : fontSize.xl,
     color: colors.brand.goldLight,
-    marginTop: spacing.xxl,
+    marginTop: layout.isSmallDevice ? spacing.lg : spacing.xxl,
     textAlign: 'center',
-    fontStyle: 'italic',
     letterSpacing: 2,
     opacity: 0.85,
+    includeFontPadding: false,
   },
   buttonContainer: {
-    gap: spacing.lg,
-    paddingBottom: 80,
+    gap: spacing.md,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
     paddingHorizontal: spacing.md,
   },
   buttonPrimary: {
     width: '100%',
-    paddingVertical: spacing.md + 4,
+    paddingVertical: spacing.md,
     paddingHorizontal: spacing.xl,
     alignItems: 'center',
     justifyContent: 'center',
@@ -143,7 +154,7 @@ const styles = StyleSheet.create({
   },
   buttonSecondary: {
     width: '100%',
-    paddingVertical: spacing.md + 4,
+    paddingVertical: spacing.md,
     paddingHorizontal: spacing.xl,
     alignItems: 'center',
     justifyContent: 'center',

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import {
   View,
   Text,
@@ -9,50 +9,23 @@ import {
   Modal,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import * as Localization from 'expo-localization';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
+import { LANGUAGES, Language } from '../src/constants/languages';
 import { useUser } from '../src/context/UserContext';
+import { useLanguage } from '../src/context/LanguageContext';
 
-const LANGUAGES = [
-  { code: 'ar', name: 'العربية', nameEn: 'Arabic', flag: '🇸🇦' },
-  { code: 'az', name: 'Azərbaycan', nameEn: 'Azerbaijani', flag: '🇦🇿' },
-  { code: 'hr', name: 'Hrvatski', nameEn: 'Croatian', flag: '🇭🇷' },
-  { code: 'cs', name: 'Čeština', nameEn: 'Czech', flag: '🇨🇿' },
-  { code: 'da', name: 'Dansk', nameEn: 'Danish', flag: '🇩🇰' },
-  { code: 'nl', name: 'Nederlands', nameEn: 'Dutch', flag: '🇳🇱' },
-  { code: 'en', name: 'English', nameEn: 'English', flag: '🇬🇧' },
-  { code: 'fi', name: 'Suomi', nameEn: 'Finnish', flag: '🇫🇮' },
-  { code: 'fr', name: 'Français', nameEn: 'French', flag: '🇫🇷' },
-  { code: 'de', name: 'Deutsch', nameEn: 'German', flag: '🇩🇪' },
-  { code: 'el', name: 'Ελληνικά', nameEn: 'Greek', flag: '🇬🇷' },
-  { code: 'hi', name: 'हिन्दी', nameEn: 'Hindi', flag: '🇮🇳' },
-  { code: 'id', name: 'Indonesia', nameEn: 'Indonesian', flag: '🇮🇩' },
-  { code: 'it', name: 'Italiano', nameEn: 'Italian', flag: '🇮🇹' },
-  { code: 'ja', name: '日本語', nameEn: 'Japanese', flag: '🇯🇵' },
-  { code: 'ko', name: '한국어', nameEn: 'Korean', flag: '🇰🇷' },
-  { code: 'no', name: 'Norsk', nameEn: 'Norwegian', flag: '🇳🇴' },
-  { code: 'pl', name: 'Polski', nameEn: 'Polish', flag: '🇵🇱' },
-  { code: 'pt', name: 'Português', nameEn: 'Portuguese', flag: '🇵🇹' },
-  { code: 'ro', name: 'Română', nameEn: 'Romanian', flag: '🇷🇴' },
-  { code: 'ru', name: 'Русский', nameEn: 'Russian', flag: '🇷🇺' },
-  { code: 'zh', name: '简体中文', nameEn: 'Simplified Chinese', flag: '🇨🇳' },
-  { code: 'es', name: 'Español', nameEn: 'Spanish', flag: '🇪🇸' },
-  { code: 'sv', name: 'Svenska', nameEn: 'Swedish', flag: '🇸🇪' },
-  { code: 'th', name: 'ไทย', nameEn: 'Thai', flag: '🇹🇭' },
-  { code: 'tr', name: 'Türkçe', nameEn: 'Turkish', flag: '🇹🇷' },
-  { code: 'uk', name: 'Українська', nameEn: 'Ukrainian', flag: '🇺🇦' },
-  { code: 'ur', name: 'اردو', nameEn: 'Urdu', flag: '🇵🇰' },
-  { code: 'vi', name: 'Tiếng Việt', nameEn: 'Vietnamese', flag: '🇻🇳' },
-];
-
-type LanguageType = typeof LANGUAGES[0];
+type LanguageType = Language;
 type SelectionType = 'native' | 'learn';
 
 export default function LanguageSelectScreen() {
   const router = useRouter();
   const { setNativeLanguage: saveNativeLanguage, setLearningLanguage: saveLearningLanguage } = useUser();
+  const { setLocale } = useLanguage();
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const slideAnim = useRef(new Animated.Value(30)).current;
 
@@ -61,6 +34,24 @@ export default function LanguageSelectScreen() {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectionType, setSelectionType] = useState<SelectionType>('native');
   const [, setLocaleUpdate] = useState(0); // Force re-render on locale change
+
+  // Get device language code
+  const deviceLanguageCode = useMemo(() => {
+    const locale = Localization.getLocales()[0];
+    return locale?.languageCode || 'en';
+  }, []);
+
+  // Sort languages with device language at top for native selection
+  const sortedLanguages = useMemo(() => {
+    if (selectionType === 'native') {
+      const deviceLang = LANGUAGES.find(l => l.code === deviceLanguageCode);
+      if (deviceLang) {
+        const otherLangs = LANGUAGES.filter(l => l.code !== deviceLanguageCode);
+        return [{ ...deviceLang, isRecommended: true }, ...otherLangs];
+      }
+    }
+    return LANGUAGES.map(l => ({ ...l, isRecommended: false }));
+  }, [selectionType, deviceLanguageCode]);
 
   useEffect(() => {
     Animated.parallel([
@@ -82,11 +73,11 @@ export default function LanguageSelectScreen() {
     setModalVisible(true);
   };
 
-  const selectLanguage = (language: LanguageType) => {
+  const selectLanguage = async (language: LanguageType) => {
     if (selectionType === 'native') {
       setNativeLanguage(language);
-      // Uygulama dilini seçilen anadile göre değiştir
-      i18n.locale = language.code;
+      // Uygulama dilini seçilen anadile göre değiştir ve LanguageContext'e kaydet
+      await setLocale(language.code);
       setLocaleUpdate(prev => prev + 1); // Force re-render
     } else {
       setLearnLanguage(language);
@@ -104,7 +95,7 @@ export default function LanguageSelectScreen() {
 
   const canContinue = nativeLanguage && learnLanguage && nativeLanguage.code !== learnLanguage.code;
 
-  const renderLanguageItem = ({ item }: { item: LanguageType }) => {
+  const renderLanguageItem = ({ item }: { item: LanguageType & { isRecommended?: boolean } }) => {
     const isSelected =
       (selectionType === 'native' && nativeLanguage?.code === item.code) ||
       (selectionType === 'learn' && learnLanguage?.code === item.code);
@@ -117,6 +108,7 @@ export default function LanguageSelectScreen() {
       <TouchableOpacity
         style={[
           styles.languageItem,
+          item.isRecommended && styles.languageItemRecommended,
           isSelected && styles.languageItemSelected,
           isDisabled && styles.languageItemDisabled,
         ]}
@@ -128,9 +120,16 @@ export default function LanguageSelectScreen() {
           <Text style={styles.flag}>{item.flag}</Text>
         </View>
         <View style={styles.languageInfo}>
-          <Text style={[styles.languageName, isDisabled && styles.languageNameDisabled]}>
-            {item.name}
-          </Text>
+          <View style={styles.languageNameRow}>
+            <Text style={[styles.languageName, isDisabled && styles.languageNameDisabled]}>
+              {item.name}
+            </Text>
+            {item.isRecommended && (
+              <View style={styles.recommendedBadge}>
+                <Text style={styles.recommendedText}>{i18n.t('languageSelect.recommended')}</Text>
+              </View>
+            )}
+          </View>
           <Text style={[styles.languageNameEn, isDisabled && styles.languageNameDisabled]}>
             {item.nameEn}
           </Text>
@@ -150,81 +149,83 @@ export default function LanguageSelectScreen() {
       start={{ x: 0.5, y: 0.35 }}
       end={{ x: 0.5, y: 1 }}
     >
-      <Animated.View
-        style={[
-          styles.content,
-          {
-            opacity: fadeAnim,
-            transform: [{ translateY: slideAnim }],
-          },
-        ]}
-      >
-        <View style={styles.header}>
-          <Text style={styles.logo}>SYNORA</Text>
-        </View>
+      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+        <Animated.View
+          style={[
+            styles.content,
+            {
+              opacity: fadeAnim,
+              transform: [{ translateY: slideAnim }],
+            },
+          ]}
+        >
+          <View style={styles.header}>
+            <Text style={styles.logo}>SYNORA</Text>
+          </View>
 
-        <View style={styles.mainContent}>
-          <Text style={styles.title}>{i18n.t('languageSelect.title')}</Text>
-          <Text style={styles.subtitle}>{i18n.t('languageSelect.subtitle')}</Text>
+          <View style={styles.mainContent}>
+            <Text style={styles.title}>{i18n.t('languageSelect.title')}</Text>
+            <Text style={styles.subtitle}>{i18n.t('languageSelect.subtitle')}</Text>
 
-          <View style={styles.selectionsContainer}>
-            <TouchableOpacity
-              style={[styles.selectionBox, nativeLanguage && styles.selectionBoxSelected]}
-              onPress={() => openLanguageModal('native')}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.selectionLabel}>{i18n.t('languageSelect.nativeLanguage')}</Text>
-              <View style={styles.selectionValue}>
-                {nativeLanguage && (
-                  <View style={styles.selectedFlagContainer}>
-                    <Text style={styles.selectedFlag}>{nativeLanguage.flag}</Text>
-                  </View>
-                )}
-                <Text style={[styles.selectionText, !nativeLanguage && styles.selectionPlaceholder]}>
-                  {nativeLanguage ? nativeLanguage.name : i18n.t('languageSelect.select')}
-                </Text>
-                <Ionicons name="chevron-down" size={20} color={colors.text.secondary} />
+            <View style={styles.selectionsContainer}>
+              <TouchableOpacity
+                style={[styles.selectionBox, nativeLanguage && styles.selectionBoxSelected]}
+                onPress={() => openLanguageModal('native')}
+                activeOpacity={0.7}
+              >
+                <Text style={styles.selectionLabel}>{i18n.t('languageSelect.nativeLanguage')}</Text>
+                <View style={styles.selectionValue}>
+                  {nativeLanguage && (
+                    <View style={styles.selectedFlagContainer}>
+                      <Text style={styles.selectedFlag}>{nativeLanguage.flag}</Text>
+                    </View>
+                  )}
+                  <Text style={[styles.selectionText, !nativeLanguage && styles.selectionPlaceholder]}>
+                    {nativeLanguage ? nativeLanguage.name : i18n.t('languageSelect.select')}
+                  </Text>
+                  <Ionicons name="chevron-down" size={20} color={colors.text.secondary} />
+                </View>
+              </TouchableOpacity>
+
+              <View style={styles.arrowContainer}>
+                <Ionicons name="arrow-down" size={24} color={colors.brand.gold} />
               </View>
-            </TouchableOpacity>
 
-            <View style={styles.arrowContainer}>
-              <Ionicons name="arrow-down" size={24} color={colors.brand.gold} />
+              <TouchableOpacity
+                style={[styles.selectionBox, learnLanguage && styles.selectionBoxSelected]}
+                onPress={() => openLanguageModal('learn')}
+                activeOpacity={0.7}
+              >
+                <Text style={styles.selectionLabel}>{i18n.t('languageSelect.learnLanguage')}</Text>
+                <View style={styles.selectionValue}>
+                  {learnLanguage && (
+                    <View style={styles.selectedFlagContainer}>
+                      <Text style={styles.selectedFlag}>{learnLanguage.flag}</Text>
+                    </View>
+                  )}
+                  <Text style={[styles.selectionText, !learnLanguage && styles.selectionPlaceholder]}>
+                    {learnLanguage ? learnLanguage.name : i18n.t('languageSelect.select')}
+                  </Text>
+                  <Ionicons name="chevron-down" size={20} color={colors.text.secondary} />
+                </View>
+              </TouchableOpacity>
             </View>
+          </View>
 
+          <View style={styles.footer}>
             <TouchableOpacity
-              style={[styles.selectionBox, learnLanguage && styles.selectionBoxSelected]}
-              onPress={() => openLanguageModal('learn')}
+              style={[styles.continueButton, !canContinue && styles.continueButtonDisabled]}
+              onPress={handleContinue}
               activeOpacity={0.7}
+              disabled={!canContinue}
             >
-              <Text style={styles.selectionLabel}>{i18n.t('languageSelect.learnLanguage')}</Text>
-              <View style={styles.selectionValue}>
-                {learnLanguage && (
-                  <View style={styles.selectedFlagContainer}>
-                    <Text style={styles.selectedFlag}>{learnLanguage.flag}</Text>
-                  </View>
-                )}
-                <Text style={[styles.selectionText, !learnLanguage && styles.selectionPlaceholder]}>
-                  {learnLanguage ? learnLanguage.name : i18n.t('languageSelect.select')}
-                </Text>
-                <Ionicons name="chevron-down" size={20} color={colors.text.secondary} />
-              </View>
+              <Text style={[styles.continueButtonText, !canContinue && styles.continueButtonTextDisabled]}>
+                {i18n.t('languageSelect.continue')}
+              </Text>
             </TouchableOpacity>
           </View>
-        </View>
-
-        <View style={styles.footer}>
-          <TouchableOpacity
-            style={[styles.continueButton, !canContinue && styles.continueButtonDisabled]}
-            onPress={handleContinue}
-            activeOpacity={0.7}
-            disabled={!canContinue}
-          >
-            <Text style={[styles.continueButtonText, !canContinue && styles.continueButtonTextDisabled]}>
-              {i18n.t('languageSelect.continue')}
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </Animated.View>
+        </Animated.View>
+      </SafeAreaView>
 
       <Modal
         visible={modalVisible}
@@ -245,7 +246,7 @@ export default function LanguageSelectScreen() {
               </TouchableOpacity>
             </View>
             <FlatList
-              data={LANGUAGES}
+              data={sortedLanguages}
               renderItem={renderLanguageItem}
               keyExtractor={(item) => item.code}
               showsVerticalScrollIndicator={false}
@@ -262,28 +263,32 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  safeArea: {
+    flex: 1,
+  },
   content: {
     flex: 1,
     paddingHorizontal: spacing.lg,
   },
   header: {
     alignItems: 'center',
-    paddingTop: 80,
+    paddingTop: layout.headerPaddingTop,
   },
   logo: {
     fontFamily: fonts.logo,
-    fontSize: 36,
+    fontSize: layout.isSmallDevice ? 28 : 36,
     color: colors.brand.gold,
     letterSpacing: 4,
+    includeFontPadding: false,
   },
   mainContent: {
     flex: 1,
     justifyContent: 'center',
-    paddingBottom: 40,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : 40,
   },
   title: {
-    fontFamily: fonts.italicMedium,
-    fontSize: 26,
+    fontFamily: fonts.semiBold,
+    fontSize: layout.isSmallDevice ? 22 : 26,
     color: colors.text.primary,
     textAlign: 'center',
     marginBottom: spacing.sm,
@@ -291,8 +296,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   subtitle: {
-    fontFamily: fonts.italic,
-    fontSize: fontSize.md,
+    fontFamily: fonts.body,
+    fontSize: layout.isSmallDevice ? fontSize.sm : fontSize.md,
     color: colors.text.secondary,
     textAlign: 'center',
     marginBottom: spacing.xxl,
@@ -352,7 +357,7 @@ const styles = StyleSheet.create({
     paddingVertical: spacing.xs,
   },
   footer: {
-    paddingBottom: 60,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
   },
   continueButton: {
     width: '100%',
@@ -444,11 +449,33 @@ const styles = StyleSheet.create({
   languageInfo: {
     flex: 1,
   },
+  languageNameRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.xs,
+  },
   languageName: {
     fontFamily: fonts.medium,
     fontSize: fontSize.md,
     color: colors.text.primary,
     marginBottom: 2,
+  },
+  languageItemRecommended: {
+    backgroundColor: 'rgba(201, 162, 39, 0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(201, 162, 39, 0.3)',
+  },
+  recommendedBadge: {
+    backgroundColor: colors.brand.gold,
+    paddingHorizontal: spacing.xs,
+    paddingVertical: 2,
+    borderRadius: borderRadius.sm,
+  },
+  recommendedText: {
+    fontFamily: fonts.medium,
+    fontSize: 10,
+    color: colors.background.primary,
+    textTransform: 'uppercase',
   },
   languageNameEn: {
     fontFamily: fonts.body,

@@ -44,7 +44,8 @@
     "select": "Chọn",
     "selectNative": "Chọn ngôn ngữ mẹ đẻ",
     "selectLearn": "Chọn ngôn ngữ để học",
-    "continue": "Tiếp tục"
+    "continue": "Tiếp tục",
+    "recommended": "Được đề xuất"
   },
   "levelSelect": {
     "title": "Chọn Cấp Độ",
@@ -101,7 +102,10 @@
       "nature": "Thiên nhiên",
       "shopping": "Mua sắm",
       "family": "Gia đình & Mối quan hệ",
-      "education": "Giáo dục"
+      "education": "Giáo dục",
+      "verbs": "Động từ",
+      "adjectives": "Tính từ",
+      "emotions": "Cảm xúc"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "Công Nghệ",
       "health": "Sức Khỏe",
       "sports": "Thể Thao",
-      "music": "Âm Nhạc"
+      "music": "Âm Nhạc",
+      "verbs": "Động từ",
+      "adjectives": "Tính từ",
+      "emotions": "Cảm xúc"
     }
   },
   "home": {
@@ -339,6 +346,12 @@
     "listening": "Đang nghe...",
     "youSaid": "Bạn nói",
     "tryAgain": "Thử lại",
+    "matchingGame": "Trò chơi ghép đôi",
+    "matchImageToWord": "Ghép hình ảnh với từ đúng",
+    "selectImageFirst": "Chọn một hình ảnh trước",
+    "wordsLearned": "từ đã học",
+    "youLearnedTheseWords": "Bạn đã học những từ này!",
+    "keepPracticing": "Tiếp tục luyện tập",
     "motivation": {
       "excellent": "Xuất sắc! Bạn là ngôi sao!",
       "great": "Làm tốt lắm! Tiếp tục nhé!",
@@ -346,5 +359,12 @@
       "keepTrying": "Tiếp tục cố gắng! Luyện tập tạo nên hoàn hảo!",
       "practiceMore": "Đừng bỏ cuộc! Hãy thử lại nào!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

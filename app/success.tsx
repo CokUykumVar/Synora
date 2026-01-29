@@ -8,10 +8,11 @@ import {
   Easing,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 export default function SuccessScreen() {
   const router = useRouter();
@@ -169,57 +170,95 @@ export default function SuccessScreen() {
         );
       })}
 
-      <Animated.View style={[styles.content, { opacity: fadeAnim }]}>
-        <View style={styles.header}>
-          <Text style={styles.logo}>SYNORA</Text>
-        </View>
+      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+        <Animated.View style={[styles.content, { opacity: fadeAnim }]}>
+          <View style={styles.header}>
+            <Text style={styles.logo}>SYNORA</Text>
+          </View>
 
-        <View style={styles.mainContent}>
-          <Animated.View
-            style={[
-              styles.successCircle,
-              {
-                transform: [
-                  { scale: Animated.multiply(scaleAnim, pulseAnim) },
-                ],
-              },
-            ]}
-          >
+          <View style={styles.mainContent}>
+            <Animated.View
+              style={[
+                styles.successCircle,
+                {
+                  transform: [
+                    { scale: Animated.multiply(scaleAnim, pulseAnim) },
+                  ],
+                },
+              ]}
+            >
+              <Animated.View
+                style={{
+                  transform: [{ scale: checkAnim }],
+                  opacity: checkAnim,
+                }}
+              >
+                <Ionicons name="checkmark" size={60} color={colors.brand.gold} />
+              </Animated.View>
+            </Animated.View>
+
             <Animated.View
               style={{
-                transform: [{ scale: checkAnim }],
-                opacity: checkAnim,
-              }}
-            >
-              <Ionicons name="checkmark" size={60} color={colors.brand.gold} />
-            </Animated.View>
-          </Animated.View>
-
-          <Animated.View
-            style={{
-              opacity: textAnim,
-              transform: [
-                {
-                  translateY: textAnim.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [20, 0],
-                  }),
-                },
-              ],
-            }}
-          >
-            <Text style={styles.title}>{i18n.t('success.title')}</Text>
-            <Text style={styles.subtitle}>{i18n.t('success.subtitle')}</Text>
-          </Animated.View>
-
-          <Animated.View
-            style={[
-              styles.featuresContainer,
-              {
                 opacity: textAnim,
                 transform: [
                   {
                     translateY: textAnim.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [20, 0],
+                    }),
+                  },
+                ],
+              }}
+            >
+              <Text style={styles.title}>{i18n.t('success.title')}</Text>
+              <Text style={styles.subtitle}>{i18n.t('success.subtitle')}</Text>
+            </Animated.View>
+
+            <Animated.View
+              style={[
+                styles.featuresContainer,
+                {
+                  opacity: textAnim,
+                  transform: [
+                    {
+                      translateY: textAnim.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [30, 0],
+                      }),
+                    },
+                  ],
+                },
+              ]}
+            >
+              <View style={styles.featureRow}>
+                <View style={styles.featureIcon}>
+                  <Ionicons name="rocket-outline" size={20} color={colors.brand.gold} />
+                </View>
+                <Text style={styles.featureText}>{i18n.t('success.features.personalized')}</Text>
+              </View>
+              <View style={styles.featureRow}>
+                <View style={styles.featureIcon}>
+                  <Ionicons name="trophy-outline" size={20} color={colors.brand.gold} />
+                </View>
+                <Text style={styles.featureText}>{i18n.t('success.features.goals')}</Text>
+              </View>
+              <View style={styles.featureRow}>
+                <View style={styles.featureIcon}>
+                  <Ionicons name="sparkles-outline" size={20} color={colors.brand.gold} />
+                </View>
+                <Text style={styles.featureText}>{i18n.t('success.features.ready')}</Text>
+              </View>
+            </Animated.View>
+          </View>
+
+          <Animated.View
+            style={[
+              styles.footer,
+              {
+                opacity: buttonAnim,
+                transform: [
+                  {
+                    translateY: buttonAnim.interpolate({
                       inputRange: [0, 1],
                       outputRange: [30, 0],
                     }),
@@ -228,59 +267,26 @@ export default function SuccessScreen() {
               },
             ]}
           >
-            <View style={styles.featureRow}>
-              <View style={styles.featureIcon}>
-                <Ionicons name="rocket-outline" size={20} color={colors.brand.gold} />
-              </View>
-              <Text style={styles.featureText}>{i18n.t('success.features.personalized')}</Text>
-            </View>
-            <View style={styles.featureRow}>
-              <View style={styles.featureIcon}>
-                <Ionicons name="trophy-outline" size={20} color={colors.brand.gold} />
-              </View>
-              <Text style={styles.featureText}>{i18n.t('success.features.goals')}</Text>
-            </View>
-            <View style={styles.featureRow}>
-              <View style={styles.featureIcon}>
-                <Ionicons name="sparkles-outline" size={20} color={colors.brand.gold} />
-              </View>
-              <Text style={styles.featureText}>{i18n.t('success.features.ready')}</Text>
-            </View>
+            <TouchableOpacity
+              style={styles.startButton}
+              onPress={handleStart}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.startButtonText}>{i18n.t('success.start')}</Text>
+              <Ionicons name="arrow-forward" size={20} color={colors.background.primary} />
+            </TouchableOpacity>
           </Animated.View>
-        </View>
-
-        <Animated.View
-          style={[
-            styles.footer,
-            {
-              opacity: buttonAnim,
-              transform: [
-                {
-                  translateY: buttonAnim.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [30, 0],
-                  }),
-                },
-              ],
-            },
-          ]}
-        >
-          <TouchableOpacity
-            style={styles.startButton}
-            onPress={handleStart}
-            activeOpacity={0.8}
-          >
-            <Text style={styles.startButtonText}>{i18n.t('success.start')}</Text>
-            <Ionicons name="arrow-forward" size={20} color={colors.background.dark} />
-          </TouchableOpacity>
         </Animated.View>
-      </Animated.View>
+      </SafeAreaView>
     </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  safeArea: {
     flex: 1,
   },
   confetti: {
@@ -296,7 +302,7 @@ const styles = StyleSheet.create({
   },
   header: {
     alignItems: 'center',
-    paddingTop: 80,
+    paddingTop: layout.headerPaddingTop,
     paddingBottom: spacing.xl,
   },
   logo: {
@@ -304,17 +310,18 @@ const styles = StyleSheet.create({
     fontSize: 28,
     color: colors.brand.gold,
     letterSpacing: 4,
+    includeFontPadding: false,
   },
   mainContent: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingBottom: 60,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
   },
   successCircle: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
+    width: layout.isSmallDevice ? 100 : 120,
+    height: layout.isSmallDevice ? 100 : 120,
+    borderRadius: layout.isSmallDevice ? 50 : 60,
     backgroundColor: 'rgba(201, 162, 39, 0.15)',
     borderWidth: 3,
     borderColor: colors.brand.gold,
@@ -323,8 +330,8 @@ const styles = StyleSheet.create({
     marginBottom: spacing.xl,
   },
   title: {
-    fontFamily: fonts.italicMedium,
-    fontSize: 28,
+    fontFamily: fonts.semiBold,
+    fontSize: layout.isSmallDevice ? 24 : 28,
     color: colors.text.primary,
     textAlign: 'center',
     marginBottom: spacing.sm,
@@ -332,8 +339,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   subtitle: {
-    fontFamily: fonts.italic,
-    fontSize: fontSize.md,
+    fontFamily: fonts.body,
+    fontSize: layout.isSmallDevice ? fontSize.sm : fontSize.md,
     color: colors.text.secondary,
     textAlign: 'center',
     marginBottom: spacing.xl * 2,
@@ -371,7 +378,7 @@ const styles = StyleSheet.create({
     color: colors.text.primary,
   },
   footer: {
-    paddingBottom: 60,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
   },
   startButton: {
     flexDirection: 'row',
@@ -385,7 +392,7 @@ const styles = StyleSheet.create({
   startButtonText: {
     fontFamily: fonts.semiBold,
     fontSize: fontSize.md,
-    color: colors.background.dark,
+    color: colors.background.primary,
     letterSpacing: 1,
   },
 });

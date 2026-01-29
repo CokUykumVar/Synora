@@ -44,7 +44,8 @@
     "select": "Odaberi",
     "selectNative": "Odaberite materinski jezik",
     "selectLearn": "Odaberite jezik za učenje",
-    "continue": "Nastavi"
+    "continue": "Nastavi",
+    "recommended": "Preporučeno"
   },
   "levelSelect": {
     "title": "Odaberite Svoju Razinu",
@@ -101,7 +102,10 @@
       "nature": "Priroda",
       "shopping": "Kupovina",
       "family": "Obitelj i Odnosi",
-      "education": "Obrazovanje"
+      "education": "Obrazovanje",
+      "verbs": "Glagoli",
+      "adjectives": "Pridjevi",
+      "emotions": "Emocije"
     }
   },
   "habit": {
@@ -164,7 +168,10 @@
       "technology": "Tech",
       "health": "Zdravlje",
       "sports": "Sport",
-      "music": "Glazba"
+      "music": "Glazba",
+      "verbs": "Glagoli",
+      "adjectives": "Pridjevi",
+      "emotions": "Emocije"
     }
   },
   "stats": {
@@ -214,6 +221,7 @@
     "startLearning": "Počni Učiti",
     "review": "Ponavljanje",
     "quickPractice": "Brza Vježba",
+    "weakWords": "Slabe Riječi",
     "statistics": "Statistike",
     "totalWords": "Ukupno Riječi",
     "level": "Razina",
@@ -339,6 +347,12 @@
     "listening": "Slušam...",
     "youSaid": "Rekli ste",
     "tryAgain": "Pokušaj ponovno",
+    "matchingGame": "Igra spajanja",
+    "matchImageToWord": "Spoji sliku s ispravnom riječi",
+    "selectImageFirst": "Prvo odaberite sliku",
+    "wordsLearned": "riječi naučeno",
+    "youLearnedTheseWords": "Naučili ste ove riječi!",
+    "keepPracticing": "Nastavite vježbati",
     "motivation": {
       "excellent": "Izvrsno! Ti si zvijezda!",
       "great": "Odličan posao! Nastavi tako!",
@@ -346,5 +360,12 @@
       "keepTrying": "Nastavi pokušavati! Vježba čini savršenstvo!",
       "practiceMore": "Ne odustaj! Pokušajmo ponovno!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

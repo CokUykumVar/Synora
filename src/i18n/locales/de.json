@@ -44,7 +44,8 @@
     "select": "Auswählen",
     "selectNative": "Wählen Sie Ihre Muttersprache",
     "selectLearn": "Wählen Sie die Sprache zum Lernen",
-    "continue": "Weiter"
+    "continue": "Weiter",
+    "recommended": "Empfohlen"
   },
   "levelSelect": {
     "title": "Wählen Sie Ihr Niveau",
@@ -101,7 +102,10 @@
       "nature": "Natur",
       "shopping": "Einkaufen",
       "family": "Familie & Beziehungen",
-      "education": "Bildung"
+      "education": "Bildung",
+      "verbs": "Verben",
+      "adjectives": "Adjektive",
+      "emotions": "Gefühle"
     }
   },
   "habit": {
@@ -154,6 +158,7 @@
     "startLearning": "Lernen Starten",
     "review": "Wiederholen",
     "quickPractice": "Schnellübung",
+    "weakWords": "Schwache Wörter",
     "statistics": "Statistiken",
     "totalWords": "Gesamte Wörter",
     "level": "Niveau",
@@ -231,7 +236,10 @@
       "technology": "Technik",
       "health": "Gesundheit",
       "sports": "Sport",
-      "music": "Musik"
+      "music": "Musik",
+      "verbs": "Verben",
+      "adjectives": "Adjektive",
+      "emotions": "Gefühle"
     }
   },
   "settings": {
@@ -339,6 +347,12 @@
     "listening": "Höre zu...",
     "youSaid": "Du hast gesagt",
     "tryAgain": "Nochmal versuchen",
+    "matchingGame": "Zuordnungsspiel",
+    "matchImageToWord": "Ordne das Bild dem richtigen Wort zu",
+    "selectImageFirst": "Wähle zuerst ein Bild aus",
+    "wordsLearned": "Wörter gelernt",
+    "youLearnedTheseWords": "Du hast diese Wörter gelernt!",
+    "keepPracticing": "Weiter üben",
     "motivation": {
       "excellent": "Ausgezeichnet! Du bist ein Star!",
       "great": "Tolle Arbeit! Weiter so!",
@@ -346,5 +360,12 @@
       "keepTrying": "Weitermachen! Übung macht den Meister!",
       "practiceMore": "Gib nicht auf! Lass uns nochmal versuchen!"
     }
+  },
+  "common": {
+    "noInternet": "Keine Internetverbindung",
+    "checkConnection": "Bitte überprüfen Sie Ihre Internetverbindung, um Audiofunktionen zu nutzen.",
+    "connectionRestored": "Verbindung wiederhergestellt",
+    "canContinue": "Sie können dort fortfahren, wo Sie aufgehört haben",
+    "ok": "OK"
   }
 }

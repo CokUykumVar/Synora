@@ -44,7 +44,8 @@
     "select": "Pilih",
     "selectNative": "Pilih bahasa ibu Anda",
     "selectLearn": "Pilih bahasa untuk dipelajari",
-    "continue": "Lanjutkan"
+    "continue": "Lanjutkan",
+    "recommended": "Direkomendasikan"
   },
   "levelSelect": {
     "title": "Pilih Level Anda",
@@ -101,7 +102,10 @@
       "nature": "Alam",
       "shopping": "Belanja",
       "family": "Keluarga & Hubungan",
-      "education": "Pendidikan"
+      "education": "Pendidikan",
+      "verbs": "Kata kerja",
+      "adjectives": "Kata sifat",
+      "emotions": "Emosi"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "Teknologi",
       "health": "Kesehatan",
       "sports": "Olahraga",
-      "music": "Musik"
+      "music": "Musik",
+      "verbs": "Kata kerja",
+      "adjectives": "Kata sifat",
+      "emotions": "Emosi"
     }
   },
   "home": {
@@ -214,6 +221,7 @@
     "startLearning": "Mulai Belajar",
     "review": "Ulasan",
     "quickPractice": "Latihan Cepat",
+    "weakWords": "Kata Lemah",
     "statistics": "Statistik",
     "totalWords": "Total Kata",
     "level": "Level",
@@ -339,6 +347,12 @@
     "listening": "Mendengarkan...",
     "youSaid": "Anda berkata",
     "tryAgain": "Coba lagi",
+    "matchingGame": "Permainan Mencocokkan",
+    "matchImageToWord": "Cocokkan gambar dengan kata yang benar",
+    "selectImageFirst": "Pilih gambar terlebih dahulu",
+    "wordsLearned": "kata dipelajari",
+    "youLearnedTheseWords": "Anda telah mempelajari kata-kata ini!",
+    "keepPracticing": "Terus berlatih",
     "motivation": {
       "excellent": "Luar biasa! Kamu bintang!",
       "great": "Kerja bagus! Terus semangat!",
@@ -346,5 +360,12 @@
       "keepTrying": "Terus mencoba! Latihan membuat sempurna!",
       "practiceMore": "Jangan menyerah! Ayo coba lagi!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

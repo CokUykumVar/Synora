@@ -1,44 +1,21 @@
 import * as FileSystem from 'expo-file-system/legacy';
 import { Audio } from 'expo-av';
 import { Buffer } from 'buffer';
+import { Platform } from 'react-native';
+import { LANGUAGE_TO_TTS } from '../constants/languages';
 
 // Azure Speech Service Configuration
 // Keys are loaded from environment variables (.env file)
 const AZURE_SPEECH_KEY = process.env.EXPO_PUBLIC_AZURE_SPEECH_KEY || '';
 const AZURE_SPEECH_REGION = process.env.EXPO_PUBLIC_AZURE_SPEECH_REGION || 'westeurope';
 
-// Language code mapping for Azure Speech
-const languageToAzureCode: { [key: string]: string } = {
-  en: 'en-US',
-  tr: 'tr-TR',
-  de: 'de-DE',
-  es: 'es-ES',
-  fr: 'fr-FR',
-  it: 'it-IT',
-  pt: 'pt-PT',
-  ru: 'ru-RU',
-  ja: 'ja-JP',
-  zh: 'zh-CN',
-  ko: 'ko-KR',
-  ar: 'ar-SA',
-  az: 'az-AZ',  // Azure supports Azerbaijani natively!
-  hr: 'hr-HR',
-  cs: 'cs-CZ',
-  da: 'da-DK',
-  nl: 'nl-NL',
-  fi: 'fi-FI',
-  el: 'el-GR',
-  hi: 'hi-IN',
-  id: 'id-ID',
-  no: 'nb-NO',
-  pl: 'pl-PL',
-  ro: 'ro-RO',
-  sv: 'sv-SE',
-  th: 'th-TH',
-  uk: 'uk-UA',
-  ur: 'ur-PK',
-  vi: 'vi-VN',
-};
+// Backend URL for audio conversion (Android uses this for pronunciation assessment)
+// For local development, use your computer's IP address
+// For production, use your deployed backend URL
+const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL || 'http://192.168.1.100:3001';
+
+// Language code mapping for Azure Speech (use shared constants)
+const languageToAzureCode = LANGUAGE_TO_TTS;
 
 // Voice names for each language (Neural voices for best quality)
 const languageToVoice: { [key: string]: string } = {
@@ -99,19 +76,33 @@ export const isAzureConfigured = (): boolean => {
 const getAccessToken = async (): Promise<string> => {
   const tokenUrl = `https://${AZURE_SPEECH_REGION}.api.cognitive.microsoft.com/sts/v1.0/issueToken`;
 
-  const response = await fetch(tokenUrl, {
-    method: 'POST',
-    headers: {
-      'Ocp-Apim-Subscription-Key': AZURE_SPEECH_KEY,
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-  });
+  console.log('Getting Azure token from:', tokenUrl);
+  console.log('Using key:', AZURE_SPEECH_KEY ? `${AZURE_SPEECH_KEY.substring(0, 10)}...` : 'NO KEY');
 
-  if (!response.ok) {
-    throw new Error(`Failed to get Azure access token: ${response.status}`);
+  try {
+    const response = await fetch(tokenUrl, {
+      method: 'POST',
+      headers: {
+        'Ocp-Apim-Subscription-Key': AZURE_SPEECH_KEY,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
+
+    console.log('Token response status:', response.status);
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Token error response:', errorText);
+      throw new Error(`Failed to get Azure access token: ${response.status} - ${errorText}`);
+    }
+
+    const token = await response.text();
+    console.log('Token received, length:', token.length);
+    return token;
+  } catch (error) {
+    console.error('Token fetch error:', error);
+    throw error;
   }
-
-  return await response.text();
 };
 
 /**
@@ -187,7 +178,8 @@ export const speakWithAzure = async (
 };
 
 /**
- * Pronunciation Assessment using Azure Speech
+ * Pronunciation Assessment using Backend (for Android) or Direct Azure (for iOS)
+ * Android cannot produce WAV/PCM audio natively, so we use a backend to convert
  */
 export const assessPronunciation = async (
   audioUri: string,
@@ -198,6 +190,87 @@ export const assessPronunciation = async (
     throw new Error('Azure Speech is not configured');
   }
 
+  console.log('Pronunciation assessment language:', languageCode, 'Word:', referenceText);
+
+  // Check if audio file exists
+  const fileInfo = await FileSystem.getInfoAsync(audioUri);
+  console.log('Audio file info:', JSON.stringify(fileInfo));
+
+  if (!fileInfo.exists) {
+    throw new Error('Audio file does not exist');
+  }
+
+  // On Android, use backend for audio conversion
+  if (Platform.OS === 'android') {
+    return assessPronunciationViaBackend(audioUri, referenceText, languageCode);
+  }
+
+  // On iOS, use direct Azure API (WAV/PCM is supported)
+  return assessPronunciationDirect(audioUri, referenceText, languageCode);
+};
+
+/**
+ * Assess pronunciation via backend (for Android)
+ * Backend converts audio to WAV before sending to Azure
+ */
+const assessPronunciationViaBackend = async (
+  audioUri: string,
+  referenceText: string,
+  languageCode: string
+): Promise<PronunciationResult> => {
+  try {
+    console.log('Using backend for pronunciation assessment');
+    console.log('Backend URL:', BACKEND_URL);
+
+    const uploadResult = await FileSystem.uploadAsync(
+      `${BACKEND_URL}/assess-pronunciation`,
+      audioUri,
+      {
+        httpMethod: 'POST',
+        uploadType: FileSystem.FileSystemUploadType.MULTIPART,
+        fieldName: 'audio',
+        parameters: {
+          referenceText,
+          languageCode,
+        },
+      }
+    );
+
+    console.log('Backend response status:', uploadResult.status);
+    console.log('Backend response body:', uploadResult.body);
+
+    if (uploadResult.status !== 200) {
+      throw new Error(`Backend error: ${uploadResult.status} - ${uploadResult.body}`);
+    }
+
+    const result = JSON.parse(uploadResult.body);
+
+    if (result.error) {
+      throw new Error(result.error);
+    }
+
+    return {
+      accuracyScore: result.accuracyScore ?? 0,
+      fluencyScore: result.fluencyScore ?? 0,
+      completenessScore: result.completenessScore ?? 0,
+      pronunciationScore: result.pronunciationScore ?? 0,
+      recognizedText: result.recognizedText ?? '',
+      words: result.words ?? [],
+    };
+  } catch (error) {
+    console.error('Backend pronunciation assessment error:', error);
+    throw error;
+  }
+};
+
+/**
+ * Assess pronunciation directly via Azure (for iOS)
+ */
+const assessPronunciationDirect = async (
+  audioUri: string,
+  referenceText: string,
+  languageCode: string
+): Promise<PronunciationResult> => {
   const azureLang = languageToAzureCode[languageCode] || 'en-US';
 
   try {
@@ -217,40 +290,33 @@ export const assessPronunciation = async (
 
     const sttUrl = `https://${AZURE_SPEECH_REGION}.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=${azureLang}&format=detailed`;
 
-    // Read audio file and send using XMLHttpRequest for better binary handling
-    const audioBase64 = await FileSystem.readAsStringAsync(audioUri, {
-      encoding: 'base64',
+    console.log('Direct Azure pronunciation assessment');
+    console.log('Audio URI:', audioUri);
+
+    // Use FileSystem.uploadAsync for reliable file upload
+    console.log('Uploading audio file to Azure...');
+
+    const uploadResult = await FileSystem.uploadAsync(sttUrl, audioUri, {
+      httpMethod: 'POST',
+      uploadType: FileSystem.FileSystemUploadType.BINARY_CONTENT,
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'audio/wav; codecs=audio/pcm; samplerate=16000',
+        'Pronunciation-Assessment': pronunciationAssessmentHeader,
+        'Accept': 'application/json',
+      },
     });
 
-    const result = await new Promise<any>((resolve, reject) => {
-      const xhr = new XMLHttpRequest();
-      xhr.open('POST', sttUrl, true);
-      xhr.setRequestHeader('Authorization', `Bearer ${token}`);
-      xhr.setRequestHeader('Content-Type', 'audio/wav; codecs=audio/pcm; samplerate=16000');
-      xhr.setRequestHeader('Pronunciation-Assessment', pronunciationAssessmentHeader);
-      xhr.setRequestHeader('Accept', 'application/json');
+    console.log('Upload response status:', uploadResult.status);
+    console.log('Upload response body:', uploadResult.body);
 
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          try {
-            resolve(JSON.parse(xhr.responseText));
-          } catch (e) {
-            reject(new Error('Failed to parse response'));
-          }
-        } else {
-          console.error('Pronunciation assessment API error:', xhr.status, xhr.responseText);
-          reject(new Error(`Pronunciation assessment failed: ${xhr.status} - ${xhr.responseText}`));
-        }
-      };
+    if (uploadResult.status !== 200) {
+      console.error('Pronunciation API error:', uploadResult.status, uploadResult.body);
+      throw new Error(`Pronunciation assessment failed: ${uploadResult.status} - ${uploadResult.body}`);
+    }
 
-      xhr.onerror = function () {
-        reject(new Error('Network error during pronunciation assessment'));
-      };
-
-      // Convert base64 to binary and send
-      const bytes = Buffer.from(audioBase64, 'base64');
-      xhr.send(bytes);
-    });
+    const result = JSON.parse(uploadResult.body);
+    console.log('Pronunciation result received');
 
     // Parse the pronunciation assessment result
     if (result.RecognitionStatus === 'Success' && result.NBest && result.NBest.length > 0) {
@@ -291,7 +357,7 @@ export const assessPronunciation = async (
       words: [],
     };
   } catch (error) {
-    console.error('Pronunciation assessment error:', error);
+    console.error('Direct pronunciation assessment error:', error);
     throw error;
   }
 };

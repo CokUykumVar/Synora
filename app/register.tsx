@@ -11,10 +11,11 @@ import {
   ScrollView,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 export default function RegisterScreen() {
   const router = useRouter();
@@ -64,15 +65,16 @@ export default function RegisterScreen() {
       start={{ x: 0.5, y: 0.35 }}
       end={{ x: 0.5, y: 1 }}
     >
-      <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        style={styles.keyboardView}
-      >
-        <ScrollView
-          contentContainerStyle={styles.scrollContent}
-          showsVerticalScrollIndicator={false}
-          keyboardShouldPersistTaps="handled"
+      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+        <KeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+          style={styles.keyboardView}
         >
+          <ScrollView
+            contentContainerStyle={styles.scrollContent}
+            showsVerticalScrollIndicator={false}
+            keyboardShouldPersistTaps="handled"
+          >
           <Animated.View
             style={[
               styles.content,
@@ -174,14 +176,18 @@ export default function RegisterScreen() {
               </TouchableOpacity>
             </View>
           </Animated.View>
-        </ScrollView>
-      </KeyboardAvoidingView>
+          </ScrollView>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
     </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  safeArea: {
     flex: 1,
   },
   keyboardView: {
@@ -198,7 +204,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 60,
+    paddingTop: layout.headerPaddingTop,
     paddingBottom: spacing.lg,
   },
   backButton: {
@@ -209,6 +215,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.brand.gold,
     letterSpacing: 3,
+    includeFontPadding: false,
   },
   placeholder: {
     width: 32,
@@ -216,11 +223,11 @@ const styles = StyleSheet.create({
   formContainer: {
     flex: 1,
     justifyContent: 'center',
-    paddingBottom: 40,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
   },
   title: {
-    fontFamily: fonts.italicMedium,
-    fontSize: 26,
+    fontFamily: fonts.semiBold,
+    fontSize: layout.isSmallDevice ? 22 : 26,
     color: colors.text.primary,
     textAlign: 'center',
     marginBottom: spacing.sm,
@@ -228,8 +235,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   subtitle: {
-    fontFamily: fonts.italic,
-    fontSize: fontSize.md,
+    fontFamily: fonts.body,
+    fontSize: layout.isSmallDevice ? fontSize.sm : fontSize.md,
     color: colors.text.secondary,
     textAlign: 'center',
     marginBottom: spacing.xxl,
@@ -280,7 +287,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingBottom: 40,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
     gap: spacing.xs,
   },
   footerText: {

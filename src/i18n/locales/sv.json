@@ -44,7 +44,8 @@
     "select": "Välj",
     "selectNative": "Välj ditt modersmål",
     "selectLearn": "Välj språk att lära",
-    "continue": "Fortsätt"
+    "continue": "Fortsätt",
+    "recommended": "Rekommenderad"
   },
   "levelSelect": {
     "title": "Välj Din Nivå",
@@ -101,7 +102,10 @@
       "nature": "Natur",
       "shopping": "Shopping",
       "family": "Familj & Relationer",
-      "education": "Utbildning"
+      "education": "Utbildning",
+      "verbs": "Verb",
+      "adjectives": "Adjektiv",
+      "emotions": "Känslor"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "Teknik",
       "health": "Hälsa",
       "sports": "Sport",
-      "music": "Musik"
+      "music": "Musik",
+      "verbs": "Verb",
+      "adjectives": "Adjektiv",
+      "emotions": "Känslor"
     }
   },
   "home": {
@@ -214,6 +221,7 @@
     "startLearning": "Börja Lära",
     "review": "Repetera",
     "quickPractice": "Snabbövning",
+    "weakWords": "Svaga Ord",
     "statistics": "Statistik",
     "totalWords": "Totalt Ord",
     "level": "Nivå",
@@ -339,6 +347,12 @@
     "listening": "Lyssnar...",
     "youSaid": "Du sa",
     "tryAgain": "Försök igen",
+    "matchingGame": "Matchningsspel",
+    "matchImageToWord": "Matcha bilden med rätt ord",
+    "selectImageFirst": "Välj en bild först",
+    "wordsLearned": "ord inlärda",
+    "youLearnedTheseWords": "Du har lärt dig dessa ord!",
+    "keepPracticing": "Fortsätt öva",
     "motivation": {
       "excellent": "Utmärkt! Du är en stjärna!",
       "great": "Bra jobbat! Fortsätt så!",
@@ -346,5 +360,12 @@
       "keepTrying": "Fortsätt försöka! Övning ger färdighet!",
       "practiceMore": "Ge inte upp! Låt oss försöka igen!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

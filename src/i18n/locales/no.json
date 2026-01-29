@@ -44,7 +44,8 @@
     "select": "Velg",
     "selectNative": "Velg ditt morsmål",
     "selectLearn": "Velg språk å lære",
-    "continue": "Fortsett"
+    "continue": "Fortsett",
+    "recommended": "Anbefalt"
   },
   "levelSelect": {
     "title": "Velg Ditt Nivå",
@@ -101,7 +102,10 @@
       "nature": "Natur",
       "shopping": "Shopping",
       "family": "Familie & Relasjoner",
-      "education": "Utdanning"
+      "education": "Utdanning",
+      "verbs": "Verb",
+      "adjectives": "Adjektiver",
+      "emotions": "Følelser"
     }
   },
   "habit": {
@@ -164,7 +168,10 @@
       "technology": "Teknologi",
       "health": "Helse",
       "sports": "Sport",
-      "music": "Musikk"
+      "music": "Musikk",
+      "verbs": "Verb",
+      "adjectives": "Adjektiver",
+      "emotions": "Følelser"
     }
   },
   "stats": {
@@ -214,6 +221,7 @@
     "startLearning": "Start Læring",
     "review": "Gjenta",
     "quickPractice": "Hurtigøvelse",
+    "weakWords": "Svake Ord",
     "statistics": "Statistikk",
     "totalWords": "Totalt Ord",
     "level": "Nivå",
@@ -339,6 +347,12 @@
     "listening": "Lytter...",
     "youSaid": "Du sa",
     "tryAgain": "Prøv igjen",
+    "matchingGame": "Matchspill",
+    "matchImageToWord": "Match bildet med riktig ord",
+    "selectImageFirst": "Velg et bilde først",
+    "wordsLearned": "ord lært",
+    "youLearnedTheseWords": "Du har lært disse ordene!",
+    "keepPracticing": "Fortsett å øve",
     "motivation": {
       "excellent": "Utmerket! Du er en stjerne!",
       "great": "Flott jobbet! Fortsett slik!",
@@ -346,5 +360,12 @@
       "keepTrying": "Fortsett å prøve! Øvelse gjør mester!",
       "practiceMore": "Ikke gi opp! La oss prøve igjen!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

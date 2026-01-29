@@ -1,9 +1,9 @@
 import { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Animated } from 'react-native';
+import { View, Text, StyleSheet, Animated, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { colors, fontSize, fonts } from '../src/constants/theme';
+import { colors, fontSize, fonts, layout } from '../src/constants/theme';
 
 export default function SplashScreen() {
   const router = useRouter();
@@ -62,11 +62,16 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     alignItems: 'center',
+    // Logo her iki ekranda aynı pozisyonda olsun
+    marginBottom: layout.screenHeight * 0.1,
   },
   logo: {
     fontFamily: fonts.logo,
-    fontSize: 72,
+    fontSize: layout.isSmallDevice ? 56 : layout.isMediumDevice ? 64 : 72,
     color: colors.brand.gold,
-    letterSpacing: 8,
+    letterSpacing: layout.isSmallDevice ? 6 : 8,
+    // Android'de font yükleme gecikmesi için
+    includeFontPadding: false,
+    textAlignVertical: 'center',
   },
 });

@@ -44,7 +44,8 @@
     "select": "Seleccionar",
     "selectNative": "Selecciona tu idioma nativo",
     "selectLearn": "Selecciona el idioma a aprender",
-    "continue": "Continuar"
+    "continue": "Continuar",
+    "recommended": "Recomendado"
   },
   "levelSelect": {
     "title": "Selecciona Tu Nivel",
@@ -101,7 +102,10 @@
       "nature": "Naturaleza",
       "shopping": "Compras",
       "family": "Familia y Relaciones",
-      "education": "Educación"
+      "education": "Educación",
+      "verbs": "Verbos",
+      "adjectives": "Adjetivos",
+      "emotions": "Emociones"
     }
   },
   "habit": {
@@ -154,6 +158,7 @@
     "startLearning": "Empezar a Aprender",
     "review": "Repasar",
     "quickPractice": "Práctica Rápida",
+    "weakWords": "Palabras Débiles",
     "statistics": "Estadísticas",
     "totalWords": "Total de Palabras",
     "level": "Nivel",
@@ -231,7 +236,10 @@
       "technology": "Tecnología",
       "health": "Salud",
       "sports": "Deportes",
-      "music": "Música"
+      "music": "Música",
+      "verbs": "Verbos",
+      "adjectives": "Adjetivos",
+      "emotions": "Emociones"
     }
   },
   "settings": {
@@ -339,6 +347,12 @@
     "listening": "Escuchando...",
     "youSaid": "Dijiste",
     "tryAgain": "Intentar de nuevo",
+    "matchingGame": "Juego de Emparejamiento",
+    "matchImageToWord": "Empareja la imagen con la palabra correcta",
+    "selectImageFirst": "Selecciona una imagen primero",
+    "wordsLearned": "palabras aprendidas",
+    "youLearnedTheseWords": "¡Aprendiste estas palabras!",
+    "keepPracticing": "Sigue practicando",
     "motivation": {
       "excellent": "¡Excelente! ¡Eres una estrella!",
       "great": "¡Buen trabajo! ¡Sigue así!",
@@ -346,5 +360,12 @@
       "keepTrying": "¡Sigue intentando! ¡La práctica hace al maestro!",
       "practiceMore": "¡No te rindas! ¡Intentemos de nuevo!"
     }
+  },
+  "common": {
+    "noInternet": "Sin conexión a Internet",
+    "checkConnection": "Por favor, compruebe su conexión a Internet para usar las funciones de audio.",
+    "connectionRestored": "Conexión restaurada",
+    "canContinue": "Puedes continuar donde lo dejaste",
+    "ok": "OK"
   }
 }

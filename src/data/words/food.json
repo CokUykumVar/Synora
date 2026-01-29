@@ -1,0 +1,183 @@
+{
+  "category": "food",
+  "version": 1,
+  "lastUpdated": "2025-01-28",
+  "words": [
+    {
+      "id": "food_001",
+      "word": "apple",
+      "translations": {
+        "tr": "elma",
+        "de": "Apfel",
+        "es": "manzana",
+        "fr": "pomme",
+        "it": "mela",
+        "pt": "maçã",
+        "ru": "яблоко",
+        "ja": "りんご",
+        "ko": "사과",
+        "zh": "苹果",
+        "ar": "تفاحة",
+        "nl": "appel"
+      },
+      "image": "apple.webp",
+      "levels": ["beginner"],
+      "pronunciation": "/ˈæp.əl/",
+      "tags": ["fruit", "healthy"]
+    },
+    {
+      "id": "food_002",
+      "word": "bread",
+      "translations": {
+        "tr": "ekmek",
+        "de": "Brot",
+        "es": "pan",
+        "fr": "pain",
+        "it": "pane",
+        "pt": "pão",
+        "ru": "хлеб",
+        "ja": "パン",
+        "ko": "빵",
+        "zh": "面包",
+        "ar": "خبز",
+        "nl": "brood"
+      },
+      "image": "bread.webp",
+      "levels": ["beginner"],
+      "pronunciation": "/bred/",
+      "tags": ["bakery", "staple"]
+    },
+    {
+      "id": "food_003",
+      "word": "cheese",
+      "translations": {
+        "tr": "peynir",
+        "de": "Käse",
+        "es": "queso",
+        "fr": "fromage",
+        "it": "formaggio",
+        "pt": "queijo",
+        "ru": "сыр",
+        "ja": "チーズ",
+        "ko": "치즈",
+        "zh": "奶酪",
+        "ar": "جبن",
+        "nl": "kaas"
+      },
+      "image": "cheese.webp",
+      "levels": ["beginner"],
+      "pronunciation": "/tʃiːz/",
+      "tags": ["dairy", "protein"]
+    },
+    {
+      "id": "food_004",
+      "word": "chicken",
+      "translations": {
+        "tr": "tavuk",
+        "de": "Huhn",
+        "es": "pollo",
+        "fr": "poulet",
+        "it": "pollo",
+        "pt": "frango",
+        "ru": "курица",
+        "ja": "鶏肉",
+        "ko": "닭고기",
+        "zh": "鸡肉",
+        "ar": "دجاج",
+        "nl": "kip"
+      },
+      "image": "chicken.webp",
+      "levels": ["beginner"],
+      "pronunciation": "/ˈtʃɪk.ɪn/",
+      "tags": ["meat", "protein"]
+    },
+    {
+      "id": "food_005",
+      "word": "rice",
+      "translations": {
+        "tr": "pirinç",
+        "de": "Reis",
+        "es": "arroz",
+        "fr": "riz",
+        "it": "riso",
+        "pt": "arroz",
+        "ru": "рис",
+        "ja": "米",
+        "ko": "쌀",
+        "zh": "米饭",
+        "ar": "أرز",
+        "nl": "rijst"
+      },
+      "image": "rice.webp",
+      "levels": ["beginner"],
+      "pronunciation": "/raɪs/",
+      "tags": ["grain", "staple"]
+    },
+    {
+      "id": "food_006",
+      "word": "restaurant",
+      "translations": {
+        "tr": "restoran",
+        "de": "Restaurant",
+        "es": "restaurante",
+        "fr": "restaurant",
+        "it": "ristorante",
+        "pt": "restaurante",
+        "ru": "ресторан",
+        "ja": "レストラン",
+        "ko": "레스토랑",
+        "zh": "餐厅",
+        "ar": "مطعم",
+        "nl": "restaurant"
+      },
+      "image": "restaurant.webp",
+      "levels": ["beginner", "elementary"],
+      "pronunciation": "/ˈres.tə.rɒnt/",
+      "tags": ["place", "dining"]
+    },
+    {
+      "id": "food_007",
+      "word": "ingredient",
+      "translations": {
+        "tr": "malzeme",
+        "de": "Zutat",
+        "es": "ingrediente",
+        "fr": "ingrédient",
+        "it": "ingrediente",
+        "pt": "ingrediente",
+        "ru": "ингредиент",
+        "ja": "材料",
+        "ko": "재료",
+        "zh": "成分",
+        "ar": "مكون",
+        "nl": "ingrediënt"
+      },
+      "image": "ingredient.webp",
+      "levels": ["intermediate"],
+      "pronunciation": "/ɪnˈɡriː.di.ənt/",
+      "tags": ["cooking", "recipe"]
+    },
+    {
+      "id": "food_008",
+      "word": "cuisine",
+      "translations": {
+        "tr": "mutfak",
+        "de": "Küche",
+        "es": "cocina",
+        "fr": "cuisine",
+        "it": "cucina",
+        "pt": "culinária",
+        "ru": "кухня",
+        "ja": "料理",
+        "ko": "요리",
+        "zh": "美食",
+        "ar": "مطبخ",
+        "nl": "keuken"
+      },
+      "image": "cuisine.webp",
+      "levels": ["intermediate", "advanced"],
+      "pronunciation": "/kwɪˈziːn/",
+      "tags": ["culture", "cooking"]
+    }
+  ]
+}

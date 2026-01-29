@@ -44,7 +44,8 @@
     "select": "Sélectionner",
     "selectNative": "Sélectionnez votre langue maternelle",
     "selectLearn": "Sélectionnez la langue à apprendre",
-    "continue": "Continuer"
+    "continue": "Continuer",
+    "recommended": "Recommandé"
   },
   "levelSelect": {
     "title": "Sélectionnez Votre Niveau",
@@ -101,7 +102,10 @@
       "nature": "Nature",
       "shopping": "Shopping",
       "family": "Famille & Relations",
-      "education": "Éducation"
+      "education": "Éducation",
+      "verbs": "Verbes",
+      "adjectives": "Adjectifs",
+      "emotions": "Émotions"
     }
   },
   "habit": {
@@ -154,6 +158,7 @@
     "startLearning": "Commencer à Apprendre",
     "review": "Réviser",
     "quickPractice": "Pratique Rapide",
+    "weakWords": "Mots Faibles",
     "statistics": "Statistiques",
     "totalWords": "Total des Mots",
     "level": "Niveau",
@@ -231,7 +236,10 @@
       "technology": "Tech",
       "health": "Santé",
       "sports": "Sports",
-      "music": "Musique"
+      "music": "Musique",
+      "verbs": "Verbes",
+      "adjectives": "Adjectifs",
+      "emotions": "Émotions"
     }
   },
   "settings": {
@@ -339,6 +347,12 @@
     "listening": "Écoute...",
     "youSaid": "Vous avez dit",
     "tryAgain": "Réessayer",
+    "matchingGame": "Jeu d'Association",
+    "matchImageToWord": "Associez l'image au mot correct",
+    "selectImageFirst": "Sélectionnez d'abord une image",
+    "wordsLearned": "mots appris",
+    "youLearnedTheseWords": "Vous avez appris ces mots !",
+    "keepPracticing": "Continuez à pratiquer",
     "motivation": {
       "excellent": "Excellent! Tu es une star!",
       "great": "Bon travail! Continue comme ça!",
@@ -346,5 +360,12 @@
       "keepTrying": "Continue! La pratique rend parfait!",
       "practiceMore": "N'abandonne pas! Réessayons!"
     }
+  },
+  "common": {
+    "noInternet": "Pas de connexion Internet",
+    "checkConnection": "Veuillez vérifier votre connexion Internet pour utiliser les fonctionnalités audio.",
+    "connectionRestored": "Connexion rétablie",
+    "canContinue": "Vous pouvez continuer où vous en étiez",
+    "ok": "OK"
   }
 }

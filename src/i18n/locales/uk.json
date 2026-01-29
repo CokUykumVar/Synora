@@ -44,7 +44,8 @@
     "select": "Вибрати",
     "selectNative": "Виберіть рідну мову",
     "selectLearn": "Виберіть мову для вивчення",
-    "continue": "Продовжити"
+    "continue": "Продовжити",
+    "recommended": "Рекомендовано"
   },
   "levelSelect": {
     "title": "Виберіть Свій Рівень",
@@ -101,7 +102,10 @@
       "nature": "Природа",
       "shopping": "Шопінг",
       "family": "Сім'я та Стосунки",
-      "education": "Освіта"
+      "education": "Освіта",
+      "verbs": "Дієслова",
+      "adjectives": "Прикметники",
+      "emotions": "Емоції"
     }
   },
   "habit": {
@@ -164,7 +168,10 @@
       "technology": "Техно",
       "health": "Здоров'я",
       "sports": "Спорт",
-      "music": "Музика"
+      "music": "Музика",
+      "verbs": "Дієслова",
+      "adjectives": "Прикметники",
+      "emotions": "Емоції"
     }
   },
   "stats": {
@@ -214,6 +221,7 @@
     "startLearning": "Почати Вчитися",
     "review": "Повторення",
     "quickPractice": "Швидка Практика",
+    "weakWords": "Слабкі Слова",
     "statistics": "Статистика",
     "totalWords": "Всього Слів",
     "level": "Рівень",
@@ -339,6 +347,12 @@
     "listening": "Слухаю...",
     "youSaid": "Ви сказали",
     "tryAgain": "Спробувати знову",
+    "matchingGame": "Гра на відповідність",
+    "matchImageToWord": "Зіставте зображення з правильним словом",
+    "selectImageFirst": "Спочатку виберіть зображення",
+    "wordsLearned": "слів вивчено",
+    "youLearnedTheseWords": "Ви вивчили ці слова!",
+    "keepPracticing": "Продовжуйте практикувати",
     "motivation": {
       "excellent": "Чудово! Ти зірка!",
       "great": "Відмінна робота! Так тримати!",
@@ -346,5 +360,12 @@
       "keepTrying": "Продовжуй намагатися! Практика веде до досконалості!",
       "practiceMore": "Не здавайся! Спробуймо ще раз!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

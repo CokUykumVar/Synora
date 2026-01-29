@@ -44,7 +44,8 @@
     "select": "منتخب کریں",
     "selectNative": "اپنی مادری زبان منتخب کریں",
     "selectLearn": "سیکھنے کے لیے زبان منتخب کریں",
-    "continue": "جاری رکھیں"
+    "continue": "جاری رکھیں",
+    "recommended": "تجویز کردہ"
   },
   "levelSelect": {
     "title": "اپنا درجہ منتخب کریں",
@@ -101,7 +102,10 @@
       "nature": "فطرت",
       "shopping": "خریداری",
       "family": "خاندان اور تعلقات",
-      "education": "تعلیم"
+      "education": "تعلیم",
+      "verbs": "افعال",
+      "adjectives": "صفات",
+      "emotions": "جذبات"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "ٹیکنالوجی",
       "health": "صحت",
       "sports": "کھیل",
-      "music": "موسیقی"
+      "music": "موسیقی",
+      "verbs": "افعال",
+      "adjectives": "صفات",
+      "emotions": "جذبات"
     }
   },
   "home": {
@@ -339,6 +346,12 @@
     "listening": "سن رہا ہے...",
     "youSaid": "آپ نے کہا",
     "tryAgain": "دوبارہ کوشش کریں",
+    "matchingGame": "ملان کھیل",
+    "matchImageToWord": "تصویر کو صحیح لفظ سے ملائیں",
+    "selectImageFirst": "پہلے ایک تصویر منتخب کریں",
+    "wordsLearned": "الفاظ سیکھے گئے",
+    "youLearnedTheseWords": "آپ نے یہ الفاظ سیکھ لیے!",
+    "keepPracticing": "مشق جاری رکھیں",
     "motivation": {
       "excellent": "بہترین! آپ ایک ستارے ہیں!",
       "great": "شاندار کام! جاری رکھیں!",
@@ -346,5 +359,12 @@
       "keepTrying": "کوشش جاری رکھیں! مشق سے کمال آتا ہے!",
       "practiceMore": "ہار نہ مانیں! دوبارہ کوشش کریں!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

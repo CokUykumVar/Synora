@@ -44,7 +44,8 @@
     "select": "Wybierz",
     "selectNative": "Wybierz swój język ojczysty",
     "selectLearn": "Wybierz język do nauki",
-    "continue": "Kontynuuj"
+    "continue": "Kontynuuj",
+    "recommended": "Zalecane"
   },
   "levelSelect": {
     "title": "Wybierz Swój Poziom",
@@ -101,7 +102,10 @@
       "nature": "Natura",
       "shopping": "Zakupy",
       "family": "Rodzina i Relacje",
-      "education": "Edukacja"
+      "education": "Edukacja",
+      "verbs": "Czasowniki",
+      "adjectives": "Przymiotniki",
+      "emotions": "Emocje"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "Tech",
       "health": "Zdrowie",
       "sports": "Sport",
-      "music": "Muzyka"
+      "music": "Muzyka",
+      "verbs": "Czasowniki",
+      "adjectives": "Przymiotniki",
+      "emotions": "Emocje"
     }
   },
   "home": {
@@ -214,6 +221,7 @@
     "startLearning": "Zacznij Naukę",
     "review": "Powtórka",
     "quickPractice": "Szybkie Ćwiczenie",
+    "weakWords": "Słabe Słowa",
     "statistics": "Statystyki",
     "totalWords": "Łącznie Słów",
     "level": "Poziom",
@@ -339,6 +347,12 @@
     "listening": "Słucham...",
     "youSaid": "Powiedziałeś",
     "tryAgain": "Spróbuj ponownie",
+    "matchingGame": "Gra w dopasowywanie",
+    "matchImageToWord": "Dopasuj obrazek do właściwego słowa",
+    "selectImageFirst": "Najpierw wybierz obrazek",
+    "wordsLearned": "słów nauczonych",
+    "youLearnedTheseWords": "Nauczyłeś się tych słów!",
+    "keepPracticing": "Ćwicz dalej",
     "motivation": {
       "excellent": "Doskonale! Jesteś gwiazdą!",
       "great": "Świetna robota! Tak trzymaj!",
@@ -346,5 +360,12 @@
       "keepTrying": "Próbuj dalej! Ćwiczenie czyni mistrza!",
       "practiceMore": "Nie poddawaj się! Spróbujmy jeszcze raz!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

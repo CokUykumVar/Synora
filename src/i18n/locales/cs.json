@@ -44,7 +44,8 @@
     "select": "Vybrat",
     "selectNative": "Vyberte svůj mateřský jazyk",
     "selectLearn": "Vyberte jazyk k učení",
-    "continue": "Pokračovat"
+    "continue": "Pokračovat",
+    "recommended": "Doporučeno"
   },
   "levelSelect": {
     "title": "Vyberte Svou Úroveň",
@@ -101,7 +102,10 @@
       "nature": "Příroda",
       "shopping": "Nakupování",
       "family": "Rodina a Vztahy",
-      "education": "Vzdělávání"
+      "education": "Vzdělávání",
+      "verbs": "Slovesa",
+      "adjectives": "Přídavná jména",
+      "emotions": "Emoce"
     }
   },
   "habit": {
@@ -164,7 +168,10 @@
       "technology": "Tech",
       "health": "Zdraví",
       "sports": "Sport",
-      "music": "Hudba"
+      "music": "Hudba",
+      "verbs": "Slovesa",
+      "adjectives": "Přídavná jména",
+      "emotions": "Emoce"
     }
   },
   "stats": {
@@ -214,6 +221,7 @@
     "startLearning": "Začít Učení",
     "review": "Opakování",
     "quickPractice": "Rychlé Cvičení",
+    "weakWords": "Slabá Slova",
     "statistics": "Statistiky",
     "totalWords": "Celkem Slov",
     "level": "Úroveň",
@@ -339,6 +347,12 @@
     "listening": "Poslouchám...",
     "youSaid": "Řekl jste",
     "tryAgain": "Zkusit znovu",
+    "matchingGame": "Hra přiřazování",
+    "matchImageToWord": "Přiřaďte obrázek ke správnému slovu",
+    "selectImageFirst": "Nejprve vyberte obrázek",
+    "wordsLearned": "slov naučeno",
+    "youLearnedTheseWords": "Naučili jste se tato slova!",
+    "keepPracticing": "Pokračujte v cvičení",
     "motivation": {
       "excellent": "Výborně! Jsi hvězda!",
       "great": "Skvělá práce! Pokračuj!",
@@ -346,5 +360,12 @@
       "keepTrying": "Nevzdávej to! Cvičení dělá mistra!",
       "practiceMore": "Nevzdávej se! Zkusme to znovu!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

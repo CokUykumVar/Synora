@@ -10,10 +10,11 @@ import {
   Platform,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 export default function EmailLoginScreen() {
   const router = useRouter();
@@ -64,90 +65,95 @@ export default function EmailLoginScreen() {
       start={{ x: 0.5, y: 0.35 }}
       end={{ x: 0.5, y: 1 }}
     >
-      <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        style={styles.keyboardView}
-      >
-        <Animated.View
-          style={[
-            styles.content,
-            {
-              opacity: fadeAnim,
-              transform: [{ translateY: slideAnim }],
-            },
-          ]}
+      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+        <KeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+          style={styles.keyboardView}
         >
-          <View style={styles.header}>
-            <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-              <Ionicons name="chevron-back" size={24} color={colors.text.primary} />
-            </TouchableOpacity>
-            <Text style={styles.logo}>SYNORA</Text>
-            <View style={styles.placeholder} />
-          </View>
-
-          <View style={styles.formContainer}>
-            <Text style={styles.title}>{i18n.t('emailLogin.title')}</Text>
-
-            <View style={styles.inputContainer}>
-              <Ionicons name="mail-outline" size={20} color={colors.text.muted} style={styles.inputIcon} />
-              <TextInput
-                style={styles.input}
-                placeholder={i18n.t('emailLogin.emailPlaceholder')}
-                placeholderTextColor={colors.text.muted}
-                value={email}
-                onChangeText={setEmail}
-                keyboardType="email-address"
-                autoCapitalize="none"
-                autoCorrect={false}
-              />
+          <Animated.View
+            style={[
+              styles.content,
+              {
+                opacity: fadeAnim,
+                transform: [{ translateY: slideAnim }],
+              },
+            ]}
+          >
+            <View style={styles.header}>
+              <TouchableOpacity onPress={handleBack} style={styles.backButton}>
+                <Ionicons name="chevron-back" size={24} color={colors.text.primary} />
+              </TouchableOpacity>
+              <Text style={styles.logo}>SYNORA</Text>
+              <View style={styles.placeholder} />
             </View>
 
-            <View style={styles.inputContainer}>
-              <Ionicons name="lock-closed-outline" size={20} color={colors.text.muted} style={styles.inputIcon} />
-              <TextInput
-                style={styles.input}
-                placeholder={i18n.t('emailLogin.passwordPlaceholder')}
-                placeholderTextColor={colors.text.muted}
-                value={password}
-                onChangeText={setPassword}
-                secureTextEntry={!showPassword}
-              />
-              <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeButton}>
-                <Ionicons
-                  name={showPassword ? "eye-outline" : "eye-off-outline"}
-                  size={20}
-                  color={colors.text.muted}
+            <View style={styles.formContainer}>
+              <Text style={styles.title}>{i18n.t('emailLogin.title')}</Text>
+
+              <View style={styles.inputContainer}>
+                <Ionicons name="mail-outline" size={20} color={colors.text.muted} style={styles.inputIcon} />
+                <TextInput
+                  style={styles.input}
+                  placeholder={i18n.t('emailLogin.emailPlaceholder')}
+                  placeholderTextColor={colors.text.muted}
+                  value={email}
+                  onChangeText={setEmail}
+                  keyboardType="email-address"
+                  autoCapitalize="none"
+                  autoCorrect={false}
                 />
+              </View>
+
+              <View style={styles.inputContainer}>
+                <Ionicons name="lock-closed-outline" size={20} color={colors.text.muted} style={styles.inputIcon} />
+                <TextInput
+                  style={styles.input}
+                  placeholder={i18n.t('emailLogin.passwordPlaceholder')}
+                  placeholderTextColor={colors.text.muted}
+                  value={password}
+                  onChangeText={setPassword}
+                  secureTextEntry={!showPassword}
+                />
+                <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeButton}>
+                  <Ionicons
+                    name={showPassword ? "eye-outline" : "eye-off-outline"}
+                    size={20}
+                    color={colors.text.muted}
+                  />
+                </TouchableOpacity>
+              </View>
+
+              <TouchableOpacity onPress={handleForgotPassword} style={styles.forgotButton}>
+                <Text style={styles.forgotText}>{i18n.t('emailLogin.forgotPassword')}</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity
+                style={styles.loginButton}
+                onPress={handleLogin}
+                activeOpacity={0.7}
+              >
+                <Text style={styles.loginButtonText}>{i18n.t('emailLogin.loginButton')}</Text>
               </TouchableOpacity>
             </View>
 
-            <TouchableOpacity onPress={handleForgotPassword} style={styles.forgotButton}>
-              <Text style={styles.forgotText}>{i18n.t('emailLogin.forgotPassword')}</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={styles.loginButton}
-              onPress={handleLogin}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.loginButtonText}>{i18n.t('emailLogin.loginButton')}</Text>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.footer}>
-            <Text style={styles.footerText}>{i18n.t('emailLogin.noAccount')}</Text>
-            <TouchableOpacity onPress={handleRegister}>
-              <Text style={styles.registerText}>{i18n.t('emailLogin.register')}</Text>
-            </TouchableOpacity>
-          </View>
-        </Animated.View>
-      </KeyboardAvoidingView>
+            <View style={styles.footer}>
+              <Text style={styles.footerText}>{i18n.t('emailLogin.noAccount')}</Text>
+              <TouchableOpacity onPress={handleRegister}>
+                <Text style={styles.registerText}>{i18n.t('emailLogin.register')}</Text>
+              </TouchableOpacity>
+            </View>
+          </Animated.View>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
     </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  safeArea: {
     flex: 1,
   },
   keyboardView: {
@@ -161,7 +167,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 60,
+    paddingTop: layout.headerPaddingTop,
     paddingBottom: spacing.xl,
   },
   backButton: {
@@ -172,6 +178,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.brand.gold,
     letterSpacing: 3,
+    includeFontPadding: false,
   },
   placeholder: {
     width: 32,
@@ -179,11 +186,11 @@ const styles = StyleSheet.create({
   formContainer: {
     flex: 1,
     justifyContent: 'center',
-    paddingBottom: 60,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
   },
   title: {
-    fontFamily: fonts.italicMedium,
-    fontSize: 26,
+    fontFamily: fonts.semiBold,
+    fontSize: layout.isSmallDevice ? 22 : 26,
     color: colors.text.primary,
     textAlign: 'center',
     marginBottom: spacing.xxl,
@@ -242,7 +249,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingBottom: 40,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
     gap: spacing.xs,
   },
   footerText: {

@@ -44,7 +44,8 @@
     "select": "Selecteren",
     "selectNative": "Selecteer je moedertaal",
     "selectLearn": "Selecteer de taal om te leren",
-    "continue": "Doorgaan"
+    "continue": "Doorgaan",
+    "recommended": "Aanbevolen"
   },
   "levelSelect": {
     "title": "Selecteer Je Niveau",
@@ -101,7 +102,10 @@
       "nature": "Natuur",
       "shopping": "Winkelen",
       "family": "Familie & Relaties",
-      "education": "Onderwijs"
+      "education": "Onderwijs",
+      "verbs": "Werkwoorden",
+      "adjectives": "Bijvoeglijke naamwoorden",
+      "emotions": "Emoties"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "Tech",
       "health": "Gezondheid",
       "sports": "Sport",
-      "music": "Muziek"
+      "music": "Muziek",
+      "verbs": "Werkwoorden",
+      "adjectives": "Bijvoeglijke naamwoorden",
+      "emotions": "Emoties"
     }
   },
   "home": {
@@ -214,6 +221,7 @@
     "startLearning": "Start met Leren",
     "review": "Herhalen",
     "quickPractice": "Snelle Oefening",
+    "weakWords": "Zwakke Woorden",
     "statistics": "Statistieken",
     "totalWords": "Totaal Woorden",
     "level": "Niveau",
@@ -339,6 +347,12 @@
     "listening": "Luisteren...",
     "youSaid": "Je zei",
     "tryAgain": "Probeer opnieuw",
+    "matchingGame": "Matching Spel",
+    "matchImageToWord": "Koppel de afbeelding aan het juiste woord",
+    "selectImageFirst": "Selecteer eerst een afbeelding",
+    "wordsLearned": "woorden geleerd",
+    "youLearnedTheseWords": "Je hebt deze woorden geleerd!",
+    "keepPracticing": "Blijf oefenen",
     "motivation": {
       "excellent": "Uitstekend! Je bent een ster!",
       "great": "Goed gedaan! Ga zo door!",
@@ -346,5 +360,12 @@
       "keepTrying": "Blijf proberen! Oefening baart kunst!",
       "practiceMore": "Geef niet op! Laten we het opnieuw proberen!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

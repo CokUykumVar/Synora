@@ -5,12 +5,14 @@ import {
   StyleSheet,
   TouchableOpacity,
   Animated,
+  ScrollView,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 const GOALS = [
   { id: 'casual', words: 5, monthly: 150, icon: 'cafe-outline' },
@@ -60,87 +62,96 @@ export default function DailyGoalScreen() {
       start={{ x: 0.5, y: 0.35 }}
       end={{ x: 0.5, y: 1 }}
     >
-      <Animated.View
-        style={[
-          styles.content,
-          {
-            opacity: fadeAnim,
-            transform: [{ translateY: slideAnim }],
-          },
-        ]}
-      >
-        <View style={styles.header}>
-          <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-            <Ionicons name="chevron-back" size={24} color={colors.text.primary} />
-          </TouchableOpacity>
-          <Text style={styles.logo}>SYNORA</Text>
-          <View style={styles.placeholder} />
-        </View>
-
-        <View style={styles.mainContent}>
-          <Text style={styles.title}>{i18n.t('dailyGoal.title')}</Text>
-          <Text style={styles.subtitle}>{i18n.t('dailyGoal.subtitle')}</Text>
-
-          <View style={styles.goalsContainer}>
-            {GOALS.map((goal) => {
-              const isSelected = selectedGoal?.id === goal.id;
-              return (
-                <TouchableOpacity
-                  key={goal.id}
-                  style={[styles.goalCard, isSelected && styles.goalCardSelected]}
-                  onPress={() => setSelectedGoal(goal)}
-                  activeOpacity={0.7}
-                >
-                  <View style={[styles.iconContainer, isSelected && styles.iconContainerSelected]}>
-                    <Ionicons
-                      name={goal.icon as any}
-                      size={24}
-                      color={isSelected ? colors.brand.gold : colors.text.secondary}
-                    />
-                  </View>
-                  <View style={styles.goalInfo}>
-                    <Text style={[styles.goalName, isSelected && styles.goalNameSelected]}>
-                      {i18n.t(`dailyGoal.goals.${goal.id}.name`)}
-                    </Text>
-                    <Text style={styles.goalWords}>
-                      {goal.words} {i18n.t('dailyGoal.wordsPerDay')}
-                    </Text>
-                  </View>
-                  <View style={styles.monthlyBadge}>
-                    <Text style={styles.monthlyText}>
-                      {goal.monthly} {i18n.t('dailyGoal.perMonth')}
-                    </Text>
-                  </View>
-                  {isSelected && (
-                    <Ionicons name="checkmark-circle" size={24} color={colors.brand.gold} />
-                  )}
-                </TouchableOpacity>
-              );
-            })}
+      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+        <Animated.View
+          style={[
+            styles.content,
+            {
+              opacity: fadeAnim,
+              transform: [{ translateY: slideAnim }],
+            },
+          ]}
+        >
+          <View style={styles.header}>
+            <TouchableOpacity onPress={handleBack} style={styles.backButton}>
+              <Ionicons name="chevron-back" size={24} color={colors.text.primary} />
+            </TouchableOpacity>
+            <Text style={styles.logo}>SYNORA</Text>
+            <View style={styles.placeholder} />
           </View>
 
-          <Text style={styles.hint}>{i18n.t('dailyGoal.hint')}</Text>
-        </View>
-
-        <View style={styles.footer}>
-          <TouchableOpacity
-            style={[styles.continueButton, !selectedGoal && styles.continueButtonDisabled]}
-            onPress={handleContinue}
-            activeOpacity={0.7}
-            disabled={!selectedGoal}
+          <ScrollView
+            style={styles.scrollView}
+            contentContainerStyle={styles.scrollContent}
+            showsVerticalScrollIndicator={false}
           >
-            <Text style={[styles.continueButtonText, !selectedGoal && styles.continueButtonTextDisabled]}>
-              {i18n.t('dailyGoal.continue')}
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </Animated.View>
+            <Text style={styles.title}>{i18n.t('dailyGoal.title')}</Text>
+            <Text style={styles.subtitle}>{i18n.t('dailyGoal.subtitle')}</Text>
+
+            <View style={styles.goalsContainer}>
+              {GOALS.map((goal) => {
+                const isSelected = selectedGoal?.id === goal.id;
+                return (
+                  <TouchableOpacity
+                    key={goal.id}
+                    style={[styles.goalCard, isSelected && styles.goalCardSelected]}
+                    onPress={() => setSelectedGoal(goal)}
+                    activeOpacity={0.7}
+                  >
+                    <View style={[styles.iconContainer, isSelected && styles.iconContainerSelected]}>
+                      <Ionicons
+                        name={goal.icon as any}
+                        size={layout.isSmallDevice ? 20 : 24}
+                        color={isSelected ? colors.brand.gold : colors.text.secondary}
+                      />
+                    </View>
+                    <View style={styles.goalInfo}>
+                      <Text style={[styles.goalName, isSelected && styles.goalNameSelected]}>
+                        {i18n.t(`dailyGoal.goals.${goal.id}.name`)}
+                      </Text>
+                      <Text style={styles.goalWords}>
+                        {goal.words} {i18n.t('dailyGoal.wordsPerDay')}
+                      </Text>
+                    </View>
+                    <View style={styles.monthlyBadge}>
+                      <Text style={styles.monthlyText}>
+                        {goal.monthly} {i18n.t('dailyGoal.perMonth')}
+                      </Text>
+                    </View>
+                    {isSelected && (
+                      <Ionicons name="checkmark-circle" size={22} color={colors.brand.gold} />
+                    )}
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+
+            <Text style={styles.hint}>{i18n.t('dailyGoal.hint')}</Text>
+          </ScrollView>
+
+          <View style={styles.footer}>
+            <TouchableOpacity
+              style={[styles.continueButton, !selectedGoal && styles.continueButtonDisabled]}
+              onPress={handleContinue}
+              activeOpacity={0.7}
+              disabled={!selectedGoal}
+            >
+              <Text style={[styles.continueButtonText, !selectedGoal && styles.continueButtonTextDisabled]}>
+                {i18n.t('dailyGoal.continue')}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </Animated.View>
+      </SafeAreaView>
     </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  safeArea: {
     flex: 1,
   },
   content: {
@@ -151,8 +162,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 60,
-    paddingBottom: spacing.lg,
+    paddingTop: layout.headerPaddingTop,
+    paddingBottom: spacing.sm,
   },
   backButton: {
     padding: spacing.xs,
@@ -162,53 +173,57 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.brand.gold,
     letterSpacing: 3,
+    includeFontPadding: false,
   },
   placeholder: {
     width: 32,
   },
-  mainContent: {
+  scrollView: {
     flex: 1,
-    paddingTop: spacing.lg,
+  },
+  scrollContent: {
+    paddingTop: spacing.sm,
+    paddingBottom: spacing.md,
   },
   title: {
-    fontFamily: fonts.italicMedium,
-    fontSize: 26,
+    fontFamily: fonts.semiBold,
+    fontSize: layout.isSmallDevice ? 20 : 24,
     color: colors.text.primary,
     textAlign: 'center',
-    marginBottom: spacing.sm,
+    marginBottom: spacing.xs,
     letterSpacing: 2,
     fontStyle: 'italic',
   },
   subtitle: {
-    fontFamily: fonts.italic,
-    fontSize: fontSize.md,
+    fontFamily: fonts.body,
+    fontSize: layout.isSmallDevice ? fontSize.xs : fontSize.sm,
     color: colors.text.secondary,
     textAlign: 'center',
-    marginBottom: spacing.xl,
+    marginBottom: spacing.lg,
     letterSpacing: 1,
     fontStyle: 'italic',
   },
   goalsContainer: {
-    gap: spacing.md,
+    gap: layout.isSmallDevice ? spacing.sm : spacing.md,
   },
   goalCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: spacing.md,
-    borderRadius: borderRadius.xl,
+    padding: layout.isSmallDevice ? spacing.sm : spacing.md,
+    borderRadius: borderRadius.lg,
     borderWidth: 1,
     borderColor: colors.border.primary,
     backgroundColor: 'rgba(255, 255, 255, 0.03)',
-    gap: spacing.md,
+    gap: spacing.sm,
   },
   goalCardSelected: {
     borderColor: colors.brand.gold,
     backgroundColor: 'rgba(201, 162, 39, 0.1)',
   },
   iconContainer: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
+    width: layout.isSmallDevice ? 38 : 44,
+    height: layout.isSmallDevice ? 38 : 44,
+    borderRadius: layout.isSmallDevice ? 19 : 22,
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     borderWidth: 1,
     borderColor: colors.border.primary,
@@ -224,7 +239,7 @@ const styles = StyleSheet.create({
   },
   goalName: {
     fontFamily: fonts.semiBold,
-    fontSize: fontSize.md,
+    fontSize: layout.isSmallDevice ? fontSize.sm : fontSize.md,
     color: colors.text.primary,
     marginBottom: 2,
   },
@@ -233,34 +248,35 @@ const styles = StyleSheet.create({
   },
   goalWords: {
     fontFamily: fonts.body,
-    fontSize: fontSize.sm,
+    fontSize: layout.isSmallDevice ? fontSize.xs : fontSize.sm,
     color: colors.text.secondary,
   },
   monthlyBadge: {
     backgroundColor: 'rgba(201, 162, 39, 0.1)',
-    paddingHorizontal: spacing.sm,
+    paddingHorizontal: layout.isSmallDevice ? spacing.xs : spacing.sm,
     paddingVertical: spacing.xs,
     borderRadius: borderRadius.sm,
   },
   monthlyText: {
     fontFamily: fonts.medium,
-    fontSize: fontSize.xs,
+    fontSize: layout.isSmallDevice ? 10 : fontSize.xs,
     color: colors.brand.goldLight,
   },
   hint: {
     fontFamily: fonts.body,
-    fontSize: fontSize.sm,
+    fontSize: layout.isSmallDevice ? fontSize.xs : fontSize.sm,
     color: colors.text.muted,
     textAlign: 'center',
-    marginTop: spacing.xl,
-    paddingHorizontal: spacing.lg,
+    marginTop: spacing.lg,
+    paddingHorizontal: spacing.md,
   },
   footer: {
-    paddingBottom: 60,
+    paddingTop: spacing.sm,
+    paddingBottom: layout.isSmallDevice ? spacing.md : spacing.lg,
   },
   continueButton: {
     width: '100%',
-    paddingVertical: spacing.md + 4,
+    paddingVertical: layout.isSmallDevice ? spacing.md : spacing.md + 4,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: borderRadius.xl,

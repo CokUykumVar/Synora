@@ -44,7 +44,8 @@
     "select": "Επιλέξτε",
     "selectNative": "Επιλέξτε τη μητρική σας γλώσσα",
     "selectLearn": "Επιλέξτε γλώσσα προς εκμάθηση",
-    "continue": "Συνέχεια"
+    "continue": "Συνέχεια",
+    "recommended": "Συνιστάται"
   },
   "levelSelect": {
     "title": "Επιλέξτε το Επίπεδό σας",
@@ -101,7 +102,10 @@
       "nature": "Φύση",
       "shopping": "Αγορές",
       "family": "Οικογένεια & Σχέσεις",
-      "education": "Εκπαίδευση"
+      "education": "Εκπαίδευση",
+      "verbs": "Ρήματα",
+      "adjectives": "Επίθετα",
+      "emotions": "Συναισθήματα"
     }
   },
   "habit": {
@@ -164,7 +168,10 @@
       "technology": "Τεχνολογία",
       "health": "Υγεία",
       "sports": "Αθλητισμός",
-      "music": "Μουσική"
+      "music": "Μουσική",
+      "verbs": "Ρήματα",
+      "adjectives": "Επίθετα",
+      "emotions": "Συναισθήματα"
     }
   },
   "stats": {
@@ -214,6 +221,7 @@
     "startLearning": "Έναρξη Μάθησης",
     "review": "Επανάληψη",
     "quickPractice": "Γρήγορη Εξάσκηση",
+    "weakWords": "Αδύναμες Λέξεις",
     "statistics": "Στατιστικά",
     "totalWords": "Συνολικές Λέξεις",
     "level": "Επίπεδο",
@@ -339,6 +347,12 @@
     "listening": "Ακούω...",
     "youSaid": "Είπατε",
     "tryAgain": "Δοκιμάστε ξανά",
+    "matchingGame": "Παιχνίδι Αντιστοίχισης",
+    "matchImageToWord": "Αντιστοιχίστε την εικόνα με τη σωστή λέξη",
+    "selectImageFirst": "Επιλέξτε πρώτα μια εικόνα",
+    "wordsLearned": "λέξεις μαθεύτηκαν",
+    "youLearnedTheseWords": "Μάθατε αυτές τις λέξεις!",
+    "keepPracticing": "Συνεχίστε να εξασκείστε",
     "motivation": {
       "excellent": "Εξαιρετικά! Είσαι αστέρι!",
       "great": "Καλή δουλειά! Συνέχισε έτσι!",
@@ -346,5 +360,12 @@
       "keepTrying": "Συνέχισε να προσπαθείς! Η εξάσκηση φέρνει την τελειότητα!",
       "practiceMore": "Μην τα παρατάς! Ας δοκιμάσουμε ξανά!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

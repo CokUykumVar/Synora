@@ -44,7 +44,8 @@
     "select": "Vælg",
     "selectNative": "Vælg dit modersmål",
     "selectLearn": "Vælg sprog at lære",
-    "continue": "Fortsæt"
+    "continue": "Fortsæt",
+    "recommended": "Anbefalet"
   },
   "levelSelect": {
     "title": "Vælg Dit Niveau",
@@ -101,7 +102,10 @@
       "nature": "Natur",
       "shopping": "Shopping",
       "family": "Familie & Relationer",
-      "education": "Uddannelse"
+      "education": "Uddannelse",
+      "verbs": "Verber",
+      "adjectives": "Adjektiver",
+      "emotions": "Følelser"
     }
   },
   "habit": {
@@ -164,7 +168,10 @@
       "technology": "Teknologi",
       "health": "Sundhed",
       "sports": "Sport",
-      "music": "Musik"
+      "music": "Musik",
+      "verbs": "Verber",
+      "adjectives": "Adjektiver",
+      "emotions": "Følelser"
     }
   },
   "stats": {
@@ -214,6 +221,7 @@
     "startLearning": "Start Læring",
     "review": "Gennemgang",
     "quickPractice": "Hurtig Øvelse",
+    "weakWords": "Svage Ord",
     "statistics": "Statistik",
     "totalWords": "Totalt Ord",
     "level": "Niveau",
@@ -339,6 +347,12 @@
     "listening": "Lytter...",
     "youSaid": "Du sagde",
     "tryAgain": "Prøv igen",
+    "matchingGame": "Matchspil",
+    "matchImageToWord": "Match billedet med det rigtige ord",
+    "selectImageFirst": "Vælg først et billede",
+    "wordsLearned": "ord lært",
+    "youLearnedTheseWords": "Du har lært disse ord!",
+    "keepPracticing": "Bliv ved med at øve",
     "motivation": {
       "excellent": "Fremragende! Du er en stjerne!",
       "great": "Godt klaret! Fortsæt sådan!",
@@ -346,5 +360,12 @@
       "keepTrying": "Bliv ved med at prøve! Øvelse gør mester!",
       "practiceMore": "Giv ikke op! Lad os prøve igen!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

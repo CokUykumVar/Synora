@@ -1,39 +1,120 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   Animated,
   TouchableOpacity,
-  ScrollView,
   Dimensions,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { useLanguage } from '../src/context/LanguageContext';
+import { useUser } from '../src/context/UserContext';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
+
+const ALL_CATEGORY_IDS = [
+  'travel', 'food', 'business', 'technology', 'health', 'sports',
+  'music', 'entertainment', 'nature', 'shopping', 'family', 'education',
+  'verbs', 'adjectives', 'emotions'
+];
 
 const { width } = Dimensions.get('window');
 
 export default function HomeScreen() {
   const router = useRouter();
+  const { locale } = useLanguage(); // For re-render on language change
+  const { preferences } = useUser(); // Get user preferences
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const slideAnim = useRef(new Animated.Value(30)).current;
   const progressAnim = useRef(new Animated.Value(0)).current;
   const streakPulse = useRef(new Animated.Value(1)).current;
 
-  // Mock data - later this will come from user state
-  const [userData] = useState({
-    name: 'User',
-    streak: 7,
-    todayWords: 3,
-    dailyGoal: 10,
-    totalWords: 156,
-    level: 'intermediate',
+  // Get language code from user preferences
+  const learningLang = preferences.learningLanguage?.code || 'en';
+
+  // State for language-specific stats
+  const [userData, setUserData] = useState({
+    name: i18n.t('home.guest'),
+    streak: 0,
+    todayWords: 0,
+    dailyGoal: preferences.dailyGoal || 10,
+    learnedWords: 0,
+    weeklyWords: 0,
+    level: preferences.level || 'intermediate',
   });
 
-  const progressPercent = (userData.todayWords / userData.dailyGoal) * 100;
+  // Load stats from AsyncStorage (language-specific)
+  const loadStats = useCallback(async () => {
+    try {
+      // Load total learned words across all categories for this language
+      let totalLearned = 0;
+      for (const catId of ALL_CATEGORY_IDS) {
+        const key = `learned_${learningLang}_${catId}`;
+        try {
+          const saved = await AsyncStorage.getItem(key);
+          if (saved) {
+            const learnedIds = JSON.parse(saved) as string[];
+            totalLearned += learnedIds.length;
+          }
+        } catch {}
+      }
+
+      // Load streak (language-specific)
+      const streakKey = `streak_${learningLang}`;
+      let streak = 0;
+      try {
+        const savedStreak = await AsyncStorage.getItem(streakKey);
+        if (savedStreak) {
+          streak = parseInt(savedStreak, 10) || 0;
+        }
+      } catch {}
+
+      // Load today's progress (language-specific)
+      const today = new Date().toISOString().split('T')[0];
+      const todayKey = `today_words_${learningLang}_${today}`;
+      let todayWords = 0;
+      try {
+        const savedToday = await AsyncStorage.getItem(todayKey);
+        if (savedToday) {
+          todayWords = parseInt(savedToday, 10) || 0;
+        }
+      } catch {}
+
+      // Load weekly progress (language-specific)
+      const weeklyKey = `weekly_progress_${learningLang}`;
+      let weeklyWords = 0;
+      try {
+        const savedWeekly = await AsyncStorage.getItem(weeklyKey);
+        if (savedWeekly) {
+          const parsed = JSON.parse(savedWeekly);
+          weeklyWords = parsed.reduce((sum: number, day: any) => sum + (day.words || 0), 0);
+        }
+      } catch {}
+
+      setUserData({
+        name: i18n.t('home.guest'),
+        streak,
+        todayWords,
+        dailyGoal: preferences.dailyGoal || 10,
+        learnedWords: totalLearned,
+        weeklyWords,
+        level: preferences.level || 'intermediate',
+      });
+    } catch (error) {
+      console.log('Error loading home stats:', error);
+    }
+  }, [learningLang, preferences.dailyGoal, preferences.level, locale]);
+
+  // Load stats when language changes
+  useEffect(() => {
+    loadStats();
+  }, [loadStats]);
+
+  const progressPercent = userData.dailyGoal > 0 ? (userData.todayWords / userData.dailyGoal) * 100 : 0;
 
   useEffect(() => {
     Animated.parallel([
@@ -87,12 +168,7 @@ export default function HomeScreen() {
       start={{ x: 0.5, y: 0.35 }}
       end={{ x: 0.5, y: 1 }}
     >
-      <ScrollView
-        style={styles.scrollView}
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
-        <Animated.View
+      <Animated.View
           style={[
             styles.content,
             {
@@ -122,14 +198,13 @@ export default function HomeScreen() {
             >
               <View style={styles.streakContent}>
                 <View style={styles.streakIconContainer}>
-                  <Ionicons name="flame" size={32} color={colors.brand.gold} />
+                  <Ionicons name="flame" size={24} color={colors.brand.gold} />
                 </View>
                 <View style={styles.streakInfo}>
                   <Text style={styles.streakNumber}>{userData.streak}</Text>
                   <Text style={styles.streakLabel}>{i18n.t('home.streak')}</Text>
                 </View>
               </View>
-              <Text style={styles.streakMessage}>{i18n.t('home.streakMessage')}</Text>
             </LinearGradient>
           </Animated.View>
 
@@ -165,79 +240,45 @@ export default function HomeScreen() {
               </LinearGradient>
             </TouchableOpacity>
 
-            <View style={styles.secondaryActions}>
-              <TouchableOpacity style={styles.secondaryButton} activeOpacity={0.7} onPress={() => router.push('/learn')}>
-                <View style={styles.secondaryIconContainer}>
-                  <Ionicons name="refresh-outline" size={24} color={colors.brand.gold} />
-                </View>
-                <Text style={styles.secondaryButtonText}>{i18n.t('home.review')}</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.secondaryButton} activeOpacity={0.7} onPress={() => router.push('/learn')}>
-                <View style={styles.secondaryIconContainer}>
-                  <Ionicons name="flash-outline" size={24} color={colors.brand.gold} />
-                </View>
-                <Text style={styles.secondaryButtonText}>{i18n.t('home.quickPractice')}</Text>
-              </TouchableOpacity>
-            </View>
+            <TouchableOpacity
+              style={[styles.reviewButton, userData.learnedWords === 0 && styles.reviewButtonDisabled]}
+              activeOpacity={0.7}
+              onPress={() => userData.learnedWords > 0 && router.push('/learn?review=true')}
+              disabled={userData.learnedWords === 0}
+            >
+              <View style={[styles.secondaryIconContainer, userData.learnedWords === 0 && styles.secondaryIconContainerDisabled]}>
+                <Ionicons name="refresh-outline" size={24} color={userData.learnedWords === 0 ? colors.text.muted : colors.brand.gold} />
+              </View>
+              <Text style={[styles.secondaryButtonText, userData.learnedWords === 0 && styles.secondaryButtonTextDisabled]}>
+                {i18n.t('home.review')}
+              </Text>
+            </TouchableOpacity>
           </View>
 
           {/* Statistics Section */}
           <View style={styles.statsSection}>
-            <Text style={styles.sectionTitle}>{i18n.t('home.statistics')}</Text>
-            <View style={styles.statsGrid}>
-              <View style={styles.statCard}>
-                <View style={styles.statIconContainer}>
-                  <Ionicons name="book-outline" size={22} color={colors.brand.gold} />
+            <View style={styles.statsCard}>
+              <View style={styles.statItem}>
+                <View style={styles.progressRing}>
+                  <View style={styles.progressRingInner}>
+                    <Text style={styles.ringNumber}>{userData.learnedWords}</Text>
+                  </View>
                 </View>
-                <Text style={styles.statNumber}>{userData.totalWords}</Text>
-                <Text style={styles.statLabel}>{i18n.t('home.totalWords')}</Text>
+                <Text style={styles.ringLabel}>{i18n.t('home.learnedWords')}</Text>
               </View>
 
-              <View style={styles.statCard}>
-                <View style={styles.statIconContainer}>
-                  <Ionicons name="trending-up-outline" size={22} color={colors.brand.gold} />
+              <View style={styles.statItem}>
+                <View style={styles.progressRing}>
+                  <View style={styles.progressRingInner}>
+                    <Text style={styles.ringNumber}>{userData.weeklyWords}</Text>
+                  </View>
                 </View>
-                <Text style={styles.statNumber}>{i18n.t(`home.levels.${userData.level}`)}</Text>
-                <Text style={styles.statLabel}>{i18n.t('home.level')}</Text>
-              </View>
-
-              <View style={styles.statCard}>
-                <View style={styles.statIconContainer}>
-                  <Ionicons name="calendar-outline" size={22} color={colors.brand.gold} />
-                </View>
-                <Text style={styles.statNumber}>{userData.streak}</Text>
-                <Text style={styles.statLabel}>{i18n.t('home.daysActive')}</Text>
-              </View>
-
-              <View style={styles.statCard}>
-                <View style={styles.statIconContainer}>
-                  <Ionicons name="star-outline" size={22} color={colors.brand.gold} />
-                </View>
-                <Text style={styles.statNumber}>85%</Text>
-                <Text style={styles.statLabel}>{i18n.t('home.accuracy')}</Text>
+                <Text style={styles.ringLabel}>{i18n.t('home.weeklyWords')}</Text>
               </View>
             </View>
           </View>
 
-          {/* Continue Learning Section */}
-          <View style={styles.continueSection}>
-            <Text style={styles.sectionTitle}>{i18n.t('home.continueLearning')}</Text>
-            <TouchableOpacity style={styles.lessonCard} activeOpacity={0.7} onPress={() => router.push('/learn')}>
-              <View style={styles.lessonIcon}>
-                <Ionicons name="airplane-outline" size={24} color={colors.brand.gold} />
-              </View>
-              <View style={styles.lessonInfo}>
-                <Text style={styles.lessonTitle}>{i18n.t('home.lastTopic')}</Text>
-                <Text style={styles.lessonProgress}>12/20 {i18n.t('home.words')}</Text>
-              </View>
-              <View style={styles.lessonArrow}>
-                <Ionicons name="chevron-forward" size={20} color={colors.text.muted} />
-              </View>
-            </TouchableOpacity>
-          </View>
-        </Animated.View>
-      </ScrollView>
+                  </Animated.View>
 
       {/* Bottom Navigation */}
       <View style={styles.bottomNav}>
@@ -266,12 +307,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  scrollView: {
-    flex: 1,
-  },
-  scrollContent: {
-    paddingBottom: 100,
-  },
   content: {
     flex: 1,
     paddingHorizontal: spacing.lg,
@@ -280,7 +315,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: 60,
+    paddingTop: layout.headerPaddingTop,
     paddingBottom: spacing.lg,
   },
   headerLeft: {
@@ -308,12 +343,12 @@ const styles = StyleSheet.create({
     borderColor: colors.border.primary,
   },
   streakCard: {
-    marginBottom: spacing.lg,
+    marginBottom: spacing.md,
     borderRadius: borderRadius.lg,
     overflow: 'hidden',
   },
   streakGradient: {
-    padding: spacing.lg,
+    padding: spacing.md,
     borderRadius: borderRadius.lg,
     borderWidth: 1,
     borderColor: 'rgba(201, 162, 39, 0.3)',
@@ -321,37 +356,31 @@ const styles = StyleSheet.create({
   streakContent: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: spacing.sm,
   },
   streakIconContainer: {
-    width: 56,
-    height: 56,
-    borderRadius: 28,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
     backgroundColor: 'rgba(201, 162, 39, 0.2)',
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: spacing.md,
+    marginRight: spacing.sm,
   },
   streakInfo: {
     flex: 1,
   },
   streakNumber: {
     fontFamily: fonts.heading,
-    fontSize: 36,
+    fontSize: 28,
     color: colors.brand.gold,
+    lineHeight: 32,
   },
   streakLabel: {
     fontFamily: fonts.medium,
-    fontSize: fontSize.sm,
+    fontSize: fontSize.xs,
     color: colors.text.secondary,
     textTransform: 'uppercase',
     letterSpacing: 1,
-  },
-  streakMessage: {
-    fontFamily: fonts.italic,
-    fontSize: fontSize.sm,
-    color: colors.text.secondary,
-    fontStyle: 'italic',
   },
   progressCard: {
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
@@ -415,12 +444,7 @@ const styles = StyleSheet.create({
     color: colors.background.primary,
     letterSpacing: 0.5,
   },
-  secondaryActions: {
-    flexDirection: 'row',
-    gap: spacing.md,
-  },
-  secondaryButton: {
-    flex: 1,
+  reviewButton: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -431,6 +455,9 @@ const styles = StyleSheet.create({
     borderColor: colors.border.primary,
     gap: spacing.sm,
   },
+  reviewButtonDisabled: {
+    opacity: 0.5,
+  },
   secondaryIconContainer: {
     width: 36,
     height: 36,
@@ -439,97 +466,73 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  secondaryIconContainerDisabled: {
+    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+  },
   secondaryButtonText: {
     fontFamily: fonts.medium,
     fontSize: fontSize.sm,
     color: colors.text.primary,
   },
+  secondaryButtonTextDisabled: {
+    color: colors.text.muted,
+  },
   statsSection: {
-    marginBottom: spacing.xl,
+    marginBottom: spacing.lg,
   },
-  sectionTitle: {
-    fontFamily: fonts.semiBold,
-    fontSize: fontSize.lg,
-    color: colors.text.primary,
-    marginBottom: spacing.md,
-  },
-  statsGrid: {
+  statsCard: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: spacing.md,
-  },
-  statCard: {
-    width: (width - spacing.lg * 2 - spacing.md) / 2,
+    justifyContent: 'space-around',
+    alignItems: 'center',
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     borderRadius: borderRadius.lg,
-    padding: spacing.md,
+    paddingVertical: spacing.lg,
+    paddingHorizontal: spacing.md,
     borderWidth: 1,
     borderColor: colors.border.primary,
+  },
+  statItem: {
     alignItems: 'center',
   },
-  statIconContainer: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: 'rgba(201, 162, 39, 0.15)',
+  progressRing: {
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    borderWidth: 4,
+    borderColor: colors.brand.gold,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: spacing.sm,
   },
-  statNumber: {
-    fontFamily: fonts.heading,
-    fontSize: fontSize.xl,
-    color: colors.text.primary,
-    marginBottom: spacing.xs,
+  progressRingAccuracy: {
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    borderWidth: 4,
+    borderColor: colors.brand.gold,
+    borderLeftColor: 'rgba(201, 162, 39, 0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: spacing.sm,
   },
-  statLabel: {
+  progressRingInner: {
+    width: 58,
+    height: 58,
+    borderRadius: 29,
+    backgroundColor: 'rgba(201, 162, 39, 0.1)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  ringNumber: {
+    fontFamily: fonts.heading,
+    fontSize: fontSize.lg,
+    color: colors.text.primary,
+  },
+  ringLabel: {
     fontFamily: fonts.body,
     fontSize: fontSize.xs,
     color: colors.text.muted,
     textAlign: 'center',
-  },
-  continueSection: {
-    marginBottom: spacing.lg,
-  },
-  lessonCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    borderRadius: borderRadius.lg,
-    padding: spacing.md,
-    borderWidth: 1,
-    borderColor: colors.border.primary,
-  },
-  lessonIcon: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    backgroundColor: 'rgba(201, 162, 39, 0.15)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: spacing.md,
-  },
-  lessonInfo: {
-    flex: 1,
-  },
-  lessonTitle: {
-    fontFamily: fonts.medium,
-    fontSize: fontSize.md,
-    color: colors.text.primary,
-    marginBottom: spacing.xs,
-  },
-  lessonProgress: {
-    fontFamily: fonts.body,
-    fontSize: fontSize.sm,
-    color: colors.text.muted,
-  },
-  lessonArrow: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   bottomNav: {
     position: 'absolute',

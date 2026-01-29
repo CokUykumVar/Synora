@@ -44,7 +44,8 @@
     "select": "Select",
     "selectNative": "Select Your Native Language",
     "selectLearn": "Select Language to Learn",
-    "continue": "Continue"
+    "continue": "Continue",
+    "recommended": "Recommended"
   },
   "levelSelect": {
     "title": "Select Your Level",
@@ -109,7 +110,10 @@
       "nature": "Nature",
       "shopping": "Shopping",
       "family": "Family & Relationships",
-      "education": "Education"
+      "education": "Education",
+      "verbs": "Verbs",
+      "adjectives": "Adjectives",
+      "emotions": "Emotions"
     }
   },
   "habit": {
@@ -152,6 +156,7 @@
     }
   },
   "home": {
+    "guest": "Guest",
     "greeting": "Hello,",
     "streak": "Day Streak",
     "streakMessage": "You're doing great! Keep up your streak.",
@@ -162,8 +167,10 @@
     "startLearning": "Start Learning",
     "review": "Review",
     "quickPractice": "Quick Practice",
+    "weakWords": "Weak Words",
     "statistics": "Statistics",
-    "totalWords": "Total Words",
+    "learnedWords": "Learned Words",
+    "weeklyWords": "Weekly Words",
     "level": "Level",
     "daysActive": "Days Active",
     "accuracy": "Accuracy",
@@ -193,13 +200,13 @@
     "moreStats": "More Stats",
     "weeklyAverage": "Weekly Avg.",
     "totalTime": "Total Time",
-    "bestStreak": "Best Streak",
-    "perfectDays": "Perfect Days",
+    "weeklyTime": "This Week",
+    "topCategory": "Top Category",
     "categoryProgress": "Category Progress",
     "words": "words",
     "achievements": "Achievements",
-    "goalMet": "Goal Met",
-    "goalNotMet": "In Progress",
+    "goalMet": "Completed",
+    "goalNotMet": "Incomplete",
     "days": {
       "mon": "Mon",
       "tue": "Tue",
@@ -221,10 +228,14 @@
   "explore": {
     "title": "Explore",
     "subtitle": "Discover new topics and words",
-    "searchPlaceholder": "Search topics or words...",
+    "searchPlaceholder": "Search topics...",
     "categories": "Categories",
     "featured": "Featured",
     "popularWords": "Popular Words",
+    "topicOfTheDay": "Topic of the Day",
+    "topicOfTheDayDesc": "Challenge yourself with today's recommended topic",
+    "today": "Today",
+    "startNow": "Start Now",
     "newTopics": "New Topics",
     "seeAll": "See All",
     "words": "words",
@@ -239,7 +250,10 @@
       "technology": "Tech",
       "health": "Health",
       "sports": "Sports",
-      "music": "Music"
+      "music": "Music",
+      "verbs": "Verbs",
+      "adjectives": "Adjectives",
+      "emotions": "Emotions"
     }
   },
   "settings": {
@@ -347,6 +361,12 @@
     "listening": "Listening...",
     "youSaid": "You said",
     "tryAgain": "Try again",
+    "matchingGame": "Matching Game",
+    "matchImageToWord": "Match the image to the correct word",
+    "selectImageFirst": "Select an image first",
+    "wordsLearned": "words learned",
+    "youLearnedTheseWords": "You learned these words!",
+    "keepPracticing": "Keep practicing",
     "motivation": {
       "excellent": "Excellent! You're a star!",
       "great": "Great job! Keep it up!",
@@ -367,5 +387,12 @@
       "noSpeech": "No speech detected. Try again.",
       "analyzing": "Analyzing pronunciation..."
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection Restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

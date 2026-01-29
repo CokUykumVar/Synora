@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface Language {
@@ -48,6 +48,14 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const [preferences, setPreferences] = useState<UserPreferences>(defaultPreferences);
   const [isLoading, setIsLoading] = useState(true);
 
+  // Ref to track latest preferences for sequential updates
+  const preferencesRef = useRef<UserPreferences>(defaultPreferences);
+
+  // Keep ref in sync with state
+  useEffect(() => {
+    preferencesRef.current = preferences;
+  }, [preferences]);
+
   useEffect(() => {
     loadPreferences();
   }, []);
@@ -66,7 +74,9 @@ export function UserProvider({ children }: { children: ReactNode }) {
       const stored = await AsyncStorage.getItem(STORAGE_KEY);
       if (stored) {
         const parsed = JSON.parse(stored);
-        setPreferences({ ...defaultPreferences, ...parsed });
+        const loadedPrefs = { ...defaultPreferences, ...parsed };
+        setPreferences(loadedPrefs);
+        preferencesRef.current = loadedPrefs;
       }
     } catch (error) {
       console.error('Error loading preferences:', error);
@@ -76,37 +86,43 @@ export function UserProvider({ children }: { children: ReactNode }) {
   };
 
   const setNativeLanguage = async (lang: Language) => {
-    const newPrefs = { ...preferences, nativeLanguage: lang };
+    const newPrefs = { ...preferencesRef.current, nativeLanguage: lang };
+    preferencesRef.current = newPrefs;
     setPreferences(newPrefs);
     await savePreferences(newPrefs);
   };
 
   const setLearningLanguage = async (lang: Language) => {
-    const newPrefs = { ...preferences, learningLanguage: lang };
+    const newPrefs = { ...preferencesRef.current, learningLanguage: lang };
+    preferencesRef.current = newPrefs;
     setPreferences(newPrefs);
     await savePreferences(newPrefs);
   };
 
   const setLevel = async (level: string) => {
-    const newPrefs = { ...preferences, level };
+    const newPrefs = { ...preferencesRef.current, level };
+    preferencesRef.current = newPrefs;
     setPreferences(newPrefs);
     await savePreferences(newPrefs);
   };
 
   const setDailyGoal = async (goal: number) => {
-    const newPrefs = { ...preferences, dailyGoal: goal };
+    const newPrefs = { ...preferencesRef.current, dailyGoal: goal };
+    preferencesRef.current = newPrefs;
     setPreferences(newPrefs);
     await savePreferences(newPrefs);
   };
 
   const setSelectedTopics = async (topics: string[]) => {
-    const newPrefs = { ...preferences, selectedTopics: topics };
+    const newPrefs = { ...preferencesRef.current, selectedTopics: topics };
+    preferencesRef.current = newPrefs;
     setPreferences(newPrefs);
     await savePreferences(newPrefs);
   };
 
   const setReminder = async (enabled: boolean, time: string | null) => {
-    const newPrefs = { ...preferences, reminderEnabled: enabled, reminderTime: time };
+    const newPrefs = { ...preferencesRef.current, reminderEnabled: enabled, reminderTime: time };
+    preferencesRef.current = newPrefs;
     setPreferences(newPrefs);
     await savePreferences(newPrefs);
   };

@@ -13,47 +13,61 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { useLanguage } from '../src/context/LanguageContext';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 const { width } = Dimensions.get('window');
 
 const CATEGORIES = [
-  { id: 'all', icon: 'grid-outline' },
-  { id: 'travel', icon: 'airplane-outline' },
-  { id: 'food', icon: 'restaurant-outline' },
-  { id: 'business', icon: 'briefcase-outline' },
-  { id: 'technology', icon: 'laptop-outline' },
-  { id: 'health', icon: 'fitness-outline' },
-  { id: 'sports', icon: 'football-outline' },
-  { id: 'music', icon: 'musical-notes-outline' },
+  { id: 'travel', icon: 'airplane-outline', color: '#4ECDC4' },
+  { id: 'food', icon: 'restaurant-outline', color: '#FF6B6B' },
+  { id: 'business', icon: 'briefcase-outline', color: '#45B7D1' },
+  { id: 'technology', icon: 'laptop-outline', color: '#9B59B6' },
+  { id: 'health', icon: 'fitness-outline', color: '#2ECC71' },
+  { id: 'sports', icon: 'football-outline', color: '#E67E22' },
+  { id: 'music', icon: 'musical-notes-outline', color: '#E91E63' },
+  { id: 'verbs', icon: 'flash-outline', color: '#FF5722' },
+  { id: 'adjectives', icon: 'color-palette-outline', color: '#00BFA5' },
+  { id: 'emotions', icon: 'heart-outline', color: '#F06292' },
 ];
 
 const FEATURED_TOPICS = [
-  { id: 'travel', wordCount: 150, progress: 45, color: '#4ECDC4' },
-  { id: 'business', wordCount: 200, progress: 30, color: '#FF6B6B' },
-  { id: 'technology', wordCount: 180, progress: 60, color: '#45B7D1' },
+  { id: 'travel', color: '#4ECDC4' },
+  { id: 'business', color: '#FF6B6B' },
+  { id: 'technology', color: '#45B7D1' },
 ];
 
-const POPULAR_WORDS = [
-  { word: 'Adventure', translation: 'Macera', category: 'travel' },
-  { word: 'Innovation', translation: 'Yenilik', category: 'technology' },
-  { word: 'Delicious', translation: 'Lezzetli', category: 'food' },
-  { word: 'Strategy', translation: 'Strateji', category: 'business' },
-];
+// Get daily topic based on current date (changes every day)
+const getDailyTopic = () => {
+  const today = new Date();
+  const dayOfYear = Math.floor(
+    (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24)
+  );
+  const index = dayOfYear % CATEGORIES.length;
+  return CATEGORIES[index];
+};
 
-const NEW_TOPICS = [
-  { id: 'entertainment', icon: 'film-outline', wordCount: 120, isNew: true },
-  { id: 'nature', icon: 'leaf-outline', wordCount: 90, isNew: true },
-  { id: 'shopping', icon: 'cart-outline', wordCount: 85, isNew: false },
-  { id: 'family', icon: 'people-outline', wordCount: 110, isNew: false },
-];
 
 export default function ExploreScreen() {
   const router = useRouter();
+  const { locale } = useLanguage(); // For re-render on language change
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const slideAnim = useRef(new Animated.Value(30)).current;
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const dailyTopic = getDailyTopic();
+
+  // Filter topics based on search query
+  const filteredFeaturedTopics = FEATURED_TOPICS.filter((topic) => {
+    if (!searchQuery) return true;
+    const topicName = i18n.t(`topicSelect.topics.${topic.id}`).toLowerCase();
+    return topicName.includes(searchQuery.toLowerCase());
+  });
+
+  const filteredCategories = CATEGORIES.filter((category) => {
+    if (!searchQuery) return true;
+    const categoryName = i18n.t(`explore.categoryNames.${category.id}`).toLowerCase();
+    return categoryName.includes(searchQuery.toLowerCase());
+  });
 
   useEffect(() => {
     Animated.parallel([
@@ -123,26 +137,19 @@ export default function ExploreScreen() {
               showsHorizontalScrollIndicator={false}
               contentContainerStyle={styles.categoriesContainer}
             >
-              {CATEGORIES.map((category) => (
+              {filteredCategories.map((category) => (
                 <TouchableOpacity
                   key={category.id}
-                  style={[
-                    styles.categoryItem,
-                    selectedCategory === category.id && styles.categoryItemActive,
-                  ]}
-                  onPress={() => setSelectedCategory(category.id)}
+                  style={styles.categoryItem}
+                  activeOpacity={0.7}
+                  onPress={() => router.push(`/topic?id=${category.id}`)}
                 >
                   <Ionicons
                     name={category.icon as any}
                     size={22}
-                    color={selectedCategory === category.id ? colors.brand.gold : colors.text.secondary}
+                    color={colors.text.secondary}
                   />
-                  <Text
-                    style={[
-                      styles.categoryText,
-                      selectedCategory === category.id && styles.categoryTextActive,
-                    ]}
-                  >
+                  <Text style={styles.categoryText}>
                     {i18n.t(`explore.categoryNames.${category.id}`)}
                   </Text>
                 </TouchableOpacity>
@@ -154,7 +161,7 @@ export default function ExploreScreen() {
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionTitle}>{i18n.t('explore.featured')}</Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => router.push('/categories')}>
                 <Text style={styles.seeAll}>{i18n.t('explore.seeAll')}</Text>
               </TouchableOpacity>
             </View>
@@ -163,8 +170,8 @@ export default function ExploreScreen() {
               showsHorizontalScrollIndicator={false}
               contentContainerStyle={styles.featuredContainer}
             >
-              {FEATURED_TOPICS.map((topic, index) => (
-                <TouchableOpacity key={topic.id} style={styles.featuredCard}>
+              {filteredFeaturedTopics.map((topic, index) => (
+                <TouchableOpacity key={topic.id} style={styles.featuredCard} onPress={() => router.push(`/topic?id=${topic.id}`)}>
                   <LinearGradient
                     colors={[`${topic.color}30`, `${topic.color}10`]}
                     style={styles.featuredGradient}
@@ -181,92 +188,44 @@ export default function ExploreScreen() {
                     <Text style={styles.featuredTitle}>
                       {i18n.t(`topicSelect.topics.${topic.id}`)}
                     </Text>
-                    <Text style={styles.featuredCount}>
-                      {topic.wordCount} {i18n.t('explore.words')}
-                    </Text>
-                    <View style={styles.featuredProgressContainer}>
-                      <View style={styles.featuredProgressBg}>
-                        <View
-                          style={[
-                            styles.featuredProgress,
-                            { width: `${topic.progress}%`, backgroundColor: topic.color },
-                          ]}
-                        />
-                      </View>
-                      <Text style={styles.featuredProgressText}>{topic.progress}%</Text>
-                    </View>
                   </LinearGradient>
                 </TouchableOpacity>
               ))}
             </ScrollView>
           </View>
 
-          {/* Popular Words */}
+          {/* Topic of the Day */}
           <View style={styles.section}>
-            <View style={styles.sectionHeader}>
-              <Text style={styles.sectionTitle}>{i18n.t('explore.popularWords')}</Text>
-              <TouchableOpacity>
-                <Text style={styles.seeAll}>{i18n.t('explore.seeAll')}</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.wordsGrid}>
-              {POPULAR_WORDS.map((item, index) => (
-                <TouchableOpacity key={index} style={styles.wordCard}>
-                  <Text style={styles.wordText}>{item.word}</Text>
-                  <Text style={styles.translationText}>{item.translation}</Text>
-                  <View style={styles.wordCategoryBadge}>
-                    <Text style={styles.wordCategoryText}>
-                      {i18n.t(`topicSelect.topics.${item.category}`)}
-                    </Text>
+            <Text style={styles.sectionTitle}>{i18n.t('explore.topicOfTheDay')}</Text>
+            <TouchableOpacity style={styles.dailyTopicCard} activeOpacity={0.8} onPress={() => router.push(`/topic?id=${dailyTopic.id}`)}>
+              <LinearGradient
+                colors={[`${dailyTopic.color}40`, `${dailyTopic.color}10`]}
+                style={styles.dailyTopicGradient}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+              >
+                <View style={styles.dailyTopicHeader}>
+                  <View style={[styles.dailyTopicIcon, { backgroundColor: `${dailyTopic.color}30` }]}>
+                    <Ionicons name={dailyTopic.icon as any} size={32} color={dailyTopic.color} />
                   </View>
-                </TouchableOpacity>
-              ))}
-            </View>
+                  <View style={[styles.dailyTopicBadge, { backgroundColor: dailyTopic.color }]}>
+                    <Ionicons name="today-outline" size={14} color={colors.background.primary} />
+                    <Text style={styles.dailyTopicBadgeText}>{i18n.t('explore.today')}</Text>
+                  </View>
+                </View>
+                <Text style={styles.dailyTopicTitle}>{i18n.t(`topicSelect.topics.${dailyTopic.id}`)}</Text>
+                <Text style={styles.dailyTopicDesc}>{i18n.t('explore.topicOfTheDayDesc')}</Text>
+                <View style={styles.dailyTopicFooter}>
+                  <View style={[styles.dailyTopicButton, { backgroundColor: dailyTopic.color }]}>
+                    <Text style={styles.dailyTopicButtonText}>{i18n.t('explore.startNow')}</Text>
+                    <Ionicons name="arrow-forward" size={16} color={colors.background.primary} />
+                  </View>
+                </View>
+              </LinearGradient>
+            </TouchableOpacity>
           </View>
 
-          {/* New & Recommended Topics */}
-          <View style={styles.section}>
-            <View style={styles.sectionHeader}>
-              <Text style={styles.sectionTitle}>{i18n.t('explore.newTopics')}</Text>
-            </View>
-            {NEW_TOPICS.map((topic) => (
-              <TouchableOpacity key={topic.id} style={styles.topicRow}>
-                <View style={styles.topicIconContainer}>
-                  <Ionicons name={topic.icon as any} size={24} color={colors.brand.gold} />
-                </View>
-                <View style={styles.topicInfo}>
-                  <View style={styles.topicTitleRow}>
-                    <Text style={styles.topicTitle}>
-                      {i18n.t(`topicSelect.topics.${topic.id}`)}
-                    </Text>
-                    {topic.isNew && (
-                      <View style={styles.newBadge}>
-                        <Text style={styles.newBadgeText}>{i18n.t('explore.new')}</Text>
-                      </View>
-                    )}
-                  </View>
-                  <Text style={styles.topicWordCount}>
-                    {topic.wordCount} {i18n.t('explore.words')}
-                  </Text>
-                </View>
-                <Ionicons name="chevron-forward" size={20} color={colors.text.muted} />
-              </TouchableOpacity>
-            ))}
-          </View>
-
-          {/* Quick Stats */}
-          <View style={styles.quickStats}>
-            <View style={styles.quickStatItem}>
-              <Text style={styles.quickStatNumber}>12</Text>
-              <Text style={styles.quickStatLabel}>{i18n.t('explore.topicsAvailable')}</Text>
-            </View>
-            <View style={styles.quickStatDivider} />
-            <View style={styles.quickStatItem}>
-              <Text style={styles.quickStatNumber}>1.2K+</Text>
-              <Text style={styles.quickStatLabel}>{i18n.t('explore.wordsToLearn')}</Text>
-            </View>
-          </View>
-        </Animated.View>
+                  </Animated.View>
       </ScrollView>
 
       {/* Bottom Navigation */}
@@ -307,7 +266,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.lg,
   },
   header: {
-    paddingTop: 60,
+    paddingTop: layout.headerPaddingTop,
     paddingBottom: spacing.lg,
   },
   headerTitle: {
@@ -373,18 +332,11 @@ const styles = StyleSheet.create({
     marginRight: spacing.sm,
     minWidth: 80,
   },
-  categoryItemActive: {
-    backgroundColor: 'rgba(201, 162, 39, 0.15)',
-    borderColor: colors.brand.gold,
-  },
   categoryText: {
     fontFamily: fonts.medium,
     fontSize: fontSize.xs,
     color: colors.text.secondary,
     marginTop: spacing.xs,
-  },
-  categoryTextActive: {
-    color: colors.brand.gold,
   },
   featuredContainer: {
     paddingVertical: spacing.sm,
@@ -415,149 +367,72 @@ const styles = StyleSheet.create({
     color: colors.text.primary,
     marginBottom: spacing.xs,
   },
-  featuredCount: {
+  dailyTopicCard: {
+    borderRadius: borderRadius.lg,
+    overflow: 'hidden',
+    marginTop: spacing.md,
+  },
+  dailyTopicGradient: {
+    padding: spacing.lg,
+    borderRadius: borderRadius.lg,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.15)',
+  },
+  dailyTopicHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    marginBottom: spacing.md,
+  },
+  dailyTopicIcon: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  dailyTopicBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: spacing.sm,
+    paddingVertical: spacing.xs,
+    borderRadius: borderRadius.sm,
+    gap: 4,
+  },
+  dailyTopicBadgeText: {
+    fontFamily: fonts.semiBold,
+    fontSize: fontSize.xs,
+    color: colors.background.primary,
+  },
+  dailyTopicTitle: {
+    fontFamily: fonts.heading,
+    fontSize: fontSize.xl,
+    color: colors.text.primary,
+    marginBottom: spacing.xs,
+  },
+  dailyTopicDesc: {
     fontFamily: fonts.body,
     fontSize: fontSize.sm,
     color: colors.text.secondary,
     marginBottom: spacing.md,
   },
-  featuredProgressContainer: {
+  dailyTopicFooter: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  dailyTopicButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: spacing.sm,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    borderRadius: borderRadius.md,
+    gap: spacing.xs,
   },
-  featuredProgressBg: {
-    flex: 1,
-    height: 6,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    borderRadius: 3,
-    overflow: 'hidden',
-  },
-  featuredProgress: {
-    height: '100%',
-    borderRadius: 3,
-  },
-  featuredProgressText: {
-    fontFamily: fonts.medium,
-    fontSize: fontSize.xs,
-    color: colors.text.secondary,
-  },
-  wordsGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: spacing.md,
-  },
-  wordCard: {
-    width: (width - spacing.lg * 2 - spacing.md) / 2,
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    borderRadius: borderRadius.lg,
-    padding: spacing.md,
-    borderWidth: 1,
-    borderColor: colors.border.primary,
-  },
-  wordText: {
+  dailyTopicButtonText: {
     fontFamily: fonts.semiBold,
-    fontSize: fontSize.md,
-    color: colors.text.primary,
-    marginBottom: spacing.xs,
-  },
-  translationText: {
-    fontFamily: fonts.body,
     fontSize: fontSize.sm,
-    color: colors.text.secondary,
-    marginBottom: spacing.sm,
-  },
-  wordCategoryBadge: {
-    alignSelf: 'flex-start',
-    backgroundColor: 'rgba(201, 162, 39, 0.15)',
-    paddingHorizontal: spacing.sm,
-    paddingVertical: spacing.xs,
-    borderRadius: borderRadius.sm,
-  },
-  wordCategoryText: {
-    fontFamily: fonts.medium,
-    fontSize: fontSize.xs,
-    color: colors.brand.gold,
-  },
-  topicRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    borderRadius: borderRadius.lg,
-    padding: spacing.md,
-    marginBottom: spacing.sm,
-    borderWidth: 1,
-    borderColor: colors.border.primary,
-  },
-  topicIconContainer: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: 'rgba(201, 162, 39, 0.15)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: spacing.md,
-  },
-  topicInfo: {
-    flex: 1,
-  },
-  topicTitleRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.sm,
-  },
-  topicTitle: {
-    fontFamily: fonts.medium,
-    fontSize: fontSize.md,
-    color: colors.text.primary,
-  },
-  newBadge: {
-    backgroundColor: colors.brand.gold,
-    paddingHorizontal: spacing.sm,
-    paddingVertical: 2,
-    borderRadius: borderRadius.sm,
-  },
-  newBadgeText: {
-    fontFamily: fonts.semiBold,
-    fontSize: 10,
     color: colors.background.primary,
-    textTransform: 'uppercase',
-  },
-  topicWordCount: {
-    fontFamily: fonts.body,
-    fontSize: fontSize.sm,
-    color: colors.text.muted,
-    marginTop: spacing.xs,
-  },
-  quickStats: {
-    flexDirection: 'row',
-    backgroundColor: 'rgba(201, 162, 39, 0.1)',
-    borderRadius: borderRadius.lg,
-    padding: spacing.lg,
-    borderWidth: 1,
-    borderColor: 'rgba(201, 162, 39, 0.2)',
-    marginBottom: spacing.lg,
-  },
-  quickStatItem: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  quickStatDivider: {
-    width: 1,
-    backgroundColor: 'rgba(201, 162, 39, 0.3)',
-    marginHorizontal: spacing.md,
-  },
-  quickStatNumber: {
-    fontFamily: fonts.heading,
-    fontSize: fontSize.xxl,
-    color: colors.brand.gold,
-  },
-  quickStatLabel: {
-    fontFamily: fonts.body,
-    fontSize: fontSize.xs,
-    color: colors.text.secondary,
-    marginTop: spacing.xs,
-    textAlign: 'center',
   },
   bottomNav: {
     position: 'absolute',

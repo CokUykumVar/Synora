@@ -44,7 +44,8 @@
     "select": "चुनें",
     "selectNative": "अपनी मातृभाषा चुनें",
     "selectLearn": "सीखने के लिए भाषा चुनें",
-    "continue": "जारी रखें"
+    "continue": "जारी रखें",
+    "recommended": "अनुशंसित"
   },
   "levelSelect": {
     "title": "अपना स्तर चुनें",
@@ -101,7 +102,10 @@
       "nature": "प्रकृति",
       "shopping": "खरीदारी",
       "family": "परिवार और रिश्ते",
-      "education": "शिक्षा"
+      "education": "शिक्षा",
+      "verbs": "क्रियाएं",
+      "adjectives": "विशेषण",
+      "emotions": "भावनाएं"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "तकनीक",
       "health": "स्वास्थ्य",
       "sports": "खेल",
-      "music": "संगीत"
+      "music": "संगीत",
+      "verbs": "क्रियाएं",
+      "adjectives": "विशेषण",
+      "emotions": "भावनाएं"
     }
   },
   "home": {
@@ -214,6 +221,7 @@
     "startLearning": "सीखना शुरू करें",
     "review": "दोहराएं",
     "quickPractice": "त्वरित अभ्यास",
+    "weakWords": "कमज़ोर शब्द",
     "statistics": "आंकड़े",
     "totalWords": "कुल शब्द",
     "level": "स्तर",
@@ -339,6 +347,12 @@
     "listening": "सुन रहा है...",
     "youSaid": "आपने कहा",
     "tryAgain": "फिर से कोशिश करें",
+    "matchingGame": "मिलान खेल",
+    "matchImageToWord": "चित्र को सही शब्द से मिलाएं",
+    "selectImageFirst": "पहले एक चित्र चुनें",
+    "wordsLearned": "शब्द सीखे",
+    "youLearnedTheseWords": "आपने ये शब्द सीख लिए!",
+    "keepPracticing": "अभ्यास जारी रखें",
     "motivation": {
       "excellent": "उत्कृष्ट! आप एक स्टार हैं!",
       "great": "शानदार काम! जारी रखें!",
@@ -346,5 +360,12 @@
       "keepTrying": "कोशिश करते रहें! अभ्यास से सिद्धि होती है!",
       "practiceMore": "हार मत मानो! फिर से कोशिश करें!"
     }
+  },
+  "common": {
+    "noInternet": "इंटरनेट कनेक्शन नहीं है",
+    "checkConnection": "ऑडियो सुविधाओं का उपयोग करने के लिए कृपया अपना इंटरनेट कनेक्शन जांचें।",
+    "connectionRestored": "कनेक्शन बहाल हो गया",
+    "canContinue": "आप जहां रुके थे वहां से जारी रख सकते हैं",
+    "ok": "ठीक है"
   }
 }

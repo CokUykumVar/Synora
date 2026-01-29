@@ -44,7 +44,8 @@
     "select": "เลือก",
     "selectNative": "เลือกภาษาแม่ของคุณ",
     "selectLearn": "เลือกภาษาที่จะเรียน",
-    "continue": "ดำเนินการต่อ"
+    "continue": "ดำเนินการต่อ",
+    "recommended": "แนะนำ"
   },
   "levelSelect": {
     "title": "เลือกระดับของคุณ",
@@ -101,7 +102,10 @@
       "nature": "ธรรมชาติ",
       "shopping": "ช้อปปิ้ง",
       "family": "ครอบครัวและความสัมพันธ์",
-      "education": "การศึกษา"
+      "education": "การศึกษา",
+      "verbs": "คำกริยา",
+      "adjectives": "คำคุณศัพท์",
+      "emotions": "อารมณ์"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "เทคโนโลยี",
       "health": "สุขภาพ",
       "sports": "กีฬา",
-      "music": "ดนตรี"
+      "music": "ดนตรี",
+      "verbs": "คำกริยา",
+      "adjectives": "คำคุณศัพท์",
+      "emotions": "อารมณ์"
     }
   },
   "home": {
@@ -339,6 +346,12 @@
     "listening": "กำลังฟัง...",
     "youSaid": "คุณพูดว่า",
     "tryAgain": "ลองอีกครั้ง",
+    "matchingGame": "เกมจับคู่",
+    "matchImageToWord": "จับคู่รูปภาพกับคำที่ถูกต้อง",
+    "selectImageFirst": "เลือกรูปภาพก่อน",
+    "wordsLearned": "คำที่เรียนรู้",
+    "youLearnedTheseWords": "คุณได้เรียนรู้คำเหล่านี้แล้ว!",
+    "keepPracticing": "ฝึกฝนต่อไป",
     "motivation": {
       "excellent": "ยอดเยี่ยม! คุณเป็นดาว!",
       "great": "ทำได้ดีมาก! สู้ต่อไป!",
@@ -346,5 +359,12 @@
       "keepTrying": "พยายามต่อไป! การฝึกฝนนำไปสู่ความสมบูรณ์แบบ!",
       "practiceMore": "อย่ายอมแพ้! มาลองอีกครั้ง!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

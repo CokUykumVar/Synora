@@ -44,7 +44,8 @@
     "select": "Valitse",
     "selectNative": "Valitse äidinkielesi",
     "selectLearn": "Valitse opittava kieli",
-    "continue": "Jatka"
+    "continue": "Jatka",
+    "recommended": "Suositeltu"
   },
   "levelSelect": {
     "title": "Valitse Tasosi",
@@ -101,7 +102,10 @@
       "nature": "Luonto",
       "shopping": "Ostokset",
       "family": "Perhe & Suhteet",
-      "education": "Koulutus"
+      "education": "Koulutus",
+      "verbs": "Verbit",
+      "adjectives": "Adjektiivit",
+      "emotions": "Tunteet"
     }
   },
   "habit": {
@@ -164,7 +168,10 @@
       "technology": "Teknologia",
       "health": "Terveys",
       "sports": "Urheilu",
-      "music": "Musiikki"
+      "music": "Musiikki",
+      "verbs": "Verbit",
+      "adjectives": "Adjektiivit",
+      "emotions": "Tunteet"
     }
   },
   "stats": {
@@ -214,6 +221,7 @@
     "startLearning": "Aloita Oppiminen",
     "review": "Kertaa",
     "quickPractice": "Pikaharjoitus",
+    "weakWords": "Heikot Sanat",
     "statistics": "Tilastot",
     "totalWords": "Sanoja Yhteensä",
     "level": "Taso",
@@ -339,6 +347,12 @@
     "listening": "Kuuntelee...",
     "youSaid": "Sanoit",
     "tryAgain": "Yritä uudelleen",
+    "matchingGame": "Yhdistämispeli",
+    "matchImageToWord": "Yhdistä kuva oikeaan sanaan",
+    "selectImageFirst": "Valitse ensin kuva",
+    "wordsLearned": "sanaa opittu",
+    "youLearnedTheseWords": "Opit nämä sanat!",
+    "keepPracticing": "Jatka harjoittelua",
     "motivation": {
       "excellent": "Erinomaista! Olet tähti!",
       "great": "Hienoa työtä! Jatka samaan malliin!",
@@ -346,5 +360,12 @@
       "keepTrying": "Jatka yrittämistä! Harjoitus tekee mestarin!",
       "practiceMore": "Älä luovuta! Yritetään uudelleen!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

@@ -44,7 +44,8 @@
     "select": "Selectează",
     "selectNative": "Selectează limba ta maternă",
     "selectLearn": "Selectează limba de învățat",
-    "continue": "Continuă"
+    "continue": "Continuă",
+    "recommended": "Recomandat"
   },
   "levelSelect": {
     "title": "Selectează Nivelul Tău",
@@ -101,7 +102,10 @@
       "nature": "Natură",
       "shopping": "Cumpărături",
       "family": "Familie și Relații",
-      "education": "Educație"
+      "education": "Educație",
+      "verbs": "Verbe",
+      "adjectives": "Adjective",
+      "emotions": "Emoții"
     }
   },
   "habit": {
@@ -164,7 +168,10 @@
       "technology": "Tech",
       "health": "Sănătate",
       "sports": "Sport",
-      "music": "Muzică"
+      "music": "Muzică",
+      "verbs": "Verbe",
+      "adjectives": "Adjective",
+      "emotions": "Emoții"
     }
   },
   "stats": {
@@ -214,6 +221,7 @@
     "startLearning": "Începe Învățarea",
     "review": "Recapitulare",
     "quickPractice": "Practică Rapidă",
+    "weakWords": "Cuvinte Slabe",
     "statistics": "Statistici",
     "totalWords": "Total Cuvinte",
     "level": "Nivel",
@@ -339,6 +347,12 @@
     "listening": "Ascult...",
     "youSaid": "Ai spus",
     "tryAgain": "Încearcă din nou",
+    "matchingGame": "Joc de potrivire",
+    "matchImageToWord": "Potrivește imaginea cu cuvântul corect",
+    "selectImageFirst": "Selectează mai întâi o imagine",
+    "wordsLearned": "cuvinte învățate",
+    "youLearnedTheseWords": "Ai învățat aceste cuvinte!",
+    "keepPracticing": "Continuă să exersezi",
     "motivation": {
       "excellent": "Excelent! Ești o stea!",
       "great": "Bine lucrat! Continuă așa!",
@@ -346,5 +360,12 @@
       "keepTrying": "Continuă să încerci! Practica face perfecțiunea!",
       "practiceMore": "Nu renunța! Hai să încercăm din nou!"
     }
+  },
+  "common": {
+    "noInternet": "No Internet Connection",
+    "checkConnection": "Please check your internet connection to use audio features.",
+    "connectionRestored": "Connection restored",
+    "canContinue": "You can continue where you left off",
+    "ok": "OK"
   }
 }

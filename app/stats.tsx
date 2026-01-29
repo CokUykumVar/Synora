@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import {
   View,
   Text,
@@ -11,55 +11,175 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { useLanguage } from '../src/context/LanguageContext';
+import { useUser } from '../src/context/UserContext';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
+import { getWordsByCategory } from '../src/data/words';
 
 const { width } = Dimensions.get('window');
 
-const WEEKLY_DATA = [
-  { day: 'mon', words: 12, goal: 10 },
-  { day: 'tue', words: 8, goal: 10 },
-  { day: 'wed', words: 15, goal: 10 },
-  { day: 'thu', words: 10, goal: 10 },
-  { day: 'fri', words: 6, goal: 10 },
-  { day: 'sat', words: 14, goal: 10 },
-  { day: 'sun', words: 9, goal: 10 },
+// Base weekly data without goal (goal will be added dynamically from user preferences)
+const WEEKLY_DATA_BASE = [
+  { day: 'mon', words: 0 },
+  { day: 'tue', words: 0 },
+  { day: 'wed', words: 0 },
+  { day: 'thu', words: 0 },
+  { day: 'fri', words: 0 },
+  { day: 'sat', words: 0 },
+  { day: 'sun', words: 0 },
 ];
 
-const CATEGORY_STATS = [
-  { id: 'travel', words: 45, total: 150, color: '#4ECDC4' },
-  { id: 'business', words: 32, total: 200, color: '#FF6B6B' },
-  { id: 'technology', words: 28, total: 180, color: '#45B7D1' },
-  { id: 'food', words: 51, total: 120, color: '#96CEB4' },
-];
-
-const ACHIEVEMENTS = [
-  { id: 'first_word', icon: 'star', unlocked: true },
-  { id: 'week_streak', icon: 'flame', unlocked: true },
-  { id: 'hundred_words', icon: 'trophy', unlocked: true },
-  { id: 'perfect_day', icon: 'checkmark-circle', unlocked: false },
-  { id: 'month_streak', icon: 'medal', unlocked: false },
-  { id: 'five_hundred', icon: 'ribbon', unlocked: false },
+const ALL_CATEGORIES = [
+  { id: 'travel', color: '#4ECDC4', icon: 'airplane-outline' },
+  { id: 'food', color: '#FF6B6B', icon: 'restaurant-outline' },
+  { id: 'business', color: '#45B7D1', icon: 'briefcase-outline' },
+  { id: 'technology', color: '#9B59B6', icon: 'laptop-outline' },
+  { id: 'health', color: '#2ECC71', icon: 'fitness-outline' },
+  { id: 'sports', color: '#E67E22', icon: 'football-outline' },
+  { id: 'music', color: '#E91E63', icon: 'musical-notes-outline' },
+  { id: 'entertainment', color: '#00BCD4', icon: 'film-outline' },
+  { id: 'nature', color: '#8BC34A', icon: 'leaf-outline' },
+  { id: 'shopping', color: '#FF9800', icon: 'cart-outline' },
+  { id: 'family', color: '#673AB7', icon: 'people-outline' },
+  { id: 'education', color: '#3F51B5', icon: 'school-outline' },
+  { id: 'verbs', color: '#FF5722', icon: 'flash-outline' },
+  { id: 'adjectives', color: '#00BFA5', icon: 'color-palette-outline' },
+  { id: 'emotions', color: '#F06292', icon: 'heart-outline' },
 ];
 
 export default function StatsScreen() {
   const router = useRouter();
+  const { locale } = useLanguage(); // For re-render on language change
+  const { preferences } = useUser(); // Get user preferences
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const slideAnim = useRef(new Animated.Value(30)).current;
-  const barAnims = useRef(WEEKLY_DATA.map(() => new Animated.Value(0))).current;
+  const barAnims = useRef(WEEKLY_DATA_BASE.map(() => new Animated.Value(0))).current;
 
-  const [stats] = useState({
-    totalWords: 156,
-    streak: 7,
-    accuracy: 85,
-    todayWords: 9,
-    weeklyAverage: 10.6,
-    totalTime: 12.5,
-    bestStreak: 14,
-    perfectDays: 4,
+  // Get language codes from user preferences
+  const learningLang = preferences.learningLanguage?.code || 'en';
+  const nativeLang = preferences.nativeLanguage?.code || 'tr';
+  const userLevel = preferences.level;
+
+  // Get daily goal from user preferences (set in onboarding/settings)
+  const dailyGoal = preferences.dailyGoal || 10;
+
+  // State for dynamic stats (language-specific)
+  const [stats, setStats] = useState({
+    totalWords: 0,
+    weeklyWords: 0,
+    streak: 0,
+    weeklyAverage: 0,
+    totalTime: 0,
+    weeklyTime: 0,
+    topCategory: 'travel',
   });
 
-  const maxWords = Math.max(...WEEKLY_DATA.map(d => d.words));
+  const [weeklyData, setWeeklyData] = useState(WEEKLY_DATA_BASE.map(day => ({ ...day, goal: dailyGoal })));
+  const [categoryStats, setCategoryStats] = useState<Array<{ id: string; words: number; total: number; color: string; icon: string }>>([]);
+
+  // Load stats from AsyncStorage (language-specific)
+  const loadStats = useCallback(async () => {
+    try {
+      // Load total learned words across all categories for this language
+      let totalLearned = 0;
+      let topCat = 'travel';
+      let maxCatWords = 0;
+      const catStatsArray: Array<{ id: string; words: number; total: number; color: string; icon: string }> = [];
+
+      for (const cat of ALL_CATEGORIES) {
+        const key = `learned_${learningLang}_${cat.id}`;
+        let learnedCount = 0;
+        try {
+          const saved = await AsyncStorage.getItem(key);
+          if (saved) {
+            const learnedIds = JSON.parse(saved) as string[];
+            learnedCount = learnedIds.length;
+            totalLearned += learnedCount;
+            if (learnedCount > maxCatWords) {
+              maxCatWords = learnedCount;
+              topCat = cat.id;
+            }
+          }
+        } catch {}
+
+        // Get total words for this category
+        const words = getWordsByCategory(cat.id, learningLang, nativeLang, userLevel);
+        catStatsArray.push({
+          id: cat.id,
+          words: learnedCount,
+          total: words.length,
+          color: cat.color,
+          icon: cat.icon,
+        });
+      }
+
+      // Filter to only show categories with words
+      const filteredCatStats = catStatsArray.filter(c => c.total > 0);
+      setCategoryStats(filteredCatStats);
+
+      // Load weekly progress (language-specific)
+      const weeklyKey = `weekly_progress_${learningLang}`;
+      let weeklyProgressData = WEEKLY_DATA_BASE.map(day => ({ ...day, goal: dailyGoal }));
+      let weeklyTotal = 0;
+      try {
+        const savedWeekly = await AsyncStorage.getItem(weeklyKey);
+        if (savedWeekly) {
+          const parsed = JSON.parse(savedWeekly);
+          weeklyProgressData = parsed.map((day: any, index: number) => ({
+            ...WEEKLY_DATA_BASE[index],
+            words: day.words || 0,
+            goal: dailyGoal,
+          }));
+          weeklyTotal = weeklyProgressData.reduce((sum: number, day: any) => sum + day.words, 0);
+        }
+      } catch {}
+      setWeeklyData(weeklyProgressData);
+
+      // Load streak (language-specific)
+      const streakKey = `streak_${learningLang}`;
+      let streak = 0;
+      try {
+        const savedStreak = await AsyncStorage.getItem(streakKey);
+        if (savedStreak) {
+          streak = parseInt(savedStreak, 10) || 0;
+        }
+      } catch {}
+
+      // Load total time (language-specific)
+      const timeKey = `total_time_${learningLang}`;
+      let totalTime = 0;
+      try {
+        const savedTime = await AsyncStorage.getItem(timeKey);
+        if (savedTime) {
+          totalTime = parseFloat(savedTime) || 0;
+        }
+      } catch {}
+
+      // Calculate weekly average
+      const weeklyAverage = weeklyTotal > 0 ? Math.round((weeklyTotal / 7) * 10) / 10 : 0;
+
+      setStats({
+        totalWords: totalLearned,
+        weeklyWords: weeklyTotal,
+        streak,
+        weeklyAverage,
+        totalTime,
+        weeklyTime: Math.round(totalTime * 10) / 10,
+        topCategory: topCat,
+      });
+    } catch (error) {
+      console.log('Error loading stats:', error);
+    }
+  }, [learningLang, nativeLang, userLevel, dailyGoal]);
+
+  // Load stats when language changes
+  useEffect(() => {
+    loadStats();
+  }, [loadStats]);
+
+  const maxWords = Math.max(...weeklyData.map(d => d.words), 1);
 
   useEffect(() => {
     Animated.parallel([
@@ -74,18 +194,20 @@ export default function StatsScreen() {
         useNativeDriver: true,
       }),
     ]).start();
+  }, []);
 
-    // Animate bars sequentially
+  // Animate bars when weekly data changes
+  useEffect(() => {
     const barAnimations = barAnims.map((anim, index) =>
       Animated.timing(anim, {
-        toValue: WEEKLY_DATA[index].words / maxWords,
+        toValue: weeklyData[index]?.words ? weeklyData[index].words / maxWords : 0,
         duration: 600,
         delay: index * 100,
         useNativeDriver: false,
       })
     );
     Animated.stagger(50, barAnimations).start();
-  }, []);
+  }, [weeklyData, maxWords]);
 
   return (
     <LinearGradient
@@ -117,36 +239,28 @@ export default function StatsScreen() {
 
           {/* Overview Cards */}
           <View style={styles.overviewGrid}>
-            <View style={styles.overviewCard}>
+            <View style={[styles.overviewCard, styles.overviewCardLarge]}>
               <View style={[styles.overviewIcon, { backgroundColor: 'rgba(78, 205, 196, 0.2)' }]}>
-                <Ionicons name="book" size={24} color="#4ECDC4" />
+                <Ionicons name="book" size={28} color="#4ECDC4" />
               </View>
               <Text style={styles.overviewNumber}>{stats.totalWords}</Text>
               <Text style={styles.overviewLabel}>{i18n.t('stats.totalWords')}</Text>
             </View>
 
-            <View style={styles.overviewCard}>
+            <View style={[styles.overviewCard, styles.overviewCardLarge]}>
+              <View style={[styles.overviewIcon, { backgroundColor: 'rgba(201, 162, 39, 0.2)' }]}>
+                <Ionicons name="calendar" size={28} color={colors.brand.gold} />
+              </View>
+              <Text style={styles.overviewNumber}>{stats.weeklyWords}</Text>
+              <Text style={styles.overviewLabel}>{i18n.t('home.weeklyWords')}</Text>
+            </View>
+
+            <View style={[styles.overviewCard, styles.overviewCardLarge]}>
               <View style={[styles.overviewIcon, { backgroundColor: 'rgba(255, 107, 107, 0.2)' }]}>
-                <Ionicons name="flame" size={24} color="#FF6B6B" />
+                <Ionicons name="flame" size={28} color="#FF6B6B" />
               </View>
               <Text style={styles.overviewNumber}>{stats.streak}</Text>
               <Text style={styles.overviewLabel}>{i18n.t('stats.currentStreak')}</Text>
-            </View>
-
-            <View style={styles.overviewCard}>
-              <View style={[styles.overviewIcon, { backgroundColor: 'rgba(69, 183, 209, 0.2)' }]}>
-                <Ionicons name="checkmark-done" size={24} color="#45B7D1" />
-              </View>
-              <Text style={styles.overviewNumber}>{stats.accuracy}%</Text>
-              <Text style={styles.overviewLabel}>{i18n.t('stats.accuracy')}</Text>
-            </View>
-
-            <View style={styles.overviewCard}>
-              <View style={[styles.overviewIcon, { backgroundColor: 'rgba(201, 162, 39, 0.2)' }]}>
-                <Ionicons name="today" size={24} color={colors.brand.gold} />
-              </View>
-              <Text style={styles.overviewNumber}>{stats.todayWords}</Text>
-              <Text style={styles.overviewLabel}>{i18n.t('stats.todayWords')}</Text>
             </View>
           </View>
 
@@ -155,16 +269,23 @@ export default function StatsScreen() {
             <Text style={styles.sectionTitle}>{i18n.t('stats.weeklyProgress')}</Text>
             <View style={styles.chartCard}>
               <View style={styles.chartContainer}>
-                {WEEKLY_DATA.map((day, index) => {
+                {/* Goal Line */}
+                <View style={styles.goalLine}>
+                  <View style={styles.goalLineDash} />
+                  <Text style={styles.goalLineText}>{dailyGoal}</Text>
+                </View>
+                {weeklyData.map((day, index) => {
                   const barHeight = barAnims[index].interpolate({
                     inputRange: [0, 1],
                     outputRange: [0, 120],
                   });
                   const isGoalMet = day.words >= day.goal;
+                  const isToday = index === new Date().getDay() - 1 || (new Date().getDay() === 0 && index === 6);
 
                   return (
                     <View key={day.day} style={styles.barColumn}>
-                      <View style={styles.barWrapper}>
+                      <Text style={[styles.barValueTop, isGoalMet && styles.barValueTopGold]}>{day.words}</Text>
+                      <View style={[styles.barWrapper, isToday && styles.barWrapperToday]}>
                         <View style={styles.barBackground} />
                         <Animated.View
                           style={[
@@ -175,14 +296,8 @@ export default function StatsScreen() {
                             },
                           ]}
                         />
-                        {isGoalMet && (
-                          <View style={styles.goalIndicator}>
-                            <Ionicons name="checkmark" size={12} color={colors.background.primary} />
-                          </View>
-                        )}
                       </View>
-                      <Text style={styles.barLabel}>{i18n.t(`stats.days.${day.day}`)}</Text>
-                      <Text style={styles.barValue}>{day.words}</Text>
+                      <Text style={[styles.barLabel, isToday && styles.barLabelToday]}>{i18n.t(`stats.days.${day.day}`)}</Text>
                     </View>
                   );
                 })}
@@ -224,18 +339,18 @@ export default function StatsScreen() {
               <View style={styles.additionalStatDividerH} />
               <View style={styles.additionalStatRow}>
                 <View style={styles.additionalStatItem}>
-                  <Ionicons name="trophy-outline" size={20} color={colors.brand.gold} />
+                  <Ionicons name="hourglass-outline" size={20} color={colors.brand.gold} />
                   <View style={styles.additionalStatInfo}>
-                    <Text style={styles.additionalStatValue}>{stats.bestStreak}</Text>
-                    <Text style={styles.additionalStatLabel}>{i18n.t('stats.bestStreak')}</Text>
+                    <Text style={styles.additionalStatValue}>{stats.weeklyTime}h</Text>
+                    <Text style={styles.additionalStatLabel}>{i18n.t('stats.weeklyTime')}</Text>
                   </View>
                 </View>
                 <View style={styles.statDivider} />
                 <View style={styles.additionalStatItem}>
-                  <Ionicons name="star-outline" size={20} color={colors.brand.gold} />
+                  <Ionicons name="trophy-outline" size={20} color={colors.brand.gold} />
                   <View style={styles.additionalStatInfo}>
-                    <Text style={styles.additionalStatValue}>{stats.perfectDays}</Text>
-                    <Text style={styles.additionalStatLabel}>{i18n.t('stats.perfectDays')}</Text>
+                    <Text style={styles.additionalStatValue}>{i18n.t(`explore.categoryNames.${stats.topCategory}`)}</Text>
+                    <Text style={styles.additionalStatLabel}>{i18n.t('stats.topCategory')}</Text>
                   </View>
                 </View>
               </View>
@@ -245,74 +360,30 @@ export default function StatsScreen() {
           {/* Category Progress */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>{i18n.t('stats.categoryProgress')}</Text>
-            {CATEGORY_STATS.map((category) => {
-              const progress = (category.words / category.total) * 100;
-              return (
-                <View key={category.id} style={styles.categoryRow}>
-                  <View style={styles.categoryInfo}>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={styles.categoryScrollContainer}
+            >
+              {categoryStats.map((category) => {
+                const progress = category.total > 0 ? Math.round((category.words / category.total) * 100) : 0;
+                return (
+                  <View key={category.id} style={styles.categoryCard}>
+                    <View style={[styles.categoryIconContainer, { backgroundColor: `${category.color}20` }]}>
+                      <Ionicons name={category.icon as any} size={24} color={category.color} />
+                    </View>
                     <Text style={styles.categoryName}>
                       {i18n.t(`topicSelect.topics.${category.id}`)}
                     </Text>
-                    <Text style={styles.categoryCount}>
-                      {category.words}/{category.total} {i18n.t('stats.words')}
-                    </Text>
-                  </View>
-                  <View style={styles.categoryProgressContainer}>
-                    <View style={styles.categoryProgressBg}>
-                      <View
-                        style={[
-                          styles.categoryProgress,
-                          { width: `${progress}%`, backgroundColor: category.color },
-                        ]}
-                      />
+                    <View style={[styles.progressRing, { borderColor: category.color }]}>
+                      <Text style={[styles.categoryPercent, { color: category.color }]}>{progress}%</Text>
                     </View>
-                    <Text style={[styles.categoryPercent, { color: category.color }]}>
-                      {Math.round(progress)}%
-                    </Text>
                   </View>
-                </View>
-              );
-            })}
+                );
+              })}
+            </ScrollView>
           </View>
 
-          {/* Achievements */}
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>{i18n.t('stats.achievements')}</Text>
-            <View style={styles.achievementsGrid}>
-              {ACHIEVEMENTS.map((achievement) => (
-                <View
-                  key={achievement.id}
-                  style={[
-                    styles.achievementItem,
-                    !achievement.unlocked && styles.achievementLocked,
-                  ]}
-                >
-                  <View
-                    style={[
-                      styles.achievementIcon,
-                      achievement.unlocked
-                        ? styles.achievementIconUnlocked
-                        : styles.achievementIconLocked,
-                    ]}
-                  >
-                    <Ionicons
-                      name={achievement.icon as any}
-                      size={24}
-                      color={achievement.unlocked ? colors.brand.gold : colors.text.muted}
-                    />
-                  </View>
-                  <Text
-                    style={[
-                      styles.achievementName,
-                      !achievement.unlocked && styles.achievementNameLocked,
-                    ]}
-                  >
-                    {i18n.t(`stats.achievementNames.${achievement.id}`)}
-                  </Text>
-                </View>
-              ))}
-            </View>
-          </View>
         </Animated.View>
       </ScrollView>
 
@@ -354,7 +425,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.lg,
   },
   header: {
-    paddingTop: 60,
+    paddingTop: layout.headerPaddingTop,
     paddingBottom: spacing.lg,
   },
   headerTitle: {
@@ -370,12 +441,12 @@ const styles = StyleSheet.create({
   },
   overviewGrid: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: spacing.md,
+    justifyContent: 'space-between',
+    gap: spacing.sm,
     marginBottom: spacing.xl,
   },
   overviewCard: {
-    width: (width - spacing.lg * 2 - spacing.md) / 2,
+    flex: 1,
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     borderRadius: borderRadius.lg,
     padding: spacing.md,
@@ -383,17 +454,20 @@ const styles = StyleSheet.create({
     borderColor: colors.border.primary,
     alignItems: 'center',
   },
+  overviewCardLarge: {
+    paddingVertical: spacing.lg,
+  },
   overviewIcon: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: spacing.sm,
+    marginBottom: spacing.md,
   },
   overviewNumber: {
     fontFamily: fonts.heading,
-    fontSize: fontSize.xl,
+    fontSize: fontSize.xxl,
     color: colors.text.primary,
     marginBottom: spacing.xs,
   },
@@ -423,41 +497,71 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    height: 160,
+    height: 180,
     marginBottom: spacing.md,
+    position: 'relative',
+  },
+  goalLine: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 100,
+    flexDirection: 'row',
+    alignItems: 'center',
+    zIndex: 1,
+  },
+  goalLineDash: {
+    flex: 1,
+    height: 1,
+    borderStyle: 'dashed',
+    borderWidth: 1,
+    borderColor: 'rgba(201, 162, 39, 0.5)',
+  },
+  goalLineText: {
+    fontFamily: fonts.medium,
+    fontSize: 10,
+    color: colors.brand.gold,
+    marginLeft: spacing.xs,
+    backgroundColor: 'rgba(11, 13, 16, 0.9)',
+    paddingHorizontal: 4,
   },
   barColumn: {
     alignItems: 'center',
     flex: 1,
   },
+  barValueTop: {
+    fontFamily: fonts.semiBold,
+    fontSize: fontSize.xs,
+    color: colors.text.muted,
+    marginBottom: spacing.xs,
+  },
+  barValueTopGold: {
+    color: colors.brand.gold,
+  },
   barWrapper: {
     height: 120,
-    width: 24,
+    width: 28,
     justifyContent: 'flex-end',
     alignItems: 'center',
     position: 'relative',
+    borderRadius: 14,
+  },
+  barWrapperToday: {
+    borderWidth: 2,
+    borderColor: colors.brand.gold,
+    borderStyle: 'solid',
   },
   barBackground: {
     position: 'absolute',
     bottom: 0,
     width: 24,
-    height: 120,
+    height: 116,
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     borderRadius: 12,
   },
   bar: {
     width: 24,
     borderRadius: 12,
-  },
-  goalIndicator: {
-    position: 'absolute',
-    top: -8,
-    width: 18,
-    height: 18,
-    borderRadius: 9,
-    backgroundColor: colors.brand.gold,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   barLabel: {
     fontFamily: fonts.medium,
@@ -466,11 +570,9 @@ const styles = StyleSheet.create({
     marginTop: spacing.sm,
     textTransform: 'uppercase',
   },
-  barValue: {
+  barLabelToday: {
+    color: colors.brand.gold,
     fontFamily: fonts.semiBold,
-    fontSize: fontSize.xs,
-    color: colors.text.secondary,
-    marginTop: 2,
   },
   chartLegend: {
     flexDirection: 'row',
@@ -534,69 +636,21 @@ const styles = StyleSheet.create({
     backgroundColor: colors.border.primary,
     marginVertical: spacing.md,
   },
-  categoryRow: {
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    borderRadius: borderRadius.lg,
-    padding: spacing.md,
-    marginBottom: spacing.sm,
-    borderWidth: 1,
-    borderColor: colors.border.primary,
-  },
-  categoryInfo: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: spacing.sm,
-  },
-  categoryName: {
-    fontFamily: fonts.medium,
-    fontSize: fontSize.md,
-    color: colors.text.primary,
-  },
-  categoryCount: {
-    fontFamily: fonts.body,
-    fontSize: fontSize.sm,
-    color: colors.text.muted,
-  },
-  categoryProgressContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.sm,
-  },
-  categoryProgressBg: {
-    flex: 1,
-    height: 8,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    borderRadius: 4,
-    overflow: 'hidden',
-  },
-  categoryProgress: {
-    height: '100%',
-    borderRadius: 4,
-  },
-  categoryPercent: {
-    fontFamily: fonts.semiBold,
-    fontSize: fontSize.sm,
-    width: 45,
-    textAlign: 'right',
-  },
-  achievementsGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+  categoryScrollContainer: {
+    paddingVertical: spacing.sm,
     gap: spacing.md,
   },
-  achievementItem: {
-    width: (width - spacing.lg * 2 - spacing.md * 2) / 3,
-    alignItems: 'center',
-    padding: spacing.md,
+  categoryCard: {
     backgroundColor: 'rgba(255, 255, 255, 0.05)',
     borderRadius: borderRadius.lg,
+    padding: spacing.lg,
     borderWidth: 1,
     borderColor: colors.border.primary,
+    alignItems: 'center',
+    width: 140,
+    marginRight: spacing.md,
   },
-  achievementLocked: {
-    opacity: 0.5,
-  },
-  achievementIcon: {
+  categoryIconContainer: {
     width: 48,
     height: 48,
     borderRadius: 24,
@@ -604,20 +658,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: spacing.sm,
   },
-  achievementIconUnlocked: {
-    backgroundColor: 'rgba(201, 162, 39, 0.2)',
-  },
-  achievementIconLocked: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-  },
-  achievementName: {
+  categoryName: {
     fontFamily: fonts.medium,
-    fontSize: fontSize.xs,
+    fontSize: fontSize.sm,
     color: colors.text.primary,
     textAlign: 'center',
+    marginBottom: spacing.md,
   },
-  achievementNameLocked: {
-    color: colors.text.muted,
+  progressRing: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    borderWidth: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  categoryPercent: {
+    fontFamily: fonts.semiBold,
+    fontSize: fontSize.md,
   },
   bottomNav: {
     position: 'absolute',

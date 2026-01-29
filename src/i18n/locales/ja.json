@@ -44,7 +44,8 @@
     "select": "選択",
     "selectNative": "母国語を選択",
     "selectLearn": "学ぶ言語を選択",
-    "continue": "続ける"
+    "continue": "続ける",
+    "recommended": "おすすめ"
   },
   "levelSelect": {
     "title": "レベルを選択",
@@ -101,7 +102,10 @@
       "nature": "自然",
       "shopping": "ショッピング",
       "family": "家族と人間関係",
-      "education": "教育"
+      "education": "教育",
+      "verbs": "動詞",
+      "adjectives": "形容詞",
+      "emotions": "感情"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "テック",
       "health": "健康",
       "sports": "スポーツ",
-      "music": "音楽"
+      "music": "音楽",
+      "verbs": "動詞",
+      "adjectives": "形容詞",
+      "emotions": "感情"
     }
   },
   "home": {
@@ -214,6 +221,7 @@
     "startLearning": "学習を始める",
     "review": "復習",
     "quickPractice": "クイック練習",
+    "weakWords": "苦手な単語",
     "statistics": "統計",
     "totalWords": "総単語数",
     "level": "レベル",
@@ -339,6 +347,12 @@
     "listening": "聞いています...",
     "youSaid": "あなたが言ったのは",
     "tryAgain": "もう一度試す",
+    "matchingGame": "マッチングゲーム",
+    "matchImageToWord": "画像を正しい単語に合わせてください",
+    "selectImageFirst": "まず画像を選択してください",
+    "wordsLearned": "単語を学習",
+    "youLearnedTheseWords": "これらの単語を学習しました！",
+    "keepPracticing": "練習を続ける",
     "motivation": {
       "excellent": "素晴らしい！あなたはスターです！",
       "great": "よくできました！その調子！",
@@ -346,5 +360,12 @@
       "keepTrying": "頑張って！練習は完璧を生む！",
       "practiceMore": "あきらめないで！もう一度やってみよう！"
     }
+  },
+  "common": {
+    "noInternet": "インターネット接続がありません",
+    "checkConnection": "音声機能を使用するには、インターネット接続を確認してください。",
+    "connectionRestored": "接続が復元されました",
+    "canContinue": "中断したところから続けられます",
+    "ok": "OK"
   }
 }

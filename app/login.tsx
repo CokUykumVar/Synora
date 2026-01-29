@@ -7,10 +7,11 @@ import {
   Animated,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 export default function LoginScreen() {
   const router = useRouter();
@@ -55,58 +56,60 @@ export default function LoginScreen() {
       start={{ x: 0.5, y: 0.35 }}
       end={{ x: 0.5, y: 1 }}
     >
-      <Animated.View
-        style={[
-          styles.content,
-          {
-            opacity: fadeAnim,
-            transform: [{ translateY: slideAnim }],
-          },
-        ]}
-      >
-        <View style={styles.header}>
-          <Text style={styles.logo}>SYNORA</Text>
-        </View>
-
-        <View style={styles.messageContainer}>
-          <Text style={styles.title}>{i18n.t('login.title')}</Text>
-          <Text style={styles.subtitle}>{i18n.t('login.subtitle')}</Text>
-        </View>
-
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity
-            style={styles.socialButton}
-            onPress={handleGoogleLogin}
-            activeOpacity={0.7}
-          >
-            <Ionicons name="logo-google" size={20} color={colors.text.primary} />
-            <Text style={styles.socialButtonText}>{i18n.t('login.google')}</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.socialButton}
-            onPress={handleAppleLogin}
-            activeOpacity={0.7}
-          >
-            <Ionicons name="logo-apple" size={22} color={colors.text.primary} />
-            <Text style={styles.socialButtonText}>{i18n.t('login.apple')}</Text>
-          </TouchableOpacity>
-
-          <View style={styles.dividerContainer}>
-            <View style={styles.divider} />
-            <Text style={styles.dividerText}>{i18n.t('login.or')}</Text>
-            <View style={styles.divider} />
+      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+        <Animated.View
+          style={[
+            styles.content,
+            {
+              opacity: fadeAnim,
+              transform: [{ translateY: slideAnim }],
+            },
+          ]}
+        >
+          <View style={styles.header}>
+            <Text style={styles.logo}>SYNORA</Text>
           </View>
 
-          <TouchableOpacity
-            style={styles.emailButton}
-            onPress={handleEmailLogin}
-            activeOpacity={0.7}
-          >
-            <Text style={styles.emailButtonText}>{i18n.t('login.email')}</Text>
-          </TouchableOpacity>
-        </View>
-      </Animated.View>
+          <View style={styles.messageContainer}>
+            <Text style={styles.title}>{i18n.t('login.title')}</Text>
+            <Text style={styles.subtitle}>{i18n.t('login.subtitle')}</Text>
+          </View>
+
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity
+              style={styles.socialButton}
+              onPress={handleGoogleLogin}
+              activeOpacity={0.7}
+            >
+              <Ionicons name="logo-google" size={20} color={colors.text.primary} />
+              <Text style={styles.socialButtonText}>{i18n.t('login.google')}</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.socialButton}
+              onPress={handleAppleLogin}
+              activeOpacity={0.7}
+            >
+              <Ionicons name="logo-apple" size={22} color={colors.text.primary} />
+              <Text style={styles.socialButtonText}>{i18n.t('login.apple')}</Text>
+            </TouchableOpacity>
+
+            <View style={styles.dividerContainer}>
+              <View style={styles.divider} />
+              <Text style={styles.dividerText}>{i18n.t('login.or')}</Text>
+              <View style={styles.divider} />
+            </View>
+
+            <TouchableOpacity
+              style={styles.emailButton}
+              onPress={handleEmailLogin}
+              activeOpacity={0.7}
+            >
+              <Text style={styles.emailButtonText}>{i18n.t('login.email')}</Text>
+            </TouchableOpacity>
+          </View>
+        </Animated.View>
+      </SafeAreaView>
     </LinearGradient>
   );
 }
@@ -115,29 +118,33 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  safeArea: {
+    flex: 1,
+  },
   content: {
     flex: 1,
     paddingHorizontal: spacing.lg,
   },
   header: {
     alignItems: 'center',
-    paddingTop: 80,
+    paddingTop: layout.headerPaddingTop,
   },
   logo: {
     fontFamily: fonts.logo,
-    fontSize: 36,
+    fontSize: layout.isSmallDevice ? 28 : 36,
     color: colors.brand.gold,
     letterSpacing: 4,
+    includeFontPadding: false,
   },
   messageContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingBottom: 40,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : 40,
   },
   title: {
-    fontFamily: fonts.italicMedium,
-    fontSize: 28,
+    fontFamily: fonts.semiBold,
+    fontSize: layout.isSmallDevice ? 24 : 28,
     color: colors.text.primary,
     textAlign: 'center',
     marginBottom: spacing.lg,
@@ -145,8 +152,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   subtitle: {
-    fontFamily: fonts.italic,
-    fontSize: fontSize.md,
+    fontFamily: fonts.body,
+    fontSize: layout.isSmallDevice ? fontSize.sm : fontSize.md,
     color: colors.text.secondary,
     textAlign: 'center',
     letterSpacing: 1.5,
@@ -156,7 +163,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     gap: spacing.md,
-    paddingBottom: 60,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
   },
   socialButton: {
     width: '100%',

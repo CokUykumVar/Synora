@@ -4,7 +4,10 @@ import { Slot } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { UserProvider } from '../src/context/UserContext';
+import { LanguageProvider } from '../src/context/LanguageContext';
+import { NetworkProvider } from '../src/context/NetworkContext';
 import {
   NotoSans_400Regular,
   NotoSans_500Medium,
@@ -63,11 +66,17 @@ export default function RootLayout() {
   }
 
   return (
-    <UserProvider>
-      <View style={{ flex: 1, backgroundColor: '#0B0D10' }}>
-        <StatusBar style="light" />
-        <Slot />
-      </View>
-    </UserProvider>
+    <SafeAreaProvider>
+      <LanguageProvider>
+        <UserProvider>
+          <NetworkProvider>
+            <View style={{ flex: 1, backgroundColor: '#0B0D10' }}>
+              <StatusBar style="light" />
+              <Slot />
+            </View>
+          </NetworkProvider>
+        </UserProvider>
+      </LanguageProvider>
+    </SafeAreaProvider>
   );
 }

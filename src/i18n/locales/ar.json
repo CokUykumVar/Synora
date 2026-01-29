@@ -44,7 +44,8 @@
     "select": "اختر",
     "selectNative": "اختر لغتك الأم",
     "selectLearn": "اختر اللغة للتعلم",
-    "continue": "متابعة"
+    "continue": "متابعة",
+    "recommended": "موصى به"
   },
   "levelSelect": {
     "title": "اختر مستواك",
@@ -101,7 +102,10 @@
       "nature": "الطبيعة",
       "shopping": "التسوق",
       "family": "العائلة والعلاقات",
-      "education": "التعليم"
+      "education": "التعليم",
+      "verbs": "أفعال",
+      "adjectives": "صفات",
+      "emotions": "مشاعر"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "التقنية",
       "health": "الصحة",
       "sports": "الرياضة",
-      "music": "الموسيقى"
+      "music": "الموسيقى",
+      "verbs": "أفعال",
+      "adjectives": "صفات",
+      "emotions": "مشاعر"
     }
   },
   "home": {
@@ -214,6 +221,7 @@
     "startLearning": "ابدأ التعلم",
     "review": "مراجعة",
     "quickPractice": "تدريب سريع",
+    "weakWords": "الكلمات الضعيفة",
     "statistics": "الإحصائيات",
     "totalWords": "إجمالي الكلمات",
     "level": "المستوى",
@@ -339,6 +347,12 @@
     "listening": "جاري الاستماع...",
     "youSaid": "قلت",
     "tryAgain": "حاول مرة أخرى",
+    "matchingGame": "لعبة المطابقة",
+    "matchImageToWord": "طابق الصورة مع الكلمة الصحيحة",
+    "selectImageFirst": "اختر صورة أولاً",
+    "wordsLearned": "كلمات تم تعلمها",
+    "youLearnedTheseWords": "لقد تعلمت هذه الكلمات!",
+    "keepPracticing": "استمر في التدريب",
     "motivation": {
       "excellent": "ممتاز! أنت نجم!",
       "great": "عمل رائع! استمر!",
@@ -346,5 +360,12 @@
       "keepTrying": "استمر في المحاولة! الممارسة تصنع الكمال!",
       "practiceMore": "لا تستسلم! لنحاول مرة أخرى!"
     }
+  },
+  "common": {
+    "noInternet": "لا يوجد اتصال بالإنترنت",
+    "checkConnection": "يرجى التحقق من اتصالك بالإنترنت لاستخدام ميزات الصوت.",
+    "connectionRestored": "تم استعادة الاتصال",
+    "canContinue": "يمكنك المتابعة من حيث توقفت",
+    "ok": "حسناً"
   }
 }

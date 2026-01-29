@@ -1,3 +1,29 @@
+import { Platform, StatusBar, Dimensions } from 'react-native';
+import Constants from 'expo-constants';
+
+const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
+
+// Get status bar height for different platforms
+const getStatusBarHeight = (): number => {
+  if (Platform.OS === 'ios') {
+    // iOS devices with notch have higher status bar
+    return Constants.statusBarHeight || 44;
+  }
+  // Android
+  return StatusBar.currentHeight || Constants.statusBarHeight || 24;
+};
+
+// Responsive layout values
+export const layout = {
+  statusBarHeight: getStatusBarHeight(),
+  headerPaddingTop: getStatusBarHeight() + 10,
+  screenWidth: SCREEN_WIDTH,
+  screenHeight: SCREEN_HEIGHT,
+  isSmallDevice: SCREEN_WIDTH < 375,
+  isMediumDevice: SCREEN_WIDTH >= 375 && SCREEN_WIDTH < 414,
+  isLargeDevice: SCREEN_WIDTH >= 414,
+};
+
 export const colors = {
   background: {
     primary: '#0B0D10',

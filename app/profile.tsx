@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import {
   View,
   Text,
@@ -14,35 +14,109 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { useLanguage } from '../src/context/LanguageContext';
+import { useUser } from '../src/context/UserContext';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
+
+const ALL_CATEGORY_IDS = [
+  'travel', 'food', 'business', 'technology', 'health', 'sports',
+  'music', 'entertainment', 'nature', 'shopping', 'family', 'education',
+  'verbs', 'adjectives', 'emotions'
+];
 
 export default function ProfileScreen() {
   const router = useRouter();
+  const { locale } = useLanguage(); // For re-render on language change
+  const { preferences } = useUser(); // Get user preferences from onboarding
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const slideAnim = useRef(new Animated.Value(30)).current;
 
   const [isEditing, setIsEditing] = useState(false);
-  const [profile, setProfile] = useState({
-    name: 'User',
-    email: 'user@example.com',
-    joinDate: '2024-01-15',
-    nativeLanguage: 'Turkish',
-    learningLanguage: 'English',
-    level: 'intermediate',
-    dailyGoal: 10,
+  const [userName, setUserName] = useState('User');
+  const [userEmail] = useState('user@example.com');
+  const [joinDate] = useState('2024-01-15');
+
+  const [editedName, setEditedName] = useState(userName);
+
+  // Get language info from preferences
+  const nativeLanguage = preferences.nativeLanguage?.name || i18n.t('home.guest');
+  const learningLanguage = preferences.learningLanguage?.name || 'English';
+  const learningLang = preferences.learningLanguage?.code || 'en';
+  const level = preferences.level || 'intermediate';
+  const dailyGoal = preferences.dailyGoal || 10;
+
+  const [stats, setStats] = useState({
+    totalWords: 0,
+    daysActive: 0,
+    currentStreak: 0,
+    bestStreak: 0,
+    totalTime: 0,
+    accuracy: 0,
   });
 
-  const [editedName, setEditedName] = useState(profile.name);
+  // Load stats from AsyncStorage (language-specific)
+  const loadStats = useCallback(async () => {
+    try {
+      // Load total learned words across all categories for this language
+      let totalLearned = 0;
+      for (const catId of ALL_CATEGORY_IDS) {
+        const key = `learned_${learningLang}_${catId}`;
+        try {
+          const saved = await AsyncStorage.getItem(key);
+          if (saved) {
+            const learnedIds = JSON.parse(saved) as string[];
+            totalLearned += learnedIds.length;
+          }
+        } catch {}
+      }
 
-  const [stats] = useState({
-    totalWords: 156,
-    daysActive: 23,
-    currentStreak: 7,
-    bestStreak: 14,
-    totalTime: 12.5,
-    accuracy: 85,
-  });
+      // Load streak (language-specific)
+      const streakKey = `streak_${learningLang}`;
+      let currentStreak = 0;
+      try {
+        const savedStreak = await AsyncStorage.getItem(streakKey);
+        if (savedStreak) currentStreak = parseInt(savedStreak, 10) || 0;
+      } catch {}
+
+      // Load best streak (language-specific)
+      const bestStreakKey = `best_streak_${learningLang}`;
+      let bestStreak = currentStreak;
+      try {
+        const savedBest = await AsyncStorage.getItem(bestStreakKey);
+        if (savedBest) bestStreak = Math.max(parseInt(savedBest, 10) || 0, currentStreak);
+      } catch {}
+      // Update best streak if current is higher
+      if (currentStreak > bestStreak) {
+        bestStreak = currentStreak;
+        await AsyncStorage.setItem(bestStreakKey, String(bestStreak));
+      }
+
+      // Load total time (language-specific)
+      const timeKey = `total_time_${learningLang}`;
+      let totalTime = 0;
+      try {
+        const savedTime = await AsyncStorage.getItem(timeKey);
+        if (savedTime) totalTime = parseFloat(savedTime) || 0;
+      } catch {}
+
+      setStats({
+        totalWords: totalLearned,
+        daysActive: currentStreak > 0 ? currentStreak : 0,
+        currentStreak,
+        bestStreak,
+        totalTime,
+        accuracy: 85, // Placeholder - would need to track correct/incorrect answers
+      });
+    } catch (error) {
+      console.log('Error loading profile stats:', error);
+    }
+  }, [learningLang]);
+
+  useEffect(() => {
+    loadStats();
+  }, [loadStats]);
 
   useEffect(() => {
     Animated.parallel([
@@ -64,12 +138,12 @@ export default function ProfileScreen() {
       Alert.alert(i18n.t('profile.error'), i18n.t('profile.nameError'));
       return;
     }
-    setProfile(prev => ({ ...prev, name: editedName.trim() }));
+    setUserName(editedName.trim());
     setIsEditing(false);
   };
 
   const handleCancel = () => {
-    setEditedName(profile.name);
+    setEditedName(userName);
     setIsEditing(false);
   };
 
@@ -141,7 +215,7 @@ export default function ProfileScreen() {
               <View style={styles.avatarContainer}>
                 <View style={styles.avatar}>
                   <Text style={styles.avatarText}>
-                    {profile.name.charAt(0).toUpperCase()}
+                    {userName.charAt(0).toUpperCase()}
                   </Text>
                 </View>
                 <TouchableOpacity style={styles.cameraButton} activeOpacity={0.7}>
@@ -164,13 +238,13 @@ export default function ProfileScreen() {
                   </TouchableOpacity>
                 </View>
               ) : (
-                <Text style={styles.profileName}>{profile.name}</Text>
+                <Text style={styles.profileName}>{userName}</Text>
               )}
-              <Text style={styles.profileEmail}>{profile.email}</Text>
+              <Text style={styles.profileEmail}>{userEmail}</Text>
               <View style={styles.memberSince}>
                 <Ionicons name="calendar-outline" size={14} color={colors.text.muted} />
                 <Text style={styles.memberSinceText}>
-                  {i18n.t('profile.memberSince')} {formatDate(profile.joinDate)}
+                  {i18n.t('profile.memberSince')} {formatDate(joinDate)}
                 </Text>
               </View>
             </View>
@@ -221,7 +295,7 @@ export default function ProfileScreen() {
                     <Ionicons name="globe-outline" size={20} color={colors.brand.gold} />
                     <Text style={styles.infoLabel}>{i18n.t('profile.nativeLanguage')}</Text>
                   </View>
-                  <Text style={styles.infoValue}>{profile.nativeLanguage}</Text>
+                  <Text style={styles.infoValue}>{nativeLanguage}</Text>
                 </View>
                 <View style={styles.infoDivider} />
                 <View style={styles.infoRow}>
@@ -229,7 +303,7 @@ export default function ProfileScreen() {
                     <Ionicons name="school-outline" size={20} color={colors.brand.gold} />
                     <Text style={styles.infoLabel}>{i18n.t('profile.learningLanguage')}</Text>
                   </View>
-                  <Text style={styles.infoValue}>{profile.learningLanguage}</Text>
+                  <Text style={styles.infoValue}>{learningLanguage}</Text>
                 </View>
                 <View style={styles.infoDivider} />
                 <View style={styles.infoRow}>
@@ -238,7 +312,7 @@ export default function ProfileScreen() {
                     <Text style={styles.infoLabel}>{i18n.t('profile.level')}</Text>
                   </View>
                   <Text style={styles.infoValue}>
-                    {i18n.t(`home.levels.${profile.level}`)}
+                    {i18n.t(`home.levels.${level}`)}
                   </Text>
                 </View>
                 <View style={styles.infoDivider} />
@@ -248,42 +322,9 @@ export default function ProfileScreen() {
                     <Text style={styles.infoLabel}>{i18n.t('profile.dailyGoal')}</Text>
                   </View>
                   <Text style={styles.infoValue}>
-                    {profile.dailyGoal} {i18n.t('profile.wordsPerDay')}
+                    {dailyGoal} {i18n.t('profile.wordsPerDay')}
                   </Text>
                 </View>
-              </View>
-            </View>
-
-            {/* Achievements Preview */}
-            <View style={styles.section}>
-              <View style={styles.sectionHeader}>
-                <Text style={styles.sectionTitle}>{i18n.t('profile.achievements')}</Text>
-                <TouchableOpacity activeOpacity={0.7} onPress={() => router.push('/stats')}>
-                  <Text style={styles.seeAllText}>{i18n.t('profile.seeAll')}</Text>
-                </TouchableOpacity>
-              </View>
-              <View style={styles.achievementsRow}>
-                {[
-                  { icon: 'star', unlocked: true },
-                  { icon: 'flame', unlocked: true },
-                  { icon: 'trophy', unlocked: true },
-                  { icon: 'medal', unlocked: false },
-                  { icon: 'ribbon', unlocked: false },
-                ].map((achievement, index) => (
-                  <View
-                    key={index}
-                    style={[
-                      styles.achievementBadge,
-                      !achievement.unlocked && styles.achievementLocked,
-                    ]}
-                  >
-                    <Ionicons
-                      name={achievement.icon as any}
-                      size={24}
-                      color={achievement.unlocked ? colors.brand.gold : colors.text.muted}
-                    />
-                  </View>
-                ))}
               </View>
             </View>
 
@@ -324,7 +365,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 60,
+    paddingTop: layout.headerPaddingTop,
     paddingBottom: spacing.lg,
   },
   backButton: {
@@ -431,22 +472,11 @@ const styles = StyleSheet.create({
   section: {
     marginBottom: spacing.xl,
   },
-  sectionHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: spacing.md,
-  },
   sectionTitle: {
     fontFamily: fonts.semiBold,
     fontSize: fontSize.md,
     color: colors.text.primary,
     marginBottom: spacing.md,
-  },
-  seeAllText: {
-    fontFamily: fonts.medium,
-    fontSize: fontSize.sm,
-    color: colors.brand.gold,
   },
   statsGrid: {
     flexDirection: 'row',
@@ -515,24 +545,6 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: colors.border.primary,
     marginLeft: 44,
-  },
-  achievementsRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  achievementBadge: {
-    width: 56,
-    height: 56,
-    borderRadius: 28,
-    backgroundColor: colors.background.card,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 2,
-    borderColor: colors.brand.gold,
-  },
-  achievementLocked: {
-    borderColor: colors.border.primary,
-    opacity: 0.5,
   },
   actionSection: {
     marginTop: spacing.md,

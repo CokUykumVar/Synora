@@ -44,7 +44,8 @@
     "select": "选择",
     "selectNative": "选择您的母语",
     "selectLearn": "选择要学习的语言",
-    "continue": "继续"
+    "continue": "继续",
+    "recommended": "推荐"
   },
   "levelSelect": {
     "title": "选择您的级别",
@@ -101,7 +102,10 @@
       "nature": "自然",
       "shopping": "购物",
       "family": "家庭与关系",
-      "education": "教育"
+      "education": "教育",
+      "verbs": "动词",
+      "adjectives": "形容词",
+      "emotions": "情感"
     }
   },
   "habit": {
@@ -200,7 +204,10 @@
       "technology": "科技",
       "health": "健康",
       "sports": "体育",
-      "music": "音乐"
+      "music": "音乐",
+      "verbs": "动词",
+      "adjectives": "形容词",
+      "emotions": "情感"
     }
   },
   "home": {
@@ -214,6 +221,7 @@
     "startLearning": "开始学习",
     "review": "复习",
     "quickPractice": "快速练习",
+    "weakWords": "薄弱词汇",
     "statistics": "统计数据",
     "totalWords": "总单词数",
     "level": "级别",
@@ -339,6 +347,12 @@
     "listening": "正在听...",
     "youSaid": "你说的是",
     "tryAgain": "再试一次",
+    "matchingGame": "配对游戏",
+    "matchImageToWord": "将图片与正确的单词配对",
+    "selectImageFirst": "请先选择一张图片",
+    "wordsLearned": "已学单词",
+    "youLearnedTheseWords": "你学会了这些单词！",
+    "keepPracticing": "继续练习",
     "motivation": {
       "excellent": "太棒了！你是明星！",
       "great": "做得好！继续保持！",
@@ -346,5 +360,12 @@
       "keepTrying": "继续努力！熟能生巧！",
       "practiceMore": "不要放弃！让我们再试一次！"
     }
+  },
+  "common": {
+    "noInternet": "无网络连接",
+    "checkConnection": "请检查您的网络连接以使用音频功能。",
+    "connectionRestored": "连接已恢复",
+    "canContinue": "您可以从上次中断的地方继续",
+    "ok": "确定"
   }
 }

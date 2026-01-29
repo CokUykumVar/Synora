@@ -8,10 +8,11 @@ import {
   ScrollView,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import i18n from '../src/i18n';
-import { colors, fontSize, spacing, borderRadius, fonts } from '../src/constants/theme';
+import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 const MIN_TOPICS = 3;
 
@@ -83,87 +84,92 @@ export default function TopicSelectScreen() {
       start={{ x: 0.5, y: 0.35 }}
       end={{ x: 0.5, y: 1 }}
     >
-      <Animated.View
-        style={[
-          styles.content,
-          {
-            opacity: fadeAnim,
-            transform: [{ translateY: slideAnim }],
-          },
-        ]}
-      >
-        <View style={styles.header}>
-          <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-            <Ionicons name="chevron-back" size={24} color={colors.text.primary} />
-          </TouchableOpacity>
-          <Text style={styles.logo}>SYNORA</Text>
-          <View style={styles.placeholder} />
-        </View>
+      <SafeAreaView style={styles.safeArea} edges={['bottom']}>
+        <Animated.View
+          style={[
+            styles.content,
+            {
+              opacity: fadeAnim,
+              transform: [{ translateY: slideAnim }],
+            },
+          ]}
+        >
+          <View style={styles.header}>
+            <TouchableOpacity onPress={handleBack} style={styles.backButton}>
+              <Ionicons name="chevron-back" size={24} color={colors.text.primary} />
+            </TouchableOpacity>
+            <Text style={styles.logo}>SYNORA</Text>
+            <View style={styles.placeholder} />
+          </View>
 
-        <View style={styles.mainContent}>
-          <Text style={styles.title}>{i18n.t('topicSelect.title')}</Text>
-          <Text style={styles.subtitle}>{i18n.t('topicSelect.subtitle')}</Text>
+          <View style={styles.mainContent}>
+            <Text style={styles.title}>{i18n.t('topicSelect.title')}</Text>
+            <Text style={styles.subtitle}>{i18n.t('topicSelect.subtitle')}</Text>
 
-          <ScrollView
-            style={styles.scrollView}
-            contentContainerStyle={styles.topicsContainer}
-            showsVerticalScrollIndicator={false}
-          >
-            {TOPICS.map((topic) => {
-              const isSelected = selectedTopics.has(topic.id);
-              return (
-                <TouchableOpacity
-                  key={topic.id}
-                  style={[styles.topicCard, isSelected && styles.topicCardSelected]}
-                  onPress={() => toggleTopic(topic.id)}
-                  activeOpacity={0.7}
-                >
-                  <View style={[styles.iconContainer, isSelected && styles.iconContainerSelected]}>
-                    <Ionicons
-                      name={topic.icon as any}
-                      size={24}
-                      color={isSelected ? colors.brand.gold : colors.text.secondary}
-                    />
-                  </View>
-                  <Text style={[styles.topicName, isSelected && styles.topicNameSelected]}>
-                    {i18n.t(`topicSelect.topics.${topic.id}`)}
-                  </Text>
-                  {isSelected && (
-                    <View style={styles.checkContainer}>
-                      <Ionicons name="checkmark" size={16} color={colors.brand.gold} />
+            <ScrollView
+              style={styles.scrollView}
+              contentContainerStyle={styles.topicsContainer}
+              showsVerticalScrollIndicator={false}
+            >
+              {TOPICS.map((topic) => {
+                const isSelected = selectedTopics.has(topic.id);
+                return (
+                  <TouchableOpacity
+                    key={topic.id}
+                    style={[styles.topicCard, isSelected && styles.topicCardSelected]}
+                    onPress={() => toggleTopic(topic.id)}
+                    activeOpacity={0.7}
+                  >
+                    <View style={[styles.iconContainer, isSelected && styles.iconContainerSelected]}>
+                      <Ionicons
+                        name={topic.icon as any}
+                        size={24}
+                        color={isSelected ? colors.brand.gold : colors.text.secondary}
+                      />
                     </View>
-                  )}
-                </TouchableOpacity>
-              );
-            })}
-          </ScrollView>
+                    <Text style={[styles.topicName, isSelected && styles.topicNameSelected]}>
+                      {i18n.t(`topicSelect.topics.${topic.id}`)}
+                    </Text>
+                    {isSelected && (
+                      <View style={styles.checkContainer}>
+                        <Ionicons name="checkmark" size={16} color={colors.brand.gold} />
+                      </View>
+                    )}
+                  </TouchableOpacity>
+                );
+              })}
+            </ScrollView>
 
-          <Text style={[styles.hint, selectedTopics.size >= MIN_TOPICS && styles.hintSuccess]}>
-            {selectedTopics.size < MIN_TOPICS
-              ? i18n.t('topicSelect.hintMin', { count: selectedTopics.size, min: MIN_TOPICS })
-              : i18n.t('topicSelect.hint', { count: selectedTopics.size })}
-          </Text>
-        </View>
-
-        <View style={styles.footer}>
-          <TouchableOpacity
-            style={[styles.continueButton, selectedTopics.size < MIN_TOPICS && styles.continueButtonDisabled]}
-            onPress={handleContinue}
-            activeOpacity={0.7}
-            disabled={selectedTopics.size < MIN_TOPICS}
-          >
-            <Text style={[styles.continueButtonText, selectedTopics.size < MIN_TOPICS && styles.continueButtonTextDisabled]}>
-              {i18n.t('topicSelect.continue')}
+            <Text style={[styles.hint, selectedTopics.size >= MIN_TOPICS && styles.hintSuccess]}>
+              {selectedTopics.size < MIN_TOPICS
+                ? i18n.t('topicSelect.hintMin', { count: selectedTopics.size, min: MIN_TOPICS })
+                : i18n.t('topicSelect.hint', { count: selectedTopics.size })}
             </Text>
-          </TouchableOpacity>
-        </View>
-      </Animated.View>
+          </View>
+
+          <View style={styles.footer}>
+            <TouchableOpacity
+              style={[styles.continueButton, selectedTopics.size < MIN_TOPICS && styles.continueButtonDisabled]}
+              onPress={handleContinue}
+              activeOpacity={0.7}
+              disabled={selectedTopics.size < MIN_TOPICS}
+            >
+              <Text style={[styles.continueButtonText, selectedTopics.size < MIN_TOPICS && styles.continueButtonTextDisabled]}>
+                {i18n.t('topicSelect.continue')}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </Animated.View>
+      </SafeAreaView>
     </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  safeArea: {
     flex: 1,
   },
   content: {
@@ -174,7 +180,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingTop: 60,
+    paddingTop: layout.headerPaddingTop,
     paddingBottom: spacing.md,
   },
   backButton: {
@@ -185,6 +191,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.brand.gold,
     letterSpacing: 3,
+    includeFontPadding: false,
   },
   placeholder: {
     width: 32,
@@ -194,8 +201,8 @@ const styles = StyleSheet.create({
     paddingTop: spacing.sm,
   },
   title: {
-    fontFamily: fonts.italicMedium,
-    fontSize: 26,
+    fontFamily: fonts.semiBold,
+    fontSize: layout.isSmallDevice ? 22 : 26,
     color: colors.text.primary,
     textAlign: 'center',
     marginBottom: spacing.sm,
@@ -203,8 +210,8 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   subtitle: {
-    fontFamily: fonts.italic,
-    fontSize: fontSize.md,
+    fontFamily: fonts.body,
+    fontSize: layout.isSmallDevice ? fontSize.sm : fontSize.md,
     color: colors.text.secondary,
     textAlign: 'center',
     marginBottom: spacing.lg,
@@ -279,7 +286,7 @@ const styles = StyleSheet.create({
     color: colors.brand.goldLight,
   },
   footer: {
-    paddingBottom: 60,
+    paddingBottom: layout.isSmallDevice ? spacing.lg : spacing.xl,
     paddingTop: spacing.md,
   },
   continueButton: {

@@ -69,4 +69,14 @@ i18n.locale = deviceLocale;
 i18n.enableFallback = true;
 i18n.defaultLocale = 'en';
 
+// Function to change locale
+export const changeLocale = (locale: string) => {
+  i18n.locale = locale;
+};
+
+// Function to get current locale
+export const getCurrentLocale = () => {
+  return i18n.locale;
+};
+
 export default i18n;

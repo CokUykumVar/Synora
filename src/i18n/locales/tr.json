@@ -44,7 +44,8 @@
     "select": "Seçiniz",
     "selectNative": "Ana Dilinizi Seçin",
     "selectLearn": "Öğrenmek İstediğiniz Dili Seçin",
-    "continue": "Devam Et"
+    "continue": "Devam Et",
+    "recommended": "Önerilen"
   },
   "levelSelect": {
     "title": "Seviyenizi Seçin",
@@ -109,7 +110,10 @@
       "nature": "Doğa",
       "shopping": "Alışveriş",
       "family": "Aile & İlişkiler",
-      "education": "Eğitim"
+      "education": "Eğitim",
+      "verbs": "Fiiller",
+      "adjectives": "Sıfatlar",
+      "emotions": "Duygular"
     }
   },
   "habit": {
@@ -152,6 +156,7 @@
     }
   },
   "home": {
+    "guest": "Misafir",
     "greeting": "Merhaba,",
     "streak": "Günlük Seri",
     "streakMessage": "Harika gidiyorsun! Serini korumaya devam et.",
@@ -162,8 +167,10 @@
     "startLearning": "Öğrenmeye Başla",
     "review": "Tekrar Et",
     "quickPractice": "Hızlı Pratik",
+    "weakWords": "Zayıf Kelimeler",
     "statistics": "İstatistikler",
-    "totalWords": "Toplam Kelime",
+    "learnedWords": "Öğrenilen Kelime",
+    "weeklyWords": "Haftalık Kelime",
     "level": "Seviye",
     "daysActive": "Aktif Gün",
     "accuracy": "Doğruluk",
@@ -193,13 +200,13 @@
     "moreStats": "Daha Fazla İstatistik",
     "weeklyAverage": "Haftalık Ort.",
     "totalTime": "Toplam Süre",
-    "bestStreak": "En İyi Seri",
-    "perfectDays": "Mükemmel Gün",
+    "weeklyTime": "Bu Hafta",
+    "topCategory": "En Çok Çalışılan",
     "categoryProgress": "Kategori İlerlemesi",
     "words": "kelime",
     "achievements": "Başarılar",
-    "goalMet": "Hedef Tamamlandı",
-    "goalNotMet": "Devam Ediyor",
+    "goalMet": "Tamamlandı",
+    "goalNotMet": "Tamamlanamadı",
     "days": {
       "mon": "Pzt",
       "tue": "Sal",
@@ -221,10 +228,14 @@
   "explore": {
     "title": "Keşfet",
     "subtitle": "Yeni konular ve kelimeler keşfet",
-    "searchPlaceholder": "Konu veya kelime ara...",
+    "searchPlaceholder": "Konu ara...",
     "categories": "Kategoriler",
     "featured": "Öne Çıkanlar",
     "popularWords": "Popüler Kelimeler",
+    "topicOfTheDay": "Günün Konusu",
+    "topicOfTheDayDesc": "Bugün önerilen konu ile kendini geliştir",
+    "today": "Bugün",
+    "startNow": "Başla",
     "newTopics": "Yeni Konular",
     "seeAll": "Tümünü Gör",
     "words": "kelime",
@@ -239,7 +250,10 @@
       "technology": "Teknoloji",
       "health": "Sağlık",
       "sports": "Spor",
-      "music": "Müzik"
+      "music": "Müzik",
+      "verbs": "Fiiller",
+      "adjectives": "Sıfatlar",
+      "emotions": "Duygular"
     }
   },
   "settings": {
@@ -347,6 +361,12 @@
     "listening": "Dinleniyor...",
     "youSaid": "Sen dedin",
     "tryAgain": "Tekrar dene",
+    "matchingGame": "Eşleştirme Oyunu",
+    "matchImageToWord": "Resmi doğru kelimeyle eşleştir",
+    "selectImageFirst": "Önce bir resim seç",
+    "wordsLearned": "kelime öğrenildi",
+    "youLearnedTheseWords": "Bu kelimeleri öğrendin!",
+    "keepPracticing": "Pratik yapmaya devam et",
     "motivation": {
       "excellent": "Mükemmel! Harikasın!",
       "great": "Çok iyi! Böyle devam!",
@@ -367,5 +387,12 @@
       "noSpeech": "Ses algılanamadı. Tekrar dene.",
       "analyzing": "Telaffuz analiz ediliyor..."
     }
+  },
+  "common": {
+    "noInternet": "İnternet Bağlantısı Yok",
+    "checkConnection": "Ses özelliklerini kullanmak için internet bağlantınızı kontrol edin.",
+    "connectionRestored": "Bağlantı Sağlandı",
+    "canContinue": "Kaldığınız yerden devam edebilirsiniz",
+    "ok": "Tamam"
   }
 }
