@@ -20,6 +20,10 @@ const LANG_MAP = {
   'th': 'th', 'uk': 'uk', 'ur': 'ur', 'vi': 'vi'
 };
 
+const LANG_ORDER = ['en', 'tr', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'ja', 'zh', 'ko', 'ar',
+  'az', 'hr', 'cs', 'da', 'nl', 'fi', 'el', 'hi', 'id', 'no', 'pl', 'ro',
+  'sv', 'th', 'uk', 'ur', 'vi'];
+
 // Free Google Translate API
 function translate(text, targetLang) {
   return new Promise((resolve, reject) => {
@@ -48,27 +52,37 @@ async function translateAllWords() {
   console.log('Reading words.ts...');
   let content = fs.readFileSync(wordsFilePath, 'utf-8');
 
-  // Find words that have same text in all languages (not translated)
-  // Pattern: words where en.word === tr.word === ja.word etc.
-  const wordPattern = /{\s*id:\s*'(\d+)',[\s\S]*?translations:\s*{([\s\S]*?)}\s*,?\s*}/g;
+  // Find all word entries that need translation
+  // Match complete word objects including the trailing comma
+  const wordPattern = /\{\s*id:\s*'(\d+)',\s*category:\s*'([^']+)',\s*level:\s*'([^']+)',\s*translations:\s*\{([^}]+(?:\{[^}]*\}[^}]*)*)\},?\s*\},?/g;
 
-  let match;
   let wordsToTranslate = [];
+  let match;
 
   while ((match = wordPattern.exec(content)) !== null) {
     const id = match[1];
-    const translationsBlock = match[2];
+    const category = match[2];
+    const level = match[3];
+    const translationsBlock = match[4];
 
     // Extract English word
-    const enMatch = translationsBlock.match(/en:\s*{\s*word:\s*'([^']+)'/);
+    const enMatch = translationsBlock.match(/en:\s*\{\s*word:\s*'([^']+)'/);
     if (!enMatch) continue;
 
     const englishWord = enMatch[1];
 
     // Check if Turkish is same as English (means not translated)
-    const trMatch = translationsBlock.match(/tr:\s*{\s*word:\s*'([^']+)'/);
+    const trMatch = translationsBlock.match(/tr:\s*\{\s*word:\s*'([^']+)'/);
     if (trMatch && trMatch[1] === englishWord) {
-      wordsToTranslate.push({ id, englishWord, fullMatch: match[0] });
+      wordsToTranslate.push({
+        id,
+        category,
+        level,
+        englishWord,
+        fullMatch: match[0],
+        startIndex: match.index,
+        endIndex: match.index + match[0].length
+      });
     }
   }
 
@@ -79,55 +93,55 @@ async function translateAllWords() {
     return;
   }
 
+  // Process in reverse order to maintain correct indices
+  wordsToTranslate.reverse();
+
   // Translate each word
   for (let i = 0; i < wordsToTranslate.length; i++) {
-    const { id, englishWord, fullMatch } = wordsToTranslate[i];
-    console.log(`[${i + 1}/${wordsToTranslate.length}] Translating: ${englishWord}`);
+    const wordData = wordsToTranslate[i];
+    const displayIndex = wordsToTranslate.length - i;
+    console.log(`[${displayIndex}/${wordsToTranslate.length}] Translating: ${wordData.englishWord}`);
 
-    let newTranslations = {};
+    let translations = {};
 
-    for (const [langCode, googleCode] of Object.entries(LANG_MAP)) {
+    for (const langCode of LANG_ORDER) {
       if (langCode === 'en') {
-        newTranslations[langCode] = englishWord;
+        translations[langCode] = wordData.englishWord;
         continue;
       }
 
       try {
-        const translated = await translate(englishWord, googleCode);
-        newTranslations[langCode] = translated;
+        const googleCode = LANG_MAP[langCode];
+        const translated = await translate(wordData.englishWord, googleCode);
+        translations[langCode] = translated;
         await delay(100); // Small delay to avoid rate limiting
       } catch (e) {
-        newTranslations[langCode] = englishWord;
+        translations[langCode] = wordData.englishWord;
       }
     }
 
     // Build new translations block
     let translationsStr = '';
-    for (const [lang, word] of Object.entries(newTranslations)) {
+    for (const lang of LANG_ORDER) {
+      const word = translations[lang];
       const escapedWord = word.replace(/'/g, "\\'");
       translationsStr += `      ${lang}: { word: '${escapedWord}' },\n`;
     }
 
     // Create new word block
-    const idMatch = fullMatch.match(/id:\s*'(\d+)'/);
-    const categoryMatch = fullMatch.match(/category:\s*'([^']+)'/);
-    const levelMatch = fullMatch.match(/level:\s*'([^']+)'/);
-    const imageMatch = fullMatch.match(/image:\s*'([^']+)'/);
-
     const newBlock = `{
-    id: '${idMatch[1]}',
-    category: '${categoryMatch[1]}',
-    level: '${levelMatch ? levelMatch[1] : 'beginner'}',
-    image: '${imageMatch ? imageMatch[1] : ''}',
+    id: '${wordData.id}',
+    category: '${wordData.category}',
+    level: '${wordData.level}',
     translations: {
 ${translationsStr}    },
-  }`;
+  },`;
 
-    // Replace in content
-    content = content.replace(fullMatch, newBlock);
+    // Replace in content using indices
+    content = content.substring(0, wordData.startIndex) + newBlock + content.substring(wordData.endIndex);
 
     // Save periodically
-    if ((i + 1) % 10 === 0) {
+    if ((displayIndex) % 10 === 0) {
       fs.writeFileSync(wordsFilePath, content, 'utf-8');
       console.log('  Progress saved...');
     }

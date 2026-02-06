@@ -21,9 +21,8 @@ import { useUser } from '../src/context/UserContext';
 import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 const ALL_CATEGORY_IDS = [
-  'travel', 'food', 'business', 'technology', 'health', 'sports',
-  'music', 'entertainment', 'nature', 'shopping', 'family', 'education',
-  'verbs', 'adjectives', 'emotions'
+  'everyday_objects', 'food_drink', 'people_roles', 'actions',
+  'adjectives', 'emotions', 'nature_animals', 'travel', 'sports_hobbies'
 ];
 
 export default function ProfileScreen() {

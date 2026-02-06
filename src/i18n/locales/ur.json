@@ -196,6 +196,7 @@
     "new": "نیا",
     "topicsAvailable": "دستیاب موضوعات",
     "wordsToLearn": "سیکھنے کے الفاظ",
+    "noResults": "کوئی نتیجہ نہیں ملا",
     "categoryNames": {
       "all": "سب",
       "travel": "سفر",
@@ -222,7 +223,9 @@
     "review": "دہرائی",
     "quickPractice": "فوری مشق",
     "statistics": "اعداد و شمار",
-    "totalWords": "کل الفاظ",
+    "learnedWords": "سیکھے گئے",
+    "weeklyWords": "اس ہفتے",
+    "knownWords": "پہلے سے معلوم",
     "level": "درجہ",
     "daysActive": "فعال دن",
     "accuracy": "درستگی",
@@ -273,7 +276,9 @@
     "deleteMessage": "یہ عمل واپس نہیں ہو سکتا۔ آپ کا تمام ڈیٹا مستقل طور پر حذف ہو جائے گا۔",
     "delete": "حذف کریں",
     "cancel": "منسوخ",
-    "madeWith": "محبت سے بنایا گیا"
+    "madeWith": "محبت سے بنایا گیا",
+    "languageError": "زبان کی خرابی",
+    "sameLanguageWarning": "آپ کی مادری زبان اور سیکھنے کی زبان ایک جیسی نہیں ہو سکتی۔"
   },
   "profile": {
     "title": "پروفائل",

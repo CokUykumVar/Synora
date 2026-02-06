@@ -1,0 +1,318 @@
+word	level
+Passport	beginner
+Ticket	beginner
+Boarding pass	beginner
+Id card	beginner
+Wallet	beginner
+Money	beginner
+Credit card	beginner
+Cash	beginner
+Phone	beginner
+Charger	beginner
+Plug	beginner
+Map	beginner
+Camera	beginner
+Bag	beginner
+Backpack	beginner
+Suitcase	beginner
+Lock	beginner
+Key	beginner
+Travel document	elementary
+Itinerary printout	elementary
+Boarding stub	elementary
+Luggage tag	elementary
+Name tag	elementary
+Insurance card	elementary
+Vaccination card	elementary
+Sim card	elementary
+Earphones	elementary
+Travel wallet	elementary
+Passport cover	elementary
+Document folder	elementary
+Guidebook	elementary
+Phrasebook	elementary
+Notebook	elementary
+Pen	elementary
+Sunglasses	elementary
+Watch	elementary
+Neck pillow	elementary
+Boarding pass holder	intermediate
+Document organizer	intermediate
+Luggage lock	intermediate
+Cable organizer	intermediate
+Travel router	intermediate
+E ticket printout	intermediate
+Passport stamp	intermediate
+Visa sticker	intermediate
+Customs form	intermediate
+Declaration card	intermediate
+Arrival card	intermediate
+Departure card	intermediate
+Emergency contact card	intermediate
+Medical info card	intermediate
+Carry on	beginner
+Handbag	beginner
+Duffel bag	beginner
+Tote bag	beginner
+Travel bag	beginner
+Rolling suitcase	beginner
+Shoulder bag	beginner
+School backpack	beginner
+Gym bag	beginner
+Beach bag	beginner
+Shopping bag	beginner
+Laptop bag	beginner
+Camera bag	beginner
+Garment bag	beginner
+Daypack	beginner
+Waist pack	beginner
+Briefcase	beginner
+Purse	beginner
+Checked bag	elementary
+Carryall	elementary
+Weekender bag	elementary
+Overnight bag	elementary
+Travel backpack	elementary
+Hiking backpack	elementary
+Rolling backpack	elementary
+Hard shell suitcase	elementary
+Soft shell suitcase	elementary
+Expandable suitcase	elementary
+Compression bag	elementary
+Packing cube	elementary
+Shoe bag	elementary
+Laundry bag	elementary
+Toiletry bag	elementary
+Cosmetic bag	elementary
+Document bag	elementary
+Money belt	elementary
+Passport pouch	elementary
+Crossbody bag	elementary
+Spinner suitcase	intermediate
+Two wheel suitcase	intermediate
+Four wheel suitcase	intermediate
+Underseat bag	intermediate
+Overhead bin bag	intermediate
+Anti theft backpack	intermediate
+Waterproof bag	intermediate
+Dry bag	intermediate
+Compression sack	intermediate
+Garment sleeve	intermediate
+Modular backpack	intermediate
+Camera backpack	intermediate
+Travel vest pouch	intermediate
+Hip belt pack	intermediate
+Organizer pouch	intermediate
+Electronics bag	intermediate
+Cable pouch	intermediate
+Shoe sack	intermediate
+Foldable bag	intermediate
+Reusable tote	intermediate
+Airplane	beginner
+Train	beginner
+Bus	beginner
+Car	beginner
+Van	beginner
+Truck	beginner
+Motorcycle	beginner
+Bicycle	beginner
+Boat	beginner
+Ship	beginner
+Ferry	beginner
+Subway	beginner
+Helicopter	beginner
+Coach	beginner
+Cable car	beginner
+Commercial airplane	elementary
+Private jet	elementary
+Propeller plane	elementary
+High speed train	elementary
+Regional train	elementary
+Metro train	elementary
+Night train	elementary
+Double decker bus	elementary
+Airport shuttle	elementary
+Rental car	elementary
+Electric car	elementary
+Tour bus	elementary
+Passenger ship	elementary
+Cruise ship	elementary
+Speedboat	elementary
+Water taxi	elementary
+Riverboat	elementary
+Wide body aircraft	intermediate
+Narrow body aircraft	intermediate
+Cargo plane	intermediate
+Seaplane	intermediate
+Tiltrotor aircraft	intermediate
+Diesel train	intermediate
+Electric train	intermediate
+Maglev train	intermediate
+Light rail	intermediate
+Intercity bus	intermediate
+Articulated bus	intermediate
+Motor home	intermediate
+Camper van	intermediate
+Off road vehicle	intermediate
+All terrain vehicle	intermediate
+Icebreaker ship	intermediate
+Research vessel	intermediate
+Autonomous vehicle	intermediate
+Airport	beginner
+Gate	beginner
+Runway	beginner
+Taxiway	beginner
+Baggage claim	beginner
+Check in counter	beginner
+Security check	beginner
+Passport control	beginner
+Customs	beginner
+Departure board	beginner
+Arrival board	beginner
+Waiting area	beginner
+Bench	beginner
+Ticket office	beginner
+Ticket machine	beginner
+Escalator	beginner
+Boarding gate	elementary
+Jet bridge	elementary
+Luggage carousel	elementary
+Oversize baggage area	elementary
+Security scanner	elementary
+Xray machine	elementary
+Metal detector	elementary
+Immigration desk	elementary
+Information desk	elementary
+Help desk	elementary
+Lost and found	elementary
+Restroom	elementary
+Drinking fountain	elementary
+Vending machine	elementary
+Airport lounge	elementary
+Business lounge	elementary
+Railway platform	elementary
+Concourse	elementary
+Corridor	elementary
+Waiting room	elementary
+Elevator	elementary
+Control tower	intermediate
+Apron	intermediate
+Service road	intermediate
+Airside area	intermediate
+Landside area	intermediate
+Priority lane	intermediate
+Fast track lane	intermediate
+Biometric gate	intermediate
+E gate	intermediate
+Customs channel	intermediate
+Quarantine area	intermediate
+Transfer desk	intermediate
+Connections desk	intermediate
+Platform edge	intermediate
+Buffer stop	intermediate
+Signal light	intermediate
+Wayfinding sign	intermediate
+Flight information screen	intermediate
+Public address speaker	intermediate
+Guesthouse	beginner
+Resort	beginner
+Room	beginner
+Bed	beginner
+Pillow	beginner
+Blanket	beginner
+Wardrobe	beginner
+Dresser	beginner
+Desk	beginner
+Chair	beginner
+Lamp	beginner
+Mirror	beginner
+Window	beginner
+Door	beginner
+Keycard	beginner
+Bathroom	beginner
+Reception desk	elementary
+Hallway	elementary
+Stairs	elementary
+Balcony	elementary
+Terrace	elementary
+Bathroom sink	elementary
+Shower	elementary
+Bathtub	elementary
+Towel	elementary
+Toiletries set	elementary
+Mini fridge	elementary
+Tv remote	elementary
+Air conditioner	elementary
+Heater	elementary
+Safe box	elementary
+Luggage rack	elementary
+Coffee maker	elementary
+Room number sign	elementary
+Connecting room	intermediate
+Family room	intermediate
+Bunk bed	intermediate
+Sofa bed	intermediate
+Bedside table	intermediate
+Headboard	intermediate
+Reading light	intermediate
+Power outlet	intermediate
+Usb socket	intermediate
+Curtain	intermediate
+Blackout curtain	intermediate
+Shower screen	intermediate
+Bath mat	intermediate
+Amenities tray	intermediate
+Welcome card	intermediate
+Do not disturb sign	intermediate
+Fire exit sign	intermediate
+Smoke detector	intermediate
+Sprinkler head	intermediate
+Square	beginner
+Street	beginner
+Road	beginner
+Bridge	beginner
+Fountain	beginner
+Garden	beginner
+Market	beginner
+Shop	beginner
+Postcard	beginner
+Signpost	beginner
+Street sign	beginner
+Landmark	elementary
+Historic building	elementary
+Old town	elementary
+City gate	elementary
+Clock tower	elementary
+Cathedral	elementary
+Church	elementary
+Mosque	elementary
+Temple	elementary
+Pedestrian street	elementary
+Crosswalk	elementary
+Traffic light	elementary
+Bus stop	elementary
+Taxi stand	elementary
+Information kiosk	elementary
+Tourist map	elementary
+Audio guide	elementary
+Ticket booth	elementary
+Viewpoint	elementary
+Observation deck	intermediate
+Viewing platform	intermediate
+City wall	intermediate
+Fortress	intermediate
+Citadel	intermediate
+Heritage site	intermediate
+Archway	intermediate
+Colonnade	intermediate
+Riverwalk	intermediate
+Street market	intermediate
+Flea market	intermediate
+Artisan shop	intermediate
+Souvenir stand	intermediate
+Photo spot	intermediate
+Panorama point	intermediate
+City map board	intermediate
+Wayfinding map	intermediate
+Public art installation	intermediate
+Memorial plaque	intermediate

@@ -160,7 +160,9 @@
     "quickPractice": "Быстрая Практика",
     "weakWords": "Слабые Слова",
     "statistics": "Статистика",
-    "totalWords": "Всего Слов",
+    "learnedWords": "Изученные Слова",
+    "weeklyWords": "За Неделю",
+    "knownWords": "Уже Знакомые",
     "level": "Уровень",
     "daysActive": "Активных Дней",
     "accuracy": "Точность",
@@ -228,6 +230,7 @@
     "new": "Новое",
     "topicsAvailable": "Доступных Тем",
     "wordsToLearn": "Слов для Изучения",
+    "noResults": "Ничего не найдено",
     "categoryNames": {
       "all": "Все",
       "travel": "Путешествия",
@@ -274,7 +277,9 @@
     "deleteMessage": "Это действие нельзя отменить. Все ваши данные будут удалены навсегда.",
     "delete": "Удалить",
     "cancel": "Отмена",
-    "madeWith": "Сделано с любовью"
+    "madeWith": "Сделано с любовью",
+    "languageError": "Ошибка языка",
+    "sameLanguageWarning": "Ваш родной язык и язык изучения не могут совпадать."
   },
   "profile": {
     "title": "Профиль",

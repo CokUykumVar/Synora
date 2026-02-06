@@ -1,0 +1,2232 @@
+{
+  "46": {
+    "word": "Chair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\chair.jpg"
+  },
+  "47": {
+    "word": "Table",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\table.jpg"
+  },
+  "48": {
+    "word": "Bed",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bed.jpg"
+  },
+  "49": {
+    "word": "Sofa",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sofa.jpg"
+  },
+  "50": {
+    "word": "Lamp",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\lamp.jpg"
+  },
+  "51": {
+    "word": "Door",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\door.jpg"
+  },
+  "52": {
+    "word": "Window",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\window.jpg"
+  },
+  "53": {
+    "word": "Mirror",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\mirror.jpg"
+  },
+  "54": {
+    "word": "Clock",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\clock.jpg"
+  },
+  "55": {
+    "word": "Rug",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\rug.jpg"
+  },
+  "57": {
+    "word": "Pillow",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pillow.jpg"
+  },
+  "58": {
+    "word": "Blanket",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\blanket.jpg"
+  },
+  "59": {
+    "word": "Mattress",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\mattress.jpg"
+  },
+  "61": {
+    "word": "Cabinet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\cabinet.jpg"
+  },
+  "62": {
+    "word": "Bookshelf",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bookshelf.jpg"
+  },
+  "63": {
+    "word": "Wardrobe",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\wardrobe.jpg"
+  },
+  "64": {
+    "word": "Hanger",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hanger.jpg"
+  },
+  "65": {
+    "word": "Nightstand",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\nightstand.jpg"
+  },
+  "66": {
+    "word": "Vase",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\vase.jpg"
+  },
+  "67": {
+    "word": "Television",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\television.jpg"
+  },
+  "69": {
+    "word": "Phone",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\phone.jpg"
+  },
+  "70": {
+    "word": "Laptop",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\laptop.jpg"
+  },
+  "71": {
+    "word": "Keyboard",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\keyboard.jpg"
+  },
+  "72": {
+    "word": "Mouse",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\mouse.jpg"
+  },
+  "73": {
+    "word": "Charger",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\charger.jpg"
+  },
+  "74": {
+    "word": "Desk",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\desk.jpg"
+  },
+  "75": {
+    "word": "Printer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\printer.jpg"
+  },
+  "76": {
+    "word": "Book",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\book.jpg"
+  },
+  "78": {
+    "word": "Pen",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pen.jpg"
+  },
+  "79": {
+    "word": "Pencil",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pencil.jpg"
+  },
+  "81": {
+    "word": "Refrigerator",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\refrigerator.jpg"
+  },
+  "82": {
+    "word": "Oven",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\oven.jpg"
+  },
+  "83": {
+    "word": "Microwave",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\microwave.jpg"
+  },
+  "84": {
+    "word": "Stove",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\stove.jpg"
+  },
+  "85": {
+    "word": "Kettle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\kettle.jpg"
+  },
+  "86": {
+    "word": "Pan",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pan.jpg"
+  },
+  "87": {
+    "word": "Pot",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pot.jpg"
+  },
+  "88": {
+    "word": "Plate",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\plate.jpg"
+  },
+  "89": {
+    "word": "Bowl",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bowl.jpg"
+  },
+  "90": {
+    "word": "Cup",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\cup.jpg"
+  },
+  "91": {
+    "word": "Fork",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\fork.jpg"
+  },
+  "77": {
+    "word": "Notebook",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\notebook.jpg"
+  },
+  "80": {
+    "word": "Eraser",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\eraser.jpg"
+  },
+  "93": {
+    "word": "Knife",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\knife.jpg"
+  },
+  "94": {
+    "word": "Sink",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sink.jpg"
+  },
+  "95": {
+    "word": "Toilet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\toilet.jpg"
+  },
+  "96": {
+    "word": "Shower",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shower.jpg"
+  },
+  "97": {
+    "word": "Bathtub",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bathtub.jpg"
+  },
+  "98": {
+    "word": "Toothbrush",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\toothbrush.jpg"
+  },
+  "99": {
+    "word": "Soap",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\soap.jpg"
+  },
+  "100": {
+    "word": "Towel",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\towel.jpg"
+  },
+  "101": {
+    "word": "Trash can",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\trash-can.jpg"
+  },
+  "102": {
+    "word": "Broom",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\broom.jpg"
+  },
+  "103": {
+    "word": "Mop",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\mop.jpg"
+  },
+  "104": {
+    "word": "Bucket",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bucket.jpg"
+  },
+  "105": {
+    "word": "Vacuum",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\vacuum.jpg"
+  },
+  "106": {
+    "word": "Washing machine",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\washing-machine.jpg"
+  },
+  "107": {
+    "word": "Dryer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dryer.jpg"
+  },
+  "108": {
+    "word": "Shirt",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shirt.jpg"
+  },
+  "109": {
+    "word": "Pants",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pants.jpg"
+  },
+  "110": {
+    "word": "Jacket",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\jacket.jpg"
+  },
+  "111": {
+    "word": "Shoes",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shoes.jpg"
+  },
+  "112": {
+    "word": "Socks",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\socks.jpg"
+  },
+  "113": {
+    "word": "Hat",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hat.jpg"
+  },
+  "114": {
+    "word": "Backpack",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\backpack.jpg"
+  },
+  "115": {
+    "word": "Wallet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\wallet.jpg"
+  },
+  "116": {
+    "word": "Keys",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\keys.jpg"
+  },
+  "117": {
+    "word": "Glasses",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\glasses.jpg"
+  },
+  "118": {
+    "word": "Umbrella",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\umbrella.jpg"
+  },
+  "119": {
+    "word": "House",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\house.jpg"
+  },
+  "120": {
+    "word": "Apartment",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\apartment.jpg"
+  },
+  "122": {
+    "word": "Kitchen",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\kitchen.jpg"
+  },
+  "123": {
+    "word": "Bathroom",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bathroom.jpg"
+  },
+  "124": {
+    "word": "Bedroom",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bedroom.jpg"
+  },
+  "125": {
+    "word": "School",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\school.jpg"
+  },
+  "121": {
+    "word": "Room",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\room.jpg"
+  },
+  "126": {
+    "word": "Office",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\office.jpg"
+  },
+  "128": {
+    "word": "Street",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\street.jpg"
+  },
+  "130": {
+    "word": "Bus",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bus.jpg"
+  },
+  "131": {
+    "word": "Car",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\car.jpg"
+  },
+  "132": {
+    "word": "Bicycle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bicycle.jpg"
+  },
+  "133": {
+    "word": "Bench",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bench.jpg"
+  },
+  "134": {
+    "word": "Stool",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\stool.jpg"
+  },
+  "135": {
+    "word": "Armchair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\armchair.jpg"
+  },
+  "136": {
+    "word": "Carpet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\carpet.jpg"
+  },
+  "137": {
+    "word": "Doormat",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\doormat.jpg"
+  },
+  "138": {
+    "word": "Picture frame",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\picture-frame.jpg"
+  },
+  "139": {
+    "word": "Plant pot",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\plant-pot.jpg"
+  },
+  "140": {
+    "word": "Watering can",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\watering-can.jpg"
+  },
+  "141": {
+    "word": "Alarm clock",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\alarm-clock.jpg"
+  },
+  "143": {
+    "word": "Monitor",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\monitor.jpg"
+  },
+  "144": {
+    "word": "Camera",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\camera.jpg"
+  },
+  "145": {
+    "word": "Headphones",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\headphones.jpg"
+  },
+  "129": {
+    "word": "Sidewalk",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sidewalk.jpg"
+  },
+  "142": {
+    "word": "Flashlight",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\flashlight.jpg"
+  },
+  "147": {
+    "word": "Calculator",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\calculator.jpg"
+  },
+  "92": {
+    "word": "Spoon",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\spoon.jpg"
+  },
+  "127": {
+    "word": "Store",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\store.jpg"
+  },
+  "146": {
+    "word": "Earphones",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\earphones.jpg"
+  },
+  "148": {
+    "word": "Stapler",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\stapler.jpg"
+  },
+  "149": {
+    "word": "Paper clip",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\paper-clip.jpg"
+  },
+  "150": {
+    "word": "Folder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\folder.jpg"
+  },
+  "152": {
+    "word": "Clipboard",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\clipboard.jpg"
+  },
+  "153": {
+    "word": "Envelope",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\envelope.jpg"
+  },
+  "154": {
+    "word": "Stamp",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\stamp.jpg"
+  },
+  "155": {
+    "word": "Freezer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\freezer.jpg"
+  },
+  "156": {
+    "word": "Toaster",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\toaster.jpg"
+  },
+  "157": {
+    "word": "Glass",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\glass.jpg"
+  },
+  "158": {
+    "word": "Mug",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\mug.jpg"
+  },
+  "159": {
+    "word": "Ladle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ladle.jpg"
+  },
+  "160": {
+    "word": "Spatula",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\spatula.jpg"
+  },
+  "161": {
+    "word": "Napkin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\napkin.jpg"
+  },
+  "162": {
+    "word": "Tablecloth",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\tablecloth.jpg"
+  },
+  "163": {
+    "word": "Bottle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bottle.jpg"
+  },
+  "151": {
+    "word": "Binder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\binder.jpg"
+  },
+  "164": {
+    "word": "Jar",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\jar.jpg"
+  },
+  "166": {
+    "word": "Lunchbox",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\lunchbox.jpg"
+  },
+  "167": {
+    "word": "Thermos",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\thermos.jpg"
+  },
+  "168": {
+    "word": "Water bottle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\water-bottle.jpg"
+  },
+  "169": {
+    "word": "Toothpaste",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\toothpaste.jpg"
+  },
+  "170": {
+    "word": "Shampoo",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shampoo.jpg"
+  },
+  "171": {
+    "word": "Hairbrush",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hairbrush.jpg"
+  },
+  "172": {
+    "word": "Razor",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\razor.jpg"
+  },
+  "173": {
+    "word": "Hair dryer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hair-dryer.jpg"
+  },
+  "174": {
+    "word": "Toilet paper",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\toilet-paper.jpg"
+  },
+  "175": {
+    "word": "Tissue box",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\tissue-box.jpg"
+  },
+  "176": {
+    "word": "Bath mat",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bath-mat.jpg"
+  },
+  "177": {
+    "word": "Trash bag",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\trash-bag.jpg"
+  },
+  "165": {
+    "word": "Container",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\container.jpg"
+  },
+  "178": {
+    "word": "Recycling bin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\recycling-bin.jpg"
+  },
+  "179": {
+    "word": "Sponge",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sponge.jpg"
+  },
+  "180": {
+    "word": "Dish soap",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dish-soap.jpg"
+  },
+  "181": {
+    "word": "Dishcloth",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dishcloth.jpg"
+  },
+  "182": {
+    "word": "Laundry basket",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\laundry-basket.jpg"
+  },
+  "183": {
+    "word": "Laundry detergent",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\laundry-detergent.jpg"
+  },
+  "184": {
+    "word": "Iron",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\iron.jpg"
+  },
+  "185": {
+    "word": "Ironing board",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ironing-board.jpg"
+  },
+  "186": {
+    "word": "Spray bottle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\spray-bottle.jpg"
+  },
+  "187": {
+    "word": "Dustpan",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dustpan.jpg"
+  },
+  "188": {
+    "word": "Jeans",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\jeans.jpg"
+  },
+  "189": {
+    "word": "Shorts",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shorts.jpg"
+  },
+  "190": {
+    "word": "Skirt",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\skirt.jpg"
+  },
+  "191": {
+    "word": "Dress",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dress.jpg"
+  },
+  "192": {
+    "word": "Coat",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\coat.jpg"
+  },
+  "193": {
+    "word": "Sweater",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sweater.jpg"
+  },
+  "194": {
+    "word": "Hoodie",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hoodie.jpg"
+  },
+  "195": {
+    "word": "Sneakers",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sneakers.jpg"
+  },
+  "196": {
+    "word": "Boots",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\boots.jpg"
+  },
+  "198": {
+    "word": "Slippers",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\slippers.jpg"
+  },
+  "199": {
+    "word": "Scarf",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\scarf.jpg"
+  },
+  "200": {
+    "word": "Gloves",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\gloves.jpg"
+  },
+  "202": {
+    "word": "Handbag",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\handbag.jpg"
+  },
+  "203": {
+    "word": "Watch",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\watch.jpg"
+  },
+  "204": {
+    "word": "Keychain",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\keychain.jpg"
+  },
+  "207": {
+    "word": "Garden",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\garden.jpg"
+  },
+  "208": {
+    "word": "Classroom",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\classroom.jpg"
+  },
+  "209": {
+    "word": "Restaurant",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\restaurant.jpg"
+  },
+  "212": {
+    "word": "Playground",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\playground.jpg"
+  },
+  "205": {
+    "word": "Balcony",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\balcony.jpg"
+  },
+  "206": {
+    "word": "Garage",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\garage.jpg"
+  },
+  "210": {
+    "word": "Cafe",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\cafe.jpg"
+  },
+  "211": {
+    "word": "Park",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\park.jpg"
+  },
+  "213": {
+    "word": "Road",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\road.jpg"
+  },
+  "218": {
+    "word": "Taxi",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\taxi.jpg"
+  },
+  "219": {
+    "word": "Motorcycle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\motorcycle.jpg"
+  },
+  "220": {
+    "word": "Truck",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\truck.jpg"
+  },
+  "224": {
+    "word": "Escalator",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\escalator.jpg"
+  },
+  "225": {
+    "word": "Hallway",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hallway.jpg"
+  },
+  "226": {
+    "word": "Lobby",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\lobby.jpg"
+  },
+  "227": {
+    "word": "Fence",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\fence.jpg"
+  },
+  "228": {
+    "word": "Gate",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\gate.jpg"
+  },
+  "232": {
+    "word": "Streetlight",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\streetlight.jpg"
+  },
+  "233": {
+    "word": "Traffic light",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\traffic-light.jpg"
+  },
+  "234": {
+    "word": "Stop sign",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\stop-sign.jpg"
+  },
+  "235": {
+    "word": "Street sign",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\street-sign.jpg"
+  },
+  "236": {
+    "word": "Mailbox",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\mailbox.jpg"
+  },
+  "237": {
+    "word": "Doorbell",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\doorbell.jpg"
+  },
+  "238": {
+    "word": "Toolbox",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\toolbox.jpg"
+  },
+  "239": {
+    "word": "Hammer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hammer.jpg"
+  },
+  "241": {
+    "word": "Wrench",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\wrench.jpg"
+  },
+  "242": {
+    "word": "Ladder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ladder.jpg"
+  },
+  "243": {
+    "word": "First aid kit",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\first-aid-kit.jpg"
+  },
+  "244": {
+    "word": "Fire extinguisher",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\fire-extinguisher.jpg"
+  },
+  "245": {
+    "word": "Smoke detector",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\smoke-detector.jpg"
+  },
+  "246": {
+    "word": "Fan",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\fan.jpg"
+  },
+  "247": {
+    "word": "Heater",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\heater.jpg"
+  },
+  "201": {
+    "word": "Belt",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\belt.jpg"
+  },
+  "197": {
+    "word": "Sandals",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sandals.jpg"
+  },
+  "214": {
+    "word": "Crosswalk",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\crosswalk.jpg"
+  },
+  "215": {
+    "word": "Bus stop",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bus-stop.jpg"
+  },
+  "216": {
+    "word": "Train station",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\train-station.jpg"
+  },
+  "217": {
+    "word": "Airport",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\airport.jpg"
+  },
+  "221": {
+    "word": "Stairs",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\stairs.jpg"
+  },
+  "222": {
+    "word": "Staircase",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\staircase.jpg"
+  },
+  "223": {
+    "word": "Elevator",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\elevator.jpg"
+  },
+  "240": {
+    "word": "Screwdriver",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\screwdriver.jpg"
+  },
+  "248": {
+    "word": "Air conditioner",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\air-conditioner.jpg"
+  },
+  "249": {
+    "word": "Light switch",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\light-switch.jpg"
+  },
+  "250": {
+    "word": "Power outlet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\power-outlet.jpg"
+  },
+  "251": {
+    "word": "Extension cord",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\extension-cord.jpg"
+  },
+  "252": {
+    "word": "Shopping cart",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shopping-cart.jpg"
+  },
+  "56": {
+    "word": "Curtain",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\curtain.jpg"
+  },
+  "60": {
+    "word": "Drawer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\drawer.jpg"
+  },
+  "230": {
+    "word": "Street bench",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\street-bench.jpg"
+  },
+  "231": {
+    "word": "Park bench",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\park-bench.jpg"
+  },
+  "253": {
+    "word": "Shopping basket",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shopping-basket.jpg"
+  },
+  "254": {
+    "word": "Receipt",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\receipt.jpg"
+  },
+  "255": {
+    "word": "Ticket",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ticket.jpg"
+  },
+  "256": {
+    "word": "Coat rack",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\coat-rack.jpg"
+  },
+  "257": {
+    "word": "Shoe rack",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shoe-rack.jpg"
+  },
+  "258": {
+    "word": "Storage box",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\storage-box.jpg"
+  },
+  "259": {
+    "word": "Laundry rack",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\laundry-rack.jpg"
+  },
+  "263": {
+    "word": "Chalkboard",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\chalkboard.jpg"
+  },
+  "264": {
+    "word": "Chalk",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\chalk.jpg"
+  },
+  "265": {
+    "word": "Bottle opener",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bottle-opener.jpg"
+  },
+  "260": {
+    "word": "Remote control",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\remote-control.jpg"
+  },
+  "261": {
+    "word": "Pencil case",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pencil-case.jpg"
+  },
+  "267": {
+    "word": "Dishwasher",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dishwasher.jpg"
+  },
+  "68": {
+    "word": "Remote",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\remote.jpg"
+  },
+  "262": {
+    "word": "Pencil sharpener",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pencil-sharpener.jpg"
+  },
+  "268": {
+    "word": "Dish rack",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dish-rack.jpg"
+  },
+  "271": {
+    "word": "Hand soap",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hand-soap.jpg"
+  },
+  "272": {
+    "word": "Shower gel",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shower-gel.jpg"
+  },
+  "266": {
+    "word": "Can opener",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\can-opener.jpg"
+  },
+  "269": {
+    "word": "Kitchen sink",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\kitchen-sink.jpg"
+  },
+  "270": {
+    "word": "Bathroom sink",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bathroom-sink.jpg"
+  },
+  "273": {
+    "word": "Hair clip",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hair-clip.jpg"
+  },
+  "279": {
+    "word": "Thread",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\thread.jpg"
+  },
+  "280": {
+    "word": "Button",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\button.jpg"
+  },
+  "274": {
+    "word": "Hair tie",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hair-tie.jpg"
+  },
+  "277": {
+    "word": "Sewing kit",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sewing-kit.jpg"
+  },
+  "281": {
+    "word": "Zipper",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\zipper.jpg"
+  },
+  "282": {
+    "word": "Shoelace",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shoelace.jpg"
+  },
+  "278": {
+    "word": "Needle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\needle.jpg"
+  },
+  "285": {
+    "word": "Car key",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\car-key.jpg"
+  },
+  "286": {
+    "word": "Bike helmet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bike-helmet.jpg"
+  },
+  "284": {
+    "word": "Seatbelt",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\seatbelt.jpg"
+  },
+  "287": {
+    "word": "Bike lock",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bike-lock.jpg"
+  },
+  "288": {
+    "word": "Parking sign",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\parking-sign.jpg"
+  },
+  "275": {
+    "word": "Cotton swab",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\cotton-swab.jpg"
+  },
+  "283": {
+    "word": "Clothespin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\clothespin.jpg"
+  },
+  "289": {
+    "word": "Bus shelter",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bus-shelter.jpg"
+  },
+  "290": {
+    "word": "Vending machine",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\vending-machine.jpg"
+  },
+  "291": {
+    "word": "Soap dish",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\soap-dish.jpg"
+  },
+  "292": {
+    "word": "Toothbrush holder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\toothbrush-holder.jpg"
+  },
+  "296": {
+    "word": "Perfume bottle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\perfume-bottle.jpg"
+  },
+  "297": {
+    "word": "Light bulb",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\light-bulb.jpg"
+  },
+  "298": {
+    "word": "Battery",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\battery.jpg"
+  },
+  "300": {
+    "word": "Credit card",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\credit-card.jpg"
+  },
+  "302": {
+    "word": "Door key",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\door-key.jpg"
+  },
+  "303": {
+    "word": "Window curtain",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\window-curtain.jpg"
+  },
+  "308": {
+    "word": "Dining chair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dining-chair.jpg"
+  },
+  "293": {
+    "word": "Shampoo bottle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shampoo-bottle.jpg"
+  },
+  "294": {
+    "word": "Conditioner bottle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\conditioner-bottle.jpg"
+  },
+  "295": {
+    "word": "Lotion bottle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\lotion-bottle.jpg"
+  },
+  "301": {
+    "word": "Name tag",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\name-tag.jpg"
+  },
+  "305": {
+    "word": "Bathroom trash can",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bathroom-trash-can.jpg"
+  },
+  "309": {
+    "word": "Office chair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\office-chair.jpg"
+  },
+  "310": {
+    "word": "Folding chair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\folding-chair.jpg"
+  },
+  "311": {
+    "word": "Rocking chair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\rocking-chair.jpg"
+  },
+  "306": {
+    "word": "Tissue roll",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\tissue-roll.jpg"
+  },
+  "307": {
+    "word": "Paper towel roll",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\paper-towel-roll.jpg"
+  },
+  "312": {
+    "word": "Swivel chair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\swivel-chair.jpg"
+  },
+  "313": {
+    "word": "Gaming chair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\gaming-chair.jpg"
+  },
+  "314": {
+    "word": "Wheelchair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\wheelchair.jpg"
+  },
+  "299": {
+    "word": "Coin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\coin.jpg"
+  },
+  "304": {
+    "word": "Shower mat",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shower-mat.jpg"
+  },
+  "315": {
+    "word": "High chair",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\high-chair.jpg"
+  },
+  "316": {
+    "word": "Bar stool",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bar-stool.jpg"
+  },
+  "317": {
+    "word": "Step stool",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\step-stool.jpg"
+  },
+  "318": {
+    "word": "Dining table",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dining-table.jpg"
+  },
+  "319": {
+    "word": "Coffee table",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\coffee-table.jpg"
+  },
+  "320": {
+    "word": "Side table",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\side-table.jpg"
+  },
+  "321": {
+    "word": "Console table",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\console-table.jpg"
+  },
+  "322": {
+    "word": "Folding table",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\folding-table.jpg"
+  },
+  "323": {
+    "word": "Picnic table",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\picnic-table.jpg"
+  },
+  "324": {
+    "word": "Bunk bed",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bunk-bed.jpg"
+  },
+  "326": {
+    "word": "Daybed",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\daybed.jpg"
+  },
+  "327": {
+    "word": "Crib",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\crib.jpg"
+  },
+  "334": {
+    "word": "Armoire",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\armoire.jpg"
+  },
+  "335": {
+    "word": "Sideboard",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sideboard.jpg"
+  },
+  "336": {
+    "word": "China cabinet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\china-cabinet.jpg"
+  },
+  "337": {
+    "word": "Linen cabinet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\linen-cabinet.jpg"
+  },
+  "339": {
+    "word": "Bathroom cabinet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bathroom-cabinet.jpg"
+  },
+  "325": {
+    "word": "Sofa bed",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sofa-bed.jpg"
+  },
+  "328": {
+    "word": "Bed frame",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bed-frame.jpg"
+  },
+  "329": {
+    "word": "Headboard",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\headboard.jpg"
+  },
+  "333": {
+    "word": "Bookcase",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bookcase.jpg"
+  },
+  "338": {
+    "word": "Medicine cabinet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\medicine-cabinet.jpg"
+  },
+  "340": {
+    "word": "Kitchen cabinet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\kitchen-cabinet.jpg"
+  },
+  "342": {
+    "word": "Key hook",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\key-hook.jpg"
+  },
+  "343": {
+    "word": "Storage bin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\storage-bin.jpg"
+  },
+  "344": {
+    "word": "Plastic bin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\plastic-bin.jpg"
+  },
+  "341": {
+    "word": "Wall hook",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\wall-hook.jpg"
+  },
+  "345": {
+    "word": "Stackable bin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\stackable-bin.jpg"
+  },
+  "346": {
+    "word": "Rolling cart",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\rolling-cart.jpg"
+  },
+  "347": {
+    "word": "Utility cart",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\utility-cart.jpg"
+  },
+  "348": {
+    "word": "Serving cart",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\serving-cart.jpg"
+  },
+  "349": {
+    "word": "Room divider",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\room-divider.jpg"
+  },
+  "350": {
+    "word": "Folding screen",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\folding-screen.jpg"
+  },
+  "351": {
+    "word": "Shelf unit",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\shelf-unit.jpg"
+  },
+  "352": {
+    "word": "Wall shelf",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\wall-shelf.jpg"
+  },
+  "353": {
+    "word": "Floating shelf",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\floating-shelf.jpg"
+  },
+  "354": {
+    "word": "Floor lamp",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\floor-lamp.jpg"
+  },
+  "365": {
+    "word": "Power adapter",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\power-adapter.jpg"
+  },
+  "366": {
+    "word": "Usb cable",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\usb-cable.jpg"
+  },
+  "367": {
+    "word": "Hdmi cable",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hdmi-cable.jpg"
+  },
+  "368": {
+    "word": "Ethernet cable",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ethernet-cable.jpg"
+  },
+  "369": {
+    "word": "Extension reel",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\extension-reel.jpg"
+  },
+  "370": {
+    "word": "Router",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\router.jpg"
+  },
+  "371": {
+    "word": "Modem",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\modem.jpg"
+  },
+  "374": {
+    "word": "Speaker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\speaker.jpg"
+  },
+  "375": {
+    "word": "Smart speaker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\smart-speaker.jpg"
+  },
+  "376": {
+    "word": "Bluetooth speaker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bluetooth-speaker.jpg"
+  },
+  "377": {
+    "word": "Power bank",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\power-bank.jpg"
+  },
+  "378": {
+    "word": "Usb hub",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\usb-hub.jpg"
+  },
+  "379": {
+    "word": "Docking station",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\docking-station.jpg"
+  },
+  "380": {
+    "word": "Coffee maker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\coffee-maker.jpg"
+  },
+  "381": {
+    "word": "Espresso machine",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\espresso-machine.jpg"
+  },
+  "382": {
+    "word": "Electric kettle",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\electric-kettle.jpg"
+  },
+  "383": {
+    "word": "Stand mixer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\stand-mixer.jpg"
+  },
+  "384": {
+    "word": "Hand mixer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hand-mixer.jpg"
+  },
+  "385": {
+    "word": "Food processor",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\food-processor.jpg"
+  },
+  "386": {
+    "word": "Rice cooker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\rice-cooker.jpg"
+  },
+  "387": {
+    "word": "Air fryer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\air-fryer.jpg"
+  },
+  "388": {
+    "word": "Slow cooker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\slow-cooker.jpg"
+  },
+  "389": {
+    "word": "Pressure cooker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pressure-cooker.jpg"
+  },
+  "390": {
+    "word": "Waffle maker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\waffle-maker.jpg"
+  },
+  "391": {
+    "word": "Electric grill",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\electric-grill.jpg"
+  },
+  "392": {
+    "word": "Sandwich maker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\sandwich-maker.jpg"
+  },
+  "393": {
+    "word": "Popcorn maker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\popcorn-maker.jpg"
+  },
+  "394": {
+    "word": "Bread maker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bread-maker.jpg"
+  },
+  "395": {
+    "word": "Mini fridge",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\mini-fridge.jpg"
+  },
+  "396": {
+    "word": "Ice maker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ice-maker.jpg"
+  },
+  "397": {
+    "word": "Humidifier",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\humidifier.jpg"
+  },
+  "398": {
+    "word": "Dehumidifier",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\dehumidifier.jpg"
+  },
+  "399": {
+    "word": "Tower fan",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\tower-fan.jpg"
+  },
+  "400": {
+    "word": "Space heater",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\space-heater.jpg"
+  },
+  "401": {
+    "word": "Colander",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\colander.jpg"
+  },
+  "402": {
+    "word": "Strainer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\strainer.jpg"
+  },
+  "403": {
+    "word": "Peeler",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\peeler.jpg"
+  },
+  "404": {
+    "word": "Grater",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\grater.jpg"
+  },
+  "405": {
+    "word": "Garlic press",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\garlic-press.jpg"
+  },
+  "406": {
+    "word": "Corkscrew",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\corkscrew.jpg"
+  },
+  "407": {
+    "word": "Bottle stopper",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bottle-stopper.jpg"
+  },
+  "408": {
+    "word": "Rolling pin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\rolling-pin.jpg"
+  },
+  "409": {
+    "word": "Baking tray",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\baking-tray.jpg"
+  },
+  "410": {
+    "word": "Baking pan",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\baking-pan.jpg"
+  },
+  "411": {
+    "word": "Muffin tin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\muffin-tin.jpg"
+  },
+  "412": {
+    "word": "Oven mitt",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\oven-mitt.jpg"
+  },
+  "413": {
+    "word": "Apron",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\apron.jpg"
+  },
+  "414": {
+    "word": "Measuring cup",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\measuring-cup.jpg"
+  },
+  "415": {
+    "word": "Measuring spoon",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\measuring-spoon.jpg"
+  },
+  "416": {
+    "word": "Kitchen timer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\kitchen-timer.jpg"
+  },
+  "417": {
+    "word": "Kitchen scale",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\kitchen-scale.jpg"
+  },
+  "418": {
+    "word": "Mixing bowl",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\mixing-bowl.jpg"
+  },
+  "419": {
+    "word": "Salad spinner",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\salad-spinner.jpg"
+  },
+  "420": {
+    "word": "Spice rack",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\spice-rack.jpg"
+  },
+  "421": {
+    "word": "Spice jar",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\spice-jar.jpg"
+  },
+  "422": {
+    "word": "Bread box",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bread-box.jpg"
+  },
+  "423": {
+    "word": "Cookie jar",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\cookie-jar.jpg"
+  },
+  "424": {
+    "word": "Tea infuser",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\tea-infuser.jpg"
+  },
+  "425": {
+    "word": "Ice cube tray",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ice-cube-tray.jpg"
+  },
+  "426": {
+    "word": "Coaster",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\coaster.jpg"
+  },
+  "427": {
+    "word": "Trivet",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\trivet.jpg"
+  },
+  "428": {
+    "word": "Water filter pitcher",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\water-filter-pitcher.jpg"
+  },
+  "429": {
+    "word": "Water pitcher",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\water-pitcher.jpg"
+  },
+  "430": {
+    "word": "Soap dispenser",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\soap-dispenser.jpg"
+  },
+  "431": {
+    "word": "Paper towel dispenser",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\paper-towel-dispenser.jpg"
+  },
+  "432": {
+    "word": "Hand sanitizer dispenser",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hand-sanitizer-dispenser.jpg"
+  },
+  "433": {
+    "word": "Hand dryer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hand-dryer.jpg"
+  },
+  "434": {
+    "word": "Toilet brush",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\toilet-brush.jpg"
+  },
+  "435": {
+    "word": "Plunger",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\plunger.jpg"
+  },
+  "436": {
+    "word": "Squeegee",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\squeegee.jpg"
+  },
+  "437": {
+    "word": "Lint roller",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\lint-roller.jpg"
+  },
+  "438": {
+    "word": "Rubber gloves",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\rubber-gloves.jpg"
+  },
+  "439": {
+    "word": "Scrub brush",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\scrub-brush.jpg"
+  },
+  "440": {
+    "word": "Tape dispenser",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\tape-dispenser.jpg"
+  },
+  "441": {
+    "word": "Label maker",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\label-maker.jpg"
+  },
+  "442": {
+    "word": "Hole punch",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hole-punch.jpg"
+  },
+  "443": {
+    "word": "Binder clip",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\binder-clip.jpg"
+  },
+  "444": {
+    "word": "Pushpin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pushpin.jpg"
+  },
+  "445": {
+    "word": "Thumbtack",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\thumbtack.jpg"
+  },
+  "446": {
+    "word": "Desk organizer",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\desk-organizer.jpg"
+  },
+  "447": {
+    "word": "Pen holder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pen-holder.jpg"
+  },
+  "448": {
+    "word": "Pencil holder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\pencil-holder.jpg"
+  },
+  "449": {
+    "word": "Bulletin board",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bulletin-board.jpg"
+  },
+  "450": {
+    "word": "Notice board",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\notice-board.jpg"
+  },
+  "451": {
+    "word": "Whiteboard eraser",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\whiteboard-eraser.jpg"
+  },
+  "452": {
+    "word": "Stamp pad",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\stamp-pad.jpg"
+  },
+  "453": {
+    "word": "File folder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\file-folder.jpg"
+  },
+  "454": {
+    "word": "Hanging folder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\hanging-folder.jpg"
+  },
+  "455": {
+    "word": "Document folder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\document-folder.jpg"
+  },
+  "456": {
+    "word": "Accordion folder",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\accordion-folder.jpg"
+  },
+  "457": {
+    "word": "Index divider",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\index-divider.jpg"
+  },
+  "458": {
+    "word": "Ticket kiosk",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ticket-kiosk.jpg"
+  },
+  "459": {
+    "word": "Ticket machine",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ticket-machine.jpg"
+  },
+  "460": {
+    "word": "Information kiosk",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\information-kiosk.jpg"
+  },
+  "461": {
+    "word": "Information desk",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\information-desk.jpg"
+  },
+  "462": {
+    "word": "Parking meter",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\parking-meter.jpg"
+  },
+  "463": {
+    "word": "Bike rack",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bike-rack.jpg"
+  },
+  "464": {
+    "word": "Bike lane",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bike-lane.jpg"
+  },
+  "465": {
+    "word": "Speed bump",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\speed-bump.jpg"
+  },
+  "466": {
+    "word": "Bollard",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bollard.jpg"
+  },
+  "467": {
+    "word": "Manhole cover",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\manhole-cover.jpg"
+  },
+  "468": {
+    "word": "Storm drain",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\storm-drain.jpg"
+  },
+  "469": {
+    "word": "Fire hydrant",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\fire-hydrant.jpg"
+  },
+  "470": {
+    "word": "Street bin",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\street-bin.jpg"
+  },
+  "471": {
+    "word": "Recycling bin outdoor",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\recycling-bin-outdoor.jpg"
+  },
+  "472": {
+    "word": "Subway entrance",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\subway-entrance.jpg"
+  },
+  "473": {
+    "word": "Train platform",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\train-platform.jpg"
+  },
+  "474": {
+    "word": "Platform edge",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\platform-edge.jpg"
+  },
+  "475": {
+    "word": "Turnstile",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\turnstile.jpg"
+  },
+  "476": {
+    "word": "Ticket gate",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ticket-gate.jpg"
+  },
+  "477": {
+    "word": "Queue barrier",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\queue-barrier.jpg"
+  },
+  "478": {
+    "word": "Ticket validator",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ticket-validator.jpg"
+  },
+  "479": {
+    "word": "Bus stop sign",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bus-stop-sign.jpg"
+  },
+  "480": {
+    "word": "Street map board",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\street-map-board.jpg"
+  },
+  "481": {
+    "word": "Menu board",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\menu-board.jpg"
+  },
+  "482": {
+    "word": "Signboard",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\signboard.jpg"
+  },
+  "483": {
+    "word": "Parking garage",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\parking-garage.jpg"
+  },
+  "484": {
+    "word": "Waiting room",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\waiting-room.jpg"
+  },
+  "485": {
+    "word": "Public restroom",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\public-restroom.jpg"
+  },
+  "486": {
+    "word": "Fitting room",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\fitting-room.jpg"
+  },
+  "487": {
+    "word": "Changing room",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\changing-room.jpg"
+  },
+  "488": {
+    "word": "Checkout counter",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\checkout-counter.jpg"
+  },
+  "489": {
+    "word": "Customer service desk",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\customer-service-desk.jpg"
+  },
+  "490": {
+    "word": "Post office",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\post-office.jpg"
+  },
+  "330": {
+    "word": "Tv stand",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\tv-stand.jpg"
+  },
+  "331": {
+    "word": "Tv console",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\tv-console.jpg"
+  },
+  "332": {
+    "word": "Media console",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\media-console.jpg"
+  },
+  "355": {
+    "word": "Desk lamp",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\desk-lamp.jpg"
+  },
+  "356": {
+    "word": "Bedside lamp",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\bedside-lamp.jpg"
+  },
+  "357": {
+    "word": "Reading lamp",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\reading-lamp.jpg"
+  },
+  "358": {
+    "word": "Clip lamp",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\clip-lamp.jpg"
+  },
+  "359": {
+    "word": "Wall sconce",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\wall-sconce.jpg"
+  },
+  "360": {
+    "word": "Night light",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\night-light.jpg"
+  },
+  "361": {
+    "word": "Ceiling light",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\ceiling-light.jpg"
+  },
+  "362": {
+    "word": "Lamp shade",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\lamp-shade.jpg"
+  },
+  "363": {
+    "word": "Power strip",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\power-strip.jpg"
+  },
+  "364": {
+    "word": "Surge protector",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\surge-protector.jpg"
+  },
+  "372": {
+    "word": "Webcam",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\webcam.jpg"
+  },
+  "373": {
+    "word": "Microphone",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\microphone.jpg"
+  },
+  "491": {
+    "word": "Police station",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\police-station.jpg"
+  },
+  "492": {
+    "word": "Fire station",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\fire-station.jpg"
+  },
+  "493": {
+    "word": "Gas station",
+    "category": "everyday_objects",
+    "path": "C:\\Users\\zhd07\\Synora\\scripts\\generated-images\\gas-station.jpg"
+  }
+}

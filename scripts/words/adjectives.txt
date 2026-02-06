@@ -1,0 +1,351 @@
+word	level
+Red	beginner
+Blue	beginner
+Green	beginner
+Yellow	beginner
+Black	beginner
+White	beginner
+Gray	beginner
+Brown	beginner
+Pink	beginner
+Light	beginner
+Dark	beginner
+Bright	beginner
+Pale	beginner
+Shiny	beginner
+Dull	beginner
+Clear	beginner
+Cloudy	beginner
+Purple	elementary
+Navy	elementary
+Teal	elementary
+Turquoise	elementary
+Golden	elementary
+Silver	elementary
+Ivory	elementary
+Cream	elementary
+Matte	elementary
+Glossy	elementary
+Opaque	elementary
+Patterned	elementary
+Striped	elementary
+Spotted	elementary
+Checked	elementary
+Faded	elementary
+Stained	elementary
+Multicolored	intermediate
+Colorless	intermediate
+Translucent	intermediate
+Reflective	intermediate
+Metallic	intermediate
+Tarnished	intermediate
+Polished	intermediate
+Unpolished	intermediate
+Scratched	intermediate
+Smudged	intermediate
+Speckled	intermediate
+Marbled	intermediate
+Glittery	intermediate
+Fluorescent	intermediate
+Iridescent	intermediate
+Frosted	intermediate
+Burnished	intermediate
+Big	beginner
+Small	beginner
+Long	beginner
+Short	beginner
+Tall	beginner
+Wide	beginner
+Narrow	beginner
+Round	beginner
+Square	beginner
+Flat	beginner
+Thin	beginner
+Thick	beginner
+Large	beginner
+Tiny	beginner
+Straight	beginner
+Curved	beginner
+Deep	beginner
+Shallow	beginner
+High	beginner
+Rectangular	elementary
+Triangular	elementary
+Cylindrical	elementary
+Conical	elementary
+Spherical	elementary
+Bulky	elementary
+Slim	elementary
+Elongated	elementary
+Stubby	elementary
+Rounded	elementary
+Pointed	elementary
+Angled	elementary
+Arched	elementary
+Bent	elementary
+Asymmetrical	intermediate
+Symmetrical	intermediate
+Irregular	intermediate
+Tapered	intermediate
+Flared	intermediate
+Ribbed	intermediate
+Grooved	intermediate
+Faceted	intermediate
+Elliptical	intermediate
+Wavy	intermediate
+Jagged	intermediate
+Layered	intermediate
+Smooth	beginner
+Rough	beginner
+Soft	beginner
+Hard	beginner
+Wet	beginner
+Dry	beginner
+Sticky	beginner
+Slippery	beginner
+Bumpy	beginner
+Fuzzy	beginner
+Hairy	beginner
+Spiky	beginner
+Sharp	beginner
+Blunt	beginner
+Oily	beginner
+Greasy	beginner
+Dusty	beginner
+Sandy	beginner
+Muddy	beginner
+Grainy	elementary
+Gritty	elementary
+Powdery	elementary
+Crumbly	elementary
+Flaky	elementary
+Waxy	elementary
+Rubbery	elementary
+Leathery	elementary
+Silky	elementary
+Velvety	elementary
+Fibrous	elementary
+Porous	elementary
+Spongy	elementary
+Elastic	elementary
+Crusty	elementary
+Wrinkled	elementary
+Uneven	elementary
+Abrasive	intermediate
+Etched	intermediate
+Embossed	intermediate
+Engraved	intermediate
+Laminated	intermediate
+Coated	intermediate
+Textured	intermediate
+Corrugated	intermediate
+Perforated	intermediate
+Mesh like	intermediate
+Oxidized	intermediate
+Pockmarked	intermediate
+Fissured	intermediate
+New	beginner
+Old	beginner
+Clean	beginner
+Dirty	beginner
+Broken	beginner
+Fixed	beginner
+Open	beginner
+Closed	beginner
+Full	beginner
+Empty	beginner
+Hot	beginner
+Cold	beginner
+Fresh	beginner
+Stale	beginner
+Damaged	beginner
+Working	beginner
+Unused	beginner
+Worn	elementary
+Torn	elementary
+Cracked	elementary
+Chipped	elementary
+Leaking	elementary
+Stuck	elementary
+Jammed	elementary
+Rusty	elementary
+Moldy	elementary
+Burnt	elementary
+Melted	elementary
+Inflated	elementary
+Deflated	elementary
+Sealed	intermediate
+Locked	intermediate
+Corroded	intermediate
+Weathered	intermediate
+Compressed	intermediate
+Expanded	intermediate
+Misaligned	intermediate
+Loose	intermediate
+Tight	intermediate
+Contaminated	intermediate
+Sanitized	intermediate
+Heavy	beginner
+Solid	beginner
+Liquid	beginner
+Airy	beginner
+Hollow	beginner
+Dense	beginner
+Sparse	beginner
+Packed	beginner
+Stacked	beginner
+Foam like	beginner
+Lightweight	elementary
+Heavy duty	elementary
+Concentrated	elementary
+Diluted	elementary
+Air filled	elementary
+Water filled	elementary
+Sand filled	elementary
+Puffed	elementary
+High density	intermediate
+Low density	intermediate
+Weighty	intermediate
+Featherlight	intermediate
+Paper thin	intermediate
+Semi solid	intermediate
+Gel like	intermediate
+Viscous	intermediate
+Warm	beginner
+Icy	beginner
+Boiling	beginner
+Steaming	beginner
+Burning	beginner
+Heated	beginner
+Active	beginner
+Still	beginner
+Powered	beginner
+On	beginner
+Off	beginner
+Sparking	beginner
+Lukewarm	elementary
+Scalding	elementary
+Thawed	elementary
+Smoldering	elementary
+Glowing	elementary
+Overheated	elementary
+Cooled	elementary
+Insulated	elementary
+Energized	elementary
+Plugged in	elementary
+Superheated	intermediate
+Subzero	intermediate
+Frost covered	intermediate
+Condensing	intermediate
+Evaporating	intermediate
+Flame lit	intermediate
+Spark emitting	intermediate
+Idle running	intermediate
+Single	beginner
+Double	beginner
+Multiple	beginner
+Few	beginner
+Many	beginner
+Scattered	beginner
+Grouped	beginner
+Spread	beginner
+Aligned	beginner
+Mixed	beginner
+Separate	beginner
+Clustered	beginner
+Isolated	beginner
+Neat	elementary
+Messy	elementary
+Ordered	elementary
+Random	elementary
+Sorted	elementary
+Rowed	elementary
+Columned	elementary
+Piled	elementary
+Bundled	elementary
+Nested	elementary
+Overlapping	elementary
+Spaced	elementary
+Tightly packed	elementary
+Loosely packed	elementary
+Symmetrically arranged	intermediate
+Asymmetrically arranged	intermediate
+Grid arranged	intermediate
+Staggered	intermediate
+Tiered	intermediate
+Segmented	intermediate
+Partitioned	intermediate
+Densely packed	intermediate
+Sparsely packed	intermediate
+Fast	beginner
+Slow	beginner
+Static	beginner
+Dynamic	beginner
+Sliding	beginner
+Gliding	beginner
+Swaying	beginner
+Bouncing	beginner
+Drifting	beginner
+Flowing	beginner
+Stopped	beginner
+Paused	beginner
+Tilting	beginner
+Turning	beginner
+Swift	elementary
+Leisurely	elementary
+Jerky	elementary
+Skidding	elementary
+Tumbling	elementary
+Swinging	elementary
+Oscillating	elementary
+Vibrating	elementary
+Wobbling	elementary
+Spiraling	elementary
+Zigzagging	elementary
+Hovering	elementary
+Motion blurred	intermediate
+Streaked	intermediate
+Coasting	intermediate
+Banked	intermediate
+Whipping	intermediate
+Ricocheting	intermediate
+Free falling	intermediate
+Fat	beginner
+Weak	beginner
+Strong	beginner
+Young	beginner
+Bald	beginner
+Clean shaven	beginner
+Bearded	beginner
+Mustached	beginner
+Curly haired	beginner
+Straight haired	beginner
+Long haired	beginner
+Short haired	beginner
+Barefoot	beginner
+Stocky	elementary
+Broad shouldered	elementary
+Narrow shouldered	elementary
+Round faced	elementary
+Square faced	elementary
+Oval faced	elementary
+Freckled	elementary
+Scarred	elementary
+Tattooed	elementary
+Pierced	elementary
+Sunburned	elementary
+Sweaty	elementary
+Bandaged	elementary
+Athletic built	intermediate
+Underweight	intermediate
+Overweight	intermediate
+Stooped	intermediate
+Hunched	intermediate
+Bow legged	intermediate
+Knock kneed	intermediate
+Bruised	intermediate
+Injured	intermediate
+Prosthetic wearing	intermediate
+Wheelchair bound	intermediate
+Helmeted	intermediate
+Uniformed	intermediate

@@ -160,6 +160,7 @@
     "new": "Новий",
     "topicsAvailable": "Доступні Теми",
     "wordsToLearn": "Слова для Вивчення",
+    "noResults": "Результатів не знайдено",
     "categoryNames": {
       "all": "Все",
       "travel": "Подорожі",
@@ -223,7 +224,9 @@
     "quickPractice": "Швидка Практика",
     "weakWords": "Слабкі Слова",
     "statistics": "Статистика",
-    "totalWords": "Всього Слів",
+    "learnedWords": "Вивчені Слова",
+    "weeklyWords": "Цього Тижня",
+    "knownWords": "Вже Відомі",
     "level": "Рівень",
     "daysActive": "Активних Днів",
     "accuracy": "Точність",
@@ -274,7 +277,9 @@
     "deleteMessage": "Цю дію не можна скасувати. Всі ваші дані будуть видалені назавжди.",
     "delete": "Видалити",
     "cancel": "Скасувати",
-    "madeWith": "Зроблено з любов'ю"
+    "madeWith": "Зроблено з любов'ю",
+    "languageError": "Помилка мови",
+    "sameLanguageWarning": "Ваша рідна мова та мова вивчення не можуть бути однаковими."
   },
   "profile": {
     "title": "Профіль",

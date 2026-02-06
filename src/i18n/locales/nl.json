@@ -196,6 +196,7 @@
     "new": "Nieuw",
     "topicsAvailable": "Beschikbare Onderwerpen",
     "wordsToLearn": "Te Leren Woorden",
+    "noResults": "Geen resultaten gevonden",
     "categoryNames": {
       "all": "Alles",
       "travel": "Reizen",
@@ -223,7 +224,9 @@
     "quickPractice": "Snelle Oefening",
     "weakWords": "Zwakke Woorden",
     "statistics": "Statistieken",
-    "totalWords": "Totaal Woorden",
+    "learnedWords": "Geleerde Woorden",
+    "weeklyWords": "Deze Week",
+    "knownWords": "Al Bekend",
     "level": "Niveau",
     "daysActive": "Actieve Dagen",
     "accuracy": "Nauwkeurigheid",
@@ -274,7 +277,9 @@
     "deleteMessage": "Deze actie kan niet ongedaan worden gemaakt. Al je gegevens worden permanent verwijderd.",
     "delete": "Verwijderen",
     "cancel": "Annuleren",
-    "madeWith": "Gemaakt met liefde"
+    "madeWith": "Gemaakt met liefde",
+    "languageError": "Taalfout",
+    "sameLanguageWarning": "Uw moedertaal en leertaal kunnen niet hetzelfde zijn."
   },
   "profile": {
     "title": "Profiel",

@@ -1,7 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Image } from 'react-native';
 import { Word, WordLevel, WordDataFile, LearnedWord, LanguageCode } from '../types/word';
-import { getWordImageUrl } from '../config/cloudinary';
 
 // Import word data files (will be created per category)
 // These will be lazy loaded
@@ -25,7 +23,6 @@ const wordCache: Map<string, Word[]> = new Map();
 
 // Storage keys
 const LEARNED_WORDS_KEY = 'synora_learned_words';
-const IMAGE_CACHE_KEY = 'synora_cached_images';
 
 /**
  * Load words for a specific category
@@ -124,24 +121,6 @@ export async function searchWords(
   }
 
   return results;
-}
-
-/**
- * Prefetch images for a list of words
- */
-export async function prefetchWordImages(
-  words: Word[],
-  size: 'thumbnail' | 'medium' = 'thumbnail'
-): Promise<void> {
-  const urls = words.map(word => getWordImageUrl(word.image, size));
-
-  await Promise.all(
-    urls.map(url =>
-      Image.prefetch(url).catch(err => {
-        console.warn('Failed to prefetch image:', url, err);
-      })
-    )
-  );
 }
 
 /**

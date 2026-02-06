@@ -196,6 +196,7 @@
     "new": "新着",
     "topicsAvailable": "利用可能なトピック",
     "wordsToLearn": "学ぶ単語",
+    "noResults": "結果が見つかりません",
     "categoryNames": {
       "all": "すべて",
       "travel": "旅行",
@@ -223,7 +224,9 @@
     "quickPractice": "クイック練習",
     "weakWords": "苦手な単語",
     "statistics": "統計",
-    "totalWords": "総単語数",
+    "learnedWords": "学習した単語",
+    "weeklyWords": "今週の単語",
+    "knownWords": "既に知っている",
     "level": "レベル",
     "daysActive": "アクティブ日数",
     "accuracy": "正答率",
@@ -274,7 +277,9 @@
     "deleteMessage": "この操作は取り消せません。すべてのデータが完全に削除されます。",
     "delete": "削除",
     "cancel": "キャンセル",
-    "madeWith": "愛を込めて作りました"
+    "madeWith": "愛を込めて作りました",
+    "languageError": "言語エラー",
+    "sameLanguageWarning": "母国語と学習言語を同じにすることはできません。"
   },
   "profile": {
     "title": "プロフィール",

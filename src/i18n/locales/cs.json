@@ -160,6 +160,7 @@
     "new": "Nový",
     "topicsAvailable": "Dostupná Témata",
     "wordsToLearn": "Slova k Učení",
+    "noResults": "Nebyly nalezeny žádné výsledky",
     "categoryNames": {
       "all": "Vše",
       "travel": "Cestování",
@@ -223,7 +224,9 @@
     "quickPractice": "Rychlé Cvičení",
     "weakWords": "Slabá Slova",
     "statistics": "Statistiky",
-    "totalWords": "Celkem Slov",
+    "learnedWords": "Naučená Slova",
+    "weeklyWords": "Tento Týden",
+    "knownWords": "Již Známá",
     "level": "Úroveň",
     "daysActive": "Aktivní Dny",
     "accuracy": "Přesnost",
@@ -274,7 +277,9 @@
     "deleteMessage": "Tuto akci nelze vrátit zpět. Všechna vaše data budou trvale smazána.",
     "delete": "Smazat",
     "cancel": "Zrušit",
-    "madeWith": "Vytvořeno s láskou"
+    "madeWith": "Vytvořeno s láskou",
+    "languageError": "Chyba jazyka",
+    "sameLanguageWarning": "Váš rodný jazyk a jazyk, který se chcete učit, nemohou být stejné."
   },
   "profile": {
     "title": "Profil",

@@ -196,6 +196,7 @@
     "new": "Nytt",
     "topicsAvailable": "Tillgängliga Ämnen",
     "wordsToLearn": "Ord att Lära",
+    "noResults": "Inga resultat hittades",
     "categoryNames": {
       "all": "Alla",
       "travel": "Resor",
@@ -223,7 +224,9 @@
     "quickPractice": "Snabbövning",
     "weakWords": "Svaga Ord",
     "statistics": "Statistik",
-    "totalWords": "Totalt Ord",
+    "learnedWords": "Inlärda Ord",
+    "weeklyWords": "Denna Vecka",
+    "knownWords": "Redan Kända",
     "level": "Nivå",
     "daysActive": "Aktiva Dagar",
     "accuracy": "Noggrannhet",
@@ -274,7 +277,9 @@
     "deleteMessage": "Denna åtgärd kan inte ångras. All din data kommer att raderas permanent.",
     "delete": "Radera",
     "cancel": "Avbryt",
-    "madeWith": "Gjord med kärlek"
+    "madeWith": "Gjord med kärlek",
+    "languageError": "Språkfel",
+    "sameLanguageWarning": "Ditt modersmål och inlärningsspråk kan inte vara samma."
   },
   "profile": {
     "title": "Profil",

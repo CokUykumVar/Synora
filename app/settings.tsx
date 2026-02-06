@@ -143,11 +143,27 @@ export default function SettingsScreen() {
     if (!selectedLang) return;
 
     if (modalType === 'native') {
+      // Check if trying to set native language same as learning language
+      if (code === learningSettings.learnLanguage) {
+        Alert.alert(
+          i18n.t('settings.languageError'),
+          i18n.t('settings.sameLanguageWarning')
+        );
+        return;
+      }
       setLearningSettings(prev => ({ ...prev, nativeLanguage: code }));
       // Update UserContext and app language
       await saveNativeLanguage(selectedLang);
       await setLocale(code);
     } else if (modalType === 'learn') {
+      // Check if trying to set learning language same as native language
+      if (code === learningSettings.nativeLanguage) {
+        Alert.alert(
+          i18n.t('settings.languageError'),
+          i18n.t('settings.sameLanguageWarning')
+        );
+        return;
+      }
       setLearningSettings(prev => ({ ...prev, learnLanguage: code }));
       // Update UserContext
       await saveLearningLanguage(selectedLang);

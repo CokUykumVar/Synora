@@ -196,6 +196,7 @@
     "new": "جديد",
     "topicsAvailable": "المواضيع المتاحة",
     "wordsToLearn": "كلمات للتعلم",
+    "noResults": "لم يتم العثور على نتائج",
     "categoryNames": {
       "all": "الكل",
       "travel": "السفر",
@@ -223,7 +224,9 @@
     "quickPractice": "تدريب سريع",
     "weakWords": "الكلمات الضعيفة",
     "statistics": "الإحصائيات",
-    "totalWords": "إجمالي الكلمات",
+    "learnedWords": "كلمات متعلمة",
+    "weeklyWords": "هذا الأسبوع",
+    "knownWords": "معروفة مسبقاً",
     "level": "المستوى",
     "daysActive": "أيام نشطة",
     "accuracy": "الدقة",
@@ -274,7 +277,9 @@
     "deleteMessage": "لا يمكن التراجع عن هذا الإجراء. سيتم حذف جميع بياناتك بشكل دائم.",
     "delete": "حذف",
     "cancel": "إلغاء",
-    "madeWith": "صنع بحب"
+    "madeWith": "صنع بحب",
+    "languageError": "خطأ في اللغة",
+    "sameLanguageWarning": "لا يمكن أن تكون لغتك الأم ولغة التعلم متطابقتين."
   },
   "profile": {
     "title": "الملف الشخصي",

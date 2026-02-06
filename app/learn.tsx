@@ -29,8 +29,9 @@ import {
 
 import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 import { useUser } from '../src/context/UserContext';
-import { getWordsForLanguagePair } from '../src/data/words';
+import { getAllWords } from '../src/data/words';
 import { useNetwork } from '../src/context/NetworkContext';
+import WordImage from '../src/components/WordImage';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -78,18 +79,15 @@ const getWordEmoji = (wordId: string, category?: string): string => {
 
   // Category fallbacks
   const categoryEmojis: { [key: string]: string } = {
+    everyday_objects: '📦',
+    food_drink: '🍽️',
+    people_roles: '👥',
+    actions: '⚡',
+    adjectives: '🎨',
+    emotions: '❤️',
+    nature_animals: '🌿',
     travel: '✈️',
-    food: '🍽️',
-    business: '💼',
-    technology: '💻',
-    health: '🏥',
-    sports: '⚽',
-    music: '🎵',
-    entertainment: '🎬',
-    nature: '🌿',
-    shopping: '🛍️',
-    family: '👨‍👩‍👧',
-    education: '📚',
+    sports_hobbies: '⚽',
   };
 
   return categoryEmojis[category || ''] || '📝';
@@ -205,7 +203,7 @@ export default function LearnScreen() {
         } catch {}
         setMasteredWordIds(mastered);
 
-        const words = getWordsForLanguagePair(learningLang, nativeLang, userLevel);
+        const words = getAllWords(learningLang, nativeLang, userLevel);
         setAllWords(words);
 
         // Filter out mastered words
@@ -297,7 +295,7 @@ export default function LearnScreen() {
       const masteredKey = `mastered_words_${learningLang}`;
       const newIds = words.map(w => w.id);
 
-      // Save to main mastered list
+      // Save to main mastered list (for filtering out already seen words)
       let existing: string[] = [];
       try {
         const saved = await AsyncStorage.getItem(masteredKey);
@@ -307,9 +305,24 @@ export default function LearnScreen() {
       await AsyncStorage.setItem(masteredKey, JSON.stringify(merged));
       setMasteredWordIds(merged);
 
-      // Save each word to its category's learned list
-      for (const word of words) {
-        await saveWordToCategory(word);
+      if (updateStats) {
+        // Successfully tested words: Save to category's learned list
+        for (const word of words) {
+          await saveWordToCategory(word);
+        }
+      } else {
+        // "I know this" words: Save to known_words list (per category)
+        for (const word of words) {
+          if (!word.category) continue;
+          const knownKey = `known_words_${learningLang}_${word.category}`;
+          let knownExisting: string[] = [];
+          try {
+            const savedKnown = await AsyncStorage.getItem(knownKey);
+            if (savedKnown) knownExisting = JSON.parse(savedKnown);
+          } catch {}
+          const knownMerged = [...new Set([...knownExisting, word.id])];
+          await AsyncStorage.setItem(knownKey, JSON.stringify(knownMerged));
+        }
       }
 
       // Only update statistics for words that completed exercises successfully
@@ -543,33 +556,41 @@ export default function LearnScreen() {
     // Prevent rapid swipes
     if (isSwipingRef.current || isSwiping) return;
 
-    // Save the known word as learned (but don't update stats - only mark as learned)
     const knownWord = availableWords[0];
-    if (knownWord) {
-      saveMasteredWords([knownWord], false);
-    }
+    if (!knownWord) return;
 
-    if (availableWords.length <= 1) {
-      if (selectedWords.length >= 5) {
-        setPhase('flashcard');
-        setCurrentWordIndex(0);
-        setShowAnswer(false);
-        setCorrectCount(0);
-      }
-      return;
-    }
+    // Save the known word as learned (but don't update stats - only mark as learned)
+    saveMasteredWords([knownWord], false);
 
     isSwipingRef.current = true;
     setIsSwiping(true);
     animateCardOut('right', () => {
-      setAvailableWords(prev => prev.slice(1));
-      // Unlock after animation completes
+      const remaining = availableWords.slice(1);
+
+      if (remaining.length === 0) {
+        if (selectedWords.length >= 5) {
+          // Enough words selected, move to flashcard
+          setPhase('flashcard');
+          setCurrentWordIndex(0);
+          setShowAnswer(false);
+          setCorrectCount(0);
+          setAvailableWords([]);
+        } else {
+          // All words exhausted, reset with all words shuffled (exclude already selected)
+          const selectedIds = selectedWords.map(w => w.id);
+          const resetWords = shuffleArray(allWords.filter(w => !selectedIds.includes(w.id)));
+          setAvailableWords(resetWords);
+        }
+      } else {
+        setAvailableWords(remaining);
+      }
+
       setTimeout(() => {
         isSwipingRef.current = false;
         setIsSwiping(false);
       }, 100);
     });
-  }, [availableWords, selectedWords.length, animateCardOut, isSwiping]);
+  }, [availableWords, selectedWords, allWords, animateCardOut, isSwiping]);
 
   const handleLearnWord = useCallback(() => {
     // Prevent rapid swipes and check if already at max
@@ -1278,15 +1299,18 @@ export default function LearnScreen() {
         </Text>
       </View>
 
-      {/* Image Card */}
+      {/* Image/Emoji Card */}
       <View style={styles.imageCard}>
         {currentWord?.image ? (
-          <View style={styles.wordImage}>
-            {/* Image will be added here later */}
-          </View>
+          <WordImage
+            imageId={currentWord.image}
+            size="medium"
+            style={styles.wordImageContainer}
+            fallbackEmoji={getWordEmoji(currentWord?.id || '', currentWord?.category)}
+          />
         ) : (
           <View style={styles.imagePlaceholder}>
-            <Ionicons name="image-outline" size={64} color={colors.text.muted} />
+            <Text style={styles.wordEmojiLarge}>{getWordEmoji(currentWord?.id || '', currentWord?.category)}</Text>
             <Text style={styles.imageHint}>{currentWord?.translation}</Text>
           </View>
         )}
@@ -1395,7 +1419,16 @@ export default function LearnScreen() {
               disabled={isMatched}
               activeOpacity={0.7}
             >
-              <Text style={styles.matchingEmoji}>{getWordEmoji(word.id, word.category)}</Text>
+              {word.image ? (
+                <WordImage
+                  imageId={word.image}
+                  size="thumbnail"
+                  style={styles.matchingImageContent}
+                  fallbackEmoji={getWordEmoji(word.id, word.category)}
+                />
+              ) : (
+                <Text style={styles.matchingEmoji}>{getWordEmoji(word.id, word.category)}</Text>
+              )}
               {isMatched && (
                 <View style={styles.matchedOverlay}>
                   <Ionicons name="checkmark-circle" size={40} color={colors.status.success} />
@@ -2428,6 +2461,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  wordImageContainer: {
+    width: '100%',
+    height: layout.isSmallDevice ? 140 : 180,
+  },
+  wordEmojiLarge: {
+    fontSize: 72,
+  },
   imageHint: {
     fontFamily: fonts.semiBold,
     fontSize: fontSize.lg,
@@ -3138,6 +3178,11 @@ const styles = StyleSheet.create({
   },
   matchingEmoji: {
     fontSize: 52,
+  },
+  matchingImageContent: {
+    width: '100%',
+    height: '100%',
+    borderRadius: borderRadius.xl - 3,
   },
   matchingWordsRow: {
     flexDirection: 'row',

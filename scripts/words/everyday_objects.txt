@@ -1,0 +1,473 @@
+word	level
+Chair	beginner
+Table	beginner
+Bed	beginner
+Lamp	beginner
+Door	beginner
+Window	beginner
+Mirror	beginner
+Clock	beginner
+Tv	beginner
+Rug	beginner
+Shelf	beginner
+Pillow	beginner
+Blanket	beginner
+Drawer	beginner
+Cup	beginner
+Plate	beginner
+Fork	beginner
+Spoon	beginner
+Knife	beginner
+Pan	beginner
+Pot	beginner
+Sink	beginner
+Tap	beginner
+Shower	beginner
+Towel	beginner
+Soap	beginner
+Bucket	beginner
+Broom	beginner
+Armchair	elementary
+Stool	elementary
+Cabinet	elementary
+Wardrobe	elementary
+Nightstand	elementary
+Bookshelf	elementary
+Curtain	elementary
+Blinds	elementary
+Ceiling	elementary
+Fan	elementary
+Remote	elementary
+Speaker	elementary
+Microwave	elementary
+Oven	elementary
+Toaster	elementary
+Kettle	elementary
+Fridge	elementary
+Freezer	elementary
+Dishwasher	elementary
+Washing machine	elementary
+Dryer	elementary
+Iron	elementary
+Ironing board	elementary
+Vacuum	elementary
+Mop	beginner
+Doormat	elementary
+Hanger	elementary
+Laundrybasket	elementary
+Trashcan	beginner
+Headboard	intermediate
+Footstool	intermediate
+Sideboard	intermediate
+Cupboard	intermediate
+Cooktop	intermediate
+Cutting board	intermediate
+Utensil holder	intermediate
+Soapdispenser	intermediate
+Toothbrush holder	intermediate
+Showerhead	intermediate
+Bathmat	intermediate
+Toilet paper holder	intermediate
+Airpurifier	intermediate
+Humidifier	intermediate
+Dehumidifier	intermediate
+Extensioncord	elementary
+Light bulb	intermediate
+Lampshade	intermediate
+Pictureframe	intermediate
+Wall clock	intermediate
+Thermostat	intermediate
+Heater	intermediate
+Vent	intermediate
+Shirt	beginner
+Tshirt	beginner
+Pants	beginner
+Skirt	beginner
+Dress	beginner
+Jacket	beginner
+Coat	beginner
+Shoes	beginner
+Sneakers	beginner
+Boots	beginner
+Sandals	beginner
+Socks	beginner
+Hat	beginner
+Cap	beginner
+Belt	beginner
+Bag	beginner
+Backpack	beginner
+Scarf	beginner
+Sweater	elementary
+Hoodie	elementary
+Tights	elementary
+Tracksuit	elementary
+Swimsuit	elementary
+Underwear	elementary
+Bra	elementary
+Pajamas	elementary
+Raincoat	elementary
+Slippers	elementary
+Wallet	beginner
+Purse	elementary
+Watch	beginner
+Sunglasses	elementary
+Turtleneck	intermediate
+Windbreaker	intermediate
+Overcoat	intermediate
+Waistcoat	intermediate
+Overalls	intermediate
+Nightgown	intermediate
+Bathrobe	intermediate
+Sportswear	intermediate
+Activewear	intermediate
+Ankleboots	intermediate
+Highheels	intermediate
+Clutch	intermediate
+Briefcase	intermediate
+Earrings	intermediate
+Necklace	intermediate
+Bracelet	intermediate
+Phone	beginner
+Keys	beginner
+Glasses	beginner
+Notebook	beginner
+Pen	beginner
+Pencil	beginner
+Book	beginner
+Comb	beginner
+Brush	beginner
+Tissue	beginner
+Bottle	beginner
+Umbrella	beginner
+Coin	beginner
+Card	beginner
+Charger	beginner
+Earphones	beginner
+Headphones	elementary
+Keychain	elementary
+Lipstick	elementary
+Perfume	elementary
+Handcream	elementary
+Toothpaste	elementary
+Toothbrush	elementary
+Razor	elementary
+Conditioner	elementary
+Soapbar	elementary
+Mirror compact	elementary
+Hairdryer	elementary
+Makeupbag	elementary
+Passport	elementary
+ID card	elementary
+Wirelessearbuds	intermediate
+Charging cable	intermediate
+Travel adapter	intermediate
+Luggage	intermediate
+Suitcase	intermediate
+Toiletrybag	intermediate
+Cosmetic case	intermediate
+Eyeglass case	intermediate
+Card holder	intermediate
+Money clip	intermediate
+Key organizer	intermediate
+E reader	intermediate
+Notebook cover	intermediate
+Documentfolder	intermediate
+Badge holder	intermediate
+Flashdrive	intermediate
+Bench	beginner
+Streetlight	beginner
+Trafficlight	beginner
+Crosswalk	beginner
+Sidewalk	beginner
+Road	beginner
+Sign	beginner
+Bus stop	beginner
+Mailbox	beginner
+Fence	beginner
+Gate	beginner
+Stairs	beginner
+Elevator	beginner
+Bridge	beginner
+Parking	beginner
+Parkingmeter	beginner
+Trash bin	beginner
+Streetlamp	elementary
+Subwayentrance	elementary
+Turnstile	elementary
+Ticket machine	elementary
+Vending machine	elementary
+Security camera	elementary
+CCTV camera	elementary
+Publictoilet	elementary
+Drinking fountain	elementary
+Bike rack	elementary
+Manhole	elementary
+Stormdrain	elementary
+Handrail	elementary
+Crossing sign	elementary
+Road sign	elementary
+Parkinggarage	elementary
+Traffic cone	intermediate
+Constructionbarrier	intermediate
+Pedestriansignal	intermediate
+Streetnameplate	intermediate
+Bus shelter	intermediate
+Informationkiosk	intermediate
+Wayfindingmap	intermediate
+Surveillance camera	intermediate
+Emergency call box	intermediate
+Fire alarm box	intermediate
+Access ramp	intermediate
+Handicap sign	intermediate
+Street furniture	intermediate
+Public notice board	intermediate
+Electricalcabinet	intermediate
+Desk	beginner
+Eraser	beginner
+Ruler	beginner
+Board	beginner
+Chalk	beginner
+Paper	beginner
+Scissors	beginner
+Glue	beginner
+Calculator	beginner
+Folder	beginner
+Crayons	beginner
+Textbook	elementary
+Workbook	elementary
+Notepad	elementary
+Sharpener	elementary
+Pencil case	elementary
+Binder	elementary
+Divider	elementary
+Clipboard	elementary
+Projector	elementary
+Screen	elementary
+Keyboard	beginner
+Mouse	beginner
+Dictionary	elementary
+Blackboard	intermediate
+Whiteboardmarker	intermediate
+Bulletin board	intermediate
+Notice board	intermediate
+Microscope	intermediate
+Telescope	intermediate
+Labcoat	intermediate
+Goggles	intermediate
+Test tube	intermediate
+Beaker	intermediate
+Graduatedcylinder	intermediate
+Periodictable	intermediate
+Globe	intermediate
+Map board	elementary
+Attendancebook	intermediate
+Gradebook	intermediate
+Namebadge	intermediate
+Locker	intermediate
+Lock	intermediate
+Stapler	beginner
+Paperclip	elementary
+Envelope	elementary
+Shredder	elementary
+Label	beginner
+Nametag	elementary
+Business card	elementary
+Ergonomicchair	intermediate
+Standing desk	intermediate
+Conference phone	intermediate
+Video camera	intermediate
+Cable organizer	intermediate
+Monitor stand	intermediate
+Laptop stand	intermediate
+Document tray	intermediate
+Mail tray	intermediate
+Whiteboarderaser	intermediate
+Presentation remote	intermediate
+Access card	intermediate
+Time clock	intermediate
+Car	beginner
+Bus	beginner
+Train	beginner
+Bicycle	beginner
+Motorbike	beginner
+Plane	beginner
+Boat	beginner
+Ship	beginner
+Truck	beginner
+Van	beginner
+Helmet	beginner
+Seatbelt	beginner
+Wheel	beginner
+Engine	beginner
+Ticket	beginner
+Subway	elementary
+Ferry	elementary
+Canoe	elementary
+Rollerblades	elementary
+Handlebar	elementary
+Brake	elementary
+Headlight	elementary
+Taillight	elementary
+Dashboard	elementary
+Odometer	elementary
+Turnsignal	elementary
+Roof rack	elementary
+Locomotive	intermediate
+Railcar	intermediate
+Carriage	intermediate
+Aircraft	intermediate
+Helicopter	intermediate
+Seaplane	intermediate
+Freight car	intermediate
+Tanktruck	intermediate
+Towtruck	intermediate
+Excavator	intermediate
+Cargo hold	intermediate
+Landinggear	intermediate
+Windscreen	intermediate
+Windshieldwiper	intermediate
+Gearshift	intermediate
+Parkingbrake	intermediate
+Tree	beginner
+Flower	beginner
+Grass	beginner
+Path	beginner
+Fountain	beginner
+Flag	beginner
+Playground	beginner
+Slide	beginner
+Swing	beginner
+Sandbox	beginner
+Ball	beginner
+Net	beginner
+Goal	beginner
+Pool	beginner
+Tent	beginner
+Rock	beginner
+Hill	beginner
+Picnictable	elementary
+Firepit	elementary
+Trail	elementary
+Signpost	elementary
+Lifebuoy	elementary
+Lifeguard chair	elementary
+Bleachers	elementary
+Track	elementary
+Court	elementary
+Scoreboard	elementary
+Recycling bin	elementary
+Wateringcan	elementary
+Hose	elementary
+Shovel	elementary
+Rake	elementary
+Wheelbarrow	elementary
+Amphitheater	intermediate
+Observation deck	intermediate
+Viewpoint	intermediate
+Information board	intermediate
+Directional sign	intermediate
+Parkbench	intermediate
+Picnicblanket	intermediate
+Sunshade	intermediate
+Windsock	intermediate
+Flagpole	intermediate
+Skylight	intermediate
+Handpump	intermediate
+Outdoortable	intermediate
+Outdoorheater	intermediate
+Water feature	intermediate
+Art installation	intermediate
+Memorialplaque	intermediate
+Boundarymarker	intermediate
+Shop	beginner
+Store	beginner
+Cart	beginner
+Basket	beginner
+Counter	beginner
+Cashregister	beginner
+Receipt	beginner
+Price	beginner
+Box	beginner
+Package	beginner
+Can	beginner
+Jar	beginner
+Tray	beginner
+Checkout	elementary
+Barcode	elementary
+Display	elementary
+Fittingroom	elementary
+Price tag	elementary
+Shoppingbag	elementary
+Paperbag	elementary
+Giftbox	elementary
+Discount sign	elementary
+Paymentterminal	elementary
+Cardreader	elementary
+Bill	elementary
+Invoice	elementary
+Order	elementary
+Queue barrier	elementary
+Point of sale	intermediate
+Self checkout	intermediate
+Security tag	intermediate
+Antitheftgate	intermediate
+Productdisplay	intermediate
+Display case	intermediate
+Price board	intermediate
+Menu holder	intermediate
+Brochure rack	intermediate
+Sign holder	intermediate
+Shoppingtrolley	intermediate
+Cashdrawer	intermediate
+Weighingscale	intermediate
+Barcodeprinter	intermediate
+Receipt holder	intermediate
+Countertop	intermediate
+Screwdriver	beginner
+Wrench	beginner
+Pliers	beginner
+Drill	beginner
+Saw	beginner
+Ladder	beginner
+Dustpan	beginner
+Sponge	beginner
+Cloth	beginner
+Gloves	beginner
+Torch	beginner
+Tape	beginner
+Rope	beginner
+Nail	beginner
+Screw	beginner
+Toolbox	elementary
+Measuringtape	elementary
+Level	elementary
+Utilityknife	elementary
+Handsaw	elementary
+Hacksaw	elementary
+Paintbrush	elementary
+Paintroller	elementary
+Paint tray	elementary
+Sandpaper	elementary
+Scraper	elementary
+Chisel	elementary
+Clamp	elementary
+Vise	elementary
+Workgloves	elementary
+Safetygoggles	elementary
+Earplugs	elementary
+Dustmask	elementary
+Cordlessdrill	intermediate
+Impact driver	intermediate
+Anglegrinder	intermediate
+Jigsaw	intermediate
+Circularsaw	intermediate
+Aircompressor	intermediate
+Pressurewasher	intermediate
+Workbench	intermediate
+Tool chest	intermediate
+Laserlevel	intermediate
+Caulkinggun	intermediate
+Greasegun	intermediate
+Pipewrench	intermediate
+Torquewrench	intermediate
+Socket set	intermediate

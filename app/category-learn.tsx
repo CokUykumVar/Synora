@@ -30,6 +30,7 @@ import {
 } from '../src/services/azureSpeech';
 import { getWordsByCategory } from '../src/data/words';
 import { useNetwork } from '../src/context/NetworkContext';
+import WordImage from '../src/components/WordImage';
 
 const REQUIRED_WORDS = 5;
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -44,38 +45,45 @@ interface CategoryWordData {
   example: string;
   exampleTranslation: string;
   category: string;
+  image?: string;
 }
 
 // Words are now loaded dynamically using getWordsByCategory
 
 const CATEGORY_COLORS: { [key: string]: string } = {
+  everyday_objects: '#45B7D1',
+  food_drink: '#FF6B6B',
+  people_roles: '#673AB7',
+  actions: '#FF5722',
+  adjectives: '#00BFA5',
+  emotions: '#F06292',
+  nature_animals: '#8BC34A',
   travel: '#4ECDC4',
-  food: '#FF6B6B',
-  business: '#45B7D1',
-  technology: '#9B59B6',
-  health: '#2ECC71',
-  sports: '#E67E22',
-  music: '#E91E63',
-  entertainment: '#00BCD4',
-  nature: '#8BC34A',
-  shopping: '#FF9800',
-  family: '#673AB7',
-  education: '#3F51B5',
+  sports_hobbies: '#E67E22',
 };
 
 const CATEGORY_ICONS: { [key: string]: string } = {
+  everyday_objects: 'cube-outline',
+  food_drink: 'restaurant-outline',
+  people_roles: 'people-outline',
+  actions: 'flash-outline',
+  adjectives: 'color-palette-outline',
+  emotions: 'heart-outline',
+  nature_animals: 'leaf-outline',
   travel: 'airplane-outline',
-  food: 'restaurant-outline',
-  business: 'briefcase-outline',
-  technology: 'laptop-outline',
-  health: 'fitness-outline',
-  sports: 'football-outline',
-  music: 'musical-notes-outline',
-  entertainment: 'film-outline',
-  nature: 'leaf-outline',
-  shopping: 'cart-outline',
-  family: 'people-outline',
-  education: 'school-outline',
+  sports_hobbies: 'football-outline',
+};
+
+const CATEGORY_EMOJIS: { [key: string]: string } = {
+  everyday_objects: '📦',
+  food_drink: '🍽️',
+  people_roles: '👥',
+  actions: '⚡',
+  adjectives: '🎨',
+  emotions: '❤️',
+  nature_animals: '🌿',
+  travel: '✈️',
+  sports_hobbies: '⚽',
 };
 
 const shuffleArray = <T,>(array: T[]): T[] => {
@@ -175,18 +183,39 @@ export default function CategoryLearnScreen() {
   const [masteredWordIds, setMasteredWordIds] = useState<string[]>([]);
   const isSwipingRef = useRef(false);
 
-  // Initialize available words: load mastered IDs, filter them out, shuffle
+  // Initialize available words: load mastered IDs (learned + known), filter them out, shuffle
   useEffect(() => {
     const loadAndFilterWords = async () => {
       if (allCategoryWords.length === 0) return;
 
-      // Load mastered word IDs for this category (language-specific)
-      const masteredKey = `learned_${learningLang}_${categoryId}`;
+      // Load all mastered word IDs (both learned and known) for this category
+      const masteredKey = `mastered_${learningLang}_${categoryId}`;
       let mastered: string[] = [];
       try {
         const saved = await AsyncStorage.getItem(masteredKey);
         if (saved) mastered = JSON.parse(saved);
       } catch {}
+
+      // Also check legacy learned key for backwards compatibility
+      const learnedKey = `learned_${learningLang}_${categoryId}`;
+      try {
+        const savedLearned = await AsyncStorage.getItem(learnedKey);
+        if (savedLearned) {
+          const learned = JSON.parse(savedLearned);
+          mastered = [...new Set([...mastered, ...learned])];
+        }
+      } catch {}
+
+      // Also check known words key
+      const knownKey = `known_words_${learningLang}_${categoryId}`;
+      try {
+        const savedKnown = await AsyncStorage.getItem(knownKey);
+        if (savedKnown) {
+          const known = JSON.parse(savedKnown);
+          mastered = [...new Set([...mastered, ...known])];
+        }
+      } catch {}
+
       setMasteredWordIds(mastered);
 
       // Filter out mastered words and shuffle
@@ -238,16 +267,38 @@ export default function CategoryLearnScreen() {
   // updateStats: false for "I know this" words, true for words that completed exercises
   const saveMasteredWords = async (newMasteredIds: string[], updateStats: boolean = true) => {
     try {
-      // Use language-specific key to track learned words per language
-      const masteredKey = `learned_${learningLang}_${categoryId}`;
-      let existing: string[] = [];
+      // Track all mastered words (both learned and known) to filter them out in selection
+      const allMasteredKey = `mastered_${learningLang}_${categoryId}`;
+      let allExisting: string[] = [];
       try {
-        const saved = await AsyncStorage.getItem(masteredKey);
-        if (saved) existing = JSON.parse(saved);
+        const savedAll = await AsyncStorage.getItem(allMasteredKey);
+        if (savedAll) allExisting = JSON.parse(savedAll);
       } catch {}
-      const merged = [...new Set([...existing, ...newMasteredIds])];
-      await AsyncStorage.setItem(masteredKey, JSON.stringify(merged));
-      setMasteredWordIds(merged);
+      const allMerged = [...new Set([...allExisting, ...newMasteredIds])];
+      await AsyncStorage.setItem(allMasteredKey, JSON.stringify(allMerged));
+      setMasteredWordIds(allMerged);
+
+      if (updateStats) {
+        // Successfully tested words: Save to learned list
+        const learnedKey = `learned_${learningLang}_${categoryId}`;
+        let learnedExisting: string[] = [];
+        try {
+          const savedLearned = await AsyncStorage.getItem(learnedKey);
+          if (savedLearned) learnedExisting = JSON.parse(savedLearned);
+        } catch {}
+        const learnedMerged = [...new Set([...learnedExisting, ...newMasteredIds])];
+        await AsyncStorage.setItem(learnedKey, JSON.stringify(learnedMerged));
+      } else {
+        // "I know this" words: Save to known list only
+        const knownKey = `known_words_${learningLang}_${categoryId}`;
+        let knownExisting: string[] = [];
+        try {
+          const savedKnown = await AsyncStorage.getItem(knownKey);
+          if (savedKnown) knownExisting = JSON.parse(savedKnown);
+        } catch {}
+        const knownMerged = [...new Set([...knownExisting, ...newMasteredIds])];
+        await AsyncStorage.setItem(knownKey, JSON.stringify(knownMerged));
+      }
 
       // Only update statistics for words that completed exercises successfully
       if (updateStats) {
@@ -1162,12 +1213,21 @@ export default function CategoryLearnScreen() {
         </Text>
       </View>
 
-      {/* Image Card */}
+      {/* Image/Emoji Card */}
       <View style={styles.imageCard}>
-        <View style={styles.imagePlaceholder}>
-          <Ionicons name="image-outline" size={64} color={colors.text.muted} />
-          <Text style={styles.imageHint}>{currentWord?.translation}</Text>
-        </View>
+        {currentWord?.image ? (
+          <WordImage
+            imageId={currentWord.image}
+            size="medium"
+            style={styles.wordImageContainer}
+            fallbackEmoji={CATEGORY_EMOJIS[categoryId || 'travel']}
+          />
+        ) : (
+          <View style={styles.imagePlaceholder}>
+            <Text style={styles.categoryEmojiLarge}>{CATEGORY_EMOJIS[categoryId || 'travel']}</Text>
+            <Text style={styles.imageHint}>{currentWord?.translation}</Text>
+          </View>
+        )}
       </View>
 
       {/* Multiple Choice Options */}
@@ -1253,7 +1313,7 @@ export default function CategoryLearnScreen() {
 
       <Text style={styles.matchingInstruction}>{i18n.t('learn.matchImageToWord')}</Text>
 
-      {/* Translations Row */}
+      {/* Images Row */}
       <View style={styles.matchingTransRow}>
         {shuffledTranslations.map((word) => {
           const isMatched = matchedPairs.includes(word.id);
@@ -1264,7 +1324,7 @@ export default function CategoryLearnScreen() {
             <TouchableOpacity
               key={`trans-${word.id}`}
               style={[
-                styles.matchingTransCard,
+                styles.matchingImageCard,
                 isMatched && styles.matchedCard,
                 isSelected && styles.selectedCard,
                 isWrong && styles.wrongCard,
@@ -1273,9 +1333,16 @@ export default function CategoryLearnScreen() {
               disabled={isMatched}
               activeOpacity={0.7}
             >
-              <Text style={[styles.matchingTransText, isMatched && styles.matchedText]}>
-                {word.translation}
-              </Text>
+              {word.image ? (
+                <WordImage
+                  imageId={word.image}
+                  size="thumbnail"
+                  style={styles.matchingImageContent}
+                  fallbackEmoji={CATEGORY_EMOJIS[categoryId || 'travel']}
+                />
+              ) : (
+                <Text style={styles.matchingEmoji}>{CATEGORY_EMOJIS[categoryId || 'travel']}</Text>
+              )}
               {isMatched && (
                 <View style={styles.matchedOverlay}>
                   <Ionicons name="checkmark-circle" size={32} color="#4CAF50" />
@@ -2205,6 +2272,25 @@ const styles = StyleSheet.create({
     position: 'relative',
     overflow: 'hidden',
   },
+  matchingImageCard: {
+    width: (SCREEN_WIDTH - spacing.lg * 2 - spacing.sm * 2) / 3,
+    aspectRatio: 1,
+    backgroundColor: colors.background.card,
+    borderRadius: borderRadius.xl,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 3,
+    borderColor: colors.border.primary,
+    overflow: 'hidden',
+  },
+  matchingImageContent: {
+    width: '100%',
+    height: '100%',
+    borderRadius: borderRadius.xl - 3,
+  },
+  matchingEmoji: {
+    fontSize: 48,
+  },
   matchingTransText: {
     fontFamily: fonts.medium,
     fontSize: fontSize.sm,
@@ -2838,6 +2924,13 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background.tertiary,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  wordImageContainer: {
+    width: '100%',
+    height: layout.isSmallDevice ? 140 : 180,
+  },
+  categoryEmojiLarge: {
+    fontSize: 72,
   },
   imageHint: {
     fontFamily: fonts.semiBold,

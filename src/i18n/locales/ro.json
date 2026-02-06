@@ -160,6 +160,7 @@
     "new": "Nou",
     "topicsAvailable": "Subiecte Disponibile",
     "wordsToLearn": "Cuvinte de Învățat",
+    "noResults": "Nu s-au găsit rezultate",
     "categoryNames": {
       "all": "Tot",
       "travel": "Călătorii",
@@ -223,7 +224,9 @@
     "quickPractice": "Practică Rapidă",
     "weakWords": "Cuvinte Slabe",
     "statistics": "Statistici",
-    "totalWords": "Total Cuvinte",
+    "learnedWords": "Cuvinte Învățate",
+    "weeklyWords": "Săptămâna Aceasta",
+    "knownWords": "Deja Cunoscute",
     "level": "Nivel",
     "daysActive": "Zile Active",
     "accuracy": "Precizie",
@@ -274,7 +277,9 @@
     "deleteMessage": "Această acțiune nu poate fi anulată. Toate datele tale vor fi șterse permanent.",
     "delete": "Șterge",
     "cancel": "Anulează",
-    "madeWith": "Făcut cu dragoste"
+    "madeWith": "Făcut cu dragoste",
+    "languageError": "Eroare de limbă",
+    "sameLanguageWarning": "Limba maternă și limba pe care doriți să o învățați nu pot fi aceleași."
   },
   "profile": {
     "title": "Profil",

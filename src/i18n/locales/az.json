@@ -160,6 +160,7 @@
     "new": "Yeni",
     "topicsAvailable": "Mövcud Mövzular",
     "wordsToLearn": "Öyrəniləcək Sözlər",
+    "noResults": "Heç bir nəticə tapılmadı",
     "categoryNames": {
       "all": "Hamısı",
       "travel": "Səyahət",
@@ -223,7 +224,9 @@
     "quickPractice": "Sürətli Məşq",
     "weakWords": "Zəif Sözlər",
     "statistics": "Statistika",
-    "totalWords": "Ümumi Söz",
+    "learnedWords": "Öyrənilən Sözlər",
+    "weeklyWords": "Bu Həftə",
+    "knownWords": "Artıq Bilinən",
     "level": "Səviyyə",
     "daysActive": "Aktiv Günlər",
     "accuracy": "Dəqiqlik",
@@ -274,7 +277,9 @@
     "deleteMessage": "Bu əməliyyat geri qaytarıla bilməz. Bütün məlumatlarınız həmişəlik silinəcək.",
     "delete": "Sil",
     "cancel": "Ləğv et",
-    "madeWith": "Sevgi ilə hazırlanıb"
+    "madeWith": "Sevgi ilə hazırlanıb",
+    "languageError": "Dil xətası",
+    "sameLanguageWarning": "Ana diliniz və öyrənmək istədiyiniz dil eyni ola bilməz."
   },
   "profile": {
     "title": "Profil",

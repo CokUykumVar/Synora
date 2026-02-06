@@ -6,6 +6,7 @@ import {
   Animated,
   TouchableOpacity,
   Dimensions,
+  ScrollView,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
@@ -17,9 +18,8 @@ import { useUser } from '../src/context/UserContext';
 import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/constants/theme';
 
 const ALL_CATEGORY_IDS = [
-  'travel', 'food', 'business', 'technology', 'health', 'sports',
-  'music', 'entertainment', 'nature', 'shopping', 'family', 'education',
-  'verbs', 'adjectives', 'emotions'
+  'everyday_objects', 'food_drink', 'people_roles', 'actions',
+  'adjectives', 'emotions', 'nature_animals', 'travel', 'sports_hobbies'
 ];
 
 const { width } = Dimensions.get('window');
@@ -44,6 +44,7 @@ export default function HomeScreen() {
     dailyGoal: preferences.dailyGoal || 10,
     learnedWords: 0,
     weeklyWords: 0,
+    knownWords: 0,
     level: preferences.level || 'intermediate',
   });
 
@@ -52,6 +53,7 @@ export default function HomeScreen() {
     try {
       // Load total learned words across all categories for this language
       let totalLearned = 0;
+      let totalKnown = 0;
       for (const catId of ALL_CATEGORY_IDS) {
         const key = `learned_${learningLang}_${catId}`;
         try {
@@ -59,6 +61,16 @@ export default function HomeScreen() {
           if (saved) {
             const learnedIds = JSON.parse(saved) as string[];
             totalLearned += learnedIds.length;
+          }
+        } catch {}
+
+        // Load known words (marked with "I know this")
+        const knownKey = `known_words_${learningLang}_${catId}`;
+        try {
+          const savedKnown = await AsyncStorage.getItem(knownKey);
+          if (savedKnown) {
+            const knownIds = JSON.parse(savedKnown) as string[];
+            totalKnown += knownIds.length;
           }
         } catch {}
       }
@@ -102,6 +114,7 @@ export default function HomeScreen() {
         dailyGoal: preferences.dailyGoal || 10,
         learnedWords: totalLearned,
         weeklyWords,
+        knownWords: totalKnown,
         level: preferences.level || 'intermediate',
       });
     } catch (error) {
@@ -130,14 +143,6 @@ export default function HomeScreen() {
       }),
     ]).start();
 
-    // Animate progress bar
-    Animated.timing(progressAnim, {
-      toValue: progressPercent,
-      duration: 1000,
-      delay: 300,
-      useNativeDriver: false,
-    }).start();
-
     // Streak pulse animation
     Animated.loop(
       Animated.sequence([
@@ -154,6 +159,15 @@ export default function HomeScreen() {
       ])
     ).start();
   }, []);
+
+  // Animate progress bar when data changes
+  useEffect(() => {
+    Animated.timing(progressAnim, {
+      toValue: progressPercent,
+      duration: 800,
+      useNativeDriver: false,
+    }).start();
+  }, [progressPercent]);
 
   const progressWidth = progressAnim.interpolate({
     inputRange: [0, 100],
@@ -177,6 +191,10 @@ export default function HomeScreen() {
             },
           ]}
         >
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={styles.scrollContent}
+          >
           {/* Header */}
           <View style={styles.header}>
             <View style={styles.headerLeft}>
@@ -268,6 +286,15 @@ export default function HomeScreen() {
               </View>
 
               <View style={styles.statItem}>
+                <View style={[styles.progressRing, styles.progressRingKnown]}>
+                  <View style={[styles.progressRingInner, styles.progressRingInnerKnown]}>
+                    <Text style={styles.ringNumber}>{userData.knownWords}</Text>
+                  </View>
+                </View>
+                <Text style={styles.ringLabel}>{i18n.t('home.knownWords')}</Text>
+              </View>
+
+              <View style={styles.statItem}>
                 <View style={styles.progressRing}>
                   <View style={styles.progressRingInner}>
                     <Text style={styles.ringNumber}>{userData.weeklyWords}</Text>
@@ -278,7 +305,8 @@ export default function HomeScreen() {
             </View>
           </View>
 
-                  </Animated.View>
+          </ScrollView>
+        </Animated.View>
 
       {/* Bottom Navigation */}
       <View style={styles.bottomNav}>
@@ -309,7 +337,10 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+  },
+  scrollContent: {
     paddingHorizontal: spacing.lg,
+    paddingBottom: 100, // Space for bottom navigation
   },
   header: {
     flexDirection: 'row',
@@ -522,6 +553,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(201, 162, 39, 0.1)',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  progressRingKnown: {
+    borderColor: '#4ECDC4',
+  },
+  progressRingInnerKnown: {
+    backgroundColor: 'rgba(78, 205, 196, 0.1)',
   },
   ringNumber: {
     fontFamily: fonts.heading,

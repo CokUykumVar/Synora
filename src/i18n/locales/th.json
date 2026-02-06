@@ -196,6 +196,7 @@
     "new": "ใหม่",
     "topicsAvailable": "หัวข้อที่มี",
     "wordsToLearn": "คำศัพท์ที่จะเรียน",
+    "noResults": "ไม่พบผลลัพธ์",
     "categoryNames": {
       "all": "ทั้งหมด",
       "travel": "การเดินทาง",
@@ -222,7 +223,9 @@
     "review": "ทบทวน",
     "quickPractice": "ฝึกด่วน",
     "statistics": "สถิติ",
-    "totalWords": "คำทั้งหมด",
+    "learnedWords": "คำที่เรียน",
+    "weeklyWords": "สัปดาห์นี้",
+    "knownWords": "รู้อยู่แล้ว",
     "level": "ระดับ",
     "daysActive": "วันที่ใช้งาน",
     "accuracy": "ความแม่นยำ",
@@ -273,7 +276,9 @@
     "deleteMessage": "การดำเนินการนี้ไม่สามารถยกเลิกได้ ข้อมูลทั้งหมดของคุณจะถูกลบอย่างถาวร",
     "delete": "ลบ",
     "cancel": "ยกเลิก",
-    "madeWith": "สร้างด้วยความรัก"
+    "madeWith": "สร้างด้วยความรัก",
+    "languageError": "ข้อผิดพลาดภาษา",
+    "sameLanguageWarning": "ภาษาแม่และภาษาที่ต้องการเรียนไม่สามารถเป็นภาษาเดียวกันได้"
   },
   "profile": {
     "title": "โปรไฟล์",

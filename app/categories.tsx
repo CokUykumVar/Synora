@@ -21,21 +21,15 @@ import { getWordsByCategory } from '../src/data/words';
 const { width } = Dimensions.get('window');
 
 const ALL_CATEGORIES = [
-  { id: 'travel', icon: 'airplane-outline', color: '#4ECDC4' },
-  { id: 'food', icon: 'restaurant-outline', color: '#FF6B6B' },
-  { id: 'business', icon: 'briefcase-outline', color: '#45B7D1' },
-  { id: 'technology', icon: 'laptop-outline', color: '#9B59B6' },
-  { id: 'health', icon: 'fitness-outline', color: '#2ECC71' },
-  { id: 'sports', icon: 'football-outline', color: '#E67E22' },
-  { id: 'music', icon: 'musical-notes-outline', color: '#E91E63' },
-  { id: 'entertainment', icon: 'film-outline', color: '#00BCD4' },
-  { id: 'nature', icon: 'leaf-outline', color: '#8BC34A' },
-  { id: 'shopping', icon: 'cart-outline', color: '#FF9800' },
-  { id: 'family', icon: 'people-outline', color: '#673AB7' },
-  { id: 'education', icon: 'school-outline', color: '#3F51B5' },
-  { id: 'verbs', icon: 'flash-outline', color: '#FF5722' },
+  { id: 'everyday_objects', icon: 'cube-outline', color: '#45B7D1' },
+  { id: 'food_drink', icon: 'restaurant-outline', color: '#FF6B6B' },
+  { id: 'people_roles', icon: 'people-outline', color: '#673AB7' },
+  { id: 'actions', icon: 'flash-outline', color: '#FF5722' },
   { id: 'adjectives', icon: 'color-palette-outline', color: '#00BFA5' },
   { id: 'emotions', icon: 'heart-outline', color: '#F06292' },
+  { id: 'nature_animals', icon: 'leaf-outline', color: '#8BC34A' },
+  { id: 'travel', icon: 'airplane-outline', color: '#4ECDC4' },
+  { id: 'sports_hobbies', icon: 'football-outline', color: '#E67E22' },
 ];
 
 export default function CategoriesScreen() {

@@ -160,7 +160,9 @@
     "quickPractice": "Prática Rápida",
     "weakWords": "Palavras Fracas",
     "statistics": "Estatísticas",
-    "totalWords": "Total de Palavras",
+    "learnedWords": "Palavras Aprendidas",
+    "weeklyWords": "Palavras Semanais",
+    "knownWords": "Já Conhecidas",
     "level": "Nível",
     "daysActive": "Dias Ativos",
     "accuracy": "Precisão",
@@ -228,6 +230,7 @@
     "new": "Novo",
     "topicsAvailable": "Tópicos Disponíveis",
     "wordsToLearn": "Palavras para Aprender",
+    "noResults": "Nenhum resultado encontrado",
     "categoryNames": {
       "all": "Tudo",
       "travel": "Viagem",
@@ -274,7 +277,9 @@
     "deleteMessage": "Esta ação não pode ser desfeita. Todos os seus dados serão excluídos permanentemente.",
     "delete": "Excluir",
     "cancel": "Cancelar",
-    "madeWith": "Feito com amor"
+    "madeWith": "Feito com amor",
+    "languageError": "Erro de idioma",
+    "sameLanguageWarning": "Seu idioma nativo e o idioma que deseja aprender não podem ser iguais."
   },
   "profile": {
     "title": "Perfil",

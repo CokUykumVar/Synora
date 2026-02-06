@@ -1,0 +1,101 @@
+word	level
+Happy	beginner
+Sad	beginner
+Angry	beginner
+Scared	beginner
+Surprised	beginner
+Excited	beginner
+Smiling	beginner
+Laughing	beginner
+Crying	beginner
+Sleepy	beginner
+Tired	beginner
+Bored	beginner
+Calm	beginner
+Relaxed	beginner
+Nervous	beginner
+Worried	beginner
+Shy	beginner
+Proud face	beginner
+Confident face	beginner
+Friendly	beginner
+Upset	beginner
+Annoyed	beginner
+Frightened	beginner
+Cheerful	beginner
+Grumpy	beginner
+Hopeful face	beginner
+Relieved	beginner
+Embarrassed	beginner
+Confused face	beginner
+Curious face	beginner
+Afraid	beginner
+Joyful	beginner
+Guilty face	beginner
+Ashamed face	beginner
+Surprised happy	beginner
+Surprised scared	beginner
+Content	beginner
+Lonely	beginner
+Hurt	beginner
+Disappointed	beginner
+Pleased	elementary
+Delighted	elementary
+Thrilled	elementary
+Amused	elementary
+Satisfied	elementary
+Uneasy	elementary
+Tense	elementary
+Irritated	elementary
+Frustrated	elementary
+Overwhelmed face	elementary
+Startled	elementary
+Shocked	elementary
+Alarmed	elementary
+Conflicted face	elementary
+Hesitant face	elementary
+Relieved smile	elementary
+Forced smile	elementary
+Fake smile	elementary
+Awkward	elementary
+Uncomfortable	elementary
+Resentful face	elementary
+Jealous face	elementary
+Disgusted	elementary
+Repulsed	elementary
+Grossed out	elementary
+Fearful	elementary
+Panicked	elementary
+Worried face	elementary
+Hopeful look	elementary
+Longing face	elementary
+Soft smile	elementary
+Neutral face	elementary
+Blank face	elementary
+Stern	elementary
+Serious	elementary
+Subtle smile	intermediate
+Tight lipped	intermediate
+Raised eyebrows	intermediate
+Furrowed brow	intermediate
+Wide eyed	intermediate
+Squinting	intermediate
+Grimacing	intermediate
+Smirk	intermediate
+Half smile	intermediate
+Jaw clenched	intermediate
+Lip biting	intermediate
+Teary eyed	intermediate
+Glassy eyed	intermediate
+Downcast	intermediate
+Frowning	intermediate
+Pouting	intermediate
+Strained face	intermediate
+Numb face	intermediate
+Emotionless	intermediate
+Controlled expression	intermediate
+Forced calm	intermediate
+Suppressed anger	intermediate
+Masked sadness	intermediate
+Relief exhale	intermediate
+Micro smile	intermediate

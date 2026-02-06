@@ -1,0 +1,226 @@
+word	level
+Football	beginner
+Soccer	beginner
+Handball	beginner
+Ice hockey	beginner
+Field hockey	beginner
+Water polo	beginner
+Floorball	beginner
+Beach volleyball	elementary
+Street basketball	elementary
+Indoor volleyball	elementary
+Five a side football	elementary
+Seven a side rugby	elementary
+Flag football	elementary
+Baseball league	elementary
+College basketball	elementary
+Amateur football	elementary
+Youth soccer	elementary
+Women soccer	elementary
+Wheelchair basketball	elementary
+Sledge hockey	elementary
+Handball court	elementary
+Volleyball court	elementary
+Basketball court	elementary
+Soccer field	elementary
+Ice rink hockey	elementary
+American football	intermediate
+Canadian football	intermediate
+Australian football	intermediate
+Gaelic football	intermediate
+Hurling	intermediate
+Cycle polo	intermediate
+Underwater hockey	intermediate
+Beach soccer	intermediate
+Snow volleyball	intermediate
+Arena football	intermediate
+Roller hockey	intermediate
+Street hockey	intermediate
+Indoor soccer	intermediate
+Powerchair football	intermediate
+Blind football	intermediate
+Ball	beginner
+Bat	beginner
+Net	beginner
+Goal	beginner
+Helmet	beginner
+Gloves	beginner
+Shoes	beginner
+Whistle	beginner
+Stopwatch	beginner
+Cone	beginner
+Flag	beginner
+Shin guards	beginner
+Mouthguard	beginner
+Knee pads	beginner
+Elbow pads	beginner
+Water bottle	beginner
+Sports bag	beginner
+Tennis ball	elementary
+Tennis racket	elementary
+Badminton racket	elementary
+Shuttlecock	elementary
+Cricket bat	elementary
+Cricket helmet	elementary
+Baseball glove	elementary
+Catcher mask	elementary
+Hockey stick	elementary
+Ice skates	elementary
+Roller skates	elementary
+Ski poles	elementary
+Skis	elementary
+Surfboard	elementary
+Paddle	elementary
+Goalkeeper gloves	intermediate
+Corner flag	intermediate
+Training hurdle	intermediate
+Agility ladder	intermediate
+Resistance band	intermediate
+Medicine ball	intermediate
+Dumbbell	intermediate
+Barbell	intermediate
+Weight plate	intermediate
+Gym mat	intermediate
+Treadmill	intermediate
+Rowing machine	intermediate
+Exercise bike	intermediate
+Scoreboard	intermediate
+Referee flag	intermediate
+Protective cup	intermediate
+Chest protector	intermediate
+Headgear	intermediate
+Equipment rack	intermediate
+Boxing	beginner
+Swimming	beginner
+Running	beginner
+Cycling	beginner
+Gymnastics	beginner
+Wrestling	beginner
+Table tennis	beginner
+Skating	beginner
+Skiing	beginner
+Archery	beginner
+Fencing	beginner
+Weightlifting	elementary
+Powerlifting	elementary
+Aerobics	elementary
+Javelin throw	elementary
+Shot put	elementary
+Discus throw	elementary
+High jump	elementary
+Long jump	elementary
+Pole vault	elementary
+Speed skating	elementary
+Figure skating	elementary
+Freestyle swimming	intermediate
+Butterfly stroke	intermediate
+Backstroke	intermediate
+Breaststroke	intermediate
+Road cycling	intermediate
+Track cycling	intermediate
+Mountain biking	intermediate
+Time trial cycling	intermediate
+Artistic gymnastics	intermediate
+Rhythmic gymnastics	intermediate
+Trampoline gymnastics	intermediate
+Greco roman wrestling	intermediate
+Freestyle wrestling	intermediate
+Olympic weightlifting	intermediate
+Precision archery	intermediate
+Target shooting	intermediate
+Sport climbing	elementary
+Lead climbing	intermediate
+Speed climbing	intermediate
+Hiking	beginner
+Rock climbing	beginner
+Mountaineering	beginner
+Kayaking	beginner
+Canoeing	beginner
+Hang gliding	beginner
+Scuba diving	beginner
+Fishing	beginner
+Horseback riding	beginner
+Trail running	beginner
+Backpacking	elementary
+Alpine climbing	elementary
+Ice climbing	elementary
+Whitewater rafting	elementary
+Sea kayaking	elementary
+Stand up paddling	elementary
+Freediving	elementary
+Cave diving	elementary
+Orienteering	elementary
+Cross country skiing	elementary
+Snowshoeing	elementary
+Wildlife watching	elementary
+Expedition climbing	intermediate
+High altitude mountaineering	intermediate
+Big wall climbing	intermediate
+Aid climbing	intermediate
+Ice mountaineering	intermediate
+Open water swimming	intermediate
+Deep sea diving	intermediate
+Technical diving	intermediate
+Wreck diving	intermediate
+Ice diving	intermediate
+Volcano trekking	intermediate
+Desert trekking	intermediate
+Jungle trekking	intermediate
+Polar expedition	intermediate
+Heli skiing	intermediate
+Backcountry skiing	intermediate
+Speed flying	intermediate
+Wingsuit flying	intermediate
+Guitar	beginner
+Violin	beginner
+Drums	beginner
+Flute	beginner
+Camera	beginner
+Paintbrush	beginner
+Canvas	beginner
+Sketchbook	beginner
+Pencil	beginner
+Crayons	beginner
+Scissors	beginner
+Glue	beginner
+Yarn	beginner
+Knitting needles	beginner
+Sewing machine	beginner
+Needle thread	beginner
+Jigsaw puzzle	beginner
+Acoustic guitar	elementary
+Electric guitar	elementary
+Keyboard	elementary
+Microphone	elementary
+Headphones	elementary
+Tripod	elementary
+Camera lens	elementary
+Easel	elementary
+Palette	elementary
+Watercolor set	elementary
+Oil paints	elementary
+Calligraphy pen	elementary
+Fountain pen	elementary
+Origami paper	elementary
+Model kit	elementary
+Rc car	elementary
+Board game	elementary
+Chess set	elementary
+Dice	elementary
+Card deck	elementary
+Bass guitar	intermediate
+Saxophone	intermediate
+Trumpet	intermediate
+Drum kit	intermediate
+Audio mixer	intermediate
+Studio monitor	intermediate
+Dslr camera	intermediate
+Film camera	intermediate
+Darkroom tank	intermediate
+Drawing tablet	intermediate
+Stylus pen	intermediate
+Embroidery hoop	intermediate
+Quilting frame	intermediate
+Soldering iron	intermediate
+Model train	intermediate
+Slot car track	intermediate

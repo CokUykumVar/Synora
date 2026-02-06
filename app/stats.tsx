@@ -32,21 +32,15 @@ const WEEKLY_DATA_BASE = [
 ];
 
 const ALL_CATEGORIES = [
-  { id: 'travel', color: '#4ECDC4', icon: 'airplane-outline' },
-  { id: 'food', color: '#FF6B6B', icon: 'restaurant-outline' },
-  { id: 'business', color: '#45B7D1', icon: 'briefcase-outline' },
-  { id: 'technology', color: '#9B59B6', icon: 'laptop-outline' },
-  { id: 'health', color: '#2ECC71', icon: 'fitness-outline' },
-  { id: 'sports', color: '#E67E22', icon: 'football-outline' },
-  { id: 'music', color: '#E91E63', icon: 'musical-notes-outline' },
-  { id: 'entertainment', color: '#00BCD4', icon: 'film-outline' },
-  { id: 'nature', color: '#8BC34A', icon: 'leaf-outline' },
-  { id: 'shopping', color: '#FF9800', icon: 'cart-outline' },
-  { id: 'family', color: '#673AB7', icon: 'people-outline' },
-  { id: 'education', color: '#3F51B5', icon: 'school-outline' },
-  { id: 'verbs', color: '#FF5722', icon: 'flash-outline' },
+  { id: 'everyday_objects', color: '#45B7D1', icon: 'cube-outline' },
+  { id: 'food_drink', color: '#FF6B6B', icon: 'restaurant-outline' },
+  { id: 'people_roles', color: '#673AB7', icon: 'people-outline' },
+  { id: 'actions', color: '#FF5722', icon: 'flash-outline' },
   { id: 'adjectives', color: '#00BFA5', icon: 'color-palette-outline' },
   { id: 'emotions', color: '#F06292', icon: 'heart-outline' },
+  { id: 'nature_animals', color: '#8BC34A', icon: 'leaf-outline' },
+  { id: 'travel', color: '#4ECDC4', icon: 'airplane-outline' },
+  { id: 'sports_hobbies', color: '#E67E22', icon: 'football-outline' },
 ];
 
 export default function StatsScreen() {
@@ -73,7 +67,7 @@ export default function StatsScreen() {
     weeklyAverage: 0,
     totalTime: 0,
     weeklyTime: 0,
-    topCategory: 'travel',
+    topCategory: 'everyday_objects',
   });
 
   const [weeklyData, setWeeklyData] = useState(WEEKLY_DATA_BASE.map(day => ({ ...day, goal: dailyGoal })));
@@ -84,7 +78,7 @@ export default function StatsScreen() {
     try {
       // Load total learned words across all categories for this language
       let totalLearned = 0;
-      let topCat = 'travel';
+      let topCat = 'everyday_objects';
       let maxCatWords = 0;
       const catStatsArray: Array<{ id: string; words: number; total: number; color: string; icon: string }> = [];
 

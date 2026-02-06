@@ -99,21 +99,15 @@
     "hint": "{{count}} konu seçildi",
     "hintMin": "En az {{min}} konu seçmelisin ({{count}}/{{min}})",
     "topics": {
-      "travel": "Seyahat",
-      "food": "Yemek & İçecek",
-      "business": "İş & Kariyer",
-      "technology": "Teknoloji",
-      "health": "Sağlık",
-      "sports": "Spor",
-      "music": "Müzik",
-      "entertainment": "Eğlence",
-      "nature": "Doğa",
-      "shopping": "Alışveriş",
-      "family": "Aile & İlişkiler",
-      "education": "Eğitim",
-      "verbs": "Fiiller",
+      "everyday_objects": "Günlük Nesneler ve Mekanlar",
+      "food_drink": "Yiyecek ve İçecek",
+      "people_roles": "İnsanlar ve Roller",
+      "actions": "Eylemler (Fiiller)",
       "adjectives": "Sıfatlar",
-      "emotions": "Duygular"
+      "emotions": "Duygular",
+      "nature_animals": "Doğa ve Hayvanlar",
+      "travel": "Seyahat",
+      "sports_hobbies": "Spor ve Hobiler"
     }
   },
   "habit": {
@@ -171,6 +165,7 @@
     "statistics": "İstatistikler",
     "learnedWords": "Öğrenilen Kelime",
     "weeklyWords": "Haftalık Kelime",
+    "knownWords": "Zaten Bilinen",
     "level": "Seviye",
     "daysActive": "Aktif Gün",
     "accuracy": "Doğruluk",
@@ -242,18 +237,18 @@
     "new": "Yeni",
     "topicsAvailable": "Mevcut Konu",
     "wordsToLearn": "Öğrenilecek Kelime",
+    "noResults": "Sonuç bulunamadı",
     "categoryNames": {
       "all": "Tümü",
-      "travel": "Seyahat",
-      "food": "Yemek",
-      "business": "İş",
-      "technology": "Teknoloji",
-      "health": "Sağlık",
-      "sports": "Spor",
-      "music": "Müzik",
-      "verbs": "Fiiller",
+      "everyday_objects": "Nesneler",
+      "food_drink": "Yiyecek",
+      "people_roles": "İnsanlar",
+      "actions": "Eylemler",
       "adjectives": "Sıfatlar",
-      "emotions": "Duygular"
+      "emotions": "Duygular",
+      "nature_animals": "Doğa",
+      "travel": "Seyahat",
+      "sports_hobbies": "Spor"
     }
   },
   "settings": {
@@ -288,7 +283,9 @@
     "deleteMessage": "Bu işlem geri alınamaz. Tüm verileriniz kalıcı olarak silinecektir.",
     "delete": "Sil",
     "cancel": "İptal",
-    "madeWith": "Sevgiyle yapıldı"
+    "madeWith": "Sevgiyle yapıldı",
+    "languageError": "Dil Hatası",
+    "sameLanguageWarning": "Ana diliniz ile öğrenmek istediğiniz dil aynı olamaz."
   },
   "profile": {
     "title": "Profil",

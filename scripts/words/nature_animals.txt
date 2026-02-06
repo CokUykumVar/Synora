@@ -1,0 +1,326 @@
+word	level
+Mountain	beginner
+Hill	beginner
+Valley	beginner
+Plain	beginner
+Desert	beginner
+Forest	beginner
+Field	beginner
+Meadow	beginner
+Beach	beginner
+Coast	beginner
+Island	beginner
+Cliff	beginner
+Rock	beginner
+Soil	beginner
+Ground	beginner
+Path	beginner
+Trail	beginner
+Cave	beginner
+Volcano	beginner
+Ravine	elementary
+Dune	elementary
+Ridge	elementary
+Slope	elementary
+Foothills	elementary
+Basin	elementary
+Lowland	elementary
+Highland	elementary
+Peninsula	elementary
+Headland	elementary
+Shoreline	elementary
+Riverbank	elementary
+Sandbar	elementary
+Rocky shore	elementary
+Gravel	elementary
+Pebble	elementary
+Mudflat	elementary
+Sinkhole	elementary
+Escarpment	intermediate
+Gorge	intermediate
+Scree	intermediate
+Alluvial fan	intermediate
+Floodplain	intermediate
+Lava field	intermediate
+Crater	intermediate
+Stalactite	intermediate
+Water	beginner
+River	beginner
+Lake	beginner
+Sea	beginner
+Pond	beginner
+Stream	beginner
+Creek	beginner
+Waterfall	beginner
+Rain	beginner
+Snow	beginner
+Ice	beginner
+Wave	beginner
+Shore	beginner
+Pool	beginner
+Spring	beginner
+Puddle	beginner
+Fog	beginner
+Bay	elementary
+Lagoon	elementary
+Estuary	elementary
+Wetland	elementary
+Marsh	elementary
+Swamp	elementary
+Floodwater	elementary
+Glacier	elementary
+Snowbank	elementary
+Hail	elementary
+Mist	elementary
+Dew	elementary
+Foam	elementary
+Ripples	elementary
+Tide	elementary
+Sound	intermediate
+Strait	intermediate
+Inlet	intermediate
+Backwater	intermediate
+Oxbow lake	intermediate
+Meltwater	intermediate
+Brackish water	intermediate
+Saltwater	intermediate
+Freshwater	intermediate
+Pack ice	intermediate
+Ice sheet	intermediate
+Frazil ice	intermediate
+Steam	intermediate
+Vapor	intermediate
+Geyser	intermediate
+Hot spring	intermediate
+Mineral spring	intermediate
+Saline pool	intermediate
+Tree	beginner
+Flower	beginner
+Grass	beginner
+Leaf	beginner
+Plant	beginner
+Bush	beginner
+Shrub	beginner
+Vine	beginner
+Root	beginner
+Seed	beginner
+Branch	beginner
+Trunk	beginner
+Petal	beginner
+Bud	beginner
+Stem	beginner
+Fern	beginner
+Moss	beginner
+Palm	beginner
+Pine	beginner
+Oak	elementary
+Maple	elementary
+Birch	elementary
+Willow	elementary
+Bamboo	elementary
+Ivy	elementary
+Hedge	elementary
+Sapling	elementary
+Needle leaf	elementary
+Broadleaf	elementary
+Conifer	elementary
+Evergreen	elementary
+Deciduous	elementary
+Wildflower	elementary
+Sunflower	elementary
+Tulip	elementary
+Daisy	elementary
+Grassland	elementary
+Undergrowth	elementary
+Lichen	intermediate
+Succulent	intermediate
+Orchid	intermediate
+Seaweed	intermediate
+Algae	intermediate
+Canopy	intermediate
+Ground cover	intermediate
+Thicket	intermediate
+Creeper	intermediate
+Climber	intermediate
+Frond	intermediate
+Needle cluster	intermediate
+Seedling	intermediate
+Rhizome	intermediate
+Bulb	intermediate
+Tuber	intermediate
+Sun	beginner
+Moon	beginner
+Cloud	beginner
+Sky	beginner
+Star	beginner
+Wind	beginner
+Rainbow	beginner
+Lightning	beginner
+Thundercloud	beginner
+Sunrise	beginner
+Sunset	beginner
+Daylight	beginner
+Night sky	beginner
+Overcast	beginner
+Clear sky	beginner
+Cumulus cloud	elementary
+Cirrus cloud	elementary
+Stratus cloud	elementary
+Rainshaft	elementary
+Snowfall	elementary
+Sleet	elementary
+Drizzle	elementary
+Gust	elementary
+Breeze	elementary
+Gale	elementary
+Sunbeam	elementary
+Sunflare	elementary
+Moonlight	elementary
+Starlight	elementary
+Thunderhead	intermediate
+Anvil cloud	intermediate
+Lenticular cloud	intermediate
+Mammatus cloud	intermediate
+Rain band	intermediate
+Snowdrift	intermediate
+Fogbank	intermediate
+Dust cloud	intermediate
+Waterspout	intermediate
+Cyclone	intermediate
+Hurricane	intermediate
+Typhoon	intermediate
+Sun dog	intermediate
+Crepuscular rays	intermediate
+Zodiacal light	intermediate
+Noctilucent clouds	intermediate
+Dog	beginner
+Cat	beginner
+Cow	beginner
+Horse	beginner
+Sheep	beginner
+Goat	beginner
+Pig	beginner
+Chicken	beginner
+Duck	beginner
+Goose	beginner
+Rabbit	beginner
+Donkey	beginner
+Turkey	beginner
+Hen	beginner
+Rooster	beginner
+Chick	beginner
+Calf	beginner
+Lamb	beginner
+Kitten	beginner
+Puppy	beginner
+Bull	elementary
+Ox	elementary
+Mare	elementary
+Stallion	elementary
+Ram	elementary
+Ewe	elementary
+Kid goat	elementary
+Hog	elementary
+Sow	elementary
+Gander	elementary
+Guinea fowl	elementary
+Quail	elementary
+Pigeon	elementary
+Dove	elementary
+Barn cat	elementary
+Farm dog	elementary
+Draft horse	elementary
+Water buffalo	intermediate
+Yak	intermediate
+Llama	intermediate
+Reindeer	intermediate
+Mule	intermediate
+Peafowl	intermediate
+Peacock	intermediate
+Ostrich	intermediate
+Silkie chicken	intermediate
+Angora goat	intermediate
+Highland cattle	intermediate
+Miniature horse	intermediate
+Heritage turkey	intermediate
+Fallow deer	intermediate
+Domestic goose	intermediate
+Lion	beginner
+Elephant	beginner
+Giraffe	beginner
+Bear	beginner
+Wolf	beginner
+Fox	beginner
+Deer	beginner
+Monkey	beginner
+Chimpanzee	beginner
+Hippopotamus	beginner
+Rhinoceros	beginner
+Camel	beginner
+Kangaroo	beginner
+Cheetah	beginner
+Cougar	elementary
+Jackal	elementary
+Warthog	elementary
+Boar	elementary
+Antelope	elementary
+Elk	elementary
+Moose	elementary
+Buffalo	elementary
+Ibex	elementary
+Chamois	elementary
+Sloth	elementary
+Snow leopard	intermediate
+Clouded leopard	intermediate
+African wild dog	intermediate
+Maned wolf	intermediate
+Musk ox	intermediate
+Wildebeest	intermediate
+Fish	beginner
+Shark	beginner
+Whale	beginner
+Dolphin	beginner
+Octopus	beginner
+Squid	beginner
+Jellyfish	beginner
+Crab	beginner
+Lobster	beginner
+Shrimp	beginner
+Seal	beginner
+Sea lion	beginner
+Turtle	beginner
+Seahorse	beginner
+Starfish	beginner
+Eel	beginner
+Ray	beginner
+Clam	beginner
+Oyster	beginner
+Mussel	beginner
+Great white shark	elementary
+Hammerhead shark	elementary
+Narwhal	elementary
+Moray eel	elementary
+Lionfish	elementary
+Clownfish	elementary
+Tuna	elementary
+Swordfish	elementary
+Stingray	elementary
+Blue crab	elementary
+Hermit crab	elementary
+Basking shark	intermediate
+Whale shark	intermediate
+Thresher shark	intermediate
+Reef shark	intermediate
+Giant squid	intermediate
+Colossal squid	intermediate
+Cuttlefish	intermediate
+Leafy seadragon	intermediate
+Blue ringed octopus	intermediate
+Giant clam	intermediate
+Horseshoe crab	intermediate
+Sea urchin	intermediate
+Sea cucumber	intermediate
+Box jellyfish	intermediate
+Comb jelly	intermediate
+Flying fish	intermediate
+Mudskipper	intermediate

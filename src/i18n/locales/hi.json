@@ -196,6 +196,7 @@
     "new": "नया",
     "topicsAvailable": "उपलब्ध विषय",
     "wordsToLearn": "सीखने के लिए शब्द",
+    "noResults": "कोई परिणाम नहीं मिला",
     "categoryNames": {
       "all": "सभी",
       "travel": "यात्रा",
@@ -223,7 +224,9 @@
     "quickPractice": "त्वरित अभ्यास",
     "weakWords": "कमज़ोर शब्द",
     "statistics": "आंकड़े",
-    "totalWords": "कुल शब्द",
+    "learnedWords": "सीखे शब्द",
+    "weeklyWords": "इस सप्ताह",
+    "knownWords": "पहले से ज्ञात",
     "level": "स्तर",
     "daysActive": "सक्रिय दिन",
     "accuracy": "सटीकता",
@@ -274,7 +277,9 @@
     "deleteMessage": "यह क्रिया पूर्ववत नहीं की जा सकती। आपका सारा डेटा स्थायी रूप से हटा दिया जाएगा।",
     "delete": "हटाएं",
     "cancel": "रद्द करें",
-    "madeWith": "प्यार से बनाया गया"
+    "madeWith": "प्यार से बनाया गया",
+    "languageError": "भाषा त्रुटि",
+    "sameLanguageWarning": "आपकी मातृभाषा और सीखने की भाषा एक समान नहीं हो सकती।"
   },
   "profile": {
     "title": "प्रोफ़ाइल",

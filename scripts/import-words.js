@@ -1,9 +1,15 @@
 /**
  * Script to import words from CSV to words.ts with all 29 languages
  *
- * CSV Format:
- * word,category,level,image_name
- * apple,food,beginner,apple
+ * CSV Format (image_name artık gerekli DEĞİL - otomatik oluşturuluyor):
+ * word,category,level
+ * apple,food,beginner
+ * meeting,business,intermediate
+ *
+ * Resim Adlandırma (Bunny CDN):
+ * - "apple" kelimesi için → apple.jpg yükle
+ * - "credit card" kelimesi için → credit-card.jpg yükle
+ * - Resimleri Bunny'ye words/ klasörüne yükle
  *
  * Usage: node scripts/import-words.js words.csv
  */
@@ -33,7 +39,26 @@ const categoryArrays = {
   food: 'foodWords',
   business: 'businessWords',
   technology: 'technologyWords',
+  health: 'healthWords',
+  sports: 'sportsWords',
+  music: 'musicWords',
+  entertainment: 'entertainmentWords',
+  nature: 'natureWords',
+  shopping: 'shoppingWords',
+  family: 'familyWords',
+  education: 'educationWords',
+  verbs: 'verbsWords',
+  adjectives: 'adjectivesWords',
+  emotions: 'emotionsWords',
 };
+
+// Capitalize first letter of each word
+function capitalizeWords(str) {
+  return str
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}
 
 // Read CSV
 const csvContent = fs.readFileSync(csvFilePath, 'utf-8');
@@ -43,13 +68,12 @@ const lines = csvContent.trim().split('\n');
 const wordsByCategory = {};
 for (let i = 1; i < lines.length; i++) {
   const values = lines[i].split(',').map(v => v.trim());
-  if (values.length < 4 || !values[0]) continue;
+  if (values.length < 3 || !values[0]) continue;
 
   const word = {
-    word: values[0],
+    word: capitalizeWords(values[0]),
     category: values[1],
-    level: values[2],
-    image: values[3]
+    level: values[2] || 'intermediate'
   };
 
   if (!wordsByCategory[word.category]) {
@@ -154,7 +178,6 @@ for (const insertion of insertions) {
     id: '${maxId}',
     category: '${word.category}',
     level: '${word.level}',
-    image: 'synora-words/${word.image}',
     translations: {
 ${translations}    },
   },`;
@@ -173,7 +196,14 @@ ${translations}    },
 fs.writeFileSync(wordsFilePath, wordsContent, 'utf-8');
 
 console.log(`\n✅ Total: ${totalAdded} new words added with all 29 languages`);
+console.log('\n📋 Resim listesi (Bunny\'ye yükle):');
+for (const category of Object.keys(wordsByCategory)) {
+  for (const word of wordsByCategory[category]) {
+    const imageName = word.word.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-') + '.jpg';
+    console.log(`   ${imageName}`);
+  }
+}
 console.log('\nNext steps:');
-console.log('1. Run: npx tsc --noEmit (to check for TypeScript errors)');
-console.log('2. Upload images to Cloudinary');
-console.log('3. Translate words using translation script (optional)');
+console.log('1. Resimleri Bunny CDN\'e yükle: https://synora.b-cdn.net/words/');
+console.log('2. Resim adları: kelime.jpg (küçük harf, boşluk yerine -)');
+console.log('3. Çeviriler için: node scripts/translate-words.js');

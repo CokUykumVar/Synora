@@ -6,15 +6,17 @@ import {
   ActivityIndicator,
   ViewStyle,
   ImageStyle,
+  Text,
 } from 'react-native';
-import { getWordImageUrl } from '../config/cloudinary';
-import { colors } from '../constants/theme';
+import { getWordImageUrl, getPlaceholderUrl } from '../config/bunny';
+import { colors, borderRadius } from '../constants/theme';
 
 interface WordImageProps {
   imageId: string;
   size?: 'thumbnail' | 'medium' | 'large';
   style?: ViewStyle;
   imageStyle?: ImageStyle;
+  fallbackEmoji?: string;
   showPlaceholder?: boolean;
 }
 
@@ -23,15 +25,14 @@ export default function WordImage({
   size = 'medium',
   style,
   imageStyle,
+  fallbackEmoji = '📝',
   showPlaceholder = true,
 }: WordImageProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
   const imageUrl = getWordImageUrl(imageId, size);
-  const placeholderUrl = showPlaceholder
-    ? getWordImageUrl(imageId, 'placeholder')
-    : null;
+  const placeholderUrl = showPlaceholder ? getPlaceholderUrl(imageId) : null;
 
   const handleLoad = () => {
     setIsLoading(false);
@@ -42,19 +43,18 @@ export default function WordImage({
     setHasError(true);
   };
 
+  // Show emoji fallback on error
   if (hasError) {
     return (
-      <View style={[styles.container, styles.errorContainer, style]}>
-        <View style={[styles.errorPlaceholder, imageStyle]}>
-          {/* You can add an error icon here */}
-        </View>
+      <View style={[styles.container, styles.fallbackContainer, style]}>
+        <Text style={styles.fallbackEmoji}>{fallbackEmoji}</Text>
       </View>
     );
   }
 
   return (
     <View style={[styles.container, style]}>
-      {/* Placeholder/blur image */}
+      {/* Blur placeholder while loading */}
       {isLoading && placeholderUrl && (
         <Image
           source={{ uri: placeholderUrl }}
@@ -115,13 +115,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  errorContainer: {
+  fallbackContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  errorPlaceholder: {
-    width: '100%',
-    height: '100%',
     backgroundColor: colors.background.tertiary,
+  },
+  fallbackEmoji: {
+    fontSize: 48,
   },
 });

@@ -17,18 +17,15 @@ import { colors, fontSize, spacing, borderRadius, fonts, layout } from '../src/c
 const MIN_TOPICS = 3;
 
 const TOPICS = [
+  { id: 'everyday_objects', icon: 'cube-outline' },
+  { id: 'food_drink', icon: 'restaurant-outline' },
+  { id: 'people_roles', icon: 'people-outline' },
+  { id: 'actions', icon: 'flash-outline' },
+  { id: 'adjectives', icon: 'color-palette-outline' },
+  { id: 'emotions', icon: 'heart-outline' },
+  { id: 'nature_animals', icon: 'leaf-outline' },
   { id: 'travel', icon: 'airplane-outline' },
-  { id: 'food', icon: 'restaurant-outline' },
-  { id: 'business', icon: 'briefcase-outline' },
-  { id: 'technology', icon: 'laptop-outline' },
-  { id: 'health', icon: 'heart-outline' },
-  { id: 'sports', icon: 'football-outline' },
-  { id: 'music', icon: 'musical-notes-outline' },
-  { id: 'entertainment', icon: 'film-outline' },
-  { id: 'nature', icon: 'leaf-outline' },
-  { id: 'shopping', icon: 'cart-outline' },
-  { id: 'family', icon: 'people-outline' },
-  { id: 'education', icon: 'school-outline' },
+  { id: 'sports_hobbies', icon: 'football-outline' },
 ] as const;
 
 type TopicType = typeof TOPICS[number];

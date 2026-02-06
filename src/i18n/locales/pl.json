@@ -196,6 +196,7 @@
     "new": "Nowy",
     "topicsAvailable": "Dostępne Tematy",
     "wordsToLearn": "Słowa do Nauki",
+    "noResults": "Nie znaleziono wyników",
     "categoryNames": {
       "all": "Wszystko",
       "travel": "Podróże",
@@ -223,7 +224,9 @@
     "quickPractice": "Szybkie Ćwiczenie",
     "weakWords": "Słabe Słowa",
     "statistics": "Statystyki",
-    "totalWords": "Łącznie Słów",
+    "learnedWords": "Nauczone Słowa",
+    "weeklyWords": "Ten Tydzień",
+    "knownWords": "Już Znane",
     "level": "Poziom",
     "daysActive": "Aktywne Dni",
     "accuracy": "Dokładność",
@@ -274,7 +277,9 @@
     "deleteMessage": "Tej czynności nie można cofnąć. Wszystkie dane zostaną trwale usunięte.",
     "delete": "Usuń",
     "cancel": "Anuluj",
-    "madeWith": "Stworzone z miłością"
+    "madeWith": "Stworzone z miłością",
+    "languageError": "Błąd języka",
+    "sameLanguageWarning": "Twój język ojczysty i język, którego chcesz się uczyć, nie mogą być takie same."
   },
   "profile": {
     "title": "Profil",

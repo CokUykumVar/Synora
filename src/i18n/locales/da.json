@@ -160,6 +160,7 @@
     "new": "Nyt",
     "topicsAvailable": "Tilgængelige Emner",
     "wordsToLearn": "Ord at Lære",
+    "noResults": "Ingen resultater fundet",
     "categoryNames": {
       "all": "Alle",
       "travel": "Rejser",
@@ -223,7 +224,9 @@
     "quickPractice": "Hurtig Øvelse",
     "weakWords": "Svage Ord",
     "statistics": "Statistik",
-    "totalWords": "Totalt Ord",
+    "learnedWords": "Lærte Ord",
+    "weeklyWords": "Denne Uge",
+    "knownWords": "Allerede Kendt",
     "level": "Niveau",
     "daysActive": "Aktive Dage",
     "accuracy": "Nøjagtighed",
@@ -274,7 +277,9 @@
     "deleteMessage": "Denne handling kan ikke fortrydes. Alle dine data vil blive permanent slettet.",
     "delete": "Slet",
     "cancel": "Annuller",
-    "madeWith": "Lavet med kærlighed"
+    "madeWith": "Lavet med kærlighed",
+    "languageError": "Sprogfejl",
+    "sameLanguageWarning": "Dit modersmål og indlæringssprog kan ikke være det samme."
   },
   "profile": {
     "title": "Profil",

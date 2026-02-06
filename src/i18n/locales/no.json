@@ -160,6 +160,7 @@
     "new": "Nytt",
     "topicsAvailable": "Tilgjengelige Emner",
     "wordsToLearn": "Ord å Lære",
+    "noResults": "Ingen resultater funnet",
     "categoryNames": {
       "all": "Alle",
       "travel": "Reise",
@@ -223,7 +224,9 @@
     "quickPractice": "Hurtigøvelse",
     "weakWords": "Svake Ord",
     "statistics": "Statistikk",
-    "totalWords": "Totalt Ord",
+    "learnedWords": "Lærte Ord",
+    "weeklyWords": "Denne Uka",
+    "knownWords": "Allerede Kjent",
     "level": "Nivå",
     "daysActive": "Aktive Dager",
     "accuracy": "Nøyaktighet",
@@ -274,7 +277,9 @@
     "deleteMessage": "Denne handlingen kan ikke angres. Alle dine data vil bli permanent slettet.",
     "delete": "Slett",
     "cancel": "Avbryt",
-    "madeWith": "Laget med kjærlighet"
+    "madeWith": "Laget med kjærlighet",
+    "languageError": "Språkfeil",
+    "sameLanguageWarning": "Morsmålet ditt og lærespråket kan ikke være det samme."
   },
   "profile": {
     "title": "Profil",

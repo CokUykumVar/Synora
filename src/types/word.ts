@@ -9,7 +9,7 @@ export interface Word {
   id: string;
   word: string;                              // Base word (usually in English)
   translations: Partial<Record<LanguageCode, string>>;  // Translations to other languages
-  image: string;                             // Cloudinary image ID or full URL
+  image?: string;                            // Optional image URL (currently using emoji system)
   levels: WordLevel[];                       // Can belong to multiple levels
   category: string;                          // Category ID (e.g., 'food', 'travel')
   pronunciation?: string;                    // IPA pronunciation

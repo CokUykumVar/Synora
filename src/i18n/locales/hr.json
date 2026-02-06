@@ -160,6 +160,7 @@
     "new": "Novo",
     "topicsAvailable": "Dostupne Teme",
     "wordsToLearn": "Riječi za Učenje",
+    "noResults": "Nema rezultata",
     "categoryNames": {
       "all": "Sve",
       "travel": "Putovanja",
@@ -223,7 +224,9 @@
     "quickPractice": "Brza Vježba",
     "weakWords": "Slabe Riječi",
     "statistics": "Statistike",
-    "totalWords": "Ukupno Riječi",
+    "learnedWords": "Naučene Riječi",
+    "weeklyWords": "Ovaj Tjedan",
+    "knownWords": "Već Poznate",
     "level": "Razina",
     "daysActive": "Aktivni Dani",
     "accuracy": "Točnost",
@@ -274,7 +277,9 @@
     "deleteMessage": "Ova radnja se ne može poništiti. Svi vaši podaci bit će trajno izbrisani.",
     "delete": "Obriši",
     "cancel": "Odustani",
-    "madeWith": "Napravljeno s ljubavlju"
+    "madeWith": "Napravljeno s ljubavlju",
+    "languageError": "Jezična greška",
+    "sameLanguageWarning": "Vaš materinski jezik i jezik koji želite učiti ne mogu biti isti."
   },
   "profile": {
     "title": "Profil",

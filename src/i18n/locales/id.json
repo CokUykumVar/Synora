@@ -196,6 +196,7 @@
     "new": "Baru",
     "topicsAvailable": "Topik Tersedia",
     "wordsToLearn": "Kata untuk Dipelajari",
+    "noResults": "Tidak ada hasil ditemukan",
     "categoryNames": {
       "all": "Semua",
       "travel": "Perjalanan",
@@ -223,7 +224,9 @@
     "quickPractice": "Latihan Cepat",
     "weakWords": "Kata Lemah",
     "statistics": "Statistik",
-    "totalWords": "Total Kata",
+    "learnedWords": "Kata Dipelajari",
+    "weeklyWords": "Minggu Ini",
+    "knownWords": "Sudah Dikenal",
     "level": "Level",
     "daysActive": "Hari Aktif",
     "accuracy": "Akurasi",
@@ -274,7 +277,9 @@
     "deleteMessage": "Tindakan ini tidak dapat dibatalkan. Semua data Anda akan dihapus secara permanen.",
     "delete": "Hapus",
     "cancel": "Batal",
-    "madeWith": "Dibuat dengan cinta"
+    "madeWith": "Dibuat dengan cinta",
+    "languageError": "Kesalahan Bahasa",
+    "sameLanguageWarning": "Bahasa ibu dan bahasa yang ingin dipelajari tidak boleh sama."
   },
   "profile": {
     "title": "Profil",

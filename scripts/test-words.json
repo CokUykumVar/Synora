@@ -1,0 +1,7 @@
+[
+  {"id": "test1", "word_en": "Mouse", "category": "everyday_objects", "level": "beginner"},
+  {"id": "test2", "word_en": "Charger", "category": "everyday_objects", "level": "beginner"},
+  {"id": "test3", "word_en": "Notebook", "category": "everyday_objects", "level": "beginner"},
+  {"id": "test4", "word_en": "Keyboard", "category": "everyday_objects", "level": "beginner"},
+  {"id": "test5", "word_en": "Book", "category": "everyday_objects", "level": "beginner"}
+]

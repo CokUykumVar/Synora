@@ -196,6 +196,7 @@
     "new": "新",
     "topicsAvailable": "可用主题",
     "wordsToLearn": "待学单词",
+    "noResults": "未找到结果",
     "categoryNames": {
       "all": "全部",
       "travel": "旅行",
@@ -223,7 +224,9 @@
     "quickPractice": "快速练习",
     "weakWords": "薄弱词汇",
     "statistics": "统计数据",
-    "totalWords": "总单词数",
+    "learnedWords": "已学单词",
+    "weeklyWords": "本周单词",
+    "knownWords": "已知单词",
     "level": "级别",
     "daysActive": "活跃天数",
     "accuracy": "准确率",
@@ -274,7 +277,9 @@
     "deleteMessage": "此操作无法撤销。您的所有数据将被永久删除。",
     "delete": "删除",
     "cancel": "取消",
-    "madeWith": "用心制作"
+    "madeWith": "用心制作",
+    "languageError": "语言错误",
+    "sameLanguageWarning": "您的母语和学习语言不能相同。"
   },
   "profile": {
     "title": "个人资料",

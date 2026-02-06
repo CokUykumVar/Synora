@@ -160,6 +160,7 @@
     "new": "Uusi",
     "topicsAvailable": "Saatavilla Olevat Aiheet",
     "wordsToLearn": "Opittavat Sanat",
+    "noResults": "Tuloksia ei löytynyt",
     "categoryNames": {
       "all": "Kaikki",
       "travel": "Matkailu",
@@ -223,7 +224,9 @@
     "quickPractice": "Pikaharjoitus",
     "weakWords": "Heikot Sanat",
     "statistics": "Tilastot",
-    "totalWords": "Sanoja Yhteensä",
+    "learnedWords": "Opitut Sanat",
+    "weeklyWords": "Tällä Viikolla",
+    "knownWords": "Jo Tunnetut",
     "level": "Taso",
     "daysActive": "Aktiivisia Päiviä",
     "accuracy": "Tarkkuus",
@@ -274,7 +277,9 @@
     "deleteMessage": "Tätä toimintoa ei voi kumota. Kaikki tietosi poistetaan pysyvästi.",
     "delete": "Poista",
     "cancel": "Peruuta",
-    "madeWith": "Tehty rakkaudella"
+    "madeWith": "Tehty rakkaudella",
+    "languageError": "Kielivirhe",
+    "sameLanguageWarning": "Äidinkielesi ja opittava kieli eivät voi olla samat."
   },
   "profile": {
     "title": "Profiili",

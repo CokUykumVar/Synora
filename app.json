@@ -4,7 +4,7 @@
     "slug": "Synora",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/synora-icon.png",
     "userInterfaceStyle": "dark",
     "newArchEnabled": true,
     "scheme": "synora",
@@ -13,14 +13,16 @@
     },
     "ios": {
       "supportsTablet": true,
+      "bundleIdentifier": "com.synora.app",
       "infoPlist": {
         "NSSpeechRecognitionUsageDescription": "This app uses speech recognition to check your pronunciation",
         "NSMicrophoneUsageDescription": "This app uses the microphone to record your pronunciation"
       }
     },
     "android": {
+      "package": "com.synora.app",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/synora-icon.png",
         "backgroundColor": "#0B0D10"
       },
       "edgeToEdgeEnabled": true,

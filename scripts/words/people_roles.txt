@@ -1,0 +1,149 @@
+word	level
+Child	beginner
+Boy	beginner
+Girl	beginner
+Man	beginner
+Woman	beginner
+Mother	beginner
+Father	beginner
+Brother	beginner
+Sister	beginner
+Teacher	beginner
+Doctor	beginner
+Nurse	beginner
+Driver	beginner
+Worker	beginner
+Chef	beginner
+Cook	beginner
+Waiter	beginner
+Police officer	beginner
+Firefighter	beginner
+Shopkeeper	beginner
+Customer	beginner
+Friend	beginner
+Neighbor	beginner
+Guest	beginner
+Athlete	beginner
+Player	beginner
+Runner	beginner
+Swimmer	beginner
+Cyclist	beginner
+Adult	elementary
+Elderly	elementary
+Parent	elementary
+Grandmother	elementary
+Grandfather	elementary
+Son	elementary
+Daughter	elementary
+Classmate	elementary
+Coworker	elementary
+Dentist	elementary
+Pharmacist	elementary
+Paramedic	elementary
+Caregiver	elementary
+Security guard	elementary
+Lifeguard	elementary
+Soldier	elementary
+Cashier	elementary
+Clerk	elementary
+Salesperson	elementary
+Delivery driver	elementary
+Courier	elementary
+Cleaner	elementary
+Janitor	elementary
+Bus driver	elementary
+Taxi driver	elementary
+Flight attendant	elementary
+Passenger	elementary
+Tourist	elementary
+Traveler	elementary
+Coach	elementary
+Referee	elementary
+Umpire	elementary
+Trainer	elementary
+Artist	elementary
+Painter	elementary
+Musician	elementary
+Singer	elementary
+Actor	elementary
+Photographer	elementary
+Writer	elementary
+Nanny	intermediate
+Guardian	intermediate
+Care assistant	intermediate
+Social worker	intermediate
+Therapist	intermediate
+Psychologist	intermediate
+Veterinarian	intermediate
+Surgeon	intermediate
+Radiologist	intermediate
+Laboratory technician	intermediate
+Electrician	intermediate
+Plumber	intermediate
+Mechanic	intermediate
+Technician	intermediate
+Engineer	intermediate
+Architect	intermediate
+Surveyor	intermediate
+Construction worker	intermediate
+Foreman	intermediate
+Farmer	intermediate
+Gardener	intermediate
+Florist	intermediate
+Baker	intermediate
+Butcher	intermediate
+Fishmonger	intermediate
+Host	intermediate
+Hotel manager	intermediate
+Tour guide	intermediate
+Ticket inspector	intermediate
+Conductor	intermediate
+Dispatcher	intermediate
+Warehouse worker	intermediate
+Forklift operator	intermediate
+Logistics manager	intermediate
+Customs officer	intermediate
+Immigration officer	intermediate
+Border guard	intermediate
+Investigator	intermediate
+Forensic technician	intermediate
+Judge	intermediate
+Lawyer	intermediate
+Accountant	intermediate
+Bookkeeper	intermediate
+Financial advisor	intermediate
+Bank teller	intermediate
+Loan officer	intermediate
+Insurance agent	intermediate
+Real estate agent	intermediate
+Property manager	intermediate
+Appraiser	intermediate
+Sales manager	intermediate
+Product manager	intermediate
+Project manager	intermediate
+Recruiter	intermediate
+Content creator	intermediate
+Videographer	intermediate
+Film producer	intermediate
+Director	intermediate
+Screenwriter	intermediate
+Sound engineer	intermediate
+Lighting technician	intermediate
+Stage assistant	intermediate
+Theater actor	intermediate
+Voice actor	intermediate
+News anchor	intermediate
+Weatherman	intermediate
+Meteorologist	intermediate
+Scientist	intermediate
+Researcher	intermediate
+Data analyst	intermediate
+Statistician	intermediate
+Software developer	intermediate
+Programmer	intermediate
+Product designer	intermediate
+Game designer	intermediate
+Game tester	intermediate
+Network engineer	intermediate
+Cybersecurity analyst	intermediate
+Penetration tester	intermediate

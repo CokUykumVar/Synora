@@ -23,39 +23,27 @@ import { useNetwork } from '../src/context/NetworkContext';
 const { width } = Dimensions.get('window');
 
 const CATEGORY_COLORS: { [key: string]: string } = {
-  travel: '#4ECDC4',
-  food: '#FF6B6B',
-  business: '#45B7D1',
-  technology: '#9B59B6',
-  health: '#2ECC71',
-  sports: '#E67E22',
-  music: '#E91E63',
-  entertainment: '#00BCD4',
-  nature: '#8BC34A',
-  shopping: '#FF9800',
-  family: '#673AB7',
-  education: '#3F51B5',
-  verbs: '#FF5722',
+  everyday_objects: '#45B7D1',
+  food_drink: '#FF6B6B',
+  people_roles: '#673AB7',
+  actions: '#FF5722',
   adjectives: '#00BFA5',
   emotions: '#F06292',
+  nature_animals: '#8BC34A',
+  travel: '#4ECDC4',
+  sports_hobbies: '#E67E22',
 };
 
 const CATEGORY_ICONS: { [key: string]: string } = {
-  travel: 'airplane-outline',
-  food: 'restaurant-outline',
-  business: 'briefcase-outline',
-  technology: 'laptop-outline',
-  health: 'fitness-outline',
-  sports: 'football-outline',
-  music: 'musical-notes-outline',
-  entertainment: 'film-outline',
-  nature: 'leaf-outline',
-  shopping: 'cart-outline',
-  family: 'people-outline',
-  education: 'school-outline',
-  verbs: 'flash-outline',
+  everyday_objects: 'cube-outline',
+  food_drink: 'restaurant-outline',
+  people_roles: 'people-outline',
+  actions: 'flash-outline',
   adjectives: 'color-palette-outline',
   emotions: 'heart-outline',
+  nature_animals: 'leaf-outline',
+  travel: 'airplane-outline',
+  sports_hobbies: 'football-outline',
 };
 
 export default function TopicScreen() {

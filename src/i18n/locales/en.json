@@ -99,21 +99,15 @@
     "hint": "{{count}} topics selected",
     "hintMin": "Select at least {{min}} topics ({{count}}/{{min}})",
     "topics": {
-      "travel": "Travel",
-      "food": "Food & Drink",
-      "business": "Business & Career",
-      "technology": "Technology",
-      "health": "Health",
-      "sports": "Sports",
-      "music": "Music",
-      "entertainment": "Entertainment",
-      "nature": "Nature",
-      "shopping": "Shopping",
-      "family": "Family & Relationships",
-      "education": "Education",
-      "verbs": "Verbs",
+      "everyday_objects": "Everyday Objects & Places",
+      "food_drink": "Food & Drink",
+      "people_roles": "People & Roles",
+      "actions": "Actions (Verbs)",
       "adjectives": "Adjectives",
-      "emotions": "Emotions"
+      "emotions": "Emotions",
+      "nature_animals": "Nature & Animals",
+      "travel": "Travel",
+      "sports_hobbies": "Sports & Hobbies"
     }
   },
   "habit": {
@@ -171,6 +165,7 @@
     "statistics": "Statistics",
     "learnedWords": "Learned Words",
     "weeklyWords": "Weekly Words",
+    "knownWords": "Already Known",
     "level": "Level",
     "daysActive": "Days Active",
     "accuracy": "Accuracy",
@@ -242,18 +237,18 @@
     "new": "New",
     "topicsAvailable": "Topics Available",
     "wordsToLearn": "Words to Learn",
+    "noResults": "No results found",
     "categoryNames": {
       "all": "All",
-      "travel": "Travel",
-      "food": "Food",
-      "business": "Business",
-      "technology": "Tech",
-      "health": "Health",
-      "sports": "Sports",
-      "music": "Music",
-      "verbs": "Verbs",
+      "everyday_objects": "Objects",
+      "food_drink": "Food",
+      "people_roles": "People",
+      "actions": "Actions",
       "adjectives": "Adjectives",
-      "emotions": "Emotions"
+      "emotions": "Emotions",
+      "nature_animals": "Nature",
+      "travel": "Travel",
+      "sports_hobbies": "Sports"
     }
   },
   "settings": {
@@ -288,7 +283,9 @@
     "deleteMessage": "This action cannot be undone. All your data will be permanently deleted.",
     "delete": "Delete",
     "cancel": "Cancel",
-    "madeWith": "Made with love"
+    "madeWith": "Made with love",
+    "languageError": "Language Error",
+    "sameLanguageWarning": "Your native language and learning language cannot be the same."
   },
   "profile": {
     "title": "Profile",

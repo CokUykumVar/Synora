@@ -196,6 +196,7 @@
     "new": "Mới",
     "topicsAvailable": "Chủ Đề Có Sẵn",
     "wordsToLearn": "Từ Cần Học",
+    "noResults": "Không tìm thấy kết quả",
     "categoryNames": {
       "all": "Tất Cả",
       "travel": "Du Lịch",
@@ -222,7 +223,9 @@
     "review": "Ôn Tập",
     "quickPractice": "Luyện Nhanh",
     "statistics": "Thống Kê",
-    "totalWords": "Tổng Từ",
+    "learnedWords": "Từ Đã Học",
+    "weeklyWords": "Tuần Này",
+    "knownWords": "Đã Biết",
     "level": "Cấp Độ",
     "daysActive": "Ngày Hoạt Động",
     "accuracy": "Độ Chính Xác",
@@ -273,7 +276,9 @@
     "deleteMessage": "Hành động này không thể hoàn tác. Tất cả dữ liệu của bạn sẽ bị xóa vĩnh viễn.",
     "delete": "Xóa",
     "cancel": "Hủy",
-    "madeWith": "Được tạo với tình yêu"
+    "madeWith": "Được tạo với tình yêu",
+    "languageError": "Lỗi ngôn ngữ",
+    "sameLanguageWarning": "Ngôn ngữ mẹ đẻ và ngôn ngữ học không thể giống nhau."
   },
   "profile": {
     "title": "Hồ Sơ",
